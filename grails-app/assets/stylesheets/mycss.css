@@ -1,0 +1,20 @@
+.contentMargin{
+  margin:20px 40px;
+}
+.padding5{
+  padding:7px; 
+}
+.contentBox{
+  padding: 20px 40px; 
+}
+.valignstyle{
+  vertical-align: middle;
+}
+.img-media{
+  height:80px;
+  width:80px;
+}
+#captcha{
+  max-height:100px;
+  max-width:150px;
+}

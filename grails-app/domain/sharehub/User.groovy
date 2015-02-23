@@ -9,7 +9,7 @@ class User {
     boolean active
     Date dateCreated, lastUpdated
     static hasMany = [topics: Topic,resources: Resource,subscriptions: Subscription]
-    static transients = ['name']
+    static transients = ['name','confirmPassword']
     static constraints = {
         username unique: true
         email (unique: true,email: true, blank: false)
@@ -18,5 +18,7 @@ class User {
     }
     String getName(){
         return firstName + " " + lastName;
+    }
+    static mapping={
     }
 }

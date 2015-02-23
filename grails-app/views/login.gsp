@@ -40,13 +40,14 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <form class="navbar-form navbar-left" role="search">
+                    <g:form controller="login" action="validate" class="navbar-form navbar-left" role="search">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Username">
-                            <input type="text" class="form-control" placeholder="Password">
+                            ${error}
+                            <g:textField name="username" class="form-control" placeholder="Username"/>
+                            <g:passwordField name="password" class="form-control" placeholder="Password"/>
                         </div>
-                        <button type="submit" class="btn btn-default">Login</button>
-                    </form>
+                        <g:submitButton name="Login" class="btn btn-default">Login</g:submitButton>
+                    </g:form>
 
                 </li>
             </ul>

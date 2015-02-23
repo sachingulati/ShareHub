@@ -24,6 +24,10 @@ class UserController {
     def create() {
         respond new User(params)
     }
+    def loginHandler(String username){
+        session["username"] = username
+        redirect(controller: "Home", action: "dashboard");
+    }
 
     @Transactional
     def save(User userInstance) {
@@ -48,6 +52,9 @@ class UserController {
         }
     }
 
+    def logout(){
+        session.invalidate()
+    }
     def edit(User userInstance) {
         respond userInstance
     }

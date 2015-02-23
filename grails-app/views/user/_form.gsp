@@ -29,6 +29,15 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'photo', 'error')} ">
+	<label for="photo">
+		<g:message code="user.photo.label" default="Photo" />
+		
+	</label>
+	<input type="file" id="photo" name="photo" />
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: userInstance, field: 'active', 'error')} ">
 	<label for="active">
 		<g:message code="user.active.label" default="Active" />

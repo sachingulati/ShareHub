@@ -19,28 +19,40 @@ class BootStrap {
     def createUsers(){
         2.times{
             User u = new User(firstName: "Name$it",lastName: "Last$it", email: "Name$it@email.com",username: "name$it", password: "12345678", admin: false, active: true)
-            u.validate() && u.save(flush: true)
+            u.validate() && u.save()
         }
     }
     def createTopics(){
-        User.list().each {u->
+        User.list().each { user ->
             5.times{
-                Topic t = new Topic(name: "Topic$it", createdBy: u, visibility: Visibility.PUBLIC);
-                t.validate() && t.save(flush: true)
+                Topic t = new Topic(name: "Topic$it", createdBy: user, visibility: Visibility.PUBLIC);
+                t.validate() && t.save()
+                user.addToTopics(t)
             }
         }
     }
     def subscribeTopic(){
+        User user = User.get(1)
         3.times{
-            Subscription s = new Subscription(seriousness: Seriousness.SERIOUS, topic: Topic.get(7+it), user: User.get(1))
-            s.validate() && s.save(flush: true)
+            Subscription subscription = new Subscription(seriousness: Seriousness.SERIOUS, topic: Topic.get(7+it), user: user)
+            subscription.validate() && subscription.save(flush: true)
+            user.addToSubscriptions(subscription)
+            /*println ">>>>>>>>>>>>>>>>>>>>>>>>>...."
+            println subscription.user
+            println user.subscriptions
+            println ">>>>>>>>>>>>>>>>>>>>>>>>>...."
+*/
+
+
         }
     }
     def createResources(){
-        Topic.list().each{t->
+        Topic.list().each{ topic ->
             10.times {
-                Resource r = new Resource(title: "Resource$it", description: "description$it", type: (it<5?ResourceType.DOCUMENT:ResourceType.LINK), url: "someUrl.com", createdBy: t.createdBy, topic: t)
-                r.save(flush: true)
+                Resource r = new Resource(title: "Resource$it", description: "description$it", type: (it<5?ResourceType.DOCUMENT:ResourceType.LINK), url: "someUrl.com", createdBy: topic.createdBy, topic: topic)
+                r.save()
+                topic.addToResources(r)
+
             }
         }
     }
@@ -49,7 +61,7 @@ class BootStrap {
         ResourceStatus.findByIsRead(false).each{rs->
             if(count++<3){
                 rs.isRead = true;
-                rs.save(flush: true)
+                rs.save()
             }
 
         }

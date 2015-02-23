@@ -14,12 +14,12 @@ class Resource {
         title unique: 'topic'
         description maxSize: 1024;
     }
-    def afterInsert ={
+    def afterInsert = {
         topic.subscriptions.each {
             if(it.user == createdBy)
-                addToResourceStatus(user: it.user, topic: it.topic,isRead: true, score: -1);
+                addToResourceStatus(user: it.user, topic: it.topic,isRead: true)
             else
-                addToResourceStatus(user: it.user, topic: it.topic,isRead: false, score: -1);
+                addToResourceStatus(user: it.user, topic: it.topic,isRead: false)
         }
     }
 }

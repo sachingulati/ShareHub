@@ -50,6 +50,13 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${userInstance?.photo}">
+				<li class="fieldcontain">
+					<span id="photo-label" class="property-label"><g:message code="user.photo.label" default="Photo" /></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${userInstance?.active}">
 				<li class="fieldcontain">
 					<span id="active-label" class="property-label"><g:message code="user.active.label" default="Active" /></span>

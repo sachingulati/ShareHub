@@ -30,11 +30,11 @@
 					
 						<g:sortableColumn property="password" title="${message(code: 'user.password.label', default: 'Password')}" />
 					
+						<g:sortableColumn property="photo" title="${message(code: 'user.photo.label', default: 'Photo')}" />
+					
 						<g:sortableColumn property="active" title="${message(code: 'user.active.label', default: 'Active')}" />
 					
 						<g:sortableColumn property="admin" title="${message(code: 'user.admin.label', default: 'Admin')}" />
-					
-						<g:sortableColumn property="dateCreated" title="${message(code: 'user.dateCreated.label', default: 'Date Created')}" />
 					
 					</tr>
 				</thead>
@@ -48,11 +48,11 @@
 					
 						<td>${fieldValue(bean: userInstance, field: "password")}</td>
 					
+						<td>${fieldValue(bean: userInstance, field: "photo")}</td>
+					
 						<td><g:formatBoolean boolean="${userInstance.active}" /></td>
 					
 						<td><g:formatBoolean boolean="${userInstance.admin}" /></td>
-					
-						<td><g:formatDate date="${userInstance.dateCreated}" /></td>
 					
 					</tr>
 				</g:each>

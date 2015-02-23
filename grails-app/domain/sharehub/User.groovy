@@ -4,7 +4,7 @@ class User {
     String firstName,lastName
     String email
     String username, password
-    //byte[] photo
+    byte[] photo
     boolean admin
     boolean active
     Date dateCreated, lastUpdated
@@ -14,7 +14,7 @@ class User {
         username unique: true
         email (unique: true,email: true, blank: false)
         password(size:8..20,blank: false)
-        //photo nullable: true
+        photo nullable: true
     }
     String getName(){
         return firstName + " " + lastName;

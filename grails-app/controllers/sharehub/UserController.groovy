@@ -14,19 +14,12 @@ class UserController {
         params.max = Math.min(max ?: 10, 100)
         respond User.list(params), model:[userInstanceCount: User.count()]
     }
-    def sayHello(){
-        render view: "/myPage"
-    }
     def show(User userInstance) {
         respond userInstance
     }
 
     def create() {
         respond new User(params)
-    }
-    def loginHandler(String username){
-        session["username"] = username
-        redirect(controller: "Home", action: "dashboard");
     }
 
     @Transactional
@@ -54,6 +47,7 @@ class UserController {
 
     def logout(){
         session.invalidate()
+        redirect controller: "Login"
     }
     def edit(User userInstance) {
         respond userInstance

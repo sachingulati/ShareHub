@@ -5,12 +5,17 @@ import com.sharehub.enums.ResourceType
 class Resource {
     String description, title
     Date dateCreated, lastUpdated
+    ResourceType type
+    String url
+    String filePath
     static belongsTo = [createdBy: User, topic: Topic]
     static hasMany = [resourceStatus: ResourceStatus]
     static constraints = {
         description nullable: true;
         title unique: 'topic'
-        description maxSize: 1024;
+        description maxSize: 1024
+        filePath nullable: true
+        url nullable: true
     }
     def afterInsert = {
         topic.subscriptions.each {

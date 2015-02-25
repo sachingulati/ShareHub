@@ -13,15 +13,6 @@ class BootStrap {
         createUsers()
         createTopics()
         subscribeTopic()
-        Subscription.list().each {
-            println ">>>>>>>>>>>>>${it.topicId} || ${it.userId}"
-        }
-        println "==============================="
-        Topic.list().each {
-            println it.id
-            println it.subscriptions
-        }
-        println "==============================="
         createResources()
         createRating()
     }
@@ -46,7 +37,6 @@ class BootStrap {
     def subscribeTopic() {
         User user = User.get(1)
         3.times {
-            println it
             Topic topic =  Topic.load(7 + it)
             Subscription subscription = new Subscription(seriousness: Seriousness.SERIOUS)
             user.addToSubscriptions(subscription)
@@ -56,11 +46,11 @@ class BootStrap {
     }
 
     def createResources() {
-        Topic.findAllByIdInList([7, 8, 9]).each { topic ->
+        Topic.list().each { topic ->
             10.times {
                 Resource r = new Resource(title: "Resource$it", description: "description$it", type: (it < 5 ? ResourceType.DOCUMENT : ResourceType.LINK), url: "someUrl.com", createdBy: topic.createdBy, topic: topic)
-//                r.save()
                 topic.addToResources(r)
+                topic.createdBy.addToResources(r)
                 topic.save(flush: true)
             }
         }

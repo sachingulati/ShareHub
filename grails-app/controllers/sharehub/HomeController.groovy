@@ -3,14 +3,10 @@ package sharehub
 class HomeController {
 
     def index() {
-        if(session["username"]){
             redirect(action: "dashboard")
-        }
-        else{
-            redirect(controller: "Login")
-        }
     }
     def dashboard(){
-        render session["username"]
+        User user = User.findByUsername(session["username"]);
+        render(view: "/dashboard",model: [username: user.username, name: user.name])
     }
 }

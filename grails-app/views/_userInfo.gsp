@@ -1,17 +1,15 @@
 
-<div class="panel panel-default" style="margin-bottom:7px">
-    <div class="panel-body">
         <div style="float:left; margin-right:10px">
             <a href="#"><asset:image src="user-default.png" class="img-media" alt="User image"/></a>
         </div>
 
         <div>
             <div>
-                <a href="#">${name}</a>
+                <a href="#">${name?name:"name"}</a>
             </div>
 
             <div>
-                @${username}
+                @${username?:"username"}
             </div>
             <table>
                 <tr>
@@ -24,5 +22,3 @@
                 </tr>
             </table>
         </div>
-    </div> <!-- panel-body -->
-</div> <!-- panel -->

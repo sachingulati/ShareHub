@@ -8,8 +8,10 @@ class ShareHubFilters {
             before = {
                 if(request.assets)
                     return;
+               // println "invert login..."
                 if(!session["username"]) {
-                    redirect controller: "Login", action: "index"
+                 //   println "redirect login"
+                    //redirect controller: "Login", action: "index"
                 }
             }
             after = { Map model ->
@@ -19,7 +21,9 @@ class ShareHubFilters {
         }
         all(uri: "/login/**" ){
             before = {
+                //println "login"
                 if(session["username"]) {
+                  //  println "redirect Home.. "
                     redirect controller: "Home", action: "index"
                 }
             }

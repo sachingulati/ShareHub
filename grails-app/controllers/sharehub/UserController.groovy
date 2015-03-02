@@ -9,6 +9,7 @@ import grails.transaction.Transactional
 class UserController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    def userService
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
@@ -22,6 +23,17 @@ class UserController {
         respond new User(params)
     }
 
+    @Transactional
+    def register(User user){
+
+        user.validate()
+        if(user.hasErrors()){
+            render user.errors.allErrors
+            return
+        }
+        user.save()
+        render("User Created..")
+    }
     @Transactional
     def save(User userInstance) {
         if (userInstance == null) {
@@ -103,5 +115,24 @@ class UserController {
             }
             '*'{ render status: NOT_FOUND }
         }
+    }
+}
+
+class UserCommand {
+    String firstName,lastName
+    String email
+    String username, password, confirmPassword
+    byte[] photo
+    boolean admin
+    boolean active
+    static hasMany = [topics: Topic,resources: Resource,subscriptions: Subscription]
+    static constraints = {
+        username unique: true
+        email (unique: true,email: true, blank: false)
+        password(size:8..20,blank: false)
+        photo nullable: true
+        confirmPassword(validator:{val, user->
+            return val.equals(user.password)
+        })
     }
 }

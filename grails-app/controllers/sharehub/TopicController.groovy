@@ -1,5 +1,6 @@
 package sharehub
 
+import com.sharehub.enums.Visibility
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -14,6 +15,28 @@ class TopicController {
         respond Topic.list(params), model: [topicInstanceCount: Topic.count()]
     }
 
+    @Transactional
+    def createTopic(){
+
+        String visibility = params.createTopicVisibility.toString();
+        Topic topic = new Topic(name: params.createTopicName, createdBy: User.findByUsername(session["username"]),visibility: Visibility.valueOf(params.createTopicVisibility.toString().toUpperCase()))
+        topic.validate()
+        if(topic.hasErrors()){
+            render topic.errors.allErrors
+            //redirect(url: request.getRequestURL())
+        }
+        else{
+
+            topic.save(failOnError: true)
+            render "Topic Created.."
+            //redirect(url: request.getRequestURL())
+            //render "Topic Created."
+            //redirect(url: request.getRequestURL(), params: [message: "Topic created."])
+        }
+    }
+    def showTopic(){
+        render view: "/showTopic"
+    }
     def show(Topic topicInstance) {
         respond topicInstance
     }

@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-  <title><g:layoutTitle default="Share Hub"/> </title>
+    <title><g:layoutTitle default="Share Hub"/></title>
 
     <!-- jquery -->
     <asset:javascript src="jquery-2.1.3.min.js"/>
@@ -26,13 +26,15 @@
     <g:layoutHead/>
 
 </head>
+
 <body>
 
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>

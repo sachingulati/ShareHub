@@ -15,8 +15,8 @@
 my page <br>
 ${message}
 <br>
-<g:render template="/template" model='[content1:"this is content1" +
-        "<div> hello 1<div>", content2:"this is content2" +
+<g:render template="/template" model='[content1: "this is content1" +
+        "<div> hello 1<div>", content2         : "this is content2" +
         "<div> hello 2<div>"]'/>
 </body>
 </html>

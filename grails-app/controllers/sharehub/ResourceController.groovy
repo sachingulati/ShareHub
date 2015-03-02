@@ -1,5 +1,7 @@
 package sharehub
 
+import com.sharehub.enums.ResourceType
+import com.sharehub.enums.Visibility
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -8,6 +10,7 @@ import grails.transaction.Transactional
 class ResourceController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    def resourceService
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
@@ -22,6 +25,24 @@ class ResourceController {
         respond new Resource(params)
     }
 
+    @Transactional
+    def shareLink(){
+        if(resourceService.shareLink(params,User.findByUsername(session["username"])))
+            render "Link Shared!"
+        else "Error in sharing resource!"
+    }
+
+    @Transactional
+    def shareDocument(){
+        if(resourceService.shareLink(params,User.findByUsername(session["username"])))
+            render "Document Shared!"
+        else render "Error in sharing resource!"
+
+    }
+    def showResources(){
+        render Resource.list(offset: 0, max: 5);
+
+    }
     @Transactional
     def save(Resource resourceInstance) {
         if (resourceInstance == null) {

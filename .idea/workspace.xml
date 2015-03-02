@@ -2,37 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4160786d-3f67-4d6d-8e09-e75c85ad7b3c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/sharehub/AssetsFilters$_closure1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/sharehub/AssetsFilters$_closure1_closure2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/sharehub/AssetsFilters$_closure1_closure2_closure3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/sharehub/AssetsFilters$_closure1_closure2_closure4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/sharehub/AssetsFilters$_closure1_closure2_closure5.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/sharehub/AssetsFilters.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure2_closure4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure2_closure5.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure2_closure6.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure3_closure7.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/sharehub/User$__clinit__closure2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/assets/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/assets/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/assets/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/assets/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/conf/sharehub/AssetsFilters.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/sharehub/AssetsFiltersSpec.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/sharehub/DemoFiltersSpec.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/sharehub/DocumentSpec.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/sharehub/LinkSpec.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/conf/sharehub/ShareHubFilters.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/sharehub/ShareHubFiltersSpec.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/layouts/afterLogin.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/layouts/beforeLogin.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/dashboard.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/assets/fonts/glyphicons-halflings-regular.svg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/home.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ShareHub.h2.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ShareHub.lock.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ShareHub.trace.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_$tt__delete_closure11.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_$tt__save_closure9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_$tt__update_closure10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_delete_closure7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_edit_closure5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_notFound_closure8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_notFound_closure8_closure12.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_notFound_closure8_closure13.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_save_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__delete_closure11_closure18.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__delete_closure11_closure19.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__save_closure9_closure14.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__save_closure9_closure15.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__update_closure10_closure16.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__update_closure10_closure17.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_update_closure6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_$tt__delete_closure11.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_$tt__save_closure9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_$tt__update_closure10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_create_closure3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_delete_closure7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_edit_closure5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_notFound_closure8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_notFound_closure8_closure12.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_notFound_closure8_closure13.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_save_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_show_closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_tt__delete_closure11_closure18.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_tt__delete_closure11_closure19.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_tt__save_closure9_closure14.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_tt__save_closure9_closure15.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_tt__update_closure10_closure16.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_tt__update_closure10_closure17.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_update_closure6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_$tt__delete_closure14.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_$tt__save_closure12.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_$tt__update_closure13.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_create_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_delete_closure10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_edit_closure8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_loginHandler_closure5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_logout_closure7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_notFound_closure11.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_notFound_closure11_closure15.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_notFound_closure11_closure16.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_save_closure6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_sayHello_closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_show_closure3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__delete_closure14_closure21.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__delete_closure14_closure22.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__save_closure12_closure17.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__save_closure12_closure18.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__update_closure13_closure19.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__update_closure13_closure20.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_update_closure9.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AbstractAssetFile.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AbstractAssetFile.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AbstractProcessor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AbstractProcessor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetCompiler.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetCompiler.class" />
@@ -45,6 +72,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/AssetResourceLocator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/AssetResourceLocator.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/AssetUrlMappings.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/AssetUrlMappings.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetsController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/AssetsFilters$_closure1_closure2.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/AssetsFilters$_closure1_closure2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/AssetsFilters$_closure1_closure2_closure3.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/AssetsFilters$_closure1_closure2_closure3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/AssetsFilters$_closure1_closure2_closure4.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/AssetsFilters$_closure1_closure2_closure4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/AssetsFilters$_closure1_closure2_closure5.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/AssetsFilters$_closure1_closure2_closure5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/AssetsFilters.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/AssetsFilters.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetsTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetsTagLib.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/AuthorListWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/AuthorListWriter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/AuthorWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/AuthorWriter.class" />
@@ -113,7 +145,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/HtmlAssetFile.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/HtmlAssetFile.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/InlineExplodedTomcatServer.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/InlineExplodedTomcatServer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sharehub/enums/InviteStatus.class" afterPath="$PROJECT_DIR$/target/classes/com/sharehub/enums/InviteStatus.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Invites$__clinit__closure1.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Invites$__clinit__closure1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Invites.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Invites.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/InvitesController.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/InvitesController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/JQueryConfig.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/JQueryConfig.class" />
@@ -139,7 +170,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/RecentChangesWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/RecentChangesWriter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure2.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$_closure1.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$_closure1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$_closure1_closure3.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$_closure1_closure3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ResourceController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceStatus.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ResourceStatus.class" />
@@ -148,6 +178,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/ScaffoldingGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/ScaffoldingGrailsPlugin.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/ScriptUtils.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/ScriptUtils.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sharehub/enums/Seriousness.class" afterPath="$PROJECT_DIR$/target/classes/com/sharehub/enums/Seriousness.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure2.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure2_closure4.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure2_closure4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure2_closure5.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure2_closure5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure2_closure6.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure2_closure6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure3.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure3_closure7.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure3_closure7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/Slf4jLogger.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/Slf4jLogger.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Subscription.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Subscription.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController.class" />
@@ -163,36 +201,85 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Topic.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Topic.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/TopicController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/processors/UglifyJsProcessor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/processors/UglifyJsProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/UrlMappings$__clinit__closure1.class" afterPath="$PROJECT_DIR$/target/classes/UrlMappings$__clinit__closure1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/UrlMappings.class" afterPath="$PROJECT_DIR$/target/classes/UrlMappings.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/User$__clinit__closure1.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/User$__clinit__closure1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/User$__clinit__closure2.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/User$__clinit__closure2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/User.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_$tt__delete_closure14.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_$tt__delete_closure14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_$tt__save_closure12.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_$tt__save_closure12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_$tt__update_closure13.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_$tt__update_closure13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_notFound_closure11.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_notFound_closure11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_notFound_closure11_closure15.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_notFound_closure11_closure15.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_notFound_closure11_closure16.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_notFound_closure11_closure16.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__delete_closure14_closure21.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__delete_closure14_closure21.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__delete_closure14_closure22.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__delete_closure14_closure22.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__save_closure12_closure17.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__save_closure12_closure17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__save_closure12_closure18.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__save_closure12_closure18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__update_closure13_closure19.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__update_closure13_closure19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__update_closure13_closure20.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__update_closure13_closure20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_$tt__delete_closure13.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_$tt__delete_closure13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_$tt__save_closure11.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_$tt__save_closure11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_$tt__update_closure12.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_$tt__update_closure12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_notFound_closure10.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_notFound_closure10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_notFound_closure10_closure14.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_notFound_closure10_closure14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_notFound_closure10_closure15.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_notFound_closure10_closure15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__delete_closure12_closure19.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__delete_closure12_closure19.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__delete_closure13_closure20.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__delete_closure13_closure20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__delete_closure13_closure21.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__delete_closure13_closure21.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__save_closure10_closure15.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__save_closure10_closure15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__save_closure11_closure16.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__save_closure11_closure16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__save_closure11_closure17.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__save_closure11_closure17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__update_closure11_closure17.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__update_closure11_closure17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__update_closure12_closure18.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__update_closure12_closure18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__update_closure12_closure19.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__update_closure12_closure19.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sharehub/enums/Visibility.class" afterPath="$PROJECT_DIR$/target/classes/com/sharehub/enums/Visibility.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/WebxmlGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/WebxmlGrailsPlugin.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/resources.class" afterPath="$PROJECT_DIR$/target/classes/resources.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/sharehub/AssetsFilters.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/sharehub/AssetsFilters.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/sharehub/DemoController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/sharehub/DemoController.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/sharehub/HomeController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/sharehub/HomeController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/sharehub/Invites.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/sharehub/Invites.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/sharehub/LoginController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/sharehub/LoginController.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/sharehub/Resource.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/sharehub/Resource.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareHub.iml" afterPath="$PROJECT_DIR$/ShareHub.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/sharehub/ResourceController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/sharehub/ResourceController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/sharehub/ResourceStatus.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/sharehub/ResourceStatus.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/sharehub/ShareHubFilters.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/sharehub/ShareHubFilters.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/sharehub/TopicController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/sharehub/TopicController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/sharehub/User.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/sharehub/User.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/sharehub/UserController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/sharehub/UserController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_createTopic.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_createTopic.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/invites/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/invites/_form.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/resource/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/resource/_form.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/resourceStatus/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/resourceStatus/_form.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/subscription/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/subscription/_form.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/topic/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/topic/_form.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_posts.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_posts.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_sendInvite.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_sendInvite.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_shareDocument.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_shareDocument.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_shareLink.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_shareLink.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_subscriptions.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_subscriptions.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_topicInfo.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_topicInfo.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_userInfo.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_userInfo.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_userList.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_userList.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/afterLogin.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/afterLogin.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/beforeLogin.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/beforeLogin.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/invites/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/invites/create.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/resource/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/resource/create.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/resourceStatus/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/resourceStatus/create.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/subscription/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/subscription/create.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/topic/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/topic/create.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/dashboard.gsp" afterPath="$PROJECT_DIR$/grails-app/views/dashboard.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/invites/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/invites/edit.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/resource/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/resource/edit.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/resourceStatus/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/resourceStatus/edit.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/subscription/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/subscription/edit.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/topic/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/topic/edit.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/error.gsp" afterPath="$PROJECT_DIR$/grails-app/views/error.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/index.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/invites/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/invites/index.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/resource/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/resource/index.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/resourceStatus/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/resourceStatus/index.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/subscription/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/subscription/index.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/topic/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/topic/index.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/login.gsp" afterPath="$PROJECT_DIR$/grails-app/views/login.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/myPage.gsp" afterPath="$PROJECT_DIR$/grails-app/views/myPage.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/resources/grails-app/i18n/messages.properties" afterPath="$PROJECT_DIR$/target/work/resources/grails-app/i18n/messages.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/demo/myPage.gsp" afterPath="$PROJECT_DIR$/grails-app/views/demo/myPage.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/assets/stylesheets/mycss.css" afterPath="$PROJECT_DIR$/grails-app/assets/stylesheets/mycss.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/invites/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/invites/show.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/resource/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/resource/show.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/resourceStatus/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/resourceStatus/show.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/subscription/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/subscription/show.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/topic/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/topic/show.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/showTopic.gsp" afterPath="$PROJECT_DIR$/grails-app/views/showTopic.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -227,21 +314,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dashboard.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/dashboard.gsp">
+      <file leaf-file-name="Resource.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/Resource.groovy">
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="345">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.0384617" vertical-offset="0" max-vertical-offset="570">
+              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="afterLogin.gsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchController.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/SearchController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.2173915" vertical-offset="0" max-vertical-offset="255">
+              <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_posts.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/_posts.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="780">
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchService.groovy" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/services/sharehub/SearchService.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.31810766" vertical-offset="0" max-vertical-offset="613">
+              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="afterLogin.gsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/afterLogin.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5561497" vertical-offset="1067" max-vertical-offset="1515">
-              <caret line="85" column="108" selection-start-line="85" selection-start-column="108" selection-end-line="85" selection-end-column="108" />
+            <state vertical-scroll-proportion="-48.75" vertical-offset="540" max-vertical-offset="2280">
+              <caret line="114" column="29" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -250,51 +370,8 @@
       <file leaf-file-name="HomeController.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/HomeController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.869565" vertical-offset="0" max-vertical-offset="270">
-              <caret line="9" column="84" selection-start-line="9" selection-start-column="84" selection-end-line="9" selection-end-column="84" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginController.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/LoginController.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.73913" vertical-offset="0" max-vertical-offset="360">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataSource.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="870">
-              <caret line="22" column="87" selection-start-line="22" selection-start-column="87" selection-end-line="22" selection-end-column="87" />
-              <folding>
-                <element signature="e#206#628#0" expanded="false" />
-                <element signature="e#1041#1406#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="beforeLogin.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/beforeLogin.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.3333335" vertical-offset="568" max-vertical-offset="1050">
-              <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/UserController.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.782609" vertical-offset="495" max-vertical-offset="1680">
-              <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+            <state vertical-scroll-proportion="-2.6086957" vertical-offset="0" max-vertical-offset="450">
+              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -308,47 +385,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/groovy/ResourceType.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/sharehub/enums/Visibility.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/Home.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/TopicController.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/sharehub/enums/ResourceType.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/sharehub/enums/Seriousness.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/SubscriptionController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/_template.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/demo/myPage.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/topic/create.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/domain/sharehub/Topic.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/ResourceController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/home.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/taglib/sharehub/DateFormatTagLib.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/InvitesController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/ResourceStatusController.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/sharehub/enums/InviteStatus.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/sharehub/ResourceStatus.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/sharehub/User.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/sharehub/Document.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/sharehub/Link.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/sharehub/Resource.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/sharehub/Invites.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/sharehub/Subscription.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/DemoController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/sharehub/DemoFilters.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/myPage.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/login.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/dashboard.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/conf/sharehub/AssetsFilters.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/HomeController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/conf/sharehub/ShareHubFilters.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/beforeLogin.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/LoginController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/afterLogin.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/assets/stylesheets/mycss.css" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/Gorm2Controller.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/user/_shareDocument.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/_sendInvite.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/ShowTopicController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/_user.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/_topicInfo.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/showTopic.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/_userInfo.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/_userList.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/conf/sharehub/ShareHubFilters.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/sharehub/Invites.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/_createTopic.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/conf/sharehub/AssetsFilters.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/conf/sharehub/DispatchFilters.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/TopicController.groovy" />
+        <option value="$PROJECT_DIR$/target/work/plugins/asset-pipeline-1.9.9/grails-app/services/asset/pipeline/AssetProcessorService.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/taglib/sharehub/SubscribedTopicsOfUserTagLib.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/services/sharehub/SubscriptionService.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/sharehub/Resource.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/i18n/messages.properties" />
+        <option value="$PROJECT_DIR$/grails-app/domain/sharehub/User.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/services/sharehub/UserService.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/UserController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/login.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/services/sharehub/TopicService.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/_subscriptions.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/domain/sharehub/ResourceStatus.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/dashboard.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/_shareLink.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/services/sharehub/ResourceService.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/_shareDocument.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/ResourceController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/layouts/afterLogin.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/HomeController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/SearchController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/_posts.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/services/sharehub/SearchService.groovy" />
       </list>
     </option>
   </component>
@@ -386,8 +473,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -416,11 +503,97 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="web-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShareHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShareHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShareHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShareHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShareHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShareHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="groovy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="enums" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShareHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShareHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="grails-app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShareHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShareHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resourceStatus" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -457,6 +630,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShareHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShareHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sharehub" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -522,28 +717,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ShareHub" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ShareHub" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sharehub" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -561,13 +734,18 @@
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="LayoutCode.rearrangeEntriesGSP" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="_s&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_shareLink.gsp&#10;_sh&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_shareDocument.gsp" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/grails-app/assets/javascripts" />
       <recent name="$PROJECT_DIR$/grails-app/assets" />
       <recent name="$PROJECT_DIR$/grails-app/assets/images" />
-      <recent name="$PROJECT_DIR$/grails-app/assets/javascripts" />
       <recent name="$PROJECT_DIR$/grails-app/assets/stylesheets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/grails-app/views" />
     </key>
   </component>
   <component name="RunManager" selected="Grails.Grails:ShareHub">
@@ -1112,8 +1290,23 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="1">
+    <configuration default="false" name="debug" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="5005" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Grails.Grails:ShareHub" />
+      <item index="1" class="java.lang.String" itemvalue="Remote.debug" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -1147,7 +1340,17 @@
       <workItem from="1424667992335" duration="22059000" />
       <workItem from="1424762747475" duration="8846000" />
       <workItem from="1424781110191" duration="4034000" />
-      <workItem from="1424845095660" duration="13579000" />
+      <workItem from="1424845095660" duration="13788000" />
+      <workItem from="1424879591289" duration="7348000" />
+      <workItem from="1424950309430" duration="611000" />
+      <workItem from="1424950950843" duration="86000" />
+      <workItem from="1424951057427" duration="22124000" />
+      <workItem from="1425016214075" duration="6529000" />
+      <workItem from="1425023101895" duration="1257000" />
+      <workItem from="1425040576326" duration="3042000" />
+      <workItem from="1425056153161" duration="7633000" />
+      <workItem from="1425220284509" duration="13140000" />
+      <workItem from="1425253696620" duration="10316000" />
     </task>
     <task id="LOCAL-00001" summary="check">
       <created>1424700707141</created>
@@ -1159,11 +1362,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141788000" />
+    <option name="totallyTimeSpent" value="214083000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1173,26 +1376,26 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5138889" sideWeight="0.50038433" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3047473" sideWeight="0.50039715" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32618684" sideWeight="0.49961567" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16441621" sideWeight="0.4992343" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2848392" sideWeight="0.49961567" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32247815" sideWeight="0.49779737" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3047473" sideWeight="0.49960285" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924962" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39969373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16441621" sideWeight="0.5007657" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962668" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32247815" sideWeight="0.50220263" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -1201,42 +1404,6 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5138889" sideWeight="0.50038433" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32618684" sideWeight="0.49961567" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3208896" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36753446" sideWeight="0.49961567" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1258,7 +1425,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1267,159 +1434,202 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/Subscription.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1050">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        <state vertical-scroll-proportion="-4.6153846" vertical-offset="0" max-vertical-offset="480">
+          <caret line="18" column="9" selection-start-line="13" selection-start-column="24" selection-end-line="18" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/beforeLogin.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1845">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="534" max-vertical-offset="1230">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/sharehub/enums/Visibility.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/bootstrap-theme.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="438">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="438">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/jquery-2.1.3.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="438">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/TopicController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8333333" vertical-offset="0" max-vertical-offset="1620">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.552" vertical-offset="882" max-vertical-offset="1260">
-          <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="568" max-vertical-offset="1050">
+          <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/mycss.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="451">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/sharehub/enums/ResourceType.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/Gorm2Controller.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15544042" vertical-offset="0" max-vertical-offset="386">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.19900498" vertical-offset="0" max-vertical-offset="603">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/sharehub/enums/Seriousness.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46632123" vertical-offset="0" max-vertical-offset="386">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="634" max-vertical-offset="1260">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/user/_form.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3866668" vertical-offset="286" max-vertical-offset="2040">
-          <caret line="31" column="68" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="1860">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///opt/grails/dist/grails-plugin-rest-2.4.4-sources.jar!/org/grails/plugins/web/rest/api/ControllersRestApi.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.9517426" vertical-offset="2642" max-vertical-offset="3015">
-          <caret line="89" column="38" selection-start-line="89" selection-start-column="38" selection-end-line="89" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/demo/myPage.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.06383" vertical-offset="0" max-vertical-offset="405">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="870">
+          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/topic/create.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/LoginController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45053002" vertical-offset="0" max-vertical-offset="645">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        <state vertical-scroll-proportion="-2.6086957" vertical-offset="0" max-vertical-offset="360">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/SubscriptionController.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/modal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1635">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4860">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/InvitesController.groovy">
+    <entry file="jar:///opt/grails/dist/grails-plugin-gsp-2.4.4-sources.jar!/org/codehaus/groovy/grails/plugins/web/taglib/FormTagLib.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1635">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5641026" vertical-offset="12660" max-vertical-offset="16950">
+          <caret line="901" column="13" selection-start-line="901" selection-start-column="13" selection-end-line="901" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_sendInvite.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.22596154" vertical-offset="289" max-vertical-offset="705">
+          <caret line="13" column="67" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/showTopic.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="465">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_topicInfo.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4044665" vertical-offset="107" max-vertical-offset="780">
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_userList.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="270">
+          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/Invites.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.869565" vertical-offset="0" max-vertical-offset="255">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/sharehub/enums/Visibility.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="626">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/sharehub/AssetsFilters.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/sharehub/DispatchFilters.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/sharehub/ShareHubFilters.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="570">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/TopicController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14851485" vertical-offset="180" max-vertical-offset="1980">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <element signature="e#18#54#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/ResourceStatusController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1635">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1620">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/sharehub/enums/InviteStatus.groovy">
+    <entry file="file://$PROJECT_DIR$/target/work/plugins/asset-pipeline-1.9.9/grails-app/services/asset/pipeline/AssetProcessorService.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.17564403" vertical-offset="0" max-vertical-offset="1455">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/bootstrap.min.css">
+    <entry file="jar:///opt/grails/dist/grails-web-common-2.4.4-sources.jar!/org/codehaus/groovy/grails/plugins/web/api/CommonWebApi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="980" max-vertical-offset="3180">
+          <caret line="119" column="23" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
+          <folding>
+            <element signature="e#4301#4302#0" expanded="false" />
+            <element signature="e#4363#4364#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/taglib/sharehub/SubscribedTopicsOfUserTagLib.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/sharehub/SubscriptionService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1428,1056 +1638,216 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///opt/grails/lib/org.codehaus.groovy/groovy-all/jars/groovy-all-2.3.7-sources.jar!/org/codehaus/groovy/runtime/DefaultGroovyMethods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="8481" max-vertical-offset="211545">
-          <caret line="663" column="6" selection-start-line="663" selection-start-column="5" selection-end-line="663" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#558402#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#7254#7255#0" expanded="false" />
-            <element signature="e#7290#7291#0" expanded="false" />
-            <element signature="e#7660#7661#0" expanded="false" />
-            <element signature="e#7723#7724#0" expanded="false" />
-            <element signature="e#9704#9705#0" expanded="false" />
-            <element signature="e#9768#9769#0" expanded="false" />
-            <element signature="e#11576#11790#0" expanded="false" />
-            <element signature="e#11789#11790#0" expanded="false" />
-            <element signature="e#13977#13992#0" expanded="false" />
-            <element signature="e#14646#14662#0" expanded="false" />
-            <element signature="e#16197#16198#0" expanded="false" />
-            <element signature="e#16255#16256#0" expanded="false" />
-            <element signature="e#17490#17491#0" expanded="false" />
-            <element signature="e#17547#17548#0" expanded="false" />
-            <element signature="e#19345#19352#0" expanded="false" />
-            <element signature="e#20743#20744#0" expanded="false" />
-            <element signature="e#20800#20801#0" expanded="false" />
-            <element signature="e#21045#21046#0" expanded="false" />
-            <element signature="e#21102#21103#0" expanded="false" />
-            <element signature="e#23423#23424#0" expanded="false" />
-            <element signature="e#23482#23483#0" expanded="false" />
-            <element signature="e#23750#23751#0" expanded="false" />
-            <element signature="e#23809#23810#0" expanded="false" />
-            <element signature="e#27032#27033#0" expanded="false" />
-            <element signature="e#27086#27087#0" expanded="false" />
-            <element signature="e#30717#30718#0" expanded="false" />
-            <element signature="e#30767#30768#0" expanded="false" />
-            <element signature="e#34472#34473#0" expanded="false" />
-            <element signature="e#34526#34527#0" expanded="false" />
-            <element signature="e#36184#36185#0" expanded="false" />
-            <element signature="e#36250#36251#0" expanded="false" />
-            <element signature="e#36648#36649#0" expanded="false" />
-            <element signature="e#36689#36690#0" expanded="false" />
-            <element signature="e#38555#38567#0" expanded="false" />
-            <element signature="e#68212#68213#0" expanded="false" />
-            <element signature="e#68263#68264#0" expanded="false" />
-            <element signature="e#68914#68915#0" expanded="false" />
-            <element signature="e#68965#68966#0" expanded="false" />
-            <element signature="e#69615#69616#0" expanded="false" />
-            <element signature="e#69666#69667#0" expanded="false" />
-            <element signature="e#71823#71824#0" expanded="false" />
-            <element signature="e#71875#71876#0" expanded="false" />
-            <element signature="e#72483#72484#0" expanded="false" />
-            <element signature="e#72535#72536#0" expanded="false" />
-            <element signature="e#72703#72704#0" expanded="false" />
-            <element signature="e#72757#72758#0" expanded="false" />
-            <element signature="e#75009#75010#0" expanded="false" />
-            <element signature="e#75075#75076#0" expanded="false" />
-            <element signature="e#76035#76036#0" expanded="false" />
-            <element signature="e#76102#76103#0" expanded="false" />
-            <element signature="e#76587#76588#0" expanded="false" />
-            <element signature="e#76654#76655#0" expanded="false" />
-            <element signature="e#77140#77141#0" expanded="false" />
-            <element signature="e#77207#77208#0" expanded="false" />
-            <element signature="e#77692#77693#0" expanded="false" />
-            <element signature="e#77759#77760#0" expanded="false" />
-            <element signature="e#78247#78248#0" expanded="false" />
-            <element signature="e#78314#78315#0" expanded="false" />
-            <element signature="e#78801#78802#0" expanded="false" />
-            <element signature="e#78868#78869#0" expanded="false" />
-            <element signature="e#79354#79355#0" expanded="false" />
-            <element signature="e#79421#79422#0" expanded="false" />
-            <element signature="e#79906#79907#0" expanded="false" />
-            <element signature="e#79973#79974#0" expanded="false" />
-            <element signature="e#81248#81249#0" expanded="false" />
-            <element signature="e#81294#81295#0" expanded="false" />
-            <element signature="e#82214#82215#0" expanded="false" />
-            <element signature="e#82271#82272#0" expanded="false" />
-            <element signature="e#85022#85031#0" expanded="false" />
-            <element signature="e#86964#86965#0" expanded="false" />
-            <element signature="e#87018#87019#0" expanded="false" />
-            <element signature="e#89043#89044#0" expanded="false" />
-            <element signature="e#89107#89108#0" expanded="false" />
-            <element signature="e#90351#90352#0" expanded="false" />
-            <element signature="e#90404#90405#0" expanded="false" />
-            <element signature="e#109658#109659#0" expanded="false" />
-            <element signature="e#109719#109720#0" expanded="false" />
-            <element signature="e#110473#110474#0" expanded="false" />
-            <element signature="e#110527#110528#0" expanded="false" />
-            <element signature="e#119399#119400#0" expanded="false" />
-            <element signature="e#119460#119461#0" expanded="false" />
-            <element signature="e#121411#121412#0" expanded="false" />
-            <element signature="e#121462#121463#0" expanded="false" />
-            <element signature="e#125104#125105#0" expanded="false" />
-            <element signature="e#125155#125156#0" expanded="false" />
-            <element signature="e#135388#135389#0" expanded="false" />
-            <element signature="e#135442#135443#0" expanded="false" />
-            <element signature="e#135972#135973#0" expanded="false" />
-            <element signature="e#136026#136027#0" expanded="false" />
-            <element signature="e#137030#137031#0" expanded="false" />
-            <element signature="e#137084#137085#0" expanded="false" />
-            <element signature="e#142989#142990#0" expanded="false" />
-            <element signature="e#143045#143046#0" expanded="false" />
-            <element signature="e#146103#146118#0" expanded="false" />
-            <element signature="e#146707#146708#0" expanded="false" />
-            <element signature="e#146758#146759#0" expanded="false" />
-            <element signature="e#147302#147303#0" expanded="false" />
-            <element signature="e#147361#147362#0" expanded="false" />
-            <element signature="e#149057#149058#0" expanded="false" />
-            <element signature="e#149116#149117#0" expanded="false" />
-            <element signature="e#149610#149619#0" expanded="false" />
-            <element signature="e#152220#152221#0" expanded="false" />
-            <element signature="e#152276#152277#0" expanded="false" />
-            <element signature="e#154800#154812#0" expanded="false" />
-            <element signature="e#156140#156141#0" expanded="false" />
-            <element signature="e#156196#156197#0" expanded="false" />
-            <element signature="e#158199#158212#0" expanded="false" />
-            <element signature="e#160420#160421#0" expanded="false" />
-            <element signature="e#160476#160477#0" expanded="false" />
-            <element signature="e#161971#161972#0" expanded="false" />
-            <element signature="e#162027#162028#0" expanded="false" />
-            <element signature="e#165762#165774#0" expanded="false" />
-            <element signature="e#167111#167137#0" expanded="false" />
-            <element signature="e#168733#168747#0" expanded="false" />
-            <element signature="e#170917#170930#0" expanded="false" />
-            <element signature="e#173518#173530#0" expanded="false" />
-            <element signature="e#185540#185541#0" expanded="false" />
-            <element signature="e#185582#185583#0" expanded="false" />
-            <element signature="e#185971#185972#0" expanded="false" />
-            <element signature="e#186015#186016#0" expanded="false" />
-            <element signature="e#186361#186362#0" expanded="false" />
-            <element signature="e#186413#186414#0" expanded="false" />
-            <element signature="e#186832#186833#0" expanded="false" />
-            <element signature="e#186884#186885#0" expanded="false" />
-            <element signature="e#187100#187101#0" expanded="false" />
-            <element signature="e#187153#187154#0" expanded="false" />
-            <element signature="e#187629#187630#0" expanded="false" />
-            <element signature="e#187682#187683#0" expanded="false" />
-            <element signature="e#188053#188054#0" expanded="false" />
-            <element signature="e#188114#188115#0" expanded="false" />
-            <element signature="e#189501#189502#0" expanded="false" />
-            <element signature="e#189552#189553#0" expanded="false" />
-            <element signature="e#190151#190152#0" expanded="false" />
-            <element signature="e#190204#190205#0" expanded="false" />
-            <element signature="e#190708#190709#0" expanded="false" />
-            <element signature="e#190769#190770#0" expanded="false" />
-            <element signature="e#191388#191389#0" expanded="false" />
-            <element signature="e#191449#191450#0" expanded="false" />
-            <element signature="e#195322#195323#0" expanded="false" />
-            <element signature="e#195374#195375#0" expanded="false" />
-            <element signature="e#195588#195589#0" expanded="false" />
-            <element signature="e#195642#195643#0" expanded="false" />
-            <element signature="e#197533#197534#0" expanded="false" />
-            <element signature="e#197583#197584#0" expanded="false" />
-            <element signature="e#197921#197922#0" expanded="false" />
-            <element signature="e#197971#197972#0" expanded="false" />
-            <element signature="e#198303#198304#0" expanded="false" />
-            <element signature="e#198343#198344#0" expanded="false" />
-            <element signature="e#198577#198578#0" expanded="false" />
-            <element signature="e#198617#198618#0" expanded="false" />
-            <element signature="e#199933#199934#0" expanded="false" />
-            <element signature="e#199985#199986#0" expanded="false" />
-            <element signature="e#200357#200358#0" expanded="false" />
-            <element signature="e#200409#200410#0" expanded="false" />
-            <element signature="e#200622#200623#0" expanded="false" />
-            <element signature="e#200676#200677#0" expanded="false" />
-            <element signature="e#208769#208770#0" expanded="false" />
-            <element signature="e#208832#208833#0" expanded="false" />
-            <element signature="e#209187#209188#0" expanded="false" />
-            <element signature="e#209237#209238#0" expanded="false" />
-            <element signature="e#209598#209599#0" expanded="false" />
-            <element signature="e#209651#209652#0" expanded="false" />
-            <element signature="e#209885#209886#0" expanded="false" />
-            <element signature="e#209938#209939#0" expanded="false" />
-            <element signature="e#210151#210152#0" expanded="false" />
-            <element signature="e#210206#210207#0" expanded="false" />
-            <element signature="e#214566#214567#0" expanded="false" />
-            <element signature="e#214623#214624#0" expanded="false" />
-            <element signature="e#215990#215991#0" expanded="false" />
-            <element signature="e#216055#216056#0" expanded="false" />
-            <element signature="e#216780#216781#0" expanded="false" />
-            <element signature="e#216814#216815#0" expanded="false" />
-            <element signature="e#220936#220937#0" expanded="false" />
-            <element signature="e#220985#220986#0" expanded="false" />
-            <element signature="e#223320#223326#0" expanded="false" />
-            <element signature="e#224145#224151#0" expanded="false" />
-            <element signature="e#226211#226212#0" expanded="false" />
-            <element signature="e#226252#226253#0" expanded="false" />
-            <element signature="e#226702#226703#0" expanded="false" />
-            <element signature="e#226765#226766#0" expanded="false" />
-            <element signature="e#226988#226989#0" expanded="false" />
-            <element signature="e#227049#227050#0" expanded="false" />
-            <element signature="e#230072#230073#0" expanded="false" />
-            <element signature="e#230122#230123#0" expanded="false" />
-            <element signature="e#232226#232227#0" expanded="false" />
-            <element signature="e#232275#232276#0" expanded="false" />
-            <element signature="e#238054#238055#0" expanded="false" />
-            <element signature="e#238090#238091#0" expanded="false" />
-            <element signature="e#240075#240083#0" expanded="false" />
-            <element signature="e#241940#241941#0" expanded="false" />
-            <element signature="e#241997#241998#0" expanded="false" />
-            <element signature="e#242287#242288#0" expanded="false" />
-            <element signature="e#242343#242344#0" expanded="false" />
-            <element signature="e#242665#242666#0" expanded="false" />
-            <element signature="e#242727#242728#0" expanded="false" />
-            <element signature="e#243688#243689#0" expanded="false" />
-            <element signature="e#243744#243745#0" expanded="false" />
-            <element signature="e#244831#244832#0" expanded="false" />
-            <element signature="e#244888#244889#0" expanded="false" />
-            <element signature="e#245174#245175#0" expanded="false" />
-            <element signature="e#245230#245231#0" expanded="false" />
-            <element signature="e#245558#245559#0" expanded="false" />
-            <element signature="e#245620#245621#0" expanded="false" />
-            <element signature="e#245824#245825#0" expanded="false" />
-            <element signature="e#245864#245865#0" expanded="false" />
-            <element signature="e#250080#250081#0" expanded="false" />
-            <element signature="e#250130#250131#0" expanded="false" />
-            <element signature="e#254365#254366#0" expanded="false" />
-            <element signature="e#254417#254418#0" expanded="false" />
-            <element signature="e#255092#255093#0" expanded="false" />
-            <element signature="e#255131#255132#0" expanded="false" />
-            <element signature="e#255354#255355#0" expanded="false" />
-            <element signature="e#255408#255409#0" expanded="false" />
-            <element signature="e#257236#257242#0" expanded="false" />
-            <element signature="e#258098#258104#0" expanded="false" />
-            <element signature="e#258649#258650#0" expanded="false" />
-            <element signature="e#258695#258696#0" expanded="false" />
-            <element signature="e#260559#260560#0" expanded="false" />
-            <element signature="e#260615#260616#0" expanded="false" />
-            <element signature="e#263408#263409#0" expanded="false" />
-            <element signature="e#263459#263460#0" expanded="false" />
-            <element signature="e#274213#274214#0" expanded="false" />
-            <element signature="e#274240#274241#0" expanded="false" />
-            <element signature="e#274545#274546#0" expanded="false" />
-            <element signature="e#274572#274573#0" expanded="false" />
-            <element signature="e#277215#277216#0" expanded="false" />
-            <element signature="e#277253#277254#0" expanded="false" />
-            <element signature="e#282189#282190#0" expanded="false" />
-            <element signature="e#282223#282224#0" expanded="false" />
-            <element signature="e#282652#282653#0" expanded="false" />
-            <element signature="e#282686#282687#0" expanded="false" />
-            <element signature="e#287499#287500#0" expanded="false" />
-            <element signature="e#287556#287557#0" expanded="false" />
-            <element signature="e#289745#289746#0" expanded="false" />
-            <element signature="e#289795#289796#0" expanded="false" />
-            <element signature="e#290114#290115#0" expanded="false" />
-            <element signature="e#290174#290175#0" expanded="false" />
-            <element signature="e#290360#290361#0" expanded="false" />
-            <element signature="e#290401#290402#0" expanded="false" />
-            <element signature="e#290490#290491#0" expanded="false" />
-            <element signature="e#290548#290549#0" expanded="false" />
-            <element signature="e#292636#292637#0" expanded="false" />
-            <element signature="e#292693#292694#0" expanded="false" />
-            <element signature="e#302818#302819#0" expanded="false" />
-            <element signature="e#302859#302860#0" expanded="false" />
-            <element signature="e#310662#310663#0" expanded="false" />
-            <element signature="e#310724#310725#0" expanded="false" />
-            <element signature="e#311788#311789#0" expanded="false" />
-            <element signature="e#311836#311837#0" expanded="false" />
-            <element signature="e#312750#312751#0" expanded="false" />
-            <element signature="e#312787#312788#0" expanded="false" />
-            <element signature="e#313001#313002#0" expanded="false" />
-            <element signature="e#313028#313029#0" expanded="false" />
-            <element signature="e#313486#313487#0" expanded="false" />
-            <element signature="e#313530#313531#0" expanded="false" />
-            <element signature="e#313911#313912#0" expanded="false" />
-            <element signature="e#313948#313949#0" expanded="false" />
-            <element signature="e#314289#314290#0" expanded="false" />
-            <element signature="e#314330#314331#0" expanded="false" />
-            <element signature="e#314686#314687#0" expanded="false" />
-            <element signature="e#314738#314739#0" expanded="false" />
-            <element signature="e#315039#315040#0" expanded="false" />
-            <element signature="e#315078#315079#0" expanded="false" />
-            <element signature="e#315377#315378#0" expanded="false" />
-            <element signature="e#315416#315417#0" expanded="false" />
-            <element signature="e#315718#315719#0" expanded="false" />
-            <element signature="e#315757#315758#0" expanded="false" />
-            <element signature="e#316055#316056#0" expanded="false" />
-            <element signature="e#316094#316095#0" expanded="false" />
-            <element signature="e#316393#316394#0" expanded="false" />
-            <element signature="e#316432#316433#0" expanded="false" />
-            <element signature="e#316734#316735#0" expanded="false" />
-            <element signature="e#316773#316774#0" expanded="false" />
-            <element signature="e#317078#317079#0" expanded="false" />
-            <element signature="e#317117#317118#0" expanded="false" />
-            <element signature="e#317425#317426#0" expanded="false" />
-            <element signature="e#317464#317465#0" expanded="false" />
-            <element signature="e#317763#317764#0" expanded="false" />
-            <element signature="e#317802#317803#0" expanded="false" />
-            <element signature="e#318131#318132#0" expanded="false" />
-            <element signature="e#318168#318169#0" expanded="false" />
-            <element signature="e#318497#318498#0" expanded="false" />
-            <element signature="e#318545#318546#0" expanded="false" />
-            <element signature="e#322736#322743#0" expanded="false" />
-            <element signature="e#325134#325135#0" expanded="false" />
-            <element signature="e#325177#325178#0" expanded="false" />
-            <element signature="e#326621#326622#0" expanded="false" />
-            <element signature="e#326664#326665#0" expanded="false" />
-            <element signature="e#327888#327889#0" expanded="false" />
-            <element signature="e#327951#327952#0" expanded="false" />
-            <element signature="e#328433#328434#0" expanded="false" />
-            <element signature="e#328505#328506#0" expanded="false" />
-            <element signature="e#329042#329043#0" expanded="false" />
-            <element signature="e#329106#329107#0" expanded="false" />
-            <element signature="e#329664#329665#0" expanded="false" />
-            <element signature="e#329728#329729#0" expanded="false" />
-            <element signature="e#331884#331885#0" expanded="false" />
-            <element signature="e#331932#331933#0" expanded="false" />
-            <element signature="e#341350#341351#0" expanded="false" />
-            <element signature="e#341399#341400#0" expanded="false" />
-            <element signature="e#341940#341941#0" expanded="false" />
-            <element signature="e#341989#341990#0" expanded="false" />
-            <element signature="e#348821#348822#0" expanded="false" />
-            <element signature="e#348873#348874#0" expanded="false" />
-            <element signature="e#349998#349999#0" expanded="false" />
-            <element signature="e#350066#350067#0" expanded="false" />
-            <element signature="e#354086#354087#0" expanded="false" />
-            <element signature="e#354138#354139#0" expanded="false" />
-            <element signature="e#355200#355201#0" expanded="false" />
-            <element signature="e#355268#355269#0" expanded="false" />
-            <element signature="e#356519#356520#0" expanded="false" />
-            <element signature="e#356586#356587#0" expanded="false" />
-            <element signature="e#357407#357408#0" expanded="false" />
-            <element signature="e#357468#357469#0" expanded="false" />
-            <element signature="e#357795#357796#0" expanded="false" />
-            <element signature="e#357856#357857#0" expanded="false" />
-            <element signature="e#358177#358178#0" expanded="false" />
-            <element signature="e#358238#358239#0" expanded="false" />
-            <element signature="e#358559#358560#0" expanded="false" />
-            <element signature="e#358620#358621#0" expanded="false" />
-            <element signature="e#358943#358944#0" expanded="false" />
-            <element signature="e#359004#359005#0" expanded="false" />
-            <element signature="e#359324#359325#0" expanded="false" />
-            <element signature="e#359385#359386#0" expanded="false" />
-            <element signature="e#359706#359707#0" expanded="false" />
-            <element signature="e#359767#359768#0" expanded="false" />
-            <element signature="e#360090#360091#0" expanded="false" />
-            <element signature="e#360151#360152#0" expanded="false" />
-            <element signature="e#360476#360477#0" expanded="false" />
-            <element signature="e#360537#360538#0" expanded="false" />
-            <element signature="e#366821#366822#0" expanded="false" />
-            <element signature="e#366879#366880#0" expanded="false" />
-            <element signature="e#367281#367282#0" expanded="false" />
-            <element signature="e#367340#367341#0" expanded="false" />
-            <element signature="e#368318#368319#0" expanded="false" />
-            <element signature="e#368372#368373#0" expanded="false" />
-            <element signature="e#368741#368742#0" expanded="false" />
-            <element signature="e#368795#368796#0" expanded="false" />
-            <element signature="e#369162#369163#0" expanded="false" />
-            <element signature="e#369216#369217#0" expanded="false" />
-            <element signature="e#369590#369591#0" expanded="false" />
-            <element signature="e#369644#369645#0" expanded="false" />
-            <element signature="e#370006#370007#0" expanded="false" />
-            <element signature="e#370060#370061#0" expanded="false" />
-            <element signature="e#370427#370428#0" expanded="false" />
-            <element signature="e#370481#370482#0" expanded="false" />
-            <element signature="e#370853#370854#0" expanded="false" />
-            <element signature="e#370907#370908#0" expanded="false" />
-            <element signature="e#371284#371285#0" expanded="false" />
-            <element signature="e#371338#371339#0" expanded="false" />
-            <element signature="e#376536#376537#0" expanded="false" />
-            <element signature="e#376590#376591#0" expanded="false" />
-            <element signature="e#376977#376978#0" expanded="false" />
-            <element signature="e#377031#377032#0" expanded="false" />
-            <element signature="e#377418#377419#0" expanded="false" />
-            <element signature="e#377472#377473#0" expanded="false" />
-            <element signature="e#377855#377856#0" expanded="false" />
-            <element signature="e#377909#377910#0" expanded="false" />
-            <element signature="e#378291#378292#0" expanded="false" />
-            <element signature="e#378345#378346#0" expanded="false" />
-            <element signature="e#378732#378733#0" expanded="false" />
-            <element signature="e#378786#378787#0" expanded="false" />
-            <element signature="e#379178#379179#0" expanded="false" />
-            <element signature="e#379232#379233#0" expanded="false" />
-            <element signature="e#379620#379621#0" expanded="false" />
-            <element signature="e#379674#379675#0" expanded="false" />
-            <element signature="e#380054#380055#0" expanded="false" />
-            <element signature="e#380110#380111#0" expanded="false" />
-            <element signature="e#380495#380496#0" expanded="false" />
-            <element signature="e#380551#380552#0" expanded="false" />
-            <element signature="e#380936#380937#0" expanded="false" />
-            <element signature="e#380992#380993#0" expanded="false" />
-            <element signature="e#381373#381374#0" expanded="false" />
-            <element signature="e#381429#381430#0" expanded="false" />
-            <element signature="e#381809#381810#0" expanded="false" />
-            <element signature="e#381865#381866#0" expanded="false" />
-            <element signature="e#382250#382251#0" expanded="false" />
-            <element signature="e#382306#382307#0" expanded="false" />
-            <element signature="e#382696#382697#0" expanded="false" />
-            <element signature="e#382752#382753#0" expanded="false" />
-            <element signature="e#383147#383148#0" expanded="false" />
-            <element signature="e#383203#383204#0" expanded="false" />
-            <element signature="e#387713#387714#0" expanded="false" />
-            <element signature="e#387751#387752#0" expanded="false" />
-            <element signature="e#388028#388029#0" expanded="false" />
-            <element signature="e#388073#388074#0" expanded="false" />
-            <element signature="e#388342#388343#0" expanded="false" />
-            <element signature="e#388387#388388#0" expanded="false" />
-            <element signature="e#388656#388657#0" expanded="false" />
-            <element signature="e#388701#388702#0" expanded="false" />
-            <element signature="e#388972#388973#0" expanded="false" />
-            <element signature="e#389017#389018#0" expanded="false" />
-            <element signature="e#389285#389286#0" expanded="false" />
-            <element signature="e#389330#389331#0" expanded="false" />
-            <element signature="e#389599#389600#0" expanded="false" />
-            <element signature="e#389644#389645#0" expanded="false" />
-            <element signature="e#389915#389916#0" expanded="false" />
-            <element signature="e#389960#389961#0" expanded="false" />
-            <element signature="e#390233#390234#0" expanded="false" />
-            <element signature="e#390278#390279#0" expanded="false" />
-            <element signature="e#390600#390601#0" expanded="false" />
-            <element signature="e#390676#390677#0" expanded="false" />
-            <element signature="e#391412#391413#0" expanded="false" />
-            <element signature="e#391488#391489#0" expanded="false" />
-            <element signature="e#391813#391814#0" expanded="false" />
-            <element signature="e#391889#391890#0" expanded="false" />
-            <element signature="e#392213#392214#0" expanded="false" />
-            <element signature="e#392289#392290#0" expanded="false" />
-            <element signature="e#392611#392612#0" expanded="false" />
-            <element signature="e#392687#392688#0" expanded="false" />
-            <element signature="e#393012#393013#0" expanded="false" />
-            <element signature="e#393088#393089#0" expanded="false" />
-            <element signature="e#393416#393417#0" expanded="false" />
-            <element signature="e#393492#393493#0" expanded="false" />
-            <element signature="e#393808#393809#0" expanded="false" />
-            <element signature="e#393891#393892#0" expanded="false" />
-            <element signature="e#395822#395823#0" expanded="false" />
-            <element signature="e#395905#395906#0" expanded="false" />
-            <element signature="e#400814#400815#0" expanded="false" />
-            <element signature="e#400841#400842#0" expanded="false" />
-            <element signature="e#405306#405307#0" expanded="false" />
-            <element signature="e#405357#405358#0" expanded="false" />
-            <element signature="e#405580#405581#0" expanded="false" />
-            <element signature="e#405631#405632#0" expanded="false" />
-            <element signature="e#405854#405855#0" expanded="false" />
-            <element signature="e#405905#405906#0" expanded="false" />
-            <element signature="e#406129#406130#0" expanded="false" />
-            <element signature="e#406180#406181#0" expanded="false" />
-            <element signature="e#406402#406403#0" expanded="false" />
-            <element signature="e#406453#406454#0" expanded="false" />
-            <element signature="e#406676#406677#0" expanded="false" />
-            <element signature="e#406727#406728#0" expanded="false" />
-            <element signature="e#406951#406952#0" expanded="false" />
-            <element signature="e#407002#407003#0" expanded="false" />
-            <element signature="e#407227#407228#0" expanded="false" />
-            <element signature="e#407278#407279#0" expanded="false" />
-            <element signature="e#407539#407540#0" expanded="false" />
-            <element signature="e#407579#407580#0" expanded="false" />
-            <element signature="e#407886#407887#0" expanded="false" />
-            <element signature="e#407930#407931#0" expanded="false" />
-            <element signature="e#408810#408811#0" expanded="false" />
-            <element signature="e#408851#408852#0" expanded="false" />
-            <element signature="e#409200#409201#0" expanded="false" />
-            <element signature="e#409245#409246#0" expanded="false" />
-            <element signature="e#410063#410064#0" expanded="false" />
-            <element signature="e#410105#410106#0" expanded="false" />
-            <element signature="e#410734#410735#0" expanded="false" />
-            <element signature="e#410786#410787#0" expanded="false" />
-            <element signature="e#411098#411099#0" expanded="false" />
-            <element signature="e#411138#411139#0" expanded="false" />
-            <element signature="e#411324#411325#0" expanded="false" />
-            <element signature="e#411379#411380#0" expanded="false" />
-            <element signature="e#411585#411586#0" expanded="false" />
-            <element signature="e#411625#411626#0" expanded="false" />
-            <element signature="e#411814#411815#0" expanded="false" />
-            <element signature="e#411871#411872#0" expanded="false" />
-            <element signature="e#413726#413727#0" expanded="false" />
-            <element signature="e#413783#413784#0" expanded="false" />
-            <element signature="e#414203#414204#0" expanded="false" />
-            <element signature="e#414265#414266#0" expanded="false" />
-            <element signature="e#414685#414686#0" expanded="false" />
-            <element signature="e#414747#414748#0" expanded="false" />
-            <element signature="e#415152#415153#0" expanded="false" />
-            <element signature="e#415214#415215#0" expanded="false" />
-            <element signature="e#417180#417181#0" expanded="false" />
-            <element signature="e#417238#417239#0" expanded="false" />
-            <element signature="e#418763#418764#0" expanded="false" />
-            <element signature="e#418824#418825#0" expanded="false" />
-            <element signature="e#419446#419447#0" expanded="false" />
-            <element signature="e#419501#419502#0" expanded="false" />
-            <element signature="e#420197#420198#0" expanded="false" />
-            <element signature="e#420252#420253#0" expanded="false" />
-            <element signature="e#424180#424181#0" expanded="false" />
-            <element signature="e#424252#424253#0" expanded="false" />
-            <element signature="e#424694#424695#0" expanded="false" />
-            <element signature="e#424766#424767#0" expanded="false" />
-            <element signature="e#425224#425225#0" expanded="false" />
-            <element signature="e#425280#425281#0" expanded="false" />
-            <element signature="e#425743#425744#0" expanded="false" />
-            <element signature="e#425802#425803#0" expanded="false" />
-            <element signature="e#426265#426266#0" expanded="false" />
-            <element signature="e#426324#426325#0" expanded="false" />
-            <element signature="e#426793#426794#0" expanded="false" />
-            <element signature="e#426852#426853#0" expanded="false" />
-            <element signature="e#427137#427138#0" expanded="false" />
-            <element signature="e#427190#427191#0" expanded="false" />
-            <element signature="e#427453#427454#0" expanded="false" />
-            <element signature="e#427502#427503#0" expanded="false" />
-            <element signature="e#427769#427770#0" expanded="false" />
-            <element signature="e#427819#427820#0" expanded="false" />
-            <element signature="e#429161#429162#0" expanded="false" />
-            <element signature="e#429214#429215#0" expanded="false" />
-            <element signature="e#429954#429955#0" expanded="false" />
-            <element signature="e#430004#430005#0" expanded="false" />
-            <element signature="e#430284#430285#0" expanded="false" />
-            <element signature="e#430334#430335#0" expanded="false" />
-            <element signature="e#430622#430623#0" expanded="false" />
-            <element signature="e#430672#430673#0" expanded="false" />
-            <element signature="e#431001#431002#0" expanded="false" />
-            <element signature="e#431050#431051#0" expanded="false" />
-            <element signature="e#454231#454232#0" expanded="false" />
-            <element signature="e#454281#454282#0" expanded="false" />
-            <element signature="e#454470#454471#0" expanded="false" />
-            <element signature="e#454521#454522#0" expanded="false" />
-            <element signature="e#454714#454715#0" expanded="false" />
-            <element signature="e#454766#454767#0" expanded="false" />
-            <element signature="e#454963#454964#0" expanded="false" />
-            <element signature="e#455002#455003#0" expanded="false" />
-            <element signature="e#455187#455188#0" expanded="false" />
-            <element signature="e#455241#455242#0" expanded="false" />
-            <element signature="e#456311#456312#0" expanded="false" />
-            <element signature="e#456373#456374#0" expanded="false" />
-            <element signature="e#456562#456563#0" expanded="false" />
-            <element signature="e#456603#456604#0" expanded="false" />
-            <element signature="e#457236#457237#0" expanded="false" />
-            <element signature="e#457277#457278#0" expanded="false" />
-            <element signature="e#458007#458008#0" expanded="false" />
-            <element signature="e#458057#458058#0" expanded="false" />
-            <element signature="e#458384#458385#0" expanded="false" />
-            <element signature="e#458434#458435#0" expanded="false" />
-            <element signature="e#458751#458752#0" expanded="false" />
-            <element signature="e#458798#458799#0" expanded="false" />
-            <element signature="e#459110#459111#0" expanded="false" />
-            <element signature="e#459156#459157#0" expanded="false" />
-            <element signature="e#459512#459513#0" expanded="false" />
-            <element signature="e#459566#459567#0" expanded="false" />
-            <element signature="e#459923#459924#0" expanded="false" />
-            <element signature="e#459974#459975#0" expanded="false" />
-            <element signature="e#460424#460425#0" expanded="false" />
-            <element signature="e#460474#460475#0" expanded="false" />
-            <element signature="e#460924#460925#0" expanded="false" />
-            <element signature="e#460974#460975#0" expanded="false" />
-            <element signature="e#461163#461164#0" expanded="false" />
-            <element signature="e#461201#461202#0" expanded="false" />
-            <element signature="e#461377#461378#0" expanded="false" />
-            <element signature="e#461416#461417#0" expanded="false" />
-            <element signature="e#461596#461597#0" expanded="false" />
-            <element signature="e#461636#461637#0" expanded="false" />
-            <element signature="e#465230#465231#0" expanded="false" />
-            <element signature="e#465266#465267#0" expanded="false" />
-            <element signature="e#465533#465534#0" expanded="false" />
-            <element signature="e#465569#465570#0" expanded="false" />
-            <element signature="e#465843#465844#0" expanded="false" />
-            <element signature="e#465880#465881#0" expanded="false" />
-            <element signature="e#466152#466153#0" expanded="false" />
-            <element signature="e#466187#466188#0" expanded="false" />
-            <element signature="e#466803#466908#0" expanded="false" />
-            <element signature="e#466907#466908#0" expanded="false" />
-            <element signature="e#468254#468255#0" expanded="false" />
-            <element signature="e#468306#468307#0" expanded="false" />
-            <element signature="e#469913#469914#0" expanded="false" />
-            <element signature="e#469969#469970#0" expanded="false" />
-            <element signature="e#472301#472309#0" expanded="false" />
-            <element signature="e#475017#475024#0" expanded="false" />
-            <element signature="e#479119#479120#0" expanded="false" />
-            <element signature="e#479188#479189#0" expanded="false" />
-            <element signature="e#488477#488478#0" expanded="false" />
-            <element signature="e#488552#488553#0" expanded="false" />
-            <element signature="e#488933#488934#0" expanded="false" />
-            <element signature="e#489008#489009#0" expanded="false" />
-            <element signature="e#489568#489569#0" expanded="false" />
-            <element signature="e#489636#489637#0" expanded="false" />
-            <element signature="e#489796#489797#0" expanded="false" />
-            <element signature="e#489906#489907#0" expanded="false" />
-            <element signature="e#490273#490274#0" expanded="false" />
-            <element signature="e#490300#490301#0" expanded="false" />
-            <element signature="e#493065#493066#0" expanded="false" />
-            <element signature="e#493125#493126#0" expanded="false" />
-            <element signature="e#493197#493198#0" expanded="false" />
-            <element signature="e#493258#493259#0" expanded="false" />
-            <element signature="e#493339#493340#0" expanded="false" />
-            <element signature="e#493397#493398#0" expanded="false" />
-            <element signature="e#493508#493509#0" expanded="false" />
-            <element signature="e#493566#493567#0" expanded="false" />
-            <element signature="e#493676#493677#0" expanded="false" />
-            <element signature="e#493734#493735#0" expanded="false" />
-            <element signature="e#493812#493813#0" expanded="false" />
-            <element signature="e#493874#493875#0" expanded="false" />
-            <element signature="e#493946#493947#0" expanded="false" />
-            <element signature="e#494008#494009#0" expanded="false" />
-            <element signature="e#494088#494089#0" expanded="false" />
-            <element signature="e#494147#494148#0" expanded="false" />
-            <element signature="e#494215#494216#0" expanded="false" />
-            <element signature="e#494274#494275#0" expanded="false" />
-            <element signature="e#495213#495214#0" expanded="false" />
-            <element signature="e#495276#495277#0" expanded="false" />
-            <element signature="e#495361#495362#0" expanded="false" />
-            <element signature="e#495421#495422#0" expanded="false" />
-            <element signature="e#495494#495495#0" expanded="false" />
-            <element signature="e#495554#495555#0" expanded="false" />
-            <element signature="e#495987#495988#0" expanded="false" />
-            <element signature="e#496047#496048#0" expanded="false" />
-            <element signature="e#496122#496123#0" expanded="false" />
-            <element signature="e#496182#496183#0" expanded="false" />
-            <element signature="e#496269#496270#0" expanded="false" />
-            <element signature="e#496327#496328#0" expanded="false" />
-            <element signature="e#497863#497864#0" expanded="false" />
-            <element signature="e#497918#497919#0" expanded="false" />
-            <element signature="e#498135#498136#0" expanded="false" />
-            <element signature="e#498190#498191#0" expanded="false" />
-            <element signature="e#498267#498268#0" expanded="false" />
-            <element signature="e#498331#498332#0" expanded="false" />
-            <element signature="e#498573#498574#0" expanded="false" />
-            <element signature="e#498641#498642#0" expanded="false" />
-            <element signature="e#499386#499387#0" expanded="false" />
-            <element signature="e#499448#499449#0" expanded="false" />
-            <element signature="e#499691#499692#0" expanded="false" />
-            <element signature="e#499751#499752#0" expanded="false" />
-            <element signature="e#501038#501039#0" expanded="false" />
-            <element signature="e#501101#501102#0" expanded="false" />
-            <element signature="e#501675#501676#0" expanded="false" />
-            <element signature="e#501736#501737#0" expanded="false" />
-            <element signature="e#501976#501977#0" expanded="false" />
-            <element signature="e#502037#502038#0" expanded="false" />
-            <element signature="e#502119#502120#0" expanded="false" />
-            <element signature="e#502182#502183#0" expanded="false" />
-            <element signature="e#502258#502259#0" expanded="false" />
-            <element signature="e#502320#502321#0" expanded="false" />
-            <element signature="e#502403#502404#0" expanded="false" />
-            <element signature="e#502466#502467#0" expanded="false" />
-            <element signature="e#502547#502548#0" expanded="false" />
-            <element signature="e#502608#502609#0" expanded="false" />
-            <element signature="e#502682#502683#0" expanded="false" />
-            <element signature="e#502743#502744#0" expanded="false" />
-            <element signature="e#502822#502823#0" expanded="false" />
-            <element signature="e#502883#502884#0" expanded="false" />
-            <element signature="e#502959#502960#0" expanded="false" />
-            <element signature="e#503020#503021#0" expanded="false" />
-            <element signature="e#503092#503093#0" expanded="false" />
-            <element signature="e#503149#503150#0" expanded="false" />
-            <element signature="e#503215#503216#0" expanded="false" />
-            <element signature="e#503272#503273#0" expanded="false" />
-            <element signature="e#503339#503340#0" expanded="false" />
-            <element signature="e#503399#503400#0" expanded="false" />
-            <element signature="e#503470#503471#0" expanded="false" />
-            <element signature="e#503530#503531#0" expanded="false" />
-            <element signature="e#503610#503611#0" expanded="false" />
-            <element signature="e#503674#503675#0" expanded="false" />
-            <element signature="e#503748#503749#0" expanded="false" />
-            <element signature="e#503812#503813#0" expanded="false" />
-            <element signature="e#503889#503890#0" expanded="false" />
-            <element signature="e#503950#503951#0" expanded="false" />
-            <element signature="e#504021#504022#0" expanded="false" />
-            <element signature="e#504082#504083#0" expanded="false" />
-            <element signature="e#504159#504160#0" expanded="false" />
-            <element signature="e#504220#504221#0" expanded="false" />
-            <element signature="e#504291#504292#0" expanded="false" />
-            <element signature="e#504352#504353#0" expanded="false" />
-            <element signature="e#505085#505086#0" expanded="false" />
-            <element signature="e#505142#505143#0" expanded="false" />
-            <element signature="e#505209#505210#0" expanded="false" />
-            <element signature="e#505266#505267#0" expanded="false" />
-            <element signature="e#505338#505339#0" expanded="false" />
-            <element signature="e#505394#505395#0" expanded="false" />
-            <element signature="e#505460#505461#0" expanded="false" />
-            <element signature="e#505516#505517#0" expanded="false" />
-            <element signature="e#505590#505591#0" expanded="false" />
-            <element signature="e#505648#505649#0" expanded="false" />
-            <element signature="e#505716#505717#0" expanded="false" />
-            <element signature="e#505774#505775#0" expanded="false" />
-            <element signature="e#505845#505846#0" expanded="false" />
-            <element signature="e#505900#505901#0" expanded="false" />
-            <element signature="e#505965#505966#0" expanded="false" />
-            <element signature="e#506020#506021#0" expanded="false" />
-            <element signature="e#506093#506094#0" expanded="false" />
-            <element signature="e#506150#506151#0" expanded="false" />
-            <element signature="e#506217#506218#0" expanded="false" />
-            <element signature="e#506274#506275#0" expanded="false" />
-            <element signature="e#506352#506353#0" expanded="false" />
-            <element signature="e#506412#506413#0" expanded="false" />
-            <element signature="e#507278#507279#0" expanded="false" />
-            <element signature="e#507343#507344#0" expanded="false" />
-            <element signature="e#507573#507574#0" expanded="false" />
-            <element signature="e#507635#507636#0" expanded="false" />
-            <element signature="e#507874#507875#0" expanded="false" />
-            <element signature="e#507939#507940#0" expanded="false" />
-            <element signature="e#508013#508014#0" expanded="false" />
-            <element signature="e#508066#508067#0" expanded="false" />
-            <element signature="e#508128#508129#0" expanded="false" />
-            <element signature="e#508181#508182#0" expanded="false" />
-            <element signature="e#508266#508267#0" expanded="false" />
-            <element signature="e#508324#508325#0" expanded="false" />
-            <element signature="e#508397#508398#0" expanded="false" />
-            <element signature="e#508455#508456#0" expanded="false" />
-            <element signature="e#509975#509976#0" expanded="false" />
-            <element signature="e#510035#510036#0" expanded="false" />
-            <element signature="e#510112#510113#0" expanded="false" />
-            <element signature="e#510173#510174#0" expanded="false" />
-            <element signature="e#510249#510250#0" expanded="false" />
-            <element signature="e#510309#510310#0" expanded="false" />
-            <element signature="e#510391#510392#0" expanded="false" />
-            <element signature="e#510451#510452#0" expanded="false" />
-            <element signature="e#510529#510530#0" expanded="false" />
-            <element signature="e#510586#510587#0" expanded="false" />
-            <element signature="e#510652#510653#0" expanded="false" />
-            <element signature="e#510709#510710#0" expanded="false" />
-            <element signature="e#514262#514263#0" expanded="false" />
-            <element signature="e#514318#514319#0" expanded="false" />
-            <element signature="e#514383#514384#0" expanded="false" />
-            <element signature="e#514439#514440#0" expanded="false" />
-            <element signature="e#514516#514517#0" expanded="false" />
-            <element signature="e#514574#514575#0" expanded="false" />
-            <element signature="e#514639#514640#0" expanded="false" />
-            <element signature="e#514692#514693#0" expanded="false" />
-            <element signature="e#514753#514754#0" expanded="false" />
-            <element signature="e#514806#514807#0" expanded="false" />
-            <element signature="e#514865#514866#0" expanded="false" />
-            <element signature="e#514918#514919#0" expanded="false" />
-            <element signature="e#514985#514986#0" expanded="false" />
-            <element signature="e#515040#515041#0" expanded="false" />
-            <element signature="e#515117#515118#0" expanded="false" />
-            <element signature="e#515171#515172#0" expanded="false" />
-            <element signature="e#515237#515238#0" expanded="false" />
-            <element signature="e#515291#515292#0" expanded="false" />
-            <element signature="e#515356#515357#0" expanded="false" />
-            <element signature="e#515410#515411#0" expanded="false" />
-            <element signature="e#516323#516324#0" expanded="false" />
-            <element signature="e#516383#516384#0" expanded="false" />
-            <element signature="e#516617#516618#0" expanded="false" />
-            <element signature="e#516677#516678#0" expanded="false" />
-            <element signature="e#516911#516912#0" expanded="false" />
-            <element signature="e#516971#516972#0" expanded="false" />
-            <element signature="e#517382#517383#0" expanded="false" />
-            <element signature="e#517442#517443#0" expanded="false" />
-            <element signature="e#517840#517841#0" expanded="false" />
-            <element signature="e#517901#517902#0" expanded="false" />
-            <element signature="e#517975#517976#0" expanded="false" />
-            <element signature="e#518036#518037#0" expanded="false" />
-            <element signature="e#518116#518117#0" expanded="false" />
-            <element signature="e#518177#518178#0" expanded="false" />
-            <element signature="e#518251#518252#0" expanded="false" />
-            <element signature="e#518312#518313#0" expanded="false" />
-            <element signature="e#518380#518381#0" expanded="false" />
-            <element signature="e#518438#518439#0" expanded="false" />
-            <element signature="e#518510#518511#0" expanded="false" />
-            <element signature="e#518570#518571#0" expanded="false" />
-            <element signature="e#518642#518643#0" expanded="false" />
-            <element signature="e#518699#518700#0" expanded="false" />
-            <element signature="e#518765#518766#0" expanded="false" />
-            <element signature="e#518822#518823#0" expanded="false" />
-            <element signature="e#518892#518893#0" expanded="false" />
-            <element signature="e#518948#518949#0" expanded="false" />
-            <element signature="e#519012#519013#0" expanded="false" />
-            <element signature="e#519068#519069#0" expanded="false" />
-            <element signature="e#519142#519143#0" expanded="false" />
-            <element signature="e#519200#519201#0" expanded="false" />
-            <element signature="e#519268#519269#0" expanded="false" />
-            <element signature="e#519326#519327#0" expanded="false" />
-            <element signature="e#519410#519411#0" expanded="false" />
-            <element signature="e#519467#519468#0" expanded="false" />
-            <element signature="e#519907#519908#0" expanded="false" />
-            <element signature="e#519964#519965#0" expanded="false" />
-            <element signature="e#520238#520239#0" expanded="false" />
-            <element signature="e#520302#520303#0" expanded="false" />
-            <element signature="e#520384#520385#0" expanded="false" />
-            <element signature="e#520439#520440#0" expanded="false" />
-            <element signature="e#520509#520510#0" expanded="false" />
-            <element signature="e#520564#520565#0" expanded="false" />
-            <element signature="e#520632#520633#0" expanded="false" />
-            <element signature="e#520687#520688#0" expanded="false" />
-            <element signature="e#520749#520750#0" expanded="false" />
-            <element signature="e#520804#520805#0" expanded="false" />
-            <element signature="e#520884#520885#0" expanded="false" />
-            <element signature="e#520938#520939#0" expanded="false" />
-            <element signature="e#521006#521007#0" expanded="false" />
-            <element signature="e#521060#521061#0" expanded="false" />
-            <element signature="e#521130#521131#0" expanded="false" />
-            <element signature="e#521186#521187#0" expanded="false" />
-            <element signature="e#521250#521251#0" expanded="false" />
-            <element signature="e#521306#521307#0" expanded="false" />
-            <element signature="e#522424#522425#0" expanded="false" />
-            <element signature="e#522481#522482#0" expanded="false" />
-            <element signature="e#522704#522705#0" expanded="false" />
-            <element signature="e#522761#522762#0" expanded="false" />
-            <element signature="e#522840#522841#0" expanded="false" />
-            <element signature="e#522906#522907#0" expanded="false" />
-            <element signature="e#526134#526135#0" expanded="false" />
-            <element signature="e#526189#526190#0" expanded="false" />
-            <element signature="e#544193#544194#0" expanded="false" />
-            <element signature="e#544253#544254#0" expanded="false" />
-            <element signature="e#544492#544493#0" expanded="false" />
-            <element signature="e#544545#544546#0" expanded="false" />
-            <element signature="e#544624#544625#0" expanded="false" />
-            <element signature="e#544677#544678#0" expanded="false" />
-            <element signature="e#544766#544767#0" expanded="false" />
-            <element signature="e#544819#544820#0" expanded="false" />
-            <element signature="e#544883#544884#0" expanded="false" />
-            <element signature="e#544944#544945#0" expanded="false" />
-            <element signature="e#545014#545015#0" expanded="false" />
-            <element signature="e#545071#545072#0" expanded="false" />
-            <element signature="e#545684#545685#0" expanded="false" />
-            <element signature="e#545738#545739#0" expanded="false" />
-            <element signature="e#549481#549482#0" expanded="false" />
-            <element signature="e#549542#549543#0" expanded="false" />
-            <element signature="e#558257#558264#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/ResourceController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.2173915" vertical-offset="360" max-vertical-offset="1620">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/Invites.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7307693" vertical-offset="0" max-vertical-offset="255">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/Topic.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6153846" vertical-offset="0" max-vertical-offset="360">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="e#18#55#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/User.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.826087" vertical-offset="8" max-vertical-offset="450">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.642857" vertical-offset="294" max-vertical-offset="1155">
-          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/error.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="1920">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/_template.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/user/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="660">
-          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
-          <folding>
-            <marker date="1424670013196" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424670013196" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424670013196" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424670013196" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/DemoController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.5652175" vertical-offset="0" max-vertical-offset="240">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5" vertical-offset="122" max-vertical-offset="1860">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/myPage.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="345">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+        <state vertical-scroll-proportion="-10.172414" vertical-offset="545" max-vertical-offset="930">
+          <caret line="56" column="81" selection-start-line="56" selection-start-column="81" selection-end-line="56" selection-end-column="81" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/main.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7692308" vertical-offset="120" max-vertical-offset="510">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/Subscription.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/user/create.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6153846" vertical-offset="0" max-vertical-offset="480">
-          <caret line="18" column="9" selection-start-line="13" selection-start-column="24" selection-end-line="18" selection-end-column="9" />
+        <state vertical-scroll-proportion="1.1444142" vertical-offset="45" max-vertical-offset="660">
+          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/User.groovy">
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/Resource.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6794425" vertical-offset="0" max-vertical-offset="574">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/login.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50933784" vertical-offset="0" max-vertical-offset="2325">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/sharehub/ShareHubFilters.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21565495" vertical-offset="0" max-vertical-offset="626">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/ResourceStatus.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13066202" vertical-offset="0" max-vertical-offset="574">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/dashboard.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="345">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35942492" vertical-offset="0" max-vertical-offset="626">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/sharehub/AssetsFilters.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16773163" vertical-offset="0" max-vertical-offset="626">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/HomeController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.869565" vertical-offset="0" max-vertical-offset="270">
-          <caret line="9" column="84" selection-start-line="9" selection-start-column="84" selection-end-line="9" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="870">
-          <caret line="22" column="87" selection-start-line="22" selection-start-column="87" selection-end-line="22" selection-end-column="87" />
-          <folding>
-            <element signature="e#206#628#0" expanded="false" />
-            <element signature="e#1041#1406#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/beforeLogin.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.3333335" vertical-offset="568" max-vertical-offset="1050">
-          <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/LoginController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.73913" vertical-offset="0" max-vertical-offset="360">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="570">
+          <caret line="32" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/UserController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.782609" vertical-offset="495" max-vertical-offset="1680">
-          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+        <state vertical-scroll-proportion="-0.0" vertical-offset="2055" max-vertical-offset="2145">
+          <caret line="138" column="0" selection-start-line="34" selection-start-column="32" selection-end-line="138" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/sharehub/UserService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/login.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0" vertical-offset="2070" max-vertical-offset="2880">
+          <caret line="154" column="54" selection-start-line="154" selection-start-column="54" selection-end-line="154" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_createTopic.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.291667" vertical-offset="101" max-vertical-offset="690">
+          <caret line="28" column="60" selection-start-line="26" selection-start-column="46" selection-end-line="28" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/sharehub/TopicService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3478261" vertical-offset="96" max-vertical-offset="735">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding>
+            <element signature="e#18#55#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_userInfo.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.708333" vertical-offset="4" max-vertical-offset="435">
+          <caret line="19" column="63" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_subscriptions.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="675">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/ResourceStatus.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.7307693" vertical-offset="0" max-vertical-offset="300">
+          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/Topic.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6" vertical-offset="0" max-vertical-offset="375">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38641685" vertical-offset="0" max-vertical-offset="427">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_shareDocument.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5769231" vertical-offset="615" max-vertical-offset="1050">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_shareLink.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.125" vertical-offset="495" max-vertical-offset="1005">
+          <caret line="54" column="42" selection-start-line="54" selection-start-column="42" selection-end-line="55" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/ResourceController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5396419" vertical-offset="449" max-vertical-offset="1950">
+          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+          <folding>
+            <element signature="e#18#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/sharehub/ResourceService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7463768" vertical-offset="606" max-vertical-offset="1110">
+          <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/dashboard.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3481894" vertical-offset="220" max-vertical-offset="1245">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/Resource.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.0384617" vertical-offset="0" max-vertical-offset="570">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/afterLogin.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5561497" vertical-offset="1067" max-vertical-offset="1515">
-          <caret line="85" column="108" selection-start-line="85" selection-start-column="108" selection-end-line="85" selection-end-column="108" />
+        <state vertical-scroll-proportion="-48.75" vertical-offset="540" max-vertical-offset="2280">
+          <caret line="114" column="29" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/HomeController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6086957" vertical-offset="0" max-vertical-offset="450">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/SearchController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.2173915" vertical-offset="0" max-vertical-offset="255">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_posts.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="780">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/sharehub/SearchService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31810766" vertical-offset="0" max-vertical-offset="613">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
           <folding />
         </state>
       </provider>

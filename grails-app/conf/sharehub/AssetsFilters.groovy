@@ -5,6 +5,7 @@ class AssetsFilters {
     def filters = {
         all(uri:"/assets/**") {
             before = {
+                //println "caught assets!"
                 request.assets = true
             }
             after = { Map model ->

@@ -10,6 +10,10 @@ class Resource {
     String filePath
     static belongsTo = [createdBy: User, topic: Topic]
     static hasMany = [resourceStatus: ResourceStatus]
+    static mapping = {
+        description type: 'text'
+        sort(dateCreated:'desc')
+    }
     static constraints = {
         description nullable: true;
         title unique: 'topic'

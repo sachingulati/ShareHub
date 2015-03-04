@@ -10,7 +10,11 @@ class SearchService {
     }
     def inbox(String username, String searchString){
         User user = User.findByUsername(username)
-        List<Resource> resources = ResourceStatus.findAll{user== user && isRead== false && (resource.description.contains(searchString) || resource.title.contains(searchString) || resource.topic.name.contains(searchString))}*.resource
-        return resources
+        List<Resource> resources = ResourceStatus.findAll{user== user && isRead== false}*.resource
+        ResourceStatus.executeQuery("select resource from ResourceStatus where user = ? and isRead = false and resource.description.contains(?)",[user, searchString])
+        return (resources.findAll{resource->
+            resource.description.contains(searchString)
+        })
+        // || resource.title.contains(searchString) || resource.topic.name.contains(searchString)
     }
 }

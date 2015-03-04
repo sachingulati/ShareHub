@@ -25,6 +25,8 @@ environments {
                 username = "root"
                 password = "asdfghjkl;'"
                 url = "jdbc:mysql://127.0.0.1:3306/ShareHub"
+                //logSql = true
+
             }
     }
     test {

@@ -24,6 +24,9 @@
                     <a href="#">${resource.topic.createdBy.name}</a>
                     @${resource.topic.createdBy.username}
                 </div>
+                <div>
+                    <a href="#">${resource.title}</a>
+                </div>
 
                 <div id="recentShareDesc">
                     ${resource.description}

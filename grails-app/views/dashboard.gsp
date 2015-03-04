@@ -18,7 +18,6 @@
     <div class="row">
         <div class="col-lg-5">
             <!-- User Info -->
-
             <div class="panel panel-default" style="margin-bottom:7px">
                 <div class="panel-body">
                     <g:render template="/userInfo"/>

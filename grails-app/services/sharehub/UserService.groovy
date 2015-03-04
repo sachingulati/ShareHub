@@ -17,4 +17,25 @@ class UserService {
     def createUser(User user){
 
     }
+    def getName(String username){
+        def name = User.createCriteria().get {
+            projections{
+                property("firstName")
+                property("lastName")
+            }
+            eq("username",username)
+            cache(true)
+        }
+        return (name[0]+" "+name[1])
+    }
+    def getId(String username){
+        def id = User.createCriteria().get {
+            projections{
+                property("id")
+            }
+            eq("username",username)
+            cache(true)
+        }
+        return id
+    }
 }

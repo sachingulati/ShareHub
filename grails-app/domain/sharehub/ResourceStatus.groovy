@@ -9,6 +9,7 @@ class ResourceStatus {
         score nullable: true
     }
     static mapping = {
-        sort(lastUpdated: 'desc')
+        //sort(lastUpdated: 'desc')
+        sort(dateCreated: 'desc')
     }
 }

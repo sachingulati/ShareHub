@@ -6,10 +6,6 @@ import grails.transaction.Transactional
 @Transactional
 class ResourceService {
 
-    def serviceMethod() {
-
-    }
-
     def createDefaultResources(){
         String desc = "hi this is description of Resources. This is temporary description and will be replaced by actual description later on. so for the time being please co-operate :)"
         Topic.list().each { topic ->

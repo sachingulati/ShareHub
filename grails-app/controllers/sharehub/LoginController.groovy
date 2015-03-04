@@ -3,10 +3,10 @@ package sharehub
 class LoginController {
 
     def index() {
-        render view: "/login", model: [error:(params.error==1?"Invalid Username or Password":"")]
+        render view: "/login", model: [error:(params.error?:"")]
     }
     def loginHandler(String username, String password){
-        User u = User.findByUsernameAndPassword(username,password)
+        int u = User.countByUsernameAndPassword(username,password)
         if(u){
             session["username"] = username
             redirect(controller: "Home", action: "dashboard");

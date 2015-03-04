@@ -4,14 +4,9 @@ class HomeController {
 
     def topicService
     def index() {
-            redirect(action: "dashboard")
+            forward(action: "dashboard")
     }
     def dashboard(){
-        if(!session["username"]){
-            //println "in dashboard redirecting to login"
-            redirect controller: "login"
-            return
-        }
         User user = User.findByUsername(session["username"]);
         List<Topic> topics = user.subscriptions*.topic
         int subCount = user.subscriptions.size()

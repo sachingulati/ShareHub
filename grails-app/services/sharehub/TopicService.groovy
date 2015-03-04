@@ -7,6 +7,7 @@ import grails.transaction.Transactional
 @Transactional
 class TopicService {
 
+    def userService
     def serviceMethod() {
 
     }
@@ -38,6 +39,9 @@ class TopicService {
         }
     }
     def getTopics(String username){
-        User.findByUsername(username).subscriptions*.topic;
+        def topicsList = Subscription.executeQuery("select topic.id, topic.name from Subscription where user.username = ?",[username]) as List
+        def topicsMap = topicsList.collect {[id:it[0],name:it[1]]}
+        //def topics = User.findByUsername(username).subscriptions*.topic
+        return topicsMap
     }
 }

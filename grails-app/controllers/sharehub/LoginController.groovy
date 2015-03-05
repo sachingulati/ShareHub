@@ -2,8 +2,10 @@ package sharehub
 
 class LoginController {
 
+    def resourceService
+    def userService
     def index() {
-        render view: "/login", model: [error:(params.error?:"")]
+        render view: "/login", model: [recentResources: resourceService.recentPublicResourceList()]
     }
     def loginHandler(String username, String password){
         int u = User.countByUsernameAndPassword(username,password)
@@ -12,7 +14,19 @@ class LoginController {
             redirect(controller: "Home", action: "dashboard");
         }
         else{
-            render view: "/login", model: [error: "Invalid username or password!"]
+            flash.message = "Invalid username or password!"
+            forward(controller: "login")
         }
+    }
+
+    def register(){
+        User user = userService.register(params)
+        if(user) {
+            session["username"] = user.username
+            redirect(controller: "home", action: "dashboard")
+            return false
+        }
+        else
+            render "Invalid Data"
     }
 }

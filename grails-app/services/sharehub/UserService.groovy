@@ -5,6 +5,7 @@ import grails.transaction.Transactional
 @Transactional
 class UserService {
 
+    def grailsApplication
     def serviceMethod() {
 
     }
@@ -14,8 +15,17 @@ class UserService {
             u.validate() && u.save(flush: true, failOnError: true)
         }
     }
-    def createUser(User user){
-
+    def register(params){
+        User user = new User()
+        user.properties = params
+        user.validate()
+        if(user.hasErrors())
+            return null
+        String path = grailsApplication.config.uploadImages + params.username
+        params.photo.transferTo(new File(path));
+        user.photoUrl = path
+        user.save()
+        return user
     }
     def getName(String username){
         def name = User.createCriteria().get {
@@ -38,4 +48,9 @@ class UserService {
         }
         return id
     }
+
+    def createUser(params){
+
+    }
+
 }

@@ -60,6 +60,7 @@ grails {
 }
 
 
+
 grails.converters.encoding = "UTF-8"
 // scaffolding templates configuration
 grails.scaffolding.templates.domainSuffix = 'Instance'
@@ -84,6 +85,8 @@ grails.hibernate.cache.queries = false
 grails.hibernate.pass.readonly = false
 // configure passing read-only to OSIV session by default, requires "singleSession = false" OSIV mode
 grails.hibernate.osiv.readonly = false
+
+grails.plugins.remotepagination.max=20
 
 environments {
     development {
@@ -118,3 +121,5 @@ log4j.main = {
     //trace 'org.hibernate.type.descriptor.sql.BasicBinder'
 
 }
+
+uploadImages= "$userHome/Documents/uploads/"

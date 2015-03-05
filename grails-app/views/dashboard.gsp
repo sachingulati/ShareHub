@@ -67,7 +67,7 @@
         </div> <!-- col-lg-5 -->
 
         <div class="col-lg-7">
-            <g:render template="/posts" model="[header: 'Inbox', resources: unreadResources]"/>
+            <g:render template="/posts" bean="${unreadResources}" var="resources" model="[header: 'Inbox', search: true, markRead:true]"/>
         </div> <!-- col-lg-7 -->
 
     </div><!-- /.row -->

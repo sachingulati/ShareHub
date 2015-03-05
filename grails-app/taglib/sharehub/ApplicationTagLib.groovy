@@ -10,9 +10,15 @@ class ApplicationTagLib {
         out << userService.getName(session["username"])
     }
     def topicSelector = {
-//        out << g.select([name: "topic", from: topicService.getTopics(session["username"]), optionKey: 0, optionValue: 1, value: 0])
         def topics = topicService.getTopics(session["username"])
         out << g.select([name: "topic", from: topics, optionKey: "id", optionValue: "name", value: "id"])
 
+    }
+    def image={attr->
+        File image = new File(attr.src);
+        if(!image) return
+        out << "<img src='data:img/png;base64,"
+        out <<(image.getBytes().encodeBase64())
+        out << "' width='80' height='80' />"
     }
 }

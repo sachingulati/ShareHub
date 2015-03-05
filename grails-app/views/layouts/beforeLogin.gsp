@@ -49,7 +49,7 @@
                 <li>
                     <g:form controller="login" action="loginHandler" class="navbar-form navbar-left" role="search">
                         <div class="form-group">
-                            ${error}
+                            ${flash.message}
                             <g:textField name="username" class="form-control" placeholder="Username"/>
                             <g:passwordField name="password" class="form-control" placeholder="Password"/>
                         </div>

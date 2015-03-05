@@ -11,72 +11,8 @@
 <div class="contentMargin">
     <div class="row">
         <div class="col-lg-7">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Recent Posts</h3>
-                </div>
-
-                <div class="panel-body contentBox">
-                    <% 4.times { %>
-                    <div class="panel panel-default" style="margin-bottom:7px">
-                        <div class="panel-body">
-                            <div style="float:left">
-                                <a href="#"><asset:image src="user-default.png" class="img-media" alt="User image"/></a>
-                            </div>
-
-                            <div class="padding5">
-                                <span style="float:right;"><a href="#" id="recentShareTopicName">Topic Name</a></span>
-
-                                <div>
-                                    <a id="recentShareUserName" href="#" id="recentShareUserName">Firstname Lastname</a>
-                                </div>
-
-                                <div id="recentShareDesc">
-                                    hi this is description of Recent Share 1. This is temporary description and will be replaced by actual description later on. so for the time being please co-operate :)
-                                </div>
-
-                                <div style="float:right">
-                                    <a href="#" id="recentShareResource">View post</a>
-                                </div>
-                            </div>
-                        </div> <!-- panel-body -->
-                    </div>  <!-- panel -->
-                <% } %>
-                </div>    <!-- panel-body -->
-            </div>  <!-- panel -->
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Top Posts</h3>
-                </div>
-
-                <div class="panel-body contentBox">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div style="float:left">
-                                <a href="#" id="topPostUserImage"><asset:image src="user-default.png" class="img-media"
-                                                                               alt="User image"/></a>
-                            </div>
-
-                            <div class="padding5">
-                                <span style="float:right;"><a href="#" id="recentShareTopicName3">Topic Name</a></span>
-
-                                <div>
-                                    <a id="recentShareUserName3" href="#"
-                                       id="recentShareUserName3">Firstname Lastname</a>
-                                </div>
-
-                                <div id="topPostDesc">
-                                    hi this is description of Top Post. this is temporary description and will be replaced by actual description later on. so for the time being please co-operate :)
-                                </div>
-
-                                <div style="float:right">
-                                    <a href="#" id="recentShareResource3">View post</a>
-                                </div>
-                            </div>
-                        </div> <!-- panel-body -->
-                    </div>  <!-- panel -->
-                </div>    <!-- panel-body -->
-            </div>  <!-- panel -->
+            <g:render template="/posts" bean="${recentResources}" var="resources" model="[header:'Recent Posts', search:false]"/>
+            <g:render template="/posts" bean="${recentResources}" var="resources" model="[header:'Top Posts', search:false]"/>
         </div> <!-- col-lg-7 -->
         <div class="col-lg-5">
             <div>
@@ -86,7 +22,7 @@
                     </div>
 
                     <div class="panel-body contentBox">
-                        <g:form controller="user" action="register">
+                        <g:form controller="login" action="register" enctype="multipart/form-data">
                             <div class="row padding5">
                                 <div class="col-lg-5">
                                     <span class="valignstyle">First Name*</span>
@@ -153,7 +89,7 @@
                                 </div>
 
                                 <div class="col-lg-7">
-                                    <input type="file" id="photo" class="padding5"/>
+                                    <input type="file" name="photo" id="photo" class="padding5"/>
                                 </div>
                             </div>
 

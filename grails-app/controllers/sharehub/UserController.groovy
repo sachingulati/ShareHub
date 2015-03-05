@@ -11,6 +11,12 @@ class UserController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
     def userService
 
+    def renderImage(String path){/*
+        File file = new File(path);
+        response.setHeader("Content-Type", getServletContext().getMimetype(filename));
+        response.setHeader("Content-Length", String.valueOf(file.length()));
+        response.setHeader("Content-Disposition", "inline; filename=\"" + filename + "\"");*/
+    }
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond User.list(params), model:[userInstanceCount: User.count()]
@@ -23,17 +29,6 @@ class UserController {
         respond new User(params)
     }
 
-    @Transactional
-    def register(User user){
-
-        user.validate()
-        if(user.hasErrors()){
-            render user.errors.allErrors
-            return
-        }
-        user.save()
-        render("User Created..")
-    }
     @Transactional
     def save(User userInstance) {
         if (userInstance == null) {

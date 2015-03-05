@@ -1,6 +1,10 @@
 
         <div style="float:left; margin-right:10px">
-            <a href="#"><asset:image src="user-default.png" class="img-media" alt="User image"/></a>
+            <a href="#">
+                %{--<img src="${photoUrl}" class="img-media" alt="User image" />--}%
+                %{--<asset:image src="${photoUrl?:'user-default.png'}" class="img-media" alt="User image"/>--}%
+                <sh:image src="${photoUrl}"/>
+            </a>
         </div>
 
         <div>

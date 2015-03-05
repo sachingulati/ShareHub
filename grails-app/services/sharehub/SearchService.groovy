@@ -9,12 +9,26 @@ class SearchService {
 
     }
     def inbox(String username, String searchString){
-        User user = User.findByUsername(username)
-        List<Resource> resources = ResourceStatus.findAll{user== user && isRead== false}*.resource
-        ResourceStatus.executeQuery("select resource from ResourceStatus where user = ? and isRead = false and resource.description.contains(?)",[user, searchString])
-        return (resources.findAll{resource->
-            resource.description.contains(searchString)
-        })
+        List resources = Resource.createCriteria().list {
+            resourceStatus{
+                eq("isRead",false)
+            }
+            topic{
+                subscriptions{
+                    user{
+                        eq("username", username)
+                    }
+                }
+            }
+            or {
+                ilike("description","%$searchString%")
+                topic{
+                    ilike("name","%$searchString%")
+                }
+                ilike("title","%$searchString%")
+            }
+        }
+        return resources
         // || resource.title.contains(searchString) || resource.topic.name.contains(searchString)
     }
 }

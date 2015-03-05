@@ -6,7 +6,8 @@ class ShareHubFilters {
         all(controller: "login|assets", action: "*", invert: true){
             before={
                 if(!session['username']){
-                    redirect(controller: "login", action: "index", params: [error:"Please login to proceed!"])
+                    flash.message = "Please login to proceed!"
+                    redirect(controller: "login", action: "index")
                     return false
                 }
             }

@@ -6,7 +6,7 @@ import com.sharehub.enums.Visibility
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
-@Transactional(readOnly = true)
+@Transactional
 class ResourceController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -15,6 +15,17 @@ class ResourceController {
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Resource.list(params), model: [resourceInstanceCount: Resource.count()]
+    }
+
+    def unreadResourceList() {
+        resourceService.unreadResourceList(session["username"], params.max, params.offset)
+
+    }
+
+    def readResource() {
+        resourceService.markRead(params.resource.toLong(), session["username"])
+        render params.resource + " is marked read"
+
     }
 
     def show(Resource resourceInstance) {
@@ -26,23 +37,25 @@ class ResourceController {
     }
 
     @Transactional
-    def shareLink(){
-        if(resourceService.shareLink(params,User.findByUsername(session["username"])))
+    def shareLink() {
+        if (resourceService.shareLink(params, User.findByUsername(session["username"])))
             render "Link Shared!"
         else "Error in sharing resource!"
     }
 
     @Transactional
-    def shareDocument(){
-        if(resourceService.shareLink(params,User.findByUsername(session["username"])))
+    def shareDocument() {
+        if (resourceService.shareLink(params, User.findByUsername(session["username"])))
             render "Document Shared!"
         else render "Error in sharing resource!"
 
     }
-    def showResources(){
+
+    def showResources() {
         render Resource.list(offset: 0, max: 5);
 
     }
+
     @Transactional
     def save(Resource resourceInstance) {
         if (resourceInstance == null) {

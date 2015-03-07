@@ -20,12 +20,12 @@
             <!-- User Info -->
             <div class="panel panel-default" style="margin-bottom:7px">
                 <div class="panel-body">
-                    <g:render template="/userInfo"/>
+                    <g:render template="/userInfo" bean="${user}"/>
                 </div> <!-- panel-body -->
             </div> <!-- panel -->
 
         <!-- subscription -->
-        <g:render template="/subscriptions"/>
+        <g:render template="/topicList" model="[header: 'Subscriptions']" bean="${user.subscribedTopics}" var="topics"/>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <span style="float:right;"><a href="#">View All</a></span>
@@ -41,18 +41,18 @@
 
                         <div>
                             <div>
-                                <a href="#">${topicName ? topicName : "null"}</a>
+                                <a href="#">${topicName ? topicName : "Topic"}</a>
                             </div>
                             <table>
                                 <tr>
-                                    <td class="tableData tableDataWidth">@${username}</td>
+                                    <td class="tableData tableDataWidth">@${username?:"sachin"}</td>
                                     <td class="tableData tableDataWidth">Subscriptions</td>
                                     <td class="tableData">Posts</td>
                                 </tr>
                                 <tr>
                                     <td class="tableData tableDataWidth"><a href="#">Subscribe</a></td>
-                                    <td class="tableData tableDataWidth"><a href="#">${subCount ?: 0}</a></td>
-                                    <td class="tableData"><a href="#">${postCount ?: 0}</a></td>
+                                    <td class="tableData tableDataWidth"><a href="#">${subCount ?: 2}</a></td>
+                                    <td class="tableData"><a href="#">${postCount ?: 10}</a></td>
                                 </tr>
                             </table>
                         </div>
@@ -67,7 +67,7 @@
         </div> <!-- col-lg-5 -->
 
         <div class="col-lg-7">
-            <g:render template="/posts" bean="${unreadResources}" var="resources" model="[header: 'Inbox', search: true, markRead:true]"/>
+            <g:render template="/posts" bean="${unreadResources}" var="resources" model="[header: 'Inbox', search: true]"/>
         </div> <!-- col-lg-7 -->
 
     </div><!-- /.row -->

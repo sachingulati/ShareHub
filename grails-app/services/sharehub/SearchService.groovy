@@ -12,12 +12,8 @@ class SearchService {
         List resources = Resource.createCriteria().list {
             resourceStatus{
                 eq("isRead",false)
-            }
-            topic{
-                subscriptions{
-                    user{
-                        eq("username", username)
-                    }
+                user{
+                    eq("username", username)
                 }
             }
             or {

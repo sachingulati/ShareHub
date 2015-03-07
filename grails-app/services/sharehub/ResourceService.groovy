@@ -11,7 +11,7 @@ class ResourceService {
         String desc = "hi this is description of Resources. This is temporary description and will be replaced by actual description later on. so for the time being please co-operate :)"
         Topic.list().each { topic ->
             10.times {
-                Resource r = new Resource(title: "Resource$it", description: "$desc", type: (it < 5 ? ResourceType.DOCUMENT : ResourceType.LINK), url: "someUrl.com", createdBy: topic.createdBy, topic: topic)
+                Resource r = new Resource(title: "Resource$it", description: "$desc", type: (it < 5 ? ResourceType.DOCUMENT : ResourceType.LINK), url: "google.com", createdBy: topic.createdBy, topic: topic)
                 topic.addToResources(r)
                 topic.createdBy.addToResources(r)
                 topic.save(flush: true)
@@ -71,14 +71,11 @@ class ResourceService {
             order("dateCreated", "desc")
             resourceStatus {
                 eq("isRead", false)
-            }
-            topic {
-                subscriptions {
-                    user {
-                        eq("username", username)
-                    }
+                user{
+                    eq("username",username)
                 }
             }
+
         }
     }
 
@@ -91,7 +88,7 @@ class ResourceService {
         }
     }
 
-    def markRead(Long resourceId, String username) {
+    def switchReadStatus(Long resourceId, String username) {
         ResourceStatus rs = ResourceStatus.createCriteria().get {
             resource{
                 eq("id",resourceId)
@@ -100,7 +97,7 @@ class ResourceService {
                 eq("username", username)
             }
         }
-        rs.isRead = true
+        rs.isRead = !(rs.isRead)
         rs.save(failOnError: true)
     }
 }

@@ -1,19 +1,17 @@
 
         <div style="float:left; margin-right:10px">
             <a href="#">
-                %{--<img src="${photoUrl}" class="img-media" alt="User image" />--}%
-                %{--<asset:image src="${photoUrl?:'user-default.png'}" class="img-media" alt="User image"/>--}%
-                <sh:image src="${photoUrl}"/>
+                <sh:image src="${user.photoUrl}"/>
             </a>
         </div>
 
         <div>
             <div>
-                <a href="#">${name?name:"name"}</a>
+                <g:link controller="user" action="profile" params='[id: "${user.username}"]'>${user.name}</g:link>
             </div>
 
             <div>
-                @${username?:"username"}
+                @${user.username}
             </div>
             <table>
                 <tr>
@@ -21,8 +19,8 @@
                     <td class="userTableData">Topics</td>
                 </tr>
                 <tr>
-                    <td class="userTableData"><a href="#">${subCount ? subCount : 0}</a></td>
-                    <td class="userTableData"><a href="#">${topicCount ? topicCount : 0}</a></td>
+                    <td class="userTableData"><a href="#">${user.subscriptionCount}</a></td>
+                    <td class="userTableData"><a href="#">${user.topicCount}</a></td>
                 </tr>
             </table>
         </div>

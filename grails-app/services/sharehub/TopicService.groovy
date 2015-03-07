@@ -14,7 +14,7 @@ class TopicService {
     def createDefaultTopics(){
         User.list().each { user ->
             5.times {
-                Topic topic = new Topic(name: "Topic${it+5*(user.id-1)}", createdBy: user, visibility: Visibility.PUBLIC)
+                Topic topic = new Topic(name: "Topic${it+5*(user.id-1)}", createdBy: user, visibility: (it>2?Visibility.PRIVATE:Visibility.PUBLIC))
                 user.addToTopics(topic)
             }
             user.save(flush: true)

@@ -5,8 +5,8 @@ class User {
     String email
     String username, password, confirmPassword
     String photoUrl
-    boolean admin
-    boolean active
+    boolean admin = false
+    boolean active = true
     Date dateCreated, lastUpdated
     static hasMany = [topics: Topic,resources: Resource,subscriptions: Subscription, resourceStatus: ResourceStatus]
     static transients = ['name','confirmPassword']
@@ -25,7 +25,5 @@ class User {
         confirmPassword(validator:{val, user->
             return val.equals(user.password)
         })
-    }
-    static mapping={
     }
 }

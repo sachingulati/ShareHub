@@ -10,14 +10,18 @@ class UserService {
 
     }
     def createDefaultUsers(){
-        2.times {
-            User u = new User(firstName: "Name$it", lastName: "Last$it", email: "Name$it@email.com", username: "name$it", password: "12345678", confirmPassword: "12345678", admin: false, active: true)
-            u.validate() && u.save(flush: true, failOnError: true)
-        }
+        User user = new User(firstName: "Sachin", lastName: "Gulati", email: "sachin@email.com", username: "sachin", password: "12345678", confirmPassword: "12345678", admin: false, active: true, photoUrl: (grailsApplication.config.uploadImages+"sachin"))
+        user.save()
+        user = new User(firstName: "Admin", lastName: "ShareHub", email: "admin@email.com", username: "admin", password: "12345678", confirmPassword: "12345678", admin: true, active: true)
+        user.save()
     }
     def register(params){
         User user = new User()
         user.properties = params
+        user.firstName = user.firstName.capitalize()
+        user.lastName = user.lastName.capitalize()
+        user.username = user.username.toLowerCase()
+        user.email = user.email.toLowerCase()
         user.validate()
         if(user.hasErrors())
             return null

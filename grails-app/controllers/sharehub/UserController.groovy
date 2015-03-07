@@ -1,6 +1,6 @@
 package sharehub
 
-
+import com.sharehub.enums.Visibility
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -11,11 +11,25 @@ class UserController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
     def userService
 
-    def renderImage(String path){/*
-        File file = new File(path);
-        response.setHeader("Content-Type", getServletContext().getMimetype(filename));
-        response.setHeader("Content-Length", String.valueOf(file.length()));
-        response.setHeader("Content-Disposition", "inline; filename=\"" + filename + "\"");*/
+    def profile(){
+        UserViewCommand user
+        if(params.id == session["username"] || User.findByUsername(session["username"]).admin){
+            user = new UserViewCommand(params.id,Visibility.PRIVATE)
+        }
+        else {
+            user = new UserViewCommand(params.id,Visibility.PUBLIC)
+        }
+        if(!user.valid){
+            redirect(action: "myProfile")
+            return false
+        }
+        List<Resource> resources = Resource.findAll({topic in user.subscribedTopics && createdBy.username==user.username })
+        render (view: "/profile", model: [user: user, resources: resources])
+        return false
+    }
+    def myProfile(){
+        forward(action: "profile", params: [id:session["username"]])
+        return false
     }
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
@@ -129,5 +143,43 @@ class UserCommand {
         confirmPassword(validator:{val, user->
             return val.equals(user.password)
         })
+    }
+}
+
+class UserViewCommand {
+    String username
+    String firstName, lastName
+    String photoUrl
+    Boolean admin
+    List<Topic> topicsCreated
+    List<Topic> subscribedTopics
+    Boolean valid = false
+    def getName(){
+        return firstName+" " + lastName
+    }
+    def getSubscriptionCount(){
+        return subscribedTopics.size()
+    }
+    def getTopicCount(){
+        return topicsCreated.size()
+    }
+    def UserViewCommand(String username,Visibility access){
+        this.username = username
+        User user = User.findByUsername(username)
+        if(!user) return
+        valid = true
+        firstName = user.firstName
+        lastName = user.lastName
+        photoUrl = user.photoUrl
+        admin = user.admin
+        subscribedTopics = user.subscriptions.topic
+        topicsCreated = user.topics as List
+        if(access == Visibility.PRIVATE)
+            return
+        def findPublicTopics = {Topic topic->
+            topic.visibility == Visibility.PUBLIC
+        }
+        topicsCreated = topicsCreated.findAll(findPublicTopics)
+        subscribedTopics = subscribedTopics.findAll(findPublicTopics)
     }
 }

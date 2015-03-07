@@ -118,11 +118,11 @@
                     <div class="dropdown">
                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
                                 data-toggle="dropdown" style="margin:7px" aria-expanded="true">
-                            <sh:username/>
+                            <sh:userName/>
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Profile</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="${g.createLink(controller: "user", action: "myProfile")}">Profile</a></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Users</a></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Topics</a></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Posts</a></li>

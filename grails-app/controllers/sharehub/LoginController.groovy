@@ -8,7 +8,14 @@ class LoginController {
         render view: "/login", model: [recentResources: resourceService.recentPublicResourceList()]
     }
     def loginHandler(String username, String password){
-        int u = User.countByUsernameAndPassword(username,password)
+        int u = User.countByUsernameAndPasswordAndActive(username,password,true)
+        if(!u){
+            User user = User.findByEmailAndPasswordAndActive(username,password,true)
+            if(user){
+                username = user.username;
+                u = 1
+            }
+        }
         if(u){
             session["username"] = username
             redirect(controller: "Home", action: "dashboard");

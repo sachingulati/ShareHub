@@ -25,7 +25,10 @@
                         </div>
 
                         <div class="col-lg-7">
-                            <g:textField name="url" class="form-control" placeholder="Url"/>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">hhtp://</span>
+                                <g:textField name="url" class="form-control" placeholder="Url" aria-describedby="basic-addon1"/>
+                            </div>
                         </div>
                     </div>
 
@@ -45,7 +48,8 @@
                         </div>
 
                         <div class="col-lg-7">
-                            <sh:topicSelector/>%{--
+                            <sh:topicSelector/>
+                            %{--
                             <g:select name="topic" from="${topics}" optionKey="id" optionValue="name"
                                       noSelection="['': 'Select Topic']"
                                       class="form-control"/>--}%

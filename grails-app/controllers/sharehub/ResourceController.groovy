@@ -1,8 +1,5 @@
 package sharehub
 
-import com.sharehub.enums.ResourceType
-import com.sharehub.enums.Visibility
-
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -17,14 +14,19 @@ class ResourceController {
         respond Resource.list(params), model: [resourceInstanceCount: Resource.count()]
     }
 
+    def remoteTest(){
+        render(view: "/temp")
+    }
+    def getResources(){
+        render(template: "/posts", model: [resources: Resource.list(params)])
+    }
     def unreadResourceList() {
-        resourceService.unreadResourceList(session["username"], params.max, params.offset)
-
+        render(template: "/posts", model: [resources: resourceService.unreadResourceList(session["username"], params.max, params.offset)])
     }
 
-    def readResource() {
-        resourceService.markRead(params.resource.toLong(), session["username"])
-        render params.resource + " is marked read"
+    def switchReadStatus() {
+        resourceService.switchReadStatus(params.resource.toLong(), session["username"])
+        render params.resource + " is switched"
 
     }
 

@@ -5,7 +5,7 @@
 <div class="fieldcontain ${hasErrors(bean: resourceStatusInstance, field: 'score', 'error')} ">
 	<label for="score">
 		<g:message code="resourceStatus.score.label" default="Score" />
-		
+
 	</label>
 	<g:field name="score" type="number" value="${resourceStatusInstance.score}"/>
 
@@ -14,7 +14,7 @@
 <div class="fieldcontain ${hasErrors(bean: resourceStatusInstance, field: 'isRead', 'error')} ">
 	<label for="isRead">
 		<g:message code="resourceStatus.isRead.label" default="Is Read" />
-		
+
 	</label>
 	<g:checkBox name="isRead" value="${resourceStatusInstance?.isRead}" />
 

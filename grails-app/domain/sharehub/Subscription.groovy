@@ -12,11 +12,15 @@ class Subscription {
         topic unique: 'user'
     }
     static afterInsert={
-         Invites i = Invites.findByInvitedToAndTopicAndStatus(user,topic,InviteStatus.PENDING)
+        topic.resources.each{ resource->
+            ResourceStatus resourceStatus = new ResourceStatus(resource: resource, user: user)
+            resource.addToResourceStatus(resourceStatus)
+        }
+         /*Invites i = Invites.findByInvitedToAndTopicAndStatus(user,topic,InviteStatus.PENDING)
         if(i){
             i.status = InviteStatus.SUBSCRIBED;
             i.save()
-        }
+        }*/
     }
     static afterDelete={
         Invites i = Invites.findByInvitedToAndTopicAndStatus(user,topic,InviteStatus.SUBSCRIBED)

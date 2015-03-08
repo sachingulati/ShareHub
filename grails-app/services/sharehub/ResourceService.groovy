@@ -44,10 +44,10 @@ class ResourceService {
         resource.validate()
         if (resource.hasErrors()) {
             println(resource.errors.allErrors)
-            return false
+            return 0
         } else {
             resource.save(failOnError: true)
-            return true
+            return resource.id
         }
     }
 
@@ -59,10 +59,10 @@ class ResourceService {
         resource.validate()
         if (resource.hasErrors()) {
             println(resource.errors.allErrors)
-            return false
+            return 0
         } else {
             resource.save(failOnError: true)
-            return true
+            return resource.id
         }
     }
 
@@ -75,7 +75,13 @@ class ResourceService {
                     eq("username",username)
                 }
             }
-
+            topic{
+                subscriptions{
+                    user{
+                        eq("username",username)
+                    }
+                }
+            }
         }
     }
 

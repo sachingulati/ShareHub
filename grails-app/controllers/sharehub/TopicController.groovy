@@ -1,21 +1,22 @@
 package sharehub
 
+import com.sharehub.enums.Seriousness
 import com.sharehub.enums.Visibility
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
-@Transactional(readOnly = true)
+@Transactional
 class TopicController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+    def topicService
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Topic.list(params), model: [topicInstanceCount: Topic.count()]
     }
 
-    @Transactional
+//    @Transactional
     def createTopic(){
 
         String visibility = params.createTopicVisibility.toString();
@@ -28,14 +29,44 @@ class TopicController {
         else{
 
             topic.save(failOnError: true)
-            render "Topic Created.."
-            //redirect(url: request.getRequestURL())
-            //render "Topic Created."
-            //redirect(url: request.getRequestURL(), params: [message: "Topic created."])
+            redirect(action: "showTopic", params: [id: topic.id])
+            return false
         }
     }
+    def subscribe(){
+        if(!params.id) {
+            redirect(controller: "home")
+            return false
+        }
+        User user = User.findByUsername(session["username"])
+        Topic topic = Topic.findById(params.id)
+        Subscription subscription = new Subscription(user: user, topic: topic, seriousness: Seriousness.SERIOUS)
+        user.addToSubscriptions(subscription)
+        topic.addToSubscriptions(subscription)
+        subscription.save()
+        redirect(action: "showTopic", params: params)
+    }
+    def unsubscribe(){
+        if(!params.id) {
+            redirect(controller: "home")
+            return false
+        }
+        Subscription subscription = Subscription.findByUserAndTopic(User.findByUsername(session["username"]), Topic.findById(params.id))
+        if(!subscription) {
+            redirect(controller: "home")
+            return false
+        }
+        subscription.delete()
+        redirect(action: "showTopic", params: params)
+    }
     def showTopic(){
-        render view: "/showTopic"
+        Topic topic = Topic.findById(params.id)
+        User user = User.findByUsername(session["username"])
+        if(!topicService.show(user,topic)){
+            redirect(controller: "home")
+            return false
+        }
+        render (view: "/showTopic", model: [topic:topic])
     }
     def show(Topic topicInstance) {
         respond topicInstance
@@ -45,7 +76,7 @@ class TopicController {
         respond new Topic(params)
     }
 
-    @Transactional
+//    @Transactional
     def save(Topic topicInstance) {
         if (topicInstance == null) {
             notFound()
@@ -72,7 +103,7 @@ class TopicController {
         respond topicInstance
     }
 
-    @Transactional
+//    @Transactional
     def update(Topic topicInstance) {
         if (topicInstance == null) {
             notFound()
@@ -95,7 +126,7 @@ class TopicController {
         }
     }
 
-    @Transactional
+//    @Transactional
     def delete(Topic topicInstance) {
 
         if (topicInstance == null) {

@@ -10,8 +10,12 @@
 <head>
     <title><g:layoutTitle default="Share Hub"/></title>
 
+    <g:javascript library="jquery"/>
+    <g:setProvider library="jquery"/>
+
     <!-- jquery -->
     <asset:javascript src="jquery-2.1.3.min.js"/>
+
     <!-- Latest compiled and minified CSS -->
     <asset:stylesheet src="bootstrap.min.css"/>
 
@@ -63,13 +67,22 @@
                 alert("${message}");
             }
         }
+        function subscription(){
+            var action =  $(this).val()
+            var id = "1" //$(this).attr("id")
+
+            alert("sending: "+action+", "+id)
+            jQuery.post("${g.createLink(controller: "topic", action:"subscribe", params: [id:1])}",function(responseGot){
+                alert("back")
+            })
+        }
     </script>
     <g:layoutHead/>
 </head>
 
 <body>
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default topBar">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -80,7 +93,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Share Hub</a>
+            <a class="navbar-brand" href="/ShareHub/">Share Hub</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

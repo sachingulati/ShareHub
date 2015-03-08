@@ -22,61 +22,61 @@
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<ol class="property-list resourceStatus">
-			
+
 				<g:if test="${resourceStatusInstance?.score}">
 				<li class="fieldcontain">
 					<span id="score-label" class="property-label"><g:message code="resourceStatus.score.label" default="Score" /></span>
-					
+
 						<span class="property-value" aria-labelledby="score-label"><g:fieldValue bean="${resourceStatusInstance}" field="score"/></span>
-					
+
 				</li>
 				</g:if>
-			
+
 				<g:if test="${resourceStatusInstance?.dateCreated}">
 				<li class="fieldcontain">
 					<span id="dateCreated-label" class="property-label"><g:message code="resourceStatus.dateCreated.label" default="Date Created" /></span>
-					
+
 						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${resourceStatusInstance?.dateCreated}" /></span>
-					
+
 				</li>
 				</g:if>
-			
+
 				<g:if test="${resourceStatusInstance?.isRead}">
 				<li class="fieldcontain">
 					<span id="isRead-label" class="property-label"><g:message code="resourceStatus.isRead.label" default="Is Read" /></span>
-					
+
 						<span class="property-value" aria-labelledby="isRead-label"><g:formatBoolean boolean="${resourceStatusInstance?.isRead}" /></span>
-					
+
 				</li>
 				</g:if>
-			
+
 				<g:if test="${resourceStatusInstance?.lastUpdated}">
 				<li class="fieldcontain">
 					<span id="lastUpdated-label" class="property-label"><g:message code="resourceStatus.lastUpdated.label" default="Last Updated" /></span>
-					
+
 						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${resourceStatusInstance?.lastUpdated}" /></span>
-					
+
 				</li>
 				</g:if>
-			
+
 				<g:if test="${resourceStatusInstance?.resource}">
 				<li class="fieldcontain">
 					<span id="resource-label" class="property-label"><g:message code="resourceStatus.resource.label" default="Resource" /></span>
-					
+
 						<span class="property-value" aria-labelledby="resource-label"><g:link controller="resource" action="show" id="${resourceStatusInstance?.resource?.id}">${resourceStatusInstance?.resource?.encodeAsHTML()}</g:link></span>
-					
+
 				</li>
 				</g:if>
-			
+
 				<g:if test="${resourceStatusInstance?.user}">
 				<li class="fieldcontain">
 					<span id="user-label" class="property-label"><g:message code="resourceStatus.user.label" default="User" /></span>
-					
+
 						<span class="property-value" aria-labelledby="user-label"><g:link controller="user" action="show" id="${resourceStatusInstance?.user?.id}">${resourceStatusInstance?.user?.encodeAsHTML()}</g:link></span>
-					
+
 				</li>
 				</g:if>
-			
+
 			</ol>
 			<g:form url="[resource:resourceStatusInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

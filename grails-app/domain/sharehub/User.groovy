@@ -11,6 +11,12 @@ class User {
     static hasMany = [topics: Topic,resources: Resource,subscriptions: Subscription, resourceStatus: ResourceStatus]
     static transients = ['name','confirmPassword']
 
+    def getSubscriptionCount(){
+        return subscriptions.size()
+    }
+    def getTopicCount(){
+        return topics.size()
+    }
     String getName(){
         return firstName + " " + lastName
     }

@@ -24,3 +24,6 @@
                 </tr>
             </table>
         </div>
+        <g:if test="${hr}">
+            <hr>
+        </g:if>

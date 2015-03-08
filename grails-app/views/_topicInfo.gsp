@@ -1,46 +1,38 @@
-<div class="panel panel-default" style="margin-bottom:7px">
-    <div class="panel-body">
-        <div style="float:left; margin-right:10px">
-            <a href="#"><asset:image src="user-default.png" class="img-media" alt="User image"/></a>
-        </div>
 
+<div>
+    <div style="float:left; margin-right:10px">
+        <a href="#">
+            <sh:image src="${topic.createdBy.photoUrl}" />
+        </a>
+    </div>
+
+    <div>
         <div>
-            <div>
-                <a href="#">${name ? name : "TopicName"}</a> (public)
-            </div>
-
-            <table>
-                <tr>
-                    <td class="userTableData">@${username ? username : "username"}</td>
-                    <td class="userTableData">Subscriptions</td>
-                    <td class="userTableData">Posts</td>
-                </tr>
-                <tr>
-                    <td class="userTableData"><a href="#">Subscribe</a></td>
-                    <td class="userTableData"><a href="#">${subCount ? subCount : 0}</a></td>
-                    <td class="userTableData"><a href="#">${postCount ? postCount : 0}</a></td>
-                </tr>
-            </table>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <form class="navbar-form navbar-left" role="search">
-                            <div class="form-group">
-                                <g:select name="shareLinkTopic" from="${['Serious', 'Very Serious']}"
-                                          class="form-control"/>
-                            </div>
-                            <!-- <button type="submit" class="btn btn-default">Search</button> -->
-                        </form>
-                    </li>
-                    <li>
-                        <button type="button" class="btn btn-default" aria-label="Left Align"
-                                style="margin-top:10px;margin-right: 40px" onclick="openSendInvite()">
-                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                        </button>
-                    </li>
-                </ul>
-            </div>
+            <g:if test="${topic.visibility == com.sharehub.enums.Visibility.PRIVATE}">
+                <a href="${g.createLink(controller: "topic", action: "showTopic", params: [id: topic.id])}" style="color:red;">
+            </g:if>
+            <g:else>
+                <a href="${g.createLink(controller: "topic", action: "showTopic", params: [id: topic.id])}">
+            </g:else>
+            ${topic.name ? topic.name : "Topic"}</a>
         </div>
-    </div> <!-- panel-body -->
-</div> <!-- panel -->
+        <table>
+            <tr>
+                <td class="tableData tableDataWidth">
+                    <g:link controller="user" action="profile" params='[id:"${topic.createdBy.username}"]' style="color:#000000;"> @${topic.createdBy.username}</g:link></td>
+                <td class="tableData tableDataWidth">Subscriptions</td>
+                <td class="tableData">Posts</td>
+            </tr>
+            <tr>
+                <td class="tableData tableDataWidth">
+                    <sh:subscribe topic="${topic}"/>
+                </td>
+                <td class="tableData tableDataWidth"><a href="#">${topic.subscriptions.size()}</a></td>
+                <td class="tableData"><a href="#">${topic.resources.size()}</a></td>
+            </tr>
+        </table>
+    </div>
+    <g:if test="${hr}">
+        <hr>
+    </g:if>
+</div>

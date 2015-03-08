@@ -1,15 +1,14 @@
 package sharehub
 
 class ResourceStatus {
-    Boolean isRead
-    Integer score
+    Boolean isRead=false
+    Integer score=0
     Date dateCreated, lastUpdated
     static belongsTo = [user:User,resource:Resource]
     static constraints = {
         score nullable: true
     }
     static mapping = {
-        //sort(lastUpdated: 'desc')
         sort(dateCreated: 'desc')
     }
 }

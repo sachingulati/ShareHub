@@ -9,10 +9,10 @@
     <div class="padding5">
         <span style="float:right;">
             <g:if test="${resource.topic.visibility==com.sharehub.enums.Visibility.PRIVATE}">
-                <a href="#" style="color:red;">
+                <a href="${g.createLink(controller: "topic", action: "showTopic", params: [id: resource.topic.id])}" style="color:red;">
             </g:if>
             <g:else>
-                <a href="#">
+                <a href="${g.createLink(controller: "topic", action: "showTopic", params: [id: resource.topic.id])}">
             </g:else>
             ${resource.topic.name}</a></span>
 
@@ -21,7 +21,7 @@
             @${resource.createdBy.username}
         </div>
         <div>
-            <a href="#">${resource.title}</a>
+            <g:link controller="resource" action="showPost" params='[id:  "${resource.id}"]'>${resource.title}</g:link>
         </div>
 
         <div id="recentShareDesc">

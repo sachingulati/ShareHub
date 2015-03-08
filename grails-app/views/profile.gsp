@@ -25,7 +25,7 @@
             </div> <!-- panel -->
 
         <!-- subscription -->
-        <g:render template="/topicList" model="[header: 'Topics']" bean="${user.topicsCreated}" var="topics"/>
+        <g:render template="/topicList" model="[header: 'Topics', hr: true]" bean="${user.topicsCreated}" var="topics"/>
         </div> <!-- col-lg-5 -->
 
         <div class="col-lg-7">

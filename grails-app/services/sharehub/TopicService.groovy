@@ -20,6 +20,17 @@ class TopicService {
             user.save(flush: true)
         }
     }
+    def show(User user, Topic topic){
+        if(!topic){
+            return false
+        }
+        if(topic.visibility == Visibility.PRIVATE && !(user.admin)){
+            if(!Subscription.findByTopicAndUser(topic,user)){
+                return false
+            }
+        }
+        return true
+    }
     def createDefaultSubscription(){
         User user = User.get(1)
         3.times {

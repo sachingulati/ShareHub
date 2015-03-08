@@ -8,7 +8,7 @@
     </div> <!-- panel-heading -->
     <div class="panel-body">
     %{--<g:render template="/post" collection="${resources}" var="resource"/>--}%
-    <g:render template="/topic" collection="${topics}" var="topic" model="[subscribed:true]"/>
+    <g:render template="/topicInfo" collection="${topics}" var="topic" model="[subscribed:true]"/>
     </div>    <!-- panel-body -->
 </div>  <!-- panel -->
 

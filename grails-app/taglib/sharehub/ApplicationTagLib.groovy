@@ -22,7 +22,9 @@ class ApplicationTagLib {
     }
     def markRead={attr->
         if(!session["username"]) return
-        Boolean read = ResourceStatus.findByResourceAndUser(Resource.load(attr.resourceId),User.findByUsername(session["username"])).isRead
+        ResourceStatus resourceStatus = ResourceStatus.findByResourceAndUser(Resource.load(attr.resourceId),User.findByUsername(session["username"]))
+        if(!resourceStatus) return
+        Boolean read = resourceStatus.isRead
         out<< '<a href="'
         out<< g.createLink(controller: "resource", action: "switchReadStatus", params: [resource:attr.resourceId], class: "inboxLinkStatus")
         out<< "\" class='inboxLinkStyle'/> Mark " + (read?"un":"") + "read </a>"
@@ -31,6 +33,36 @@ class ApplicationTagLib {
         if(attr.resource.createdBy.username==session["username"] || User.findByUsername(session["username"]).admin){
             out<< "<a href='#' class='inboxLinkStyle'>Delete</a>"
             out<< "<a href='#' class='inboxLinkStyle'>Edit</a>"
+        }
+    }
+    def subscribe={attr->
+        String body=""
+        Subscription subscription =Subscription.findByTopicAndUser(attr.topic,User.findByUsername(session["username"]))
+        if(subscription){
+            body = "Unsubscribe"
+        }
+        else{
+            body = "Subscribe"
+        }
+        out<< "<a id=topic" + attr.topic.id+ " href=\"${g.createLink(controller: "topic", action: "${body}", params: [id: attr.topic.id])}\">$body</a>"
+//        out<< "<a onclick='subscription()' id=topic"+attr.topic.id+">$body</a>"
+    }
+    def date={attr->
+        Date date = attr.date
+        if(!date) return
+        out<< date.format("h:mm a, d MMM, yyyy")
+    }
+    def rate={attr->
+        int rating = attr.rating
+        rating.times {
+            out<< "<img src='/ShareHub/assets/RateOn.jpg' width='25' height='25'/>"
+        }
+        Boolean half = attr.rating > rating
+        if(half){
+            out<< "<img src='/ShareHub/assets/RateHalf.jpg' width='25' height='25'/>"
+        }
+        (5-rating-(half?1:0)).times {
+            out<< "<img src='/ShareHub/assets/RateOff.jpg' width='25' height='25'/>"
         }
     }
 }

@@ -23,37 +23,37 @@
 			<table>
 			<thead>
 					<tr>
-					
+
 						<g:sortableColumn property="score" title="${message(code: 'resourceStatus.score.label', default: 'Score')}" />
-					
+
 						<g:sortableColumn property="dateCreated" title="${message(code: 'resourceStatus.dateCreated.label', default: 'Date Created')}" />
-					
+
 						<g:sortableColumn property="isRead" title="${message(code: 'resourceStatus.isRead.label', default: 'Is Read')}" />
-					
+
 						<g:sortableColumn property="lastUpdated" title="${message(code: 'resourceStatus.lastUpdated.label', default: 'Last Updated')}" />
-					
+
 						<th><g:message code="resourceStatus.resource.label" default="Resource" /></th>
-					
+
 						<th><g:message code="resourceStatus.user.label" default="User" /></th>
-					
+
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${resourceStatusInstanceList}" status="i" var="resourceStatusInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
+
 						<td><g:link action="show" id="${resourceStatusInstance.id}">${fieldValue(bean: resourceStatusInstance, field: "score")}</g:link></td>
-					
+
 						<td><g:formatDate date="${resourceStatusInstance.dateCreated}" /></td>
-					
+
 						<td><g:formatBoolean boolean="${resourceStatusInstance.isRead}" /></td>
-					
+
 						<td><g:formatDate date="${resourceStatusInstance.lastUpdated}" /></td>
-					
+
 						<td>${fieldValue(bean: resourceStatusInstance, field: "resource")}</td>
-					
+
 						<td>${fieldValue(bean: resourceStatusInstance, field: "user")}</td>
-					
+
 					</tr>
 				</g:each>
 				</tbody>

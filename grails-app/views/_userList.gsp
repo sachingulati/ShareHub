@@ -1,13 +1,11 @@
 <div class="panel panel-default">
     <div class="panel-heading">
 
-        <h3 class="panel-title">Users: "TopicName"</h3>
+        <h3 class="panel-title">Users: ${topicName}</h3>
     </div> <!-- panel-heading  -->
 
     <div class="panel-body">
-        <% 5.times { %>
-        <g:render template="/userInfo"/>
-        <hr>
-        <% } %>
+        <g:render template="/userInfo" collection="${users}" var="user" model="[hr: true]"/>
+
     </div>
 </div>

@@ -8,7 +8,7 @@ class ResourceController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
     def resourceService
-
+    def topicService
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Resource.list(params), model: [resourceInstanceCount: Resource.count()]
@@ -30,6 +30,32 @@ class ResourceController {
 
     }
 
+    def showPost(){
+        Resource resource = Resource.findById(params.id)
+        if(!resource){
+            redirect(controller: "home")
+            return false
+        }
+        User user = User.findByUsername(session["username"])
+        if(!topicService.show(user,resource.topic)){
+            redirect(controller: "home")
+            return false
+        }
+        def rating = ResourceStatus.createCriteria().get(){
+            projections{
+                count("score","number")
+                avg("score","rating")
+            }
+            eq("resource",resource)
+        }
+        Subscription subscription = Subscription.findByUserAndTopic(user,resource.topic)
+        if(subscription){
+            ResourceStatus resourceStatus = ResourceStatus.findByUserAndResource(user,resource)
+            resourceStatus?.isRead = true
+            resourceStatus.save()
+        }
+        render(view: "/showPost", model: [resource: resource, rating: rating])
+    }
     def show(Resource resourceInstance) {
         respond resourceInstance
     }
@@ -40,15 +66,17 @@ class ResourceController {
 
     @Transactional
     def shareLink() {
-        if (resourceService.shareLink(params, User.findByUsername(session["username"])))
-            render "Link Shared!"
+        int id=resourceService.shareLink(params, User.findByUsername(session["username"]))
+        if (id)
+             redirect(action: "showPost", params: [id: id])
         else "Error in sharing resource!"
     }
 
     @Transactional
     def shareDocument() {
-        if (resourceService.shareLink(params, User.findByUsername(session["username"])))
-            render "Document Shared!"
+        int id=resourceService.shareDocument(params, User.findByUsername(session["username"]))
+        if (id)
+            redirect(action: "showPost", params: [id: id])
         else render "Error in sharing resource!"
 
     }

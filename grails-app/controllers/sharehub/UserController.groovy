@@ -23,7 +23,7 @@ class UserController {
             redirect(action: "myProfile")
             return false
         }
-        List<Resource> resources = Resource.findAll({topic in user.subscribedTopics && createdBy.username==user.username })
+        List<Resource> resources = user.subscribedTopics.size()?Resource.findAll({topic in user.subscribedTopics && createdBy.username==user.username }):[]
         render (view: "/profile", model: [user: user, resources: resources])
         return false
     }
@@ -39,6 +39,16 @@ class UserController {
         respond userInstance
     }
 
+    def showUser(){/*
+        String username = params.id
+        render (new UserViewCommand(User.createCriteria().get {
+            projections {
+                property("username")
+            }
+            eq("username", username)
+        },Visibility.PUBLIC))*/
+
+    }
     def create() {
         respond new User(params)
     }
@@ -172,14 +182,14 @@ class UserViewCommand {
         lastName = user.lastName
         photoUrl = user.photoUrl
         admin = user.admin
-        subscribedTopics = user.subscriptions.topic
+        subscribedTopics = user.subscriptions?.topic
         topicsCreated = user.topics as List
         if(access == Visibility.PRIVATE)
             return
         def findPublicTopics = {Topic topic->
             topic.visibility == Visibility.PUBLIC
         }
-        topicsCreated = topicsCreated.findAll(findPublicTopics)
-        subscribedTopics = subscribedTopics.findAll(findPublicTopics)
+        topicsCreated = topicsCreated?.findAll(findPublicTopics)
+        subscribedTopics = subscribedTopics?.findAll(findPublicTopics)
     }
 }

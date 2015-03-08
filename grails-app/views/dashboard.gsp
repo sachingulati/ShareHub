@@ -25,7 +25,7 @@
             </div> <!-- panel -->
 
         <!-- subscription -->
-        <g:render template="/topicList" model="[header: 'Subscriptions']" bean="${user.subscribedTopics}" var="topics"/>
+        <g:render template="/topicList" model="[header: 'Subscriptions', hr:true]" bean="${user.subscribedTopics}" var="topics"/>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <span style="float:right;"><a href="#">View All</a></span>

@@ -1,6 +1,7 @@
 
 .contentMargin{
     margin:20px 40px;
+    margin-top: 70px;
 }
 .padding5{
     padding:7px;
@@ -31,4 +32,11 @@
 #captcha{
     max-height:100px;
     max-width:150px;
+}
+.topBar{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
 }

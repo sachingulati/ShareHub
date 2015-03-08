@@ -8,12 +8,24 @@ class SearchService {
     def serviceMethod() {
 
     }
-    def inbox(String username, String searchString){
+    def searchResources(String username, String searchString,attr){
         List resources = Resource.createCriteria().list {
             resourceStatus{
-                eq("isRead",false)
+                if(attr.inbox) {
+                    eq("isRead", false)
+                }
                 user{
                     eq("username", username)
+                }
+
+            }
+            if(attr.inbox) {
+                topic {
+                    subscriptions {
+                        user {
+                            eq("username", username)
+                        }
+                    }
                 }
             }
             or {

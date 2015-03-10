@@ -43,7 +43,7 @@ environments {
         dataSource {
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
             //logSql = true
-            username = "root"
+            username = "sachin-gulati"
             password = "igdefault"
             url = "jdbc:mysql://127.0.0.1:3306/sachin-gulati_QA"
             //logSql = true

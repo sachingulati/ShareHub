@@ -44,15 +44,15 @@ class ApplicationTagLib {
             body = "Subscribe"
         }
         out << "<a class='subscription' data-topic-id='" + attr.topic.id + "'> $body </a>"
-//        out<< "<a class='subscription' href=\"${g.createLink(controller: "topic", action: "${body}", params: [id: attr.topic.id])}\" data-topic-id='" + attr.topic.id+"'>$body</a>"
-
-//        out<< "<a onclick='subscription()' id=topic"+attr.topic.id+">$body</a>"
     }
     def date = { attr ->
         Date date = attr.date
         if (!date) return
         out << date.format("h:mm a, d MMM, yyyy")
     }
+    def rate={attr->
+    }
+    /*
     def rate = { attr ->
         int rating = attr.rating
         rating.times {
@@ -65,5 +65,5 @@ class ApplicationTagLib {
         (5 - rating - (half ? 1 : 0)).times {
             out << "<img src='/ShareHub/assets/RateOff.jpg' width='25' height='25'/>"
         }
-    }
+    }*/
 }

@@ -35,7 +35,7 @@
                 <a href="${'http://' + resource.url}" class="inboxLinkStyle" target="_blank">View full site</a>
             </g:else>
             <sh:markRead resourceId="${resource.id}"/>
-            <a href="#" class="inboxLinkStyle">View post</a>
+            <g:link controller="resource" action="showPost" params='[id:  "${resource.id}"]' class="inboxLinkStyle">View post</g:link>
         </div>
     </div>
     <hr>

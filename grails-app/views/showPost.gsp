@@ -61,7 +61,10 @@
                             </div>
                             <div class="row">
                                 <span style="float:right; margin-right: 10px">
-                                    <sh:rate rating="${rating[1]}"/>(${rating[0]})
+                                    <g:each in="${1..5}" var="id">
+                                        <img class=".ratingHearts" data-id="${id}" src='/ShareHub/assets/RateOn.jpg' width='25' height='25'/>
+                                    </g:each>
+                                    <div>Avg. Rating: ${rating[1]} (${rating[0]})</div>
                                 </span>
                             </div>
 

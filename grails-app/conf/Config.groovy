@@ -94,7 +94,7 @@ environments {
     }
     production {
         grails.logging.jul.usebridge = false
-        // TODO: grails.serverURL = "http://www.changeme.com"
+        grails.serverURL = "http://sachin-gulati.qa6.intelligrape.net"
     }
 }
 

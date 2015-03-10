@@ -39,6 +39,17 @@ environments {
             url = "jdbc:mysql://127.0.0.1:3306/ShareHub?autoReconnect=true&useUnicode=yes&characterEncoding=UTF-8"
         }
     }
+    QA{
+        dataSource {
+            dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
+            //logSql = true
+            username = "root"
+            password = "igdefault"
+            url = "jdbc:mysql://127.0.0.1:3306/sachin-gulati_QA"
+            //logSql = true
+
+        }
+    }
     /*production {
         dataSource {
             dbCreate = "update"

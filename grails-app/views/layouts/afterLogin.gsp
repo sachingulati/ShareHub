@@ -67,15 +67,41 @@
                 alert("${message}");
             }
         }
-        function subscription(){
-            var action =  $(this).val()
-            var id = "1" //$(this).attr("id")
-
-            alert("sending: "+action+", "+id)
-            jQuery.post("${g.createLink(controller: "topic", action:"subscribe", params: [id:1])}",function(responseGot){
-                alert("back")
-            })
-        }
+        $(document).on('click', '.subscription',
+                function(){
+                    var action =  $(this).text();
+                    var id = $(this).data('topic-id');
+                    var obj = $(this);
+                    jQuery.post("/ShareHub/topic/"+action+"/" ,{id:id})
+                            .done(function(responseGot){
+                                if(responseGot == "Bad Request!"){
+                                    alert(responseGot)
+                                }
+                                else{
+                                    obj.text(responseGot);
+                                    var div = $('#topicInfo'+id);
+                                    if(div!=null)
+                                       div.remove()
+                                }
+                            })
+                }
+        )
+        $(document).on('click', '.markReadLink',
+                function(){
+                    var id = $(this).data('resource-id');
+                    var obj = $(this);
+                    $.post("${createLink(controller: "resource", action: "switchReadStatus")}", {resource: id})
+                            .done(function(response){
+                                if(response == "Bad Request!"){
+                                    alert(response)
+                                }
+                                else{
+                                    obj.text(response)
+                                }
+                            }
+                    )
+                }
+        )
     </script>
     <g:layoutHead/>
 </head>

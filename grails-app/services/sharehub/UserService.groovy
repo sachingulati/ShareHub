@@ -18,13 +18,14 @@ class UserService {
     def register(params){
         User user = new User()
         user.properties = params
+        user.validate()
+        if(user.hasErrors()){
+            return null
+        }
         user.firstName = user.firstName.capitalize()
         user.lastName = user.lastName.capitalize()
         user.username = user.username.toLowerCase()
         user.email = user.email.toLowerCase()
-        user.validate()
-        if(user.hasErrors())
-            return null
         String path = grailsApplication.config.uploadImages + params.username
         params.photo.transferTo(new File(path));
         user.photoUrl = path

@@ -2,7 +2,7 @@
 
 <div>
     <div style="float:left; margin-right: 10px">
-        <a href="#">
+        <a href="${g.createLink(controller: "user", action: "profile", params: [id:resource.createdBy.username])}">
             <sh:image src="${resource.createdBy.photoUrl}"/>
         </a>
     </div>

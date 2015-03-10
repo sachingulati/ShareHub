@@ -7,6 +7,7 @@ class ResourceStatus {
     static belongsTo = [user:User,resource:Resource]
     static constraints = {
         score nullable: true
+        user unique: 'resource'
     }
     static mapping = {
         sort(dateCreated: 'desc')

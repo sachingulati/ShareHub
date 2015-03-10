@@ -105,5 +105,6 @@ class ResourceService {
         }
         rs.isRead = !(rs.isRead)
         rs.save(failOnError: true)
+        return rs.isRead
     }
 }

@@ -17,7 +17,7 @@
     <div class="col-lg-5">
         <div class="panel panel-default">
             <div class="panel-body">
-        <g:render template="/topicInfo" bean="${topic}" var="topic"/>
+        <g:render template="/topicInfo" bean="${topic}" var="topic" model="[isHead: 'header']"/>
 </div>
             </div>
         <g:render template="/userList" model='[topicName: "${topic.name}"]' bean="${topic.subscriptions.user}" var="users"/>

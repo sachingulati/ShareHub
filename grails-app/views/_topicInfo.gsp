@@ -1,7 +1,7 @@
 
-<div>
+<div id="topicInfo${topic.id}${isHead}">
     <div style="float:left; margin-right:10px">
-        <a href="#">
+        <a href="${g.createLink(controller: "user", action: "profile", params: [id:topic.createdBy.username])}">
             <sh:image src="${topic.createdBy.photoUrl}" />
         </a>
     </div>

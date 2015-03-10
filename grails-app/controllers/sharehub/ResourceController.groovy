@@ -25,8 +25,13 @@ class ResourceController {
     }
 
     def switchReadStatus() {
-        resourceService.switchReadStatus(params.resource.toLong(), session["username"])
-        render params.resource + " is switched"
+        if(resourceService.switchReadStatus(params.resource.toLong(), session["username"])){
+            render "Mark Unread"
+        }
+        else{
+            render("Mark Read")
+        }
+        return
 
     }
 

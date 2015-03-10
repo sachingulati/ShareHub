@@ -92,7 +92,7 @@ environments {
     development {
         grails.logging.jul.usebridge = true
     }
-    production {
+    QA {
         grails.logging.jul.usebridge = false
         grails.serverURL = "http://sachin-gulati.qa6.intelligrape.net"
     }

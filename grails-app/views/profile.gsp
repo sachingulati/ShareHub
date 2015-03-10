@@ -26,7 +26,7 @@
 
         <!-- subscription -->
         <g:render template="/topicList" model="[header: 'Topics', hr: true]" bean="${user.topicsCreated}" var="topics"/>
-        </div> <!-- col-lg-5 -->
+        </div> <!-- col-lgrailg-5 -->
 
         <div class="col-lg-7">
             <g:render template="/posts" bean="${resources}" var="resources" model="[header: 'Posts', search: true]"/>

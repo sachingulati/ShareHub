@@ -102,8 +102,8 @@ environments {
     QA {
         grails.logging.jul.usebridge = false
         grails.serverURL = "http://sachin-gulati.qa6.intelligrape.net"
-        userImages= "$userHome/ShareHubResources/userImages/"
-        uploadFiles = "$userHome/ShareHubResources/uploadFiles/"
+        userImages= "/home/sachin-gulati/ShareHubResources/userImages/"
+        uploadFiles = "/home/sachin-gulati/ShareHubResources/uploadFiles/"
     }
 }
 
@@ -128,5 +128,6 @@ log4j.main = {
            'net.sf.ehcache.hibernate'
     //debug 'org.hibernate.SQL'
     //trace 'org.hibernate.type.descriptor.sql.BasicBinder'
+    info 'grails.app.services'
 
 }

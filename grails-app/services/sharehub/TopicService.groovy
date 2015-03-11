@@ -31,12 +31,15 @@ class TopicService {
         }
         return true
     }
+
     def createDefaultSubscription(){
         User user = User.get(1)
         3.times {
             Topic topic =  Topic.load(7 + it)
             Subscription subscription = new Subscription(seriousness: Seriousness.SERIOUS)
+            log.info("Adding subscriptions to user")
             user.addToSubscriptions(subscription)
+            log.info("Adding subscriptions to topic")
             topic.addToSubscriptions(subscription)
             topic.save(flush: true, failOnError: true)
         }
@@ -44,11 +47,14 @@ class TopicService {
         3.times {
             Topic topic =  Topic.load(2 + it)
             Subscription subscription = new Subscription(seriousness: Seriousness.SERIOUS)
+            log.info("Adding subscriptions to user")
             user.addToSubscriptions(subscription)
+            log.info("Adding subscriptions to topic")
             topic.addToSubscriptions(subscription)
             topic.save(flush: true, failOnError: true)
         }
     }
+
     def getTopics(String username){
         def topicsList = Subscription.executeQuery("select topic.id, topic.name from Subscription where user.username = ?",[username]) as List
         def topicsMap = topicsList.collect {[id:it[0],name:it[1]]}

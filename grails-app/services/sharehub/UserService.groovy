@@ -11,8 +11,16 @@ class UserService {
     }
     def createDefaultUsers(){
         User user = new User(firstName: "Sachin", lastName: "Gulati", email: "sachin@email.com", username: "sachin", password: "12345678", confirmPassword: "12345678", admin: false, active: true, photoUrl: (grailsApplication.config.uploadImages+"sachin"))
+        user.validate()
+        if (user.hasErrors()){
+            log.error("Validation errors in user!\n" + user.errors.allErrors)
+        }
         user.save()
         user = new User(firstName: "Admin", lastName: "ShareHub", email: "admin@email.com", username: "admin", password: "12345678", confirmPassword: "12345678", admin: true, active: true)
+        user.validate()
+        if (user.hasErrors()){
+            log.error("Validation errors in user!\n" + user.errors.allErrors)
+        }
         user.save()
     }
     def register(params){

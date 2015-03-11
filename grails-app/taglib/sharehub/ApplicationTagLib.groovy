@@ -14,7 +14,7 @@ class ApplicationTagLib {
         out << g.select([name: "topic", from: topics, optionKey: "id", optionValue: "name", value: "id", noSelection: ['': 'Select Topic'], class: "form-control"])
     }
     def image = { attr ->
-        String path = "/ShareHub/assets/user-default.png"
+        String path = createLink(controller: "assets", action: "user-default.png")
         if (attr.src)
             path = "data:img/png;base64," + new File(attr.src).getBytes().encodeBase64()
         out << "<img src='" + path

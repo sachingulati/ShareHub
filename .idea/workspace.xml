@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4160786d-3f67-4d6d-8e09-e75c85ad7b3c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Config$_run_closure3.class" afterPath="$PROJECT_DIR$/target/classes/Config$_run_closure3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Config.class" afterPath="$PROJECT_DIR$/target/classes/Config.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/Config.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/services/sharehub/UserService.groovy" afterPath="$PROJECT_DIR$/grails-app/services/sharehub/UserService.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ShareHub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,8 +38,8 @@
       <file leaf-file-name="TopicService.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/services/sharehub/TopicService.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="382" max-vertical-offset="1020">
+              <caret line="43" column="53" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -52,8 +48,18 @@
       <file leaf-file-name="UserService.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/services/sharehub/UserService.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55944055" vertical-offset="345" max-vertical-offset="1260">
-              <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.55944055" vertical-offset="300" max-vertical-offset="1155">
+              <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BootStrap.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="510">
+              <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -267,7 +273,7 @@
     <property name="FullScreen" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="LayoutCode.rearrangeEntriesGSP" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="con&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/Config.groovy&#10;conf&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/Config.groovy&#10;a&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/taglib/sharehub/ApplicationTagLib.groovy&#10;tag&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/taglib/sharehub/ApplicationTagLib.groovy&#10;user&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/services/sharehub/UserService.groovy&#10;confi&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/Config.groovy&#10;boot&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BootStrap.groovy&#10;data&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/DataSource.groovy&#10;res&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/ResourceController.groovy&#10;pos&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/showPost.gsp&#10;das&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/dashboard.gsp&#10;sub&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/domain/sharehub/Subscription.groovy&#10;datasource&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/DataSource.groovy&#10;datasour&#9;PSI&#9;JAVA://org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl&#10;_po&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_post.gsp&#10;sho&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/showPost.gsp&#10;_pos&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_post.gsp&#10;dash&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/dashboard.gsp&#10;hom&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/HomeController.groovy&#10;to&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/TopicController.groovy&#10;topic.g&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/showTopic.gsp&#10;dashb&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/dashboard.gsp&#10;af&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/afterLogin.gsp&#10;top&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_topicList.gsp&#10;re&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/services/sharehub/ResourceService.groovy&#10;resou&#9;null&#9;null&#10;topi&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/TopicController.groovy&#10;sear&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/services/sharehub/SearchService.groovy&#10;_&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_sendInvite.gsp&#10;_sha&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_shareDocument.gsp&#10;after&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/afterLogin.gsp&#10;userin&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_userInfo.gsp&#10;log&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/LoginController.groovy&#10;_to&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_topicInfo.gsp&#10;login&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/LoginController.groovy&#10;reso&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/ResourceController.groovy&#10;use&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_userInfo.gsp&#10;po&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_post.gsp&#10;Res&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/ResourceController.groovy&#10;befo&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/beforeLogin.gsp&#10;aft&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/afterLogin.gsp&#10;Sub&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/domain/sharehub/Subscription.groovy&#10;users&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/services/sharehub/UserService.groovy&#10;topic&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/domain/sharehub/Topic.groovy&#10;Topicc&#9;null&#9;null&#10;topicc&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/TopicController.groovy&#10;sea&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/services/sharehub/SearchService.groovy&#10;pro&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/profile.gsp&#10;_p&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_post.gsp&#10;da&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/dashboard.gsp" />
+    <property name="SearchEverywhereHistoryKey" value="boo&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BootStrap.groovy&#10;con&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/Config.groovy&#10;conf&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/Config.groovy&#10;a&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/taglib/sharehub/ApplicationTagLib.groovy&#10;tag&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/taglib/sharehub/ApplicationTagLib.groovy&#10;user&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/services/sharehub/UserService.groovy&#10;confi&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/Config.groovy&#10;boot&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BootStrap.groovy&#10;data&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/DataSource.groovy&#10;res&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/ResourceController.groovy&#10;pos&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/showPost.gsp&#10;das&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/dashboard.gsp&#10;sub&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/domain/sharehub/Subscription.groovy&#10;datasource&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/DataSource.groovy&#10;datasour&#9;PSI&#9;JAVA://org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl&#10;_po&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_post.gsp&#10;sho&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/showPost.gsp&#10;_pos&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_post.gsp&#10;dash&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/dashboard.gsp&#10;hom&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/HomeController.groovy&#10;to&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/TopicController.groovy&#10;topic.g&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/showTopic.gsp&#10;dashb&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/dashboard.gsp&#10;af&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/afterLogin.gsp&#10;top&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_topicList.gsp&#10;re&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/services/sharehub/ResourceService.groovy&#10;resou&#9;null&#9;null&#10;topi&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/TopicController.groovy&#10;sear&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/services/sharehub/SearchService.groovy&#10;_&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_sendInvite.gsp&#10;_sha&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_shareDocument.gsp&#10;after&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/afterLogin.gsp&#10;userin&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_userInfo.gsp&#10;log&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/LoginController.groovy&#10;_to&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_topicInfo.gsp&#10;login&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/LoginController.groovy&#10;reso&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/ResourceController.groovy&#10;use&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_userInfo.gsp&#10;po&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_post.gsp&#10;Res&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/ResourceController.groovy&#10;befo&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/beforeLogin.gsp&#10;aft&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/afterLogin.gsp&#10;Sub&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/domain/sharehub/Subscription.groovy&#10;users&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/services/sharehub/UserService.groovy&#10;topic&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/domain/sharehub/Topic.groovy&#10;Topicc&#9;null&#9;null&#10;topicc&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/TopicController.groovy&#10;sea&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/services/sharehub/SearchService.groovy&#10;pro&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/profile.gsp&#10;_p&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_post.gsp" />
     <property name="options.lastSelected" value="editor.preferences.completion" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -905,7 +911,7 @@
       <workItem from="1425879889431" duration="14712000" />
       <workItem from="1425964664764" duration="10949000" />
       <workItem from="1425984043359" duration="2598000" />
-      <workItem from="1426052854959" duration="14874000" />
+      <workItem from="1426052854959" duration="16157000" />
     </task>
     <task id="LOCAL-00001" summary="check">
       <created>1424700707141</created>
@@ -917,7 +923,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="404576000" />
+    <option name="totallyTimeSpent" value="405859000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -959,7 +965,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29308975" sideWeight="0.49741602" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25199363" sideWeight="0.49960285" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25199363" sideWeight="0.49960285" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.49960285" order="15" side_tool="false" content_ui="tabs" />
@@ -1419,22 +1425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5520362" vertical-offset="41" max-vertical-offset="510">
-          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/services/sharehub/TopicService.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1020">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1311" max-vertical-offset="2085">
@@ -1443,10 +1433,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/sharehub/TopicService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="382" max-vertical-offset="1020">
+          <caret line="43" column="53" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="510">
+          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/services/sharehub/UserService.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55944055" vertical-offset="345" max-vertical-offset="1260">
-          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.55944055" vertical-offset="300" max-vertical-offset="1155">
+          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
           <folding />
         </state>
       </provider>

@@ -30,19 +30,12 @@ class UserService {
         if(user.hasErrors()){
             return null
         }
-        log.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-        log.info(">>>>>>>>>>> SSSSSSS >>>>>>>>>>>>>>")
-        log.info(">>>>>>>>>>> SS      >>>>>>>>>>>>>>")
-        log.info(">>>>>>>>>>> SSSSSSS >>>>>>>>>>>>>>")
-        log.info(">>>>>>>>>>>      SS >>>>>>>>>>>>>>")
-        log.info(">>>>>>>>>>> SSSSSSS >>>>>>>>>>>>>>")
-        log.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-        log.info(user)
+        log.info(">>>>>>>>>>>>>>>>  New Logs  >>>>>>>>>>>>>>>>>>")
         user.firstName = user.firstName.capitalize()
         user.lastName = user.lastName.capitalize()
         user.username = user.username.toLowerCase()
         user.email = user.email.toLowerCase()
-        String path = grailsApplication.config.uploadImages + params.username
+        String path = grailsApplication.config.uploadImages.toString() + params.username
 //        String path = grailsApplication.config.userImages + params.username
         params.photo.transferTo(new File(path));
         user.photoUrl = path

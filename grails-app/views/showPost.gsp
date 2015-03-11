@@ -10,6 +10,8 @@
 <head>
     <meta name="layout" content="afterLogin"/>
     <title>${resource.title}</title>
+    <script>
+    </script>
 </head>
 
 <body>

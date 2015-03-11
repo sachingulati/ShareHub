@@ -11,6 +11,7 @@ class Subscription {
     static constraints = {
         topic unique: 'user'
     }
+
     static afterInsert={
         topic.resources.each{ resource->
             ResourceStatus resourceStatus = new ResourceStatus(resource: resource, user: user)
@@ -22,6 +23,7 @@ class Subscription {
             i.save()
         }*/
     }
+
     static afterDelete={
         Invites i = Invites.findByInvitedToAndTopicAndStatus(user,topic,InviteStatus.SUBSCRIBED)
         if(i){

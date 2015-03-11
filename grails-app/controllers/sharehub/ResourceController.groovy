@@ -52,6 +52,7 @@ class ResourceController {
                 avg("score","rating")
             }
             eq("resource",resource)
+            gt("score", 0)
         }
         Subscription subscription = Subscription.findByUserAndTopic(user,resource.topic)
         if(subscription){

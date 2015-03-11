@@ -35,6 +35,7 @@ class UserService {
         user.username = user.username.toLowerCase()
         user.email = user.email.toLowerCase()
         String path = grailsApplication.config.uploadImages + params.username
+//        String path = grailsApplication.config.userImages + params.username
         params.photo.transferTo(new File(path));
         user.photoUrl = path
         user.save()

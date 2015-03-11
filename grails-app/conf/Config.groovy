@@ -88,13 +88,22 @@ grails.hibernate.osiv.readonly = false
 
 grails.plugins.remotepagination.max=20
 
+// my paths
+//uploadFiles = "$userHome/ShareHubResources/uploadFiles/"
+//userImages= "$userHome/Documents/userImages/"
+
 environments {
     development {
         grails.logging.jul.usebridge = true
+        uploadFiles = "$userHome/ShareHubResources/uploadFiles/"
+        userImages= "$userHome/Documents/userImages/"
+        uploadImages = "$userHome/Documents/userImages/"
     }
     QA {
         grails.logging.jul.usebridge = false
         grails.serverURL = "http://sachin-gulati.qa6.intelligrape.net"
+        userImages= "$userHome/ShareHubResources/userImages/"
+        uploadFiles = "$userHome/ShareHubResources/uploadFiles/"
     }
 }
 
@@ -121,5 +130,3 @@ log4j.main = {
     //trace 'org.hibernate.type.descriptor.sql.BasicBinder'
 
 }
-
-uploadImages= "$userHome/Documents/uploads/"

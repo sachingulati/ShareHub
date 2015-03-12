@@ -31,6 +31,16 @@ class UserController {
         forward(action: "profile", params: [id:session["username"]])
         return false
     }
+
+    def editProfile(){
+        UserViewCommand user = new UserViewCommand(session["username"], Visibility.PRIVATE)
+        if (!user.valid){
+            redirect(controller: "login")
+            return false
+        }
+
+        render(view: "/editProfile", model: [user: user])
+    }
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond User.list(params), model:[userInstanceCount: User.count()]
@@ -135,6 +145,7 @@ class UserController {
             '*'{ render status: NOT_FOUND }
         }
     }
+
 }
 
 class UserCommand {
@@ -192,4 +203,5 @@ class UserViewCommand {
         topicsCreated = topicsCreated?.findAll(findPublicTopics)
         subscribedTopics = subscribedTopics?.findAll(findPublicTopics)
     }
+
 }

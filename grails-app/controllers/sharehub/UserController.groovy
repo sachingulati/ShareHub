@@ -1,6 +1,7 @@
 package sharehub
 
 import com.sharehub.enums.Visibility
+import grails.validation.Validateable
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -24,11 +25,11 @@ class UserController {
             return false
         }
         List<Resource> resources = user.subscribedTopics.size()?Resource.findAll({topic in user.subscribedTopics && createdBy.username==user.username }):[]
-        render (view: "/profile", model: [user: user, resources: resources])
+        render (view: "/profile", model: [user: user, resources: resources, myProfile: params.myProfile])
         return false
     }
     def myProfile(){
-        forward(action: "profile", params: [id:session["username"]])
+        forward(action: "profile", params: [id:session["username"], myProfile:true])
         return false
     }
 
@@ -38,8 +39,25 @@ class UserController {
             redirect(controller: "login")
             return false
         }
-
         render(view: "/editProfile", model: [user: user])
+    }
+    @Transactional
+    def editUser(){
+        println "edit User"
+        if (!userService.editUser(session["username"], params.firstName, params.lastName, params.removePhoto, params.photo)){
+            render "Bad Request!"
+            return false
+        }
+        render "done"
+        return false
+    }
+    def changePassword(){
+        if (userService.changePassword(session["username"], params.newPassword,  params.confirmPassword, params.currentPassword)){
+            render "done"
+            return false
+        }
+        else render "Bad Request!"
+        return false
     }
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
@@ -166,7 +184,37 @@ class UserCommand {
         })
     }
 }
-
+class EditUserCommand{
+    String username
+    String firstName, lastName
+    String photoUrl
+    boolean photoCheck
+    static constraints={
+        firstName nullable: false
+        lastName nullable: false
+        username nullable: false
+    }
+}
+@Validateable
+class ChangePasswordCommand{
+    String username
+    String currentPassword
+    String newPassword, confirmPassword
+    User user
+    static constraints={
+        username nullable: false
+        currentPassword nullable: false
+        newPassword nullable: false
+        confirmPassword nullable: false
+        confirmPassword(validator:{val, user->
+            return val.equals(user.newPassword)
+        })
+        user nullable: false
+    }
+    def getUser(){
+        user = User.findByUsername(username)
+    }
+}
 class UserViewCommand {
     String username
     String firstName, lastName

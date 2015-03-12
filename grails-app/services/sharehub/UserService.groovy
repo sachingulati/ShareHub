@@ -42,6 +42,39 @@ class UserService {
         user.save()
         return user
     }
+    def editUser(String username, String fname, String lname, Boolean removePhoto, def photo){
+        User user = User.findByUsername(username)
+        if (!user)
+            return false
+        user.firstName = fname
+        user.lastName = lname
+        if (removePhoto){
+            user.photoUrl = null
+        }
+        user.validate()
+        if (user.hasErrors()){
+            println user.errors.allErrors
+        }
+        user.save()
+        return true
+    }
+    def changePassword(String username, String newPassword, String confirmPassword,String currentPassword){
+        ChangePasswordCommand changePasswordCommand = new ChangePasswordCommand()
+        changePasswordCommand.confirmPassword= confirmPassword
+        changePasswordCommand.currentPassword=currentPassword
+        changePasswordCommand.newPassword=newPassword
+        changePasswordCommand.username = username
+        User user = changePasswordCommand.getUser()
+        changePasswordCommand.validate()
+        if(changePasswordCommand.hasErrors()){
+            log.error(changePasswordCommand.errors.allErrors)
+            return false
+        }
+        user.password = changePasswordCommand.newPassword
+        user.confirmPassword=changePasswordCommand.confirmPassword
+        user.save()
+        return true
+    }
     def getName(String username){
         def name = User.createCriteria().get {
             projections{

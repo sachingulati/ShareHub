@@ -13,6 +13,6 @@ class Topic {
         name unique: 'createdBy'
     }
     def afterInsert = {
-        addToSubscriptions(topic: this, user: createdBy, seriousness: Seriousness.VERY_SERIOUS);
+        addToSubscriptions(topic: this, user: createdBy, seriousness: Seriousness.VERY_SERIOUS)
     }
 }

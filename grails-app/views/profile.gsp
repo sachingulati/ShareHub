@@ -29,6 +29,11 @@
         </div> <!-- col-lgrailg-5 -->
 
         <div class="col-lg-7">
+            <g:if test="${myProfile}">
+                <div style="margin: 10px 0px; width: 100%">
+                    <g:link controller="user" action="editProfile" class="btn btn-default" style="width: 100%">Edit Profile</g:link>
+                </div>
+            </g:if>
             <g:render template="/posts" bean="${resources}" var="resources" model="[header: 'Posts', search: true]"/>
         </div> <!-- col-lg-7 -->
 

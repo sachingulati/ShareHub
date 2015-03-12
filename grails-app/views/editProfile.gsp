@@ -36,19 +36,19 @@
                 <h3 class="panel-title">Profile</h3>
             </div> <!-- panel-heading -->
             <div class="panel-body">
-                <g:form>
+                <g:form controller="user" action="editUser">
                     <table width="100%" id="editProfile">
                         <tr>
                             <td>First name*</td>
-                            <td><g:textField name="firstName" class="form-control"/> </td>
+                            <td><g:textField name="firstName" class="form-control" value="${user.firstName}"/> </td>
                         </tr>
                         <tr>
                             <td>Last name*</td>
-                            <td><g:textField name="lastName" class="form-control"/> </td>
+                            <td><g:textField name="lastName" class="form-control" value="${user.lastName}"/> </td>
                         </tr>
                         <tr>
                             <td>Username*</td>
-                            <td><g:textField name="user-name" readonly="true" class="form-control"/> </td>
+                            <td><g:textField name="user-name" readonly="true" class="form-control" value="${user.username}"/> </td>
                         </tr>
                         <tr>
                             <td>Photo</td>
@@ -71,7 +71,7 @@
                 <h3 class="panel-title">Change password</h3>
             </div> <!-- panel-heading -->
             <div class="panel-body">
-                <g:form>
+                <g:form controller="user" action="changePassword">
                     <table width="100%" id="editProfile">
                         <tr>
                             <td>Current Pasword*</td>

@@ -4,9 +4,7 @@ import com.sharehub.enums.Seriousness
 import com.sharehub.enums.Visibility
 
 import static org.springframework.http.HttpStatus.*
-import grails.transaction.Transactional
 
-@Transactional
 class TopicController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -16,7 +14,6 @@ class TopicController {
         respond Topic.list(params), model: [topicInstanceCount: Topic.count()]
     }
 
-//    @Transactional
     def createTopic(){
 
         String visibility = params.createTopicVisibility.toString();
@@ -72,7 +69,7 @@ class TopicController {
             redirect(controller: "home")
             return false
         }
-        render (view: "/showTopic", model: [topic:topic])
+        render (view: "/topic/showTopic", model: [topic:topic])
     }
     def show(Topic topicInstance) {
         respond topicInstance
@@ -82,7 +79,6 @@ class TopicController {
         respond new Topic(params)
     }
 
-//    @Transactional
     def save(Topic topicInstance) {
         if (topicInstance == null) {
             notFound()
@@ -109,7 +105,6 @@ class TopicController {
         respond topicInstance
     }
 
-//    @Transactional
     def update(Topic topicInstance) {
         if (topicInstance == null) {
             notFound()
@@ -132,7 +127,6 @@ class TopicController {
         }
     }
 
-//    @Transactional
     def delete(Topic topicInstance) {
 
         if (topicInstance == null) {

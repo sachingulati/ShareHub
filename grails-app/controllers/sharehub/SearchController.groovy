@@ -6,7 +6,7 @@ class SearchController {
     def index() {}
 
     def inboxSearch(){
-        render(template: "/posts", model: [resources: searchService.searchResources(session["username"], params.searchString, [inbox: true])])
+        render(template: "/resource/posts", model: [resources: searchService.searchResources(session["username"], params.searchString, [inbox: true])])
 
         //render searchService.searchResources(session["username"], params.searchString, [inbox: true])
     }

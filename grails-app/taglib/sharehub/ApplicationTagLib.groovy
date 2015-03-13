@@ -20,6 +20,14 @@ class ApplicationTagLib {
         out << "<img src='" + path
         out << "' width='80' height='80' />"
     }
+
+    def admin = {
+        Boolean admin = session["admin"]
+        if (admin == true) {
+            out << "<a href='${createLink(controller: "user", action: "adminPanel")}'>Admin Panel</a>"
+        }
+    }
+
     def markRead = { attr ->
         if (!session["username"])
             return
@@ -44,6 +52,10 @@ class ApplicationTagLib {
             body = "Subscribe"
         }
         out << "<a class='subscription' data-topic-id='" + attr.topic.id + "'> $body </a>"
+    }
+
+    def isEditable={attr->
+
     }
     def date = { attr ->
         Date date = attr.date

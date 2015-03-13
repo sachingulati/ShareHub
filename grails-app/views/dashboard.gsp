@@ -20,12 +20,12 @@
             <!-- User Info -->
             <div class="panel panel-default" style="margin-bottom:7px">
                 <div class="panel-body">
-                    <g:render template="/userInfo" bean="${user}"/>
+                    <g:render template="/user/userInfo" bean="${user}"/>
                 </div> <!-- panel-body -->
             </div> <!-- panel -->
 
         <!-- subscription -->
-        <g:render template="/topicList" model="[header: 'Subscriptions', hr:true]" bean="${user.subscribedTopics}" var="topics"/>
+        <g:render template="/topic/topicList" model="[header: 'Subscriptions', hr:true]" bean="${user.subscribedTopics}" var="topics"/>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <span style="float:right;"><a href="#">View All</a></span>
@@ -66,8 +66,8 @@
 
         </div> <!-- col-lg-5 -->
 
-        <div class="col-lg-7">
-            <g:render template="/posts" bean="${unreadResources}" var="resources" model="[header: 'Inbox', search: true]"/>
+        <div class="col-lg-7" id="resourceList">
+            <g:render template="/resource/posts" bean="${unreadResources}" var="resources" model="[header: 'Inbox', search: true]"/>
         </div> <!-- col-lg-7 -->
 
     </div><!-- /.row -->

@@ -30,7 +30,6 @@ class UserService {
         if(user.hasErrors()){
             return null
         }
-        log.info(">>>>>>>>>>>>>>>>  New Logs  >>>>>>>>>>>>>>>>>>")
         user.firstName = user.firstName.capitalize()
         user.lastName = user.lastName.capitalize()
         user.username = user.username.toLowerCase()
@@ -59,21 +58,17 @@ class UserService {
         return true
     }
     def changePassword(String username, String newPassword, String confirmPassword,String currentPassword){
-        ChangePasswordCommand changePasswordCommand = new ChangePasswordCommand()
-        changePasswordCommand.confirmPassword= confirmPassword
-        changePasswordCommand.currentPassword=currentPassword
-        changePasswordCommand.newPassword=newPassword
-        changePasswordCommand.username = username
-        User user = changePasswordCommand.getUser()
-        changePasswordCommand.validate()
-        if(changePasswordCommand.hasErrors()){
-            log.error(changePasswordCommand.errors.allErrors)
-            return false
+        User user = User.findByUsernameAndPassword(username,currentPassword)
+        if (!user){
+            return "Invalid Password!"
         }
-        user.password = changePasswordCommand.newPassword
-        user.confirmPassword=changePasswordCommand.confirmPassword
-        user.save()
-        return true
+        if (confirmPassword!=newPassword)
+            return "New Password and Confirm Password do not match!"
+        user.password = newPassword
+        user.validate()
+        println(user.errors.allErrors)
+        user.save(failOnError: true)
+        return "Password successfully changed."
     }
     def getName(String username){
         def name = User.createCriteria().get {

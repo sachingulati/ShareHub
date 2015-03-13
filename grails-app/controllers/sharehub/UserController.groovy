@@ -6,7 +6,7 @@ import grails.validation.Validateable
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
-@Transactional(readOnly = true)
+
 class UserController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -25,8 +25,16 @@ class UserController {
             return false
         }
         List<Resource> resources = user.subscribedTopics.size()?Resource.findAll({topic in user.subscribedTopics && createdBy.username==user.username }):[]
-        render (view: "/profile", model: [user: user, resources: resources, myProfile: params.myProfile])
+        render (view: "/user/profile", model: [user: user, resources: resources, myProfile: params.myProfile])
         return false
+    }
+
+    def adminPanel(){
+        if (session["admin"] == false){
+            redirect(action: "myProfile")
+            return false
+        }
+        render view: "/user/adminPanel", model: [username: session["username"]]
     }
     def myProfile(){
         forward(action: "profile", params: [id:session["username"], myProfile:true])
@@ -39,24 +47,18 @@ class UserController {
             redirect(controller: "login")
             return false
         }
-        render(view: "/editProfile", model: [user: user])
+        render(view: "/user/editProfile", model: [user: user])
     }
-    @Transactional
     def editUser(){
-        println "edit User"
         if (!userService.editUser(session["username"], params.firstName, params.lastName, params.removePhoto, params.photo)){
             render "Bad Request!"
             return false
         }
-        render "done"
+        render "Profile updated successfully"
         return false
     }
     def changePassword(){
-        if (userService.changePassword(session["username"], params.newPassword,  params.confirmPassword, params.currentPassword)){
-            render "done"
-            return false
-        }
-        else render "Bad Request!"
+        render userService.changePassword(session["username"], params.newPassword,  params.confirmPassword, params.currentPassword)
         return false
     }
     def index(Integer max) {

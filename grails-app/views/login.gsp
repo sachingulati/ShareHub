@@ -11,8 +11,8 @@
 <div class="contentMargin">
     <div class="row">
         <div class="col-lg-7">
-            <g:render template="/posts" bean="${recentResources}" var="resources" model="[header:'Recent Posts', search:false]"/>
-            <g:render template="/posts" bean="${recentResources}" var="resources" model="[header:'Top Posts', search:false]"/>
+            <g:render template="/resource/posts" bean="${recentResources}" var="resources" model="[header:'Recent Posts', search:false]"/>
+            <g:render template="/resource/posts" bean="${recentResources}" var="resources" model="[header:'Top Posts', search:false]"/>
         </div> <!-- col-lg-7 -->
         <div class="col-lg-5">
             <div>

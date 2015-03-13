@@ -165,6 +165,7 @@
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Users</a></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Topics</a></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Posts</a></li>
+                            <li role="presentation"><sh:admin/></li>
                             <li role="presentation">
                                 <g:link controller="user" action="logout" tabindex="-1">Logout</g:link></li>
                         </ul>
@@ -174,11 +175,13 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-<g:render template="/shareLink"/>
-<g:render template="/shareDocument"/>
-<g:render template="/createTopic"/>
-<g:render template="/sendInvite"/>
-<g:layoutBody/>
+<g:render template="/resource/shareLink"/>
+<g:render template="/resource/shareDocument"/>
+<g:render template="/topic/createTopic"/>
+<g:render template="/invites/sendInvite"/>
+<div class="contentMargin">
+    <g:layoutBody/>
+</div>
 <script>
     showErrors();
 </script>

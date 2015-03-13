@@ -3,7 +3,6 @@ package sharehub
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
-@Transactional
 class ResourceController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -18,10 +17,10 @@ class ResourceController {
         render(view: "/temp")
     }
     def getResources(){
-        render(template: "/posts", model: [resources: Resource.list(params)])
+        render(template: "/resource/posts", model: [resources: Resource.list(params)])
     }
     def unreadResourceList() {
-        render(template: "/posts", model: [resources: resourceService.unreadResourceList(session["username"], params.max, params.offset)])
+        render(template: "/resource/posts", model: [resources: resourceService.unreadResourceList(session["username"], params.max, params.offset)])
     }
 
     def switchReadStatus() {
@@ -60,7 +59,7 @@ class ResourceController {
             resourceStatus?.isRead = true
             resourceStatus.save()
         }
-        render(view: "/showPost", model: [resource: resource, rating: rating])
+        render(view: "/resource/showPost", model: [resource: resource, rating: rating])
     }
     def show(Resource resourceInstance) {
         respond resourceInstance

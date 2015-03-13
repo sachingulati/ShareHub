@@ -1,5 +1,6 @@
 package sharehub
 
+import com.sharehub.enums.Seriousness
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -7,6 +8,80 @@ import grails.transaction.Transactional
 class SubscriptionController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+
+//    @Transactional
+    def subscribe(){
+        println ("in subscribe")
+        Topic topic = Topic.findById(params.topicId)
+        User user = User.findByUsername(session["username"])
+        if (!topic || !user){
+            println ("Error in Controller: subscription, action: subscribe, reason: " + (!user?"No user found! ":"")+(!topic?"No Topic found! ":""))
+//            log.error("Error in Controller: subscription, action: subscribe, reason: " + (!user?"No user found! ":"")+(!topic?"No Topic found! ":""))
+            render(sh.subscribe(topic: topic))
+            return false
+        }
+        Subscription subscription = Subscription.findByTopicAndUser(topic,user)
+        if (subscription){
+            println "already subscribed! "
+            println "user: " + session["username"] + " topic: "  + params.topicId
+            render( sh.subscribe(topic: topic))
+            return false
+        }
+        subscription = new Subscription(user: user, topic: topic, seriousness: Seriousness.VERY_SERIOUS)
+        subscription.validate()
+        println "errors: " + subscription.errors.allErrors
+        println("Saved >>>>>>>>>>>>> " + subscription.save(failOnError: true, flush: true))
+
+        user.addToSubscriptions(subscription)
+        topic.addToSubscriptions(subscription)
+        println ("before render")
+        render(sh.subscribe(topic: topic))
+        println ("after render")
+    }
+//    @Transactional
+    def unsubscribe(){
+        Topic topic = Topic.findById(params.topicId)
+        User user = User.findByUsername(session["username"])
+        if (!topic || !user){
+            log.error("Error in Controller: subscription, action: unsubscribe, reason: " + (!user?"No user found! ":"")+(!topic?"No Topic found! ":""))
+            render(sh.subscribe(topic: topic))
+            return false
+        }
+        Subscription subscription = Subscription.findByUserAndTopic(user, topic)
+        if(!subscription) {
+            log.error("Error in Controller: subscription, action: unsubscribe, reason: no subscription found! ")
+            render (sh.subscribe(topic: topic))
+            return false
+        }
+        user.removeFromSubscriptions(subscription)
+        topic.removeFromSubscriptions(subscription)
+        subscription.delete(flush: true)
+        render(sh.subscribe(topic: topic))
+    }
+    @Transactional
+    def modifySubscriptionSeriousness(){
+        Topic topic = Topic.findById(params.topicId)
+        User user = User.findByUsername(session["username"])
+        Seriousness seriousness = Seriousness.valueOf(params.seriousness)
+        if (!user || !topic || !seriousness){
+            log.error("Error in Controller: subscription, action: subscribe, reason: " + (!user?"No user found! ":"")+(!topic?"No Topic found! ":"")+(!seriousness?"Invalid Seriousness ":""))
+            render (sh.subscribe(topic: topic))
+            return false
+        }
+        Subscription subscription = Subscription.findByTopicAndUser(topic,user)
+        if (subscription){
+            subscription.seriousness = seriousness
+            subscription.save()
+            render(sh.subscribe(topic: topic))
+        }
+        else {
+            Subscription newSubscription = new Subscription(topic: topic,user: user,seriousness: seriousness)
+            topic.addToSubscriptions(newSubscription)
+            user.addToSubscriptions(newSubscription)
+            subscription.save()
+            render(sh.subscribe(topic: topic))
+        }
+    }
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)

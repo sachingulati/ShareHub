@@ -4,9 +4,9 @@ package com.sharehub.enums
  * Created by intelligrape on 19/2/15.
  */
 enum Seriousness {
-    SERIOUS("serious"),
-    VERY_SERIOUS("very serious"),
-    CASUAL("casual")
+    SERIOUS("Serious"),
+    VERY_SERIOUS("Very serious"),
+    CASUAL("Casual")
     final String displayName;
     Seriousness(String name){
         displayName = name;

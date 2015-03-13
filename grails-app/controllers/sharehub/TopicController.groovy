@@ -30,38 +30,6 @@ class TopicController {
             return false
         }
     }
-    def subscribe(){
-        if(!params.id) {
-            render "Bad Request!"
-            return false
-        }
-        User user = User.findByUsername(session["username"])
-        Topic topic = Topic.findById(params.id)
-        if(!user || !topic){
-            render "Bad Request!"
-            return false
-        }
-        Subscription subscription = new Subscription(user: user, topic: topic, seriousness: Seriousness.SERIOUS)
-        user.addToSubscriptions(subscription)
-        topic.addToSubscriptions(subscription)
-        subscription.save()
-        user.subscriptions
-        render "Unsubscribe"
-        //redirect(action: "showTopic", params: params)
-    }
-    def unsubscribe(){
-        if(!params.id) {
-            render "Bad Request!"
-            return false
-        }
-        Subscription subscription = Subscription.findByUserAndTopic(User.findByUsername(session["username"]), Topic.findById(params.id))
-        if(!subscription) {
-            render "Bad Request!"
-            return false
-        }
-        subscription.delete()
-        render "Subscribe"
-    }
     def showTopic(){
         Topic topic = Topic.findById(params.id)
         User user = User.findByUsername(session["username"])

@@ -44,14 +44,13 @@ class ApplicationTagLib {
         }
     }
     def subscribe = { attr ->
-        String body = ""
+        if (!(attr.topic)) return
         Subscription subscription = Subscription.findByTopicAndUser(attr.topic, User.findByUsername(session["username"]))
         if (subscription) {
-            body = "Unsubscribe"
+            out<< render(template: "/subscription/subscribeOptions", model: [subscriptionType: subscription.seriousness, topicId: attr.topic.id])
         } else {
-            body = "Subscribe"
+            out<< g.remoteLink(update: "subscriptionStatus${attr.topic.id}", controller: "subscription", action: "subscribe", params: [topicId: attr.topic.id]){"Subscribe"}
         }
-        out << "<a class='subscription' data-topic-id='" + attr.topic.id + "'> $body </a>"
     }
 
     def isEditable={attr->

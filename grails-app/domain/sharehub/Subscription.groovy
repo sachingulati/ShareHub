@@ -6,7 +6,7 @@ import com.sharehub.enums.Visibility
 
 class Subscription {
     Date dateCreated
-    Seriousness seriousness;
+    Seriousness seriousness = Seriousness.VERY_SERIOUS;
     static belongsTo = [topic:Topic,user:User]
     static constraints = {
         topic unique: 'user'
@@ -22,13 +22,5 @@ class Subscription {
             i.status = InviteStatus.SUBSCRIBED;
             i.save()
         }*/
-    }
-
-    static afterDelete={
-        Invites i = Invites.findByInvitedToAndTopicAndStatus(user,topic,InviteStatus.SUBSCRIBED)
-        if(i){
-            i.status = InviteStatus.UNSUBSCRIBED;
-            i.save()
-        }
     }
 }

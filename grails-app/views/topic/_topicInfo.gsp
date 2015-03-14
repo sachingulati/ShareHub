@@ -14,7 +14,25 @@
             <g:else>
                 <a href="${g.createLink(controller: "topic", action: "showTopic", params: [id: topic.id])}">
             </g:else>
-            ${topic.name ? topic.name : "Topic"}</a>
+            ${topic.name}</a>
+            %{--    Editing options     --}%
+            <sh:isEditable topic="${topic}">
+                <span class="text-right" style="float: right">
+                    <div class="dropdown">
+                        <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" style="margin-left: 0px; padding-left: 0px">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation">
+                                <a href="#" role="menuitem" tabindex="-1" onclick='openEditTopic("${topic.id}", "${topic.name}", "${topic.visibility}")'>Edit</a>
+                            </li>
+                            <li role="presentation">
+                                <g:link role="menuitem" tabindex="-1" controller="topic" action="delTopic" params="[id: topic.id]">Delete</g:link>
+                            </li>
+                        </ul>
+                    </div>
+                </span>
+            </sh:isEditable>
         </div>
         <table>
             <tr>
@@ -31,8 +49,12 @@
                     %{--<g:remoteLink update='subscriptionStatus${topic.id}' controller='subscription' action='subscribe' params="[topicId: topic.id]" class='btn btn-link'>Subscribe</g:remoteLink>--}%
                     %{--<g:render template="/subscription/subscribeOptions"/>--}%
                 </td>
-                <td class="tableData tableDataWidth"><a href="#">${topic.subscriptions.size()}</a></td>
-                <td class="tableData"><a href="#">${topic.resources.size()}</a></td>
+                <td class="tableData tableDataWidth">
+                    <g:link controller="topic" action="showTopic" params="[id: topic.id]">${topic.subscriptions.size()}</g:link>
+                </td>
+                <td class="tableData">
+                    <g:link controller="topic" action="showTopic" params="[id: topic.id]">${topic.resources.size()}</g:link>
+                </td>
             </tr>
         </table>
     </div>

@@ -1,9 +1,15 @@
-package sharehub
 
+package sharehub
 import com.sharehub.enums.Seriousness
+
 import com.sharehub.enums.Visibility
+import grails.transaction.Transactional
+import sharehub.Topic
+import sharehub.User
 
 import static org.springframework.http.HttpStatus.*
+
+
 
 class TopicController {
 
@@ -15,20 +21,44 @@ class TopicController {
     }
 
     def createTopic(){
-
-        String visibility = params.createTopicVisibility.toString();
-        Topic topic = new Topic(name: params.createTopicName, createdBy: User.findByUsername(session["username"]),visibility: Visibility.valueOf(params.createTopicVisibility.toString().toUpperCase()))
+        Topic topic = new Topic(name: params.name, createdBy: User.findByUsername(session["username"]),visibility: Visibility.valueOf(params.visibility))
         topic.validate()
         if(topic.hasErrors()){
             render topic.errors.allErrors
-            //redirect(url: request.getRequestURL())
         }
         else{
-
-            topic.save(failOnError: true)
+            topic.save(failOnError: true, flush: true)
             redirect(action: "showTopic", params: [id: topic.id])
             return false
         }
+    }
+
+    def editTopic(){
+        Topic topic = Topic.findById(params.id)
+        if (!topic || !(topic.createdBy.username == session["username"] || session["admin"])){
+            render "Invalid request!"
+            return false
+        }
+        topic.name = params.name
+        topic.visibility = Visibility.valueOf(params.visibility)
+        topic.validate()
+        if (topic.hasErrors()){
+            render("Duplicate Name")
+            return false
+        }
+        topic.save(failOnError: true, flush: true)
+        redirect(action: "showTopic", params: [id: topic.id])
+        return false
+    }
+
+    def delTopic(){
+        Topic topic = Topic.findById(params.id)
+        if (!topic){
+            render("Invalid request!")
+            return false
+        }
+        topic.delete(flush: true)
+        render "done"
     }
     def showTopic(){
         Topic topic = Topic.findById(params.id)
@@ -68,7 +98,6 @@ class TopicController {
             '*' { respond topicInstance, [status: CREATED] }
         }
     }
-
     def edit(Topic topicInstance) {
         respond topicInstance
     }

@@ -128,6 +128,6 @@ log4j.main = {
            'net.sf.ehcache.hibernate'
     //debug 'org.hibernate.SQL'
     //trace 'org.hibernate.type.descriptor.sql.BasicBinder'
-    info 'grails.app.services'
+    //info 'grails.app.services'
 
 }

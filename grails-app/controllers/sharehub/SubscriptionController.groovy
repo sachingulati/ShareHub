@@ -20,23 +20,12 @@ class SubscriptionController {
             render(sh.subscribe(topic: topic))
             return false
         }
-        Subscription subscription = Subscription.findByTopicAndUser(topic,user)
-        if (subscription){
-            println "already subscribed! "
-            println "user: " + session["username"] + " topic: "  + params.topicId
-            render( sh.subscribe(topic: topic))
-            return false
-        }
-        subscription = new Subscription(user: user, topic: topic, seriousness: Seriousness.VERY_SERIOUS)
+        Subscription subscription = Subscription.findOrCreateByTopicAndUser(topic,user)
         subscription.validate()
-        println "errors: " + subscription.errors.allErrors
-        println("Saved >>>>>>>>>>>>> " + subscription.save(failOnError: true, flush: true))
-
+        subscription.save(flush: true)
         user.addToSubscriptions(subscription)
         topic.addToSubscriptions(subscription)
-        println ("before render")
         render(sh.subscribe(topic: topic))
-        println ("after render")
     }
 //    @Transactional
     def unsubscribe(){

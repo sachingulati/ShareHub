@@ -32,6 +32,7 @@
     <asset:stylesheet src="mycss.css"/>
 
     <script>
+    var myvar = "sachin"
         function openShareLink() {
             var options = {
                 "backdrop": "true",
@@ -47,7 +48,6 @@
             }
             $('#shareDocument').modal(options);
         }
-
         function openCreateTopic() {
             var options = {
                 "backdrop": "true",
@@ -55,6 +55,19 @@
             }
             $('#createTopic').modal(options);
         }
+
+        function openEditTopic(topicId, topicName, seriousness) {
+            var options = {
+                "backdrop": "true",
+                "keyboard": "true"
+            };
+            var topic = $('#editTopic');
+            topic.find('#id').val(topicId);
+            topic.find('#name').val(topicName);
+            topic.find('#visibility').val(seriousness);
+            topic.modal(options);
+        }
+
         function openSendInvite() {
             var options = {
                 "backdrop": "true",
@@ -134,8 +147,8 @@
                     </form>
                 </li>
                 <li>
-                    <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:10px">
-                        <span class="glyphicon glyphicon-comment" aria-hidden="true" onclick="openCreateTopic()"></span>
+                    <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:10px" onclick="openCreateTopic()">
+                        <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
                     </button>
                 </li>
                 <li>
@@ -178,12 +191,10 @@
 <g:render template="/resource/shareLink"/>
 <g:render template="/resource/shareDocument"/>
 <g:render template="/topic/createTopic"/>
+<g:render template="/topic/editTopic"/>
 <g:render template="/invites/sendInvite"/>
 <div class="contentMargin">
     <g:layoutBody/>
 </div>
-<script>
-    showErrors();
-</script>
 </body>
 </html>

@@ -53,8 +53,10 @@ class ApplicationTagLib {
         }
     }
 
-    def isEditable={attr->
-
+    def isEditable={attr, body->
+        if (session["admin"] || attr.topic.createdBy.username == session["username"]){
+            out<< (body())
+        }
     }
     def date = { attr ->
         Date date = attr.date

@@ -51,12 +51,12 @@ grails.project.dependency.resolution = {
          runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0.2-grails-2.4"
+        //build "jquery-form-validator" : ">=2.1.47"
     }
 
     plugins {
         // plugins for the build system only
         build ":tomcat:7.0.55"
-
         // plugins for the compile step
         compile ":scaffolding:2.1.2"
         compile ':cache:1.1.8'

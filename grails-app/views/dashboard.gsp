@@ -18,61 +18,44 @@
     <div class="row">
         <div class="col-lg-5">
             %{--<!-- User Info -->--}%
-            %{--<div class="panel panel-default" style="margin-bottom:7px">--}%
-                %{--<div class="panel-body">--}%
-                    %{--<g:render template="/user/userInfo" bean="${user}"/>--}%
-                %{--</div> <!-- panel-body -->--}%
-            %{--</div> <!-- panel -->--}%
-
-        <!-- subscription -->
-            <g:render template="/topic/topicList" model="[header: 'Subscriptions', hr:true]" bean="${topicList}" var="topics"/>
-
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <span style="float:right;"><a href="javascript:void(0)">View All</a></span>
-
-                    <h3 class="panel-title">Trending Topics</h3>
-                </div> <!-- panel-heading  -->
-
+            <div class="panel panel-default" style="margin-bottom:7px">
                 <div class="panel-body">
-                    <div>
-                        <div style="float:left; margin-right:10px">
-                            <a href="javascript:void(0)"><asset:image src="user-default.png" class="img-media" alt="User image"/></a>
-                        </div>
-
-                        <div>
-                            <div>
-                                <a href="javascript:void(0)">${topicName ? topicName : "Topic"}</a>
-                            </div>
-                            <table>
-                                <tr>
-                                    <td class="tableData tableDataWidth">@${username?:"sachin"}</td>
-                                    <td class="tableData tableDataWidth">Subscriptions</td>
-                                    <td class="tableData">Posts</td>
-                                </tr>
-                                <tr>
-                                    <td class="tableData tableDataWidth"><a href="javascript:void(0)">Subscribe</a></td>
-                                    <td class="tableData tableDataWidth"><a href="javascript:void(0)">${subCount ?: 2}</a></td>
-                                    <td class="tableData"><a href="javascript:void(0)">${postCount ?: 10}</a></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <hr>
-
-                        <!--  </div>    <!-- panel-body -->
-                    </div>
-
+                    <g:render template="/user/userInfo" bean="${user}"/>
                 </div> <!-- panel-body -->
             </div> <!-- panel -->
 
+            <!-- subscription -->
+            <div id="subscriptionList">
+                <g:render template="/topic/topicList" model="[header: 'Subscriptions', hr:true]" bean="${null}" var="topics"/>
+            </div>
+            %{--Trending Topics--}%
+            <div id="trendingTopics">
+                <g:render template="/topic/topicList" model="[header: 'Trending Topics', hr:true]" bean="${null}" var="topics"/>
+
+            </div>
         </div> <!-- col-lg-5 -->
 
         <div class="col-lg-7" id="resourceList">
-        <g:render template="/resource/posts" bean="${unreadResources}" var="resources" model="[header: 'Inbox', search: true]"/>
+            <div id="unreadResources">
+                <g:render template="/resource/posts" bean="${null}" var="resources" model="[header: 'Inbox', search: true]"/>
+            </div>
         </div> <!-- col-lg-7 -->
 
     </div><!-- /.row -->
 </div>
-
+<script>
+    $('#unreadResources').on('load',function(){
+        $(this).load("${createLink(controller: "resource", action: "unreadResourceList")}");
+    })
+    $('#subscriptionList').on('load', function(){
+        $(this).load("${createLink(controller: "topic", action: "getRecentSubscribedTopics")}");
+    })
+    $('#trendingTopics').on('load', function(){
+        $(this).load("${createLink(controller: "topic", action: "getTrendingTopics")}");
+    })
+    $('#unreadResources').load();
+    $('#subscriptionList').load();
+    $('#trendingTopics').load();
+</script>
 </body>
 </html>

@@ -12,7 +12,6 @@ class ResourceController {
         params.max = Math.min(max ?: 10, 100)
         respond Resource.list(params), model: [resourceInstanceCount: Resource.count()]
     }
-
     def remoteTest(){
         render(view: "/temp")
     }
@@ -20,7 +19,11 @@ class ResourceController {
         render(template: "/resource/posts", model: [resources: Resource.list(params)])
     }
     def unreadResourceList() {
-        render(template: "/resource/posts", model: [resources: resourceService.unreadResourceList(session["username"], params.max, params.offset)])
+//        render(template: "/resource/posts", model: [resources: resourceService.unreadResourceList(session["username"], params.max, params.offset)])
+        List unreadResources = resourceService.unreadResourceList(session["username"])
+//<g:render template="/resource/posts" bean="${unreadResources}" var="resources" model="[header: 'Inbox', search: true]"/>
+
+        render(template: "/resource/posts", bean: unreadResources, var: "resources", model: [header: 'Inbox', search: true])
     }
 
     def switchReadStatus() {

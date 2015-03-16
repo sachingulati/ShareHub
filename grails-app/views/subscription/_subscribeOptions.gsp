@@ -14,11 +14,15 @@
         <li role="presentation" class="${subscriptionType==com.sharehub.enums.Seriousness.VERY_SERIOUS?'active':''}">
             <g:remoteLink update="subscriptionStatus${topicId}" controller="subscription" action="modifySubscriptionSeriousness" params="[seriousness: com.sharehub.enums.Seriousness.VERY_SERIOUS, topicId: topicId]" role="menuitem" tabindex="-1">${com.sharehub.enums.Seriousness.VERY_SERIOUS.displayName}</g:remoteLink>
         </li>
-        <li role="presentation" class="divider" style="margin: 2px 0px"></li>
-        <li role="presentation">
-            <a href="javascript:void(0)">Invite</a>
-            %{--<g:remoteLink update="subscriptionStatus${topicId}" controller="subscription" action="unsubscribe" params="[topicId: topicId]" role="menuitem" tabindex="-1">Unsubscribe</g:remoteLink>--}%
-        </li>
+        <g:if test="${canUnsubscribe}">
+
+            <li role="presentation" class="divider" style="margin: 2px 0px"></li>
+            <li role="presentation">
+                <a href="javascript:void(0)">Invite</a>
+                %{--<g:remoteLink update="subscriptionStatus${topicId}" controller="subscription" action="unsubscribe" params="[topicId: topicId]" role="menuitem" tabindex="-1">Unsubscribe</g:remoteLink>--}%
+            </li>
+
+        </g:if>
         <li role="presentation" class="divider" style="margin: 2px 0px"></li>
         <li role="presentation">
             <g:remoteLink update="subscriptionStatus${topicId}" controller="subscription" action="unsubscribe" params="[topicId: topicId]" role="menuitem" tabindex="-1">Unsubscribe</g:remoteLink>

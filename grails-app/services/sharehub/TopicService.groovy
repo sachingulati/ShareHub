@@ -61,11 +61,25 @@ class TopicService {
         //def topics = User.findByUsername(username).subscriptions*.topic
         return topicsMap
     }
+
+    def getTrendingTopics(Boolean isPrivate=false){
+        def trendingTopicList = Resource.createCriteria().list {
+            projections{
+                groupProperty("topic")
+            }
+            topic{
+                if (!isPrivate){
+                    eq("visibility",Visibility.PUBLIC)
+                }
+            }
+            rowCount("rows")
+            order("rows","desc")
+        }.collect{it[0]}
+        return trendingTopicList
+    }
+
     def getRecentTopics(String username,Boolean isSubscribed=null, Boolean isPrivate = null){
         User user = User.findByUsername(username)
-        if (!user){
-            return null
-        }
         def recentTopicList = Topic.createCriteria().list {
 
             subscriptions {

@@ -32,7 +32,6 @@
     <asset:stylesheet src="mycss.css"/>
 
     <script>
-    var myvar = "sachin"
         function openShareLink() {
             var options = {
                 "backdrop": "true",

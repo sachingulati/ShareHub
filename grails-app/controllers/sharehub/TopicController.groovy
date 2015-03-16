@@ -20,6 +20,16 @@ class TopicController {
         respond Topic.list(params), model: [topicInstanceCount: Topic.count()]
     }
 
+    def getRecentSubscribedTopics(){
+        List<Topic> topicList = topicService.getRecentTopics(session["username"],true)
+//<g:render template="/topic/topicList" model="[header: 'Subscriptions', hr:true]" bean="${topicList}" var="topics"/>
+        render(template: "/topic/topicList", model: [header:"Subscriptions", hr:true], bean: topicList, var: "topics")
+    }
+    def getTrendingTopics(){
+        List<Topic> topicList = topicService.getTrendingTopics(session["admin"])
+        render(template: "/topic/topicList", model: [header:"Trending Topics", hr:true], bean: topicList, var: "topics")
+    }
+
     def createTopic(){
         Topic topic = new Topic(name: params.name, createdBy: User.findByUsername(session["username"]),visibility: Visibility.valueOf(params.visibility))
         topic.validate()
@@ -60,6 +70,7 @@ class TopicController {
         topic.delete(flush: true)
         render "done"
     }
+
     def showTopic(){
         Topic topic = Topic.findById(params.id)
         User user = User.findByUsername(session["username"])
@@ -69,6 +80,7 @@ class TopicController {
         }
         render (view: "/topic/showTopic", model: [topic:topic])
     }
+
     def show(Topic topicInstance) {
         respond topicInstance
     }
@@ -98,6 +110,7 @@ class TopicController {
             '*' { respond topicInstance, [status: CREATED] }
         }
     }
+
     def edit(Topic topicInstance) {
         respond topicInstance
     }

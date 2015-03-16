@@ -47,7 +47,7 @@ class ApplicationTagLib {
         if (!(attr.topic)) return
         Subscription subscription = Subscription.findByTopicAndUser(attr.topic, User.findByUsername(session["username"]))
         if (subscription) {
-            out<< render(template: "/subscription/subscribeOptions", model: [subscriptionType: subscription.seriousness, topicId: attr.topic.id])
+            out<< render(template: "/subscription/subscribeOptions", model: [subscriptionType: subscription.seriousness, topicId: attr.topic.id, canUnsubscribe:(attr.topic.createdBy.username!=session["username"])])
         } else {
             out<< g.remoteLink(update: "subscriptionStatus${attr.topic.id}", controller: "subscription", action: "subscribe", params: [topicId: attr.topic.id]){"Subscribe"}
         }

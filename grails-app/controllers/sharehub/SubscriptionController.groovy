@@ -36,6 +36,11 @@ class SubscriptionController {
             render(sh.subscribe(topic: topic))
             return false
         }
+        if (topic.createdBy==user){
+            log.error("User cannot unsubscribe its own created topic! TopicId: ${topic.id}, UserId: ${user.id}")
+            render(sh.subscribe(topic: topic))
+            return false
+        }
         Subscription subscription = Subscription.findByUserAndTopic(user, topic)
         if(!subscription) {
             log.error("Error in Controller: subscription, action: unsubscribe, reason: no subscription found! ")

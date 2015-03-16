@@ -12,6 +12,7 @@ class HomeController {
     def dashboard(){
         List unreadResources = resourceService.unreadResourceList(session["username"])
         UserViewCommand userViewCommand = new UserViewCommand(session["username"],Visibility.PRIVATE)
-        render(view: "/dashboard",model: [user:userViewCommand,unreadResources: unreadResources])
+        List<Topic> topicList = topicService.getRecentTopics(session["username"],true)
+        render(view: "/dashboard",model: [topicList:topicList, user:userViewCommand,unreadResources: unreadResources])
     }
 }

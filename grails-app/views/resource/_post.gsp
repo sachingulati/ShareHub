@@ -29,7 +29,7 @@
         </div>
         <div style="float:right">
             <g:if test="${resource.type==com.sharehub.enums.ResourceType.DOCUMENT}">
-                <a href="#" class="inboxLinkStyle">Download</a>
+                <a href="javascript:void(0)" class="inboxLinkStyle">Download</a>
             </g:if>
             <g:else>
                 <a href="${'http://' + resource.url}" class="inboxLinkStyle" target="_blank">View full site</a>

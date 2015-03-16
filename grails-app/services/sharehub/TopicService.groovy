@@ -61,4 +61,30 @@ class TopicService {
         //def topics = User.findByUsername(username).subscriptions*.topic
         return topicsMap
     }
+    def getRecentTopics(String username,Boolean isSubscribed=null, Boolean isPrivate = null){
+        User user = User.findByUsername(username)
+        if (!user){
+            return null
+        }
+        def recentTopicList = Topic.createCriteria().list {
+
+            subscriptions {
+                if (isSubscribed==true){
+                    eq("user", user)
+                }
+                else if (isSubscribed==false){
+                    notEqual("user",user)
+                }
+            }
+            if (isPrivate==true){
+                eq("visibility",Visibility.PRIVATE)
+            }
+            else if (isPrivate==false){
+                eq("visibility",Visibility.PUBLIC)
+            }
+            resources{
+                order("dateCreated","desc")
+            }
+        }.unique()
+    }
 }

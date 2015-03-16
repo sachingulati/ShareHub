@@ -24,7 +24,7 @@
                         </button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                             <li role="presentation">
-                                <a href="#" role="menuitem" tabindex="-1" onclick='openEditTopic("${topic.id}", "${topic.name}", "${topic.visibility}")'>Edit</a>
+                                <a href="javascript:void(0)" role="menuitem" tabindex="-1" onclick='openEditTopic("${topic.id}", "${topic.name}", "${topic.visibility}")'>Edit</a>
                             </li>
                             <li role="presentation">
                                 <g:link role="menuitem" tabindex="-1" controller="topic" action="delTopic" params="[id: topic.id]">Delete</g:link>

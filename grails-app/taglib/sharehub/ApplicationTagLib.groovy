@@ -24,7 +24,7 @@ class ApplicationTagLib {
     def admin = {
         Boolean admin = session["admin"]
         if (admin == true) {
-            out << "<a href='${createLink(controller: "user", action: "adminPanel")}'>Admin Panel</a>"
+            out << "<a href='${createLink(controller: "user", action: "adminPanel")}'>Users</a>"
         }
     }
 

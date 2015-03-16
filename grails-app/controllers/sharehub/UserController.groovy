@@ -34,13 +34,53 @@ class UserController {
             redirect(action: "myProfile")
             return false
         }
-        render view: "/user/adminPanel", model: [username: session["username"]]
+        render view: "/user/adminPanel", model: [users:User.list()]
     }
     def myProfile(){
         forward(action: "profile", params: [id:session["username"], myProfile:true])
         return false
     }
 
+    def activate(){
+        if (!session["admin"]){
+            redirect(controller: "home")
+            return false
+        }
+        User user = User.findByUsername(params.username)
+        if (!user){
+            render("User Not Found!")
+            return false
+        }
+
+        else{
+            user.active = true
+            user.save flush:true
+            render remoteLink(update: "manager_${user.username}", controller: "user", action: "deactivate"){"Deactivate"}
+//            <g:remoteLink update="manager_${user.username}" controller="user" action="${user.active?"Deactivate":"Activate"}" params="[username: user.username]">${user.active?"Deactivate":"Activate"}</g:remoteLink>
+            return false
+        }
+
+    }
+    def deactivate(){
+        if (!session["admin"]){
+            redirect(controller: "home")
+            return false
+        }
+        User user = User.findByUsername(params.username)
+        if (!user){
+            render("User Not Found!")
+            return false
+        }
+
+        else{
+            user.active = false
+            user.save flush:true
+            render remoteLink(update: "manager_${user.username}", controller: "user", action: "activate"){"Activate"}
+//            <g:remoteLink update="manager_${user.username}" controller="user" action="${user.active?"Deactivate":"Activate"}" params="[username: user.username]">${user.active?"Deactivate":"Activate"}</g:remoteLink>
+            return false
+        }
+
+    }
     def editProfile(){
         UserViewCommand user = new UserViewCommand(session["username"], Visibility.PRIVATE)
         if (!user.valid){

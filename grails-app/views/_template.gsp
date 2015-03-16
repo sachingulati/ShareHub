@@ -1,1 +1,0 @@
-this is template, message:  ${message}

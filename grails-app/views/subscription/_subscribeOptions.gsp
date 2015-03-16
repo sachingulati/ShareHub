@@ -16,7 +16,13 @@
         </li>
         <li role="presentation" class="divider"></li>
         <li role="presentation">
+            <a href="javascript:void(0)">Invite</a>
+            %{--<g:remoteLink update="subscriptionStatus${topicId}" controller="subscription" action="unsubscribe" params="[topicId: topicId]" role="menuitem" tabindex="-1">Unsubscribe</g:remoteLink>--}%
+        </li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation">
             <g:remoteLink update="subscriptionStatus${topicId}" controller="subscription" action="unsubscribe" params="[topicId: topicId]" role="menuitem" tabindex="-1">Unsubscribe</g:remoteLink>
+        </li>
             %{--<a role="menuitem" tabindex="-1" href="#">Unsubscribe</a></li>--}%
     </ul>
 </div>

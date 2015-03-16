@@ -24,7 +24,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div style="float:left; margin-right: 10px">
-                                <a href="#">
+                                <a href="javascript:void(0)">
                                     <sh:image src="${resource.createdBy.photoUrl}"/>
                                 </a>
                             </div>
@@ -78,7 +78,7 @@
                         </div>
                         <div style="float:right; margin: 10px">
                             <g:if test="${resource.type==com.sharehub.enums.ResourceType.DOCUMENT}">
-                                <a href="#" class="inboxLinkStyle">Download</a>
+                                <a href="javascript:void(0)" class="inboxLinkStyle">Download</a>
                             </g:if>
                             <g:else>
                                 <a href="${'http://' + resource.url}" class="inboxLinkStyle" target="_blank">View full site</a>

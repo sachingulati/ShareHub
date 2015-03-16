@@ -175,10 +175,9 @@
                         </button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="${g.createLink(controller: "user", action: "myProfile")}">Profile</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Users</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Topics</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Posts</a></li>
                             <li role="presentation"><sh:admin/></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Topics</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Posts</a></li>
                             <li role="presentation">
                                 <g:link controller="user" action="logout" tabindex="-1">Logout</g:link></li>
                         </ul>

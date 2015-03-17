@@ -25,10 +25,9 @@
                         </div>
 
                         <div class="col-lg-7">
-                            <sh:topicSelector/>
-                            %{--<g:select name="shareLinkTopic" from="${['hello', 'moto']}"
-                                      noSelection="['': 'Select Topic']"
-                                      class="form-control"/>--}%
+                            <div class="topicSelector">
+
+                            </div>
                         </div>
                     </div>
                 </div>

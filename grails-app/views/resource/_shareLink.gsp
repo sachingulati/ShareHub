@@ -48,11 +48,9 @@
                         </div>
 
                         <div class="col-lg-7">
-                            <sh:topicSelector/>
-                            %{--
-                            <g:select name="topic" from="${topics}" optionKey="id" optionValue="name"
-                                      noSelection="['': 'Select Topic']"
-                                      class="form-control"/>--}%
+                            <div class="topicSelector">
+
+                            </div>
                         </div>
                     </div>
                 </div>

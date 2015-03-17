@@ -35,7 +35,7 @@ class ApplicationTagLib {
         if (!resourceStatus)
             return
         Boolean read = resourceStatus.isRead
-        out << '<a class="inboxLinkStyle markReadLink" data-resource-id="' + attr.resourceId+ '"/> Mark ' + (read ? "un" : "") + "read </a>"
+        out << '<a class="inboxLinkStyle markReadLink" data-resource-id="' + attr.resourceId+ '" href="javascript:void(0)"> Mark ' + (read ? "un" : "") + "read </a>"
     }
     def resourceOptions = { attr ->
         if (attr.resource.createdBy.username == session["username"] || User.findByUsername(session["username"]).admin) {

@@ -10,5 +10,10 @@
     %{--<g:render template="/post" collection="${resources}" var="resource"/>--}%
     <g:render template="/topic/topicInfo" collection="${topics}" var="topic"/>
     </div>    <!-- panel-body -->
+    <g:if test="${footer}">
+        <div class="panel-footer">
+            ${footer}
+        </div>
+    </g:if>
 </div>  <!-- panel -->
 

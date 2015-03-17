@@ -14,6 +14,9 @@
     <div class="panel-body">
             <g:render template="/resource/post" collection="${resources}" var="resource"/>
     </div>  <!-- panel-body -->
-</div> <!-- panel -->
-        <div id="resourceList2">
+    <g:if test="${footer}">
+        <div class="panel-footer">
+            ${footer}
         </div>
+    </g:if>
+</div> <!-- panel -->

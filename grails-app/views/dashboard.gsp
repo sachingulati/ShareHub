@@ -26,18 +26,18 @@
 
             <!-- subscription -->
             <div id="subscriptionList">
-                <g:render template="/topic/topicList" model="[header: 'Subscriptions', hr:true]" bean="${null}" var="topics"/>
+                <g:render template="/topic/topicList" model="[header: 'Subscriptions', hr:true, footer:'Loading..']" bean="${null}" var="topics"/>
             </div>
             %{--Trending Topics--}%
             <div id="trendingTopics">
-                <g:render template="/topic/topicList" model="[header: 'Trending Topics', hr:true]" bean="${null}" var="topics"/>
+                <g:render template="/topic/topicList" model="[header: 'Trending Topics', hr:true, footer:'Loading..']" bean="${null}" var="topics"/>
 
             </div>
         </div> <!-- col-lg-5 -->
 
         <div class="col-lg-7" id="resourceList">
             <div id="unreadResources">
-                <g:render template="/resource/posts" bean="${null}" var="resources" model="[header: 'Inbox', search: true]"/>
+                <g:render template="/resource/posts" bean="${null}" var="resources" model="[header: 'Inbox', search: true, footer:'Loading..']"/>
             </div>
         </div> <!-- col-lg-7 -->
 

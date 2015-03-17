@@ -22,7 +22,6 @@ class TopicController {
 
     def getRecentSubscribedTopics(){
         List<Topic> topicList = topicService.getRecentTopics(session["username"],true)
-//<g:render template="/topic/topicList" model="[header: 'Subscriptions', hr:true]" bean="${topicList}" var="topics"/>
         render(template: "/topic/topicList", model: [header:"Subscriptions", hr:true], bean: topicList, var: "topics")
     }
     def getTrendingTopics(){
@@ -81,6 +80,9 @@ class TopicController {
         render (view: "/topic/showTopic", model: [topic:topic])
     }
 
+    def getSubscribedTopics(){
+        render(select([name: "topic", from: topicService.getTopics(session["username"]), optionKey: "id", optionValue: "name", value: "id", noSelection: ['': 'Select Topic'], class: "form-control"]))
+    }
     def show(Topic topicInstance) {
         respond topicInstance
     }

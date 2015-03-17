@@ -38,6 +38,7 @@
                 "keyboard": "true"
             }
             $('#shareLink').modal(options);
+            $('#shareLink.topicSelector').load();
         }
 
         function openShareDocument() {
@@ -46,6 +47,7 @@
                 "keyboard": "true"
             }
             $('#shareDocument').modal(options);
+            $('#shareDocument.topicSelector').load();
         }
         function openCreateTopic() {
             var options = {
@@ -73,6 +75,7 @@
                 "keyboard": "true"
             }
             $('#sendInvite').modal(options);
+            $('#sendInvite.topicSelector').load();
         }
         function showMessage(){
             if("${message}".length>0){
@@ -110,6 +113,7 @@
                                 else{
                                     obj.text(response)
                                 }
+                                $('#unreadResources').load()
                             }
                     )
                 }
@@ -194,5 +198,11 @@
 <div class="contentMargin">
     <g:layoutBody/>
 </div>
+<script>
+    $('.topicSelector').on('load',function(){
+        $(this).load("${createLink(controller: "topic", action: "getSubscribedTopics")}");
+    })
+    $(".topicSelector").load()
+</script>
 </body>
 </html>

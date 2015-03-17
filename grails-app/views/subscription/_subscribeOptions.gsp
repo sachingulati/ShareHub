@@ -18,13 +18,10 @@
         <li role="presentation" class="divider" style="margin: 2px 0px"></li>
         <li role="presentation">
             <a href="javascript:void(0)">Invite</a>
-            %{--<g:remoteLink update="subscriptionStatus${topicId}" controller="subscription" action="unsubscribe" params="[topicId: topicId]" role="menuitem" tabindex="-1">Unsubscribe</g:remoteLink>--}%
         </li>
-
         <g:if test="${canUnsubscribe}">
-            <li role="presentation" class="divider" style="margin: 2px 0px"></li>
             <li role="presentation">
-                <g:remoteLink update="subscriptionStatus${topicId}" controller="subscription" action="unsubscribe" params="[topicId: topicId]" role="menuitem" tabindex="-1">Unsubscribe</g:remoteLink>
+                <a class='unsubscribe' href='javascript:void(0)' data-topic-id="${topicId}">Unsubscribe</a>
             </li>
         </g:if>
             %{--<a role="menuitem" tabindex="-1" href="#">Unsubscribe</a></li>--}%

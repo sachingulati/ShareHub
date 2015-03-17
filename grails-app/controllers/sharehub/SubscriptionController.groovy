@@ -1,6 +1,7 @@
 package sharehub
 
 import com.sharehub.enums.Seriousness
+import grails.converters.JSON
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -11,21 +12,28 @@ class SubscriptionController {
 
 //    @Transactional
     def subscribe(){
-        println ("in subscribe")
+        println("in subscribe")
         Topic topic = Topic.findById(params.topicId)
         User user = User.findByUsername(session["username"])
         if (!topic || !user){
-            println ("Error in Controller: subscription, action: subscribe, reason: " + (!user?"No user found! ":"")+(!topic?"No Topic found! ":""))
+            println ("Invalid access in Controller: subscription, action: subscribe, reason: " + (!user?"No user found! ":"")+(!topic?"No Topic found! ":""))
 //            log.error("Error in Controller: subscription, action: subscribe, reason: " + (!user?"No user found! ":"")+(!topic?"No Topic found! ":""))
             render(sh.subscribe(topic: topic))
             return false
+            /*render([] as JSON)*/
+
         }
         Subscription subscription = Subscription.findOrCreateByTopicAndUser(topic,user)
-        subscription.validate()
-        subscription.save(flush: true)
-        user.addToSubscriptions(subscription)
-        topic.addToSubscriptions(subscription)
-        render(sh.subscribe(topic: topic))
+        if (subscription.validate()){
+            subscription.save(flush: true, failOnError: true)
+            user.addToSubscriptions(subscription)
+            topic.addToSubscriptions(subscription)
+            topic.save(flush: true)
+        }
+        else{
+            println(subscription.errors.allErrors)
+        }
+        render((sh.subscribe(topic: topic)))
     }
 //    @Transactional
     def unsubscribe(){

@@ -16,7 +16,8 @@ class ApplicationTagLib {
     def image = { attr ->
         String path = createLink(controller: "assets", action: "user-default.png")
         if (attr.src)
-            path = "data:img/png;base64," + new File(attr.src).getBytes().encodeBase64()
+            path = createLink(controller: "user", action: "showImage", params: [photoUrl: attr.src])
+//            path = "data:img/png;base64," + new File(attr.src).getBytes().encodeBase64()
         out << "<img src='" + path
         out << "' width='80' height='80' />"
     }
@@ -49,7 +50,8 @@ class ApplicationTagLib {
         if (subscription) {
             out<< render(template: "/subscription/subscribeOptions", model: [subscriptionType: subscription.seriousness, topicId: attr.topic.id, canUnsubscribe:(attr.topic.createdBy.username!=session["username"])])
         } else {
-            out<< g.remoteLink(update: "subscriptionStatus${attr.topic.id}", controller: "subscription", action: "subscribe", params: [topicId: attr.topic.id]){"Subscribe"}
+            out<< "<a class='subscribe' href='javascript:void(0)' data-topic-id='" + attr.topic.id+"'>Subscribe</a>"
+//            out<< g.remoteLink(update: "subscriptionStatus${attr.topic.id}", controller: "subscription", action: "subscribe", params: [topicId: attr.topic.id]){"Subscribe"}
         }
     }
 

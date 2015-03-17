@@ -10,7 +10,7 @@ class HomeController {
             forward(action: "dashboard")
     }
     def dashboard(){
-        UserViewCommand userViewCommand = new UserViewCommand(session["username"],Visibility.PRIVATE)
-        render(view: "/dashboard",model: [user:userViewCommand])
+        User user = User.findByUsername(session["username"])
+        render(view: "/dashboard",model: [user:user])
     }
 }

@@ -34,10 +34,12 @@ class UserService {
         user.lastName = user.lastName.capitalize()
         user.username = user.username.toLowerCase()
         user.email = user.email.toLowerCase()
-        String path = grailsApplication.config.uploadImages.toString() + params.username
-//        String path = grailsApplication.config.userImages + params.username
-        params.photo.transferTo(new File(path));
-        user.photoUrl = path
+        println(params.photo.bytes)
+        if (params.photo.bytes.size()>0){
+            String path = grailsApplication.config.uploadImages.toString() + params.username
+            params.photo.transferTo(new File(path));
+            user.photoUrl = path
+        }
         user.save()
         return user
     }

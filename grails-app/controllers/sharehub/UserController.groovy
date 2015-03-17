@@ -29,6 +29,15 @@ class UserController {
         return false
     }
 
+    def showImage(){
+        if (!params.photoUrl){
+            return false
+        }
+        File file = new File(params.photoUrl)
+        response.contentLength = file.bytes.length
+        response.outputStream << file.bytes
+    }
+
     def adminPanel(){
         if (session["admin"] == false){
             redirect(action: "myProfile")

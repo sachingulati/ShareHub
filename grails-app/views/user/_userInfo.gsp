@@ -19,8 +19,8 @@
                     <td class="userTableData">Topics</td>
                 </tr>
                 <tr>
-                    <td class="userTableData"><a href="javascript:void(0)">${user.subscriptionCount}</a></td>
-                    <td class="userTableData"><a href="javascript:void(0)">${user.topicCount}</a></td>
+                    <td class="userTableData"><a href="javascript:void(0)">${user.subscriptions.size()}</a></td>
+                    <td class="userTableData"><a href="javascript:void(0)">${user.topics.size()}</a></td>
                 </tr>
             </table>
         </div>

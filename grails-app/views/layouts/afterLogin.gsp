@@ -82,6 +82,45 @@
                 alert("${message}");
             }
         }
+
+        function reLoadContent($div){
+            $div.load($div.data('ajax-url'));
+        }
+
+        $(document).on('click', '.subscribe',
+            function(){
+                var url = "${createLink(controller: "subscription", action: "subscribe")}";
+                var id = $(this).data('topic-id');
+//                var parentDiv = $(this).closest('.subscriptionStatus'+id);
+                jQuery.ajax({
+                    url:url,
+                    data : {topicId:id},
+                     success: function(data){
+//                         parentDiv.html(data);
+                         $('.subscriptionStatus'+id).html(data);
+                         reLoadContent($('#subscriptionList'));
+                     }
+                });
+            }
+        );
+        $(document).on('click', '.unsubscribe',
+            function(){
+                var url = "${createLink(controller: "subscription", action: "unsubscribe")}";
+                var id = $(this).data('topic-id');
+//                var parentDiv = $(this).closest('.subscriptionStatus'+id);
+                jQuery.ajax({
+                    url:url,
+                    data : {topicId:id},
+                     success: function(data){
+//                         parentDiv.html(data);
+                         $('.subscriptionStatus'+id).html(data);
+                         reLoadContent($('#subscriptionList'));
+                     }
+                });
+            }
+        );
+
+        /*
         $(document).on('click', '.subscription',
                 function(){
                     var action =  $(this).text();
@@ -100,7 +139,7 @@
                                 }
                             })
                 }
-        )
+        );*/
         $(document).on('click', '.markReadLink',
                 function(){
                     var id = $(this).data('resource-id');

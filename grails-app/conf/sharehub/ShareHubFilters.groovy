@@ -5,6 +5,9 @@ class ShareHubFilters {
     def filters = {
         all(controller: "login|assets", action: "*", invert: true){
             before={
+                if (params.controller == "user" && params.action == "showImage"){
+                    return
+                }
                 if(!session['username']){
                     flash.message = "Please login to proceed!"
                     redirect(controller: "login", action: "index")

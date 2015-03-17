@@ -43,7 +43,7 @@
             </tr>
             <tr>
                 <td class="tableData tableDataWidth">
-                    <div id="subscriptionStatus${topic.id}">
+                    <div class="subscriptionStatus${topic.id}">
                         <sh:subscribe topic="${topic}"/>
                     </div>
                     %{--<g:remoteLink update='subscriptionStatus${topic.id}' controller='subscription' action='subscribe' params="[topicId: topic.id]" class='btn btn-link'>Subscribe</g:remoteLink>--}%

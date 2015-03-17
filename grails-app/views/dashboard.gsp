@@ -25,37 +25,43 @@
             </div> <!-- panel -->
 
             <!-- subscription -->
-            <div id="subscriptionList">
+            <div id="subscriptionList" data-ajax-url="${createLink(controller: "topic", action: "getRecentSubscribedTopics")}">
                 <g:render template="/topic/topicList" model="[header: 'Subscriptions', hr:true, footer:'Loading..']" bean="${null}" var="topics"/>
             </div>
             %{--Trending Topics--}%
-            <div id="trendingTopics">
+            <div id="trendingTopics" data-ajax-url="${createLink(controller: "topic", action: "getTrendingTopics")}">
                 <g:render template="/topic/topicList" model="[header: 'Trending Topics', hr:true, footer:'Loading..']" bean="${null}" var="topics"/>
 
             </div>
         </div> <!-- col-lg-5 -->
 
         <div class="col-lg-7" id="resourceList">
-            <div id="unreadResources">
+            <div id="unreadResources" data-ajax-url="${createLink(controller: "resource", action: "unreadResourceList")}">
                 <g:render template="/resource/posts" bean="${null}" var="resources" model="[header: 'Inbox', search: true, footer:'Loading..']"/>
             </div>
         </div> <!-- col-lg-7 -->
 
     </div><!-- /.row -->
 </div>
-<script>
+<script>/*
     $('#unreadResources').on('load',function(){
-        $(this).load("${createLink(controller: "resource", action: "unreadResourceList")}");
+        reLoadContent($(this));
     })
     $('#subscriptionList').on('load', function(){
-        $(this).load("${createLink(controller: "topic", action: "getRecentSubscribedTopics")}");
+        reLoadContent($(this));
     })
     $('#trendingTopics').on('load', function(){
-        $(this).load("${createLink(controller: "topic", action: "getTrendingTopics")}");
-    })
+        reLoadContent($(this), "");
+    })*//*
     $('#unreadResources').load();
     $('#subscriptionList').load();
     $('#trendingTopics').load();
+*/
+
+    reLoadContent($("#unreadResources"));
+    reLoadContent($("#subscriptionList"));
+    reLoadContent($("#trendingTopics"));
+
 </script>
 </body>
 </html>

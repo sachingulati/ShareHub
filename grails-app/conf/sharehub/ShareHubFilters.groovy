@@ -5,6 +5,7 @@ class ShareHubFilters {
     def filters = {
         all(controller: "login|assets", action: "*", invert: true){
             before={
+//                println request.each {println it}
                 if (params.controller == "user" && params.action == "showImage"){
                     return
                 }

@@ -1,5 +1,8 @@
 package sharehub
 
+import com.sharehub.enums.Visibility
+import grails.converters.JSON
+
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -21,10 +24,32 @@ class ResourceController {
     def unreadResourceList() {
 //        render(template: "/resource/posts", model: [resources: resourceService.unreadResourceList(session["username"], params.max, params.offset)])
         List unreadResources = resourceService.unreadResourceList(session["username"])
-//<g:render template="/resource/posts" bean="${unreadResources}" var="resources" model="[header: 'Inbox', search: true]"/>
-
         render(template: "/resource/posts", bean: unreadResources, var: "resources", model: [header: 'Inbox', search: true])
     }
+
+
+    def getResourcesCreated(){
+        String username
+        if (params.username){
+            username = params.username
+        }
+        else{
+            username = session["username"]
+        }
+        List<Resource> resources = Resource.createCriteria().list{
+            if (session["username"]!=params.username && !session["admin"]){
+                topic{
+                    eq("visibility",Visibility.PUBLIC)
+                }
+            }
+            createdBy{
+                eq("username",username)
+            }
+            order("dateCreated", "desc")
+        }
+        render(template: "/resource/posts", bean:resources, var: "resources", model: [header: 'Posts', hr:true])
+    }
+
 
     def switchReadStatus() {
         if(resourceService.switchReadStatus(params.resource.toLong(), session["username"])){
@@ -63,6 +88,20 @@ class ResourceController {
             resourceStatus.save()
         }
         render(view: "/resource/showPost", model: [resource: resource, rating: rating])
+    }
+
+    def getRating(){
+        def rating = ResourceStatus.createCriteria().get(){
+            projections{
+                count("score","number")
+                avg("score","rating")
+            }
+            'resource'{
+                eq("id",params.id.toLong())
+            }
+            gt("score", 0)
+        }
+        render "Avg. Rating: ${rating[1]} (${rating[0]})"
     }
     def show(Resource resourceInstance) {
         respond resourceInstance

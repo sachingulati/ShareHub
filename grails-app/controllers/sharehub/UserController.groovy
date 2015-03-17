@@ -13,19 +13,13 @@ class UserController {
     def userService
 
     def profile(){
-        UserViewCommand user
-        if(params.id == session["username"] || User.findByUsername(session["username"]).admin){
-            user = new UserViewCommand(params.id,Visibility.PRIVATE)
-        }
-        else {
-            user = new UserViewCommand(params.id,Visibility.PUBLIC)
-        }
-        if(!user.valid){
+        User user = User.findByUsername(params.id)
+        if (!user){
             redirect(action: "myProfile")
             return false
         }
-        List<Resource> resources = user.subscribedTopics.size()?Resource.findAll({topic in user.subscribedTopics && createdBy.username==user.username }):[]
-        render (view: "/user/profile", model: [user: user, resources: resources, myProfile: params.myProfile])
+//        List<Resource> resources1 = user.subscribedTopics.size()?Resource.findAll({topic in user.subscribedTopics && createdBy.username==user.username }):[]
+        render (view: "/user/profile", model: [user: user, myProfile: params.myProfile])
         return false
     }
 

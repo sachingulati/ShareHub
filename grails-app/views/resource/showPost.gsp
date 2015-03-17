@@ -66,7 +66,10 @@
                                     <g:each in="${1..5}" var="id">
                                         <asset:image src="RateOn.jpg" class=".ratingHearts" data-id="${id}" width="25" height="25"/>
                                     </g:each>
-                                    <div>Avg. Rating: ${rating[1]} (${rating[0]})</div>
+                                    <div id="postRating" data-ajax-url="${createLink(controller: "resource", action: "getRating")}" data-ajax-params="${[id: resource.id] as grails.converters.JSON}">
+                                        %{--Avg. Rating: ${rating[1]} (${rating[0]})--}%
+                                        loading...
+                                    </div>
                                 </span>
                             </div>
 
@@ -90,9 +93,16 @@
             </div> <!-- panel -->
         </div>
         <div class="col-lg-5">
-            <g:render template="/topic/topicList" model="[header: 'Trending Topics', hr:true]" bean="${sharehub.Topic.list(max: 5)}" var="topics"/>
+            %{--Trending Topics--}%
+            <div id="trendingTopics" data-ajax-url="${createLink(controller: "topic", action: "getTrendingTopics")}">
+                <g:render template="/topic/topicList" model="[header: 'Trending Topics', hr:true, footer:'Loading..']" bean="${null}" var="topics"/>
+            </div>
         </div>
     </div>
 </div>
+<script>
+    reLoadContent($("#trendingTopics"));
+    reLoadContent($("#postRating"))
+</script>
 </body>
 </html>

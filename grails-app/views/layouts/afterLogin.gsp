@@ -49,6 +49,7 @@
             $('#shareDocument').modal(options);
             $('#shareDocument.topicSelector').load();
         }
+
         function openCreateTopic() {
             var options = {
                 "backdrop": "true",
@@ -77,6 +78,7 @@
             $('#sendInvite').modal(options);
             $('#sendInvite.topicSelector').load();
         }
+
         function showMessage(){
             if("${message}".length>0){
                 alert("${message}");
@@ -84,7 +86,7 @@
         }
 
         function reLoadContent($div){
-            $div.load($div.data('ajax-url'));
+            $div.load($div.data('ajax-url'),$div.data('ajax-params'));
         }
 
         $(document).on('click', '.subscribe',
@@ -99,10 +101,12 @@
 //                         parentDiv.html(data);
                          $('.subscriptionStatus'+id).html(data);
                          reLoadContent($('#subscriptionList'));
+                         reLoadContent($('#unreadResources'));
                      }
                 });
             }
         );
+
         $(document).on('click', '.unsubscribe',
             function(){
                 var url = "${createLink(controller: "subscription", action: "unsubscribe")}";
@@ -115,6 +119,7 @@
 //                         parentDiv.html(data);
                          $('.subscriptionStatus'+id).html(data);
                          reLoadContent($('#subscriptionList'));
+                         reLoadContent($('#unreadResources'));
                      }
                 });
             }
@@ -140,6 +145,7 @@
                             })
                 }
         );*/
+
         $(document).on('click', '.markReadLink',
                 function(){
                     var id = $(this).data('resource-id');

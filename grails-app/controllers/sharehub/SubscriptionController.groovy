@@ -12,12 +12,11 @@ class SubscriptionController {
 
 //    @Transactional
     def subscribe(){
-        println("in subscribe")
         Topic topic = Topic.findById(params.topicId)
         User user = User.findByUsername(session["username"])
         if (!topic || !user){
-            println ("Invalid access in Controller: subscription, action: subscribe, reason: " + (!user?"No user found! ":"")+(!topic?"No Topic found! ":""))
-//            log.error("Error in Controller: subscription, action: subscribe, reason: " + (!user?"No user found! ":"")+(!topic?"No Topic found! ":""))
+//            println ("Invalid access request in Controller: subscription, action: subscribe, reason: " + (!user?"No user found! ":"")+(!topic?"No Topic found! ":""))
+            log.info("Invalid access request in Controller: subscription, action: subscribe, reason: " + (!user?"No user found! ":"")+(!topic?"No Topic found! ":""))
             render(sh.subscribe(topic: topic))
             return false
             /*render([] as JSON)*/

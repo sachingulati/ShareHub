@@ -31,7 +31,6 @@
             %{--Trending Topics--}%
             <div id="trendingTopics" data-ajax-url="${createLink(controller: "topic", action: "getTrendingTopics")}">
                 <g:render template="/topic/topicList" model="[header: 'Trending Topics', hr:true, footer:'Loading..']" bean="${null}" var="topics"/>
-
             </div>
         </div> <!-- col-lg-5 -->
 

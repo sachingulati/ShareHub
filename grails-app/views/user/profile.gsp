@@ -24,8 +24,10 @@
                 </div> <!-- panel-body -->
             </div> <!-- panel -->
 
-        <!-- subscription -->
-        <g:render template="/topic/topicList" model="[header: 'Topics', hr: true]" bean="${user.topicsCreated}" var="topics"/>
+        <!-- topics created -->
+            <div id="topicsCreated" data-ajax-url="${createLink(controller: "topic", action: "getTopicsCreated")}" data-ajax-params="${[username:user.username] as grails.converters.JSON}">
+                <g:render template="/topic/topicList" model="[header: 'Topics Created', hr:true, footer:'Loading..']" bean="${null}" var="topics"/>
+            </div>
         </div> <!-- col-lgrailg-5 -->
 
         <div class="col-lg-7">
@@ -34,11 +36,18 @@
                     <g:link controller="user" action="editProfile" class="btn btn-default" style="width: 100%">Edit Profile</g:link>
                 </div>
             </g:if>
-            <g:render template="/resource/posts" bean="${resources}" var="resources" model="[header: 'Posts', search: true]"/>
+
+            <div id="resourcesCreated" data-ajax-url="${createLink(controller: "resource", action: "getResourcesCreated")}" data-ajax-params="${[username:user.username] as grails.converters.JSON}">
+                <g:render template="/resource/posts" bean="${null}" var="resources" model="[header: 'Posts', search: true, footer:'Loading..']"/>
+            </div>
+            %{--<g:render template="/resource/posts" bean="${resources}" var="resources" model="[header: 'Posts', search: true]"/>--}%
         </div> <!-- col-lg-7 -->
 
     </div><!-- /.row -->
 </div>
-
+<script>
+    reLoadContent($('#topicsCreated'));
+    reLoadContent($('#resourcesCreated'));
+</script>
 </body>
 </html>

@@ -4,6 +4,7 @@ import com.sharehub.enums.Seriousness
 
 import com.sharehub.enums.Visibility
 import grails.transaction.Transactional
+import org.xhtmlrenderer.css.parser.property.PrimitivePropertyBuilders
 import sharehub.Topic
 import sharehub.User
 
@@ -78,6 +79,25 @@ class TopicController {
             return false
         }
         render (view: "/topic/showTopic", model: [topic:topic])
+    }
+
+    def getTopicsCreated(){
+        String username
+        if (params.username){
+            username = params.username
+        }
+        else{
+            username = session["username"]
+        }
+        List<Topic> topics = Topic.createCriteria().list{
+            if (session["username"]!=params.username && !session["admin"]){
+                eq("visibility",Visibility.PUBLIC)
+            }
+            createdBy{
+                eq("username",username)
+            }
+        }
+        render(template: "/topic/topicList", model: [header: 'Topics Created', hr:true], bean:topics, var:"topics")
     }
 
     def getSubscribedTopics(){

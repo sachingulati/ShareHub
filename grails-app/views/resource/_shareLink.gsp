@@ -6,7 +6,7 @@
                         aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Share Link</h4>
             </div>
-            <g:form controller="resource" action="shareLink">
+            <g:form controller="resource" action="shareLink" name="shareLinkForm">
                 <div class="modal-body">
 
                     <div class="row padding5">
@@ -15,7 +15,7 @@
                         </div>
 
                         <div class="col-lg-7">
-                            <g:textField name="title" class="form-control" placeholder="Title"/>
+                            <g:textField name="title" class="form-control" placeholder="Title" required="required" expression="Please enter a title for your topic."/>
                         </div>
                     </div>
 
@@ -27,7 +27,7 @@
                         <div class="col-lg-7">
                             <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon1">hhtp://</span>
-                                <g:textField name="url" class="form-control" placeholder="Url" aria-describedby="basic-addon1"/>
+                                <g:textField name="url" class="form-control" placeholder="Url" aria-describedby="basic-addon1" required="required"/>
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                         </div>
 
                         <div class="col-lg-7">
-                            <g:textArea name="description" class="form-control" placeholder="\n\nDescription" rows="5"/>
+                            <g:textArea name="description" class="form-control" placeholder="\n\nDescription" rows="5" required="required"/>
                         </div>
                     </div>
 
@@ -49,7 +49,7 @@
 
                         <div class="col-lg-7">
                             <div class="topicSelector">
-
+                                <g:select name="topic" from="${["Select Topic"]}" class="form-control"/>
                             </div>
                         </div>
                     </div>
@@ -63,3 +63,23 @@
         </div>
     </div>
 </div>
+
+<script>
+
+    $('#shareLinkForm').validate({
+        rules:{
+            title: "required"
+        },
+        messages:{
+            title: "Please enter Topic Name!"
+        }
+    })
+    console.log('script');
+    $('#shareLink .topicSelector').on('load',function(){
+        $(this).load("${createLink(controller: "topic", action: "getSubscribedTopics")}");
+    });
+    $('#shareLink').on('show',function(){
+        console.log('show');
+        $(this).find(".topicSelector").load();
+    });
+</script>

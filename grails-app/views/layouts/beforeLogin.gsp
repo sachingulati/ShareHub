@@ -23,6 +23,10 @@
 
     <!-- my css -->
     <asset:stylesheet src="mycss.css"/>
+
+    %{--jquery validation--}%
+    <asset:javascript src="jquery.validate.min.js"/>
+
     <g:layoutHead/>
 
 </head>

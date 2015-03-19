@@ -4,6 +4,7 @@
     <title>Login</title>
     <meta name="layout" content="beforeLogin">
 
+    <asset:javascript src="registration.js"/>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
                     </div>
 
                     <div class="panel-body contentBox">
-                        <g:form controller="login" action="register" enctype="multipart/form-data">
+                        <g:form name="registration" controller="login" action="register" enctype="multipart/form-data">
                             <div class="row padding5">
                                 <div class="col-lg-5">
                                     <span class="valignstyle">First Name*</span>

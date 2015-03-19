@@ -10,7 +10,7 @@
 <head>
     <title><g:layoutTitle default="Share Hub"/></title>
 
-    <g:javascript library="jquery"/>
+    %{--<g:javascript library="jquery"/>--}%
     <g:setProvider library="jquery"/>
 
     <!-- jquery -->
@@ -30,6 +30,10 @@
 
     <!-- my css -->
     <asset:stylesheet src="mycss.css"/>
+
+
+    %{--jquery validation--}%
+    <asset:javascript src="jquery.validate.min.js"/>
 
     <script>
         function openShareLink() {
@@ -195,22 +199,22 @@
                     </form>
                 </li>
                 <li>
-                    <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:10px" onclick="openCreateTopic()" data-toggle="tooltip" data-placement="auto" title="Create Topic">
+                    <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:10px" onclick="openCreateTopic()" data-toggle="tooltip" data-placement="bottom" title="Create Topic">
                         <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
                     </button>
                 </li>
                 <li>
-                    <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:10px" onclick="openSendInvite()" data-toggle="tooltip" data-placement="auto" title="Send Invite">
+                    <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:10px" onclick="openSendInvite()" data-toggle="tooltip" data-placement="bottom" title="Send Invite">
                         <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                     </button>
                 </li>
                 <li>
-                    <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:10px" onclick="openShareLink()" data-toggle="tooltip" data-placement="auto" title="Share Link">
+                    <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:10px" onclick="openShareLink()" data-toggle="tooltip" data-placement="bottom" title="Share Link">
                         <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
                     </button>
                 </li>
                 <li>
-                    <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:10px" onclick="openShareDocument()" data-toggle="tooltip" data-placement="auto" title="Share Document">
+                    <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:10px" onclick="openShareDocument()" data-toggle="tooltip" data-placement="bottom" title="">
                         <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
                     </button>
                 </li>
@@ -246,8 +250,8 @@
 <script>
     $('.topicSelector').on('load',function(){
         $(this).load("${createLink(controller: "topic", action: "getSubscribedTopics")}");
-    })
-    $(".topicSelector").load()
+    });
+    $(".topicSelector").load();
 </script>
 </body>
 </html>

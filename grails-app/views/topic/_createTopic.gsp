@@ -1,3 +1,5 @@
+<asset:javascript src="createTopic.js"/>
+
 <div class="modal fade" id="createTopic" tabindex="-1" role="dialog" aria-labelledby="createTopicModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -6,10 +8,11 @@
                         aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Create Topic</h4>
             </div>
-            <g:form controller="topic" action="createTopic">
+            <g:form name="createTopicForm" controller="topic" action="createTopic">
                 <div class="modal-body">
 
                     <div class="row padding5">
+
                         <div class="col-lg-5">
                             Name*
                         </div>

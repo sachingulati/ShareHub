@@ -26,7 +26,7 @@
 
                         <div class="col-lg-7">
                             <div class="topicSelector">
-
+                                <g:select name="topic" from="${["Select Topic"]}" class="form-control"/>
                             </div>
                         </div>
                     </div>
@@ -40,3 +40,12 @@
         </div>
     </div>
 </div>
+
+<script>
+    $('#sendInvite .topicSelector').on('load',function(){
+        $(this).load("${createLink(controller: "topic", action: "getSubscribedTopics")}");
+    });
+    $('#sendInvite').on('show',function(){
+        $(this).find(".topicSelector").load();
+    });
+</script>

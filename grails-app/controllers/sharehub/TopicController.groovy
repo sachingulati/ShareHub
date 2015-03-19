@@ -101,7 +101,7 @@ class TopicController {
     }
 
     def getSubscribedTopics(){
-        render(select([name: "topic", from: topicService.getTopics(session["username"]), optionKey: "id", optionValue: "name", value: "id", noSelection: ['': 'Select Topic'], class: "form-control"]))
+        render(select([name: "topic", from: topicService.getTopics(session["username"]), optionKey: "id", optionValue: "name", value: "id", noSelection: ['': 'Select Topic'], class: "form-control"], required: "required"))
     }
     def show(Topic topicInstance) {
         respond topicInstance

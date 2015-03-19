@@ -39,8 +39,7 @@ class ResourceService {
 
     def getResourceList(attr){
 //        Attributes summary:
-        /*
-            isRead: for either read or unread resources
+/*          isRead: for either read or unread resources
             username: for user specific search
             isSubscribed: for resources in subscribed topics
             --> searchByRating: search resources where rating is greater than equal to given rating
@@ -50,8 +49,7 @@ class ResourceService {
             lastUpdated: search resources which are updated after a given date
             offset: for pagination
             max: for pagination
-         */
-
+ */
         Boolean isAdmin = false
         if (attr.username){
             User user = User.findByUsername(attr.username)

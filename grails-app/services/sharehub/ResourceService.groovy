@@ -36,6 +36,85 @@ class ResourceService {
         }
     }
 
+
+    def getResourceList(attr){
+//        Attributes summary:
+        /*
+            isRead: for either read or unread resources
+            username: for user specific search
+            isSubscribed: for resources in subscribed topics
+            --> searchByRating: search resources where rating is greater than equal to given rating
+            resourceSearchString: for searching in resource title and description
+            topicNameSearchString: for topic specific search
+            createdByUsername: search by resourceCreator
+            lastUpdated: search resources which are updated after a given date
+            offset: for pagination
+            max: for pagination
+         */
+
+        Boolean isAdmin = false
+        if (attr.username){
+            User user = User.findByUsername(attr.username)
+            if (user){
+                isAdmin = user.isAdmin()
+            }
+        }
+        List resources = Resource.createCriteria().list(offset:attr.offset, max: attr.max) {
+            resourceStatus{
+                if(attr.isRead!=null && attr.username && attr.isSubscribed) {
+                    eq("isRead", attr.isRead)
+                    user{
+                        eq("username", attr.username)
+                    }
+                }
+                if (attr.searchByRating!=null){
+                    gte("score",attr.searchByRating)
+                }
+            }
+            topic {
+                if(attr.isSubscribed && attr.username) {
+                    subscriptions {
+                        user {
+                            eq("username", attr.username)
+                        }
+                    }
+                }
+                else if (!attr.isSubscribed && !isAdmin){
+                    eq("visibility",Visibility.PUBLIC)
+                }
+            }
+            if (attr.lastUpdated){
+                gte("lastUpdated",attr.lastUpdated)
+            }
+            if (attr.createdByUsername){
+                or {
+                    createdBy {
+                        eq("username", attr.creatorUsername)
+                    }
+                    topic {
+                        createdBy {
+                            eq("username", attr.creatorUsername)
+                        }
+                    }
+                }
+            }
+            or {
+                if (attr.resourceSearchString){
+                    ilike("description","%${attr.resourceSearchString}%")
+                    ilike("title","%${attr.resourceSearchString}%")
+                }
+                if (attr.topicNameSearchString){
+                    topic{
+                        ilike("name","%${attr.topicNameSearchString}%")
+                    }
+                }
+            }
+            order("lastUpdated","desc")
+        }
+        return resources
+        // || resource.title.contains(searchString) || resource.topic.name.contains(searchString)
+    }
+
     def shareLink(def params, User user) {
         Resource resource = new Resource()
         resource.properties = params

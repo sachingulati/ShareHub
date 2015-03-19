@@ -14,7 +14,7 @@
 <body>
 hi this is remote example
 <div id="remotePage">
-    <g:render template="/resource/posts" bean="${resources}" var="resources" />
+    <g:render template="/resource/resourceList" bean="${resources}" var="resources" />
     <div>
       <util:remotePaginate total="100" update="remotePage" action="getResources" controller="resource" pageSizes="[5,10,20,50]"/>
 </div>

@@ -195,22 +195,22 @@
                     </form>
                 </li>
                 <li>
-                    <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:10px" onclick="openCreateTopic()">
+                    <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:10px" onclick="openCreateTopic()" data-toggle="tooltip" data-placement="auto" title="Create Topic">
                         <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
                     </button>
                 </li>
                 <li>
-                    <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:10px" onclick="openSendInvite()">
+                    <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:10px" onclick="openSendInvite()" data-toggle="tooltip" data-placement="auto" title="Send Invite">
                         <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                     </button>
                 </li>
                 <li>
-                    <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:10px" onclick="openShareLink()">
+                    <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:10px" onclick="openShareLink()" data-toggle="tooltip" data-placement="auto" title="Share Link">
                         <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
                     </button>
                 </li>
                 <li>
-                    <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:10px" onclick="openShareDocument()">
+                    <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:10px" onclick="openShareDocument()" data-toggle="tooltip" data-placement="auto" title="Share Document">
                         <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
                     </button>
                 </li>

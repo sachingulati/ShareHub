@@ -36,27 +36,13 @@
 
         <div class="col-lg-7" id="resourceList">
             <div id="unreadResources" data-ajax-url="${createLink(controller: "resource", action: "unreadResourceList")}">
-                <g:render template="/resource/posts" bean="${null}" var="resources" model="[header: 'Inbox', search: true, footer:'Loading..']"/>
+                <g:render template="/resource/resourceList" bean="${null}" var="resources" model="[header: 'Inbox', search: true, footer:'Loading..']"/>
             </div>
         </div> <!-- col-lg-7 -->
 
     </div><!-- /.row -->
 </div>
-<script>/*
-    $('#unreadResources').on('load',function(){
-        reLoadContent($(this));
-    })
-    $('#subscriptionList').on('load', function(){
-        reLoadContent($(this));
-    })
-    $('#trendingTopics').on('load', function(){
-        reLoadContent($(this), "");
-    })*//*
-    $('#unreadResources').load();
-    $('#subscriptionList').load();
-    $('#trendingTopics').load();
-*/
-
+<script>
     reLoadContent($("#unreadResources"));
     reLoadContent($("#subscriptionList"));
     reLoadContent($("#trendingTopics"));

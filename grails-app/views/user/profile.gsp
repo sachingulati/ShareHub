@@ -38,7 +38,7 @@
             </g:if>
 
             <div id="resourcesCreated" data-ajax-url="${createLink(controller: "resource", action: "getResourcesCreated")}" data-ajax-params="${[username:user.username] as grails.converters.JSON}">
-                <g:render template="/resource/posts" bean="${null}" var="resources" model="[header: 'Posts', search: true, footer:'Loading..']"/>
+                <g:render template="/resource/resourceList" bean="${null}" var="resources" model="[header: 'Posts', search: true, footer:'Loading..']"/>
             </div>
             %{--<g:render template="/resource/posts" bean="${resources}" var="resources" model="[header: 'Posts', search: true]"/>--}%
         </div> <!-- col-lg-7 -->

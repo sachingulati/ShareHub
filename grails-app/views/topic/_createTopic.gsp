@@ -26,7 +26,8 @@
 
                         <div class="col-lg-7">
                             <g:select name="visibility" from="${com.sharehub.enums.Visibility.values()}" optionValue="displayName"
-                                      class="form-control"/>%{--
+                                      class="form-control"/>
+                                      %{--
                             <g:select name="createTopicVisibility" from="${com.sharehub.enums.Visibility.values()*.displayName}" value="${com.sharehub.enums.Visibility.values()}"
                                       class="form-control"/>--}%
                         </div>

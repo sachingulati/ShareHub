@@ -44,9 +44,6 @@
 
 <script>
     $('#sendInvite .topicSelector').on('load',function(){
-        $(this).load("${createLink(controller: "topic", action: "getSubscribedTopics")}");
-    });
-    $('#sendInvite').on('show',function(){
-        $(this).find(".topicSelector").load();
+        $(this).load(topicSelectorUrl);
     });
 </script>

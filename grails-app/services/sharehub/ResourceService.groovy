@@ -87,7 +87,7 @@ class ResourceService {
                         }
                     }
                 }
-                else if (!attr.isSubscribed && !isAdmin){
+                else if (!attr.isSubscribed && !isAdmin && !attr.creatorUsername==!attr.username){
                     eq("visibility",Visibility.PUBLIC)
                 }
             }
@@ -153,24 +153,6 @@ class ResourceService {
         }
     }
 
-    def unreadResourceList(String username) {
-        def resources = Resource.createCriteria().list() {
-            order("dateCreated", "desc")
-            resourceStatus {
-                eq("isRead", false)
-                user{
-                    eq("username",username)
-                }
-            }
-            topic{
-                subscriptions{
-                    user{
-                        eq("username",username)
-                    }
-                }
-            }
-        }
-    }
 
     def recentPublicResourceList() {
         def resources = Resource.createCriteria().list(max: 5, offset: 0) {

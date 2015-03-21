@@ -67,12 +67,7 @@
 </div>
 
 <script>
-    console.log('script');
     $('#shareLink .topicSelector').on('load',function(){
-        $(this).load("${createLink(controller: "topic", action: "getSubscribedTopics")}");
-    });
-    $('#shareLink').on('show',function(){
-        console.log('show');
-        $(this).find(".topicSelector").load();
+        $(this).load(topicSelectorUrl);
     });
 </script>

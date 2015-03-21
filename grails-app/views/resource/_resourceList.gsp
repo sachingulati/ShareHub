@@ -19,8 +19,11 @@
             <g:render template="/resource/resource" collection="${resources}" var="resource"/>
     </div>  <!-- panel-body -->
 
-    <util:remotePaginate update="unreadResources" max="10" controller="resource" action="unreadResourceList" total="${resources?resources.getTotalCount():0}"/>
-
+    <g:if test="${doPaginate}">
+        <div class="pagination center-block">
+            <util:remotePaginate name="paginate" update="unreadResources" max="10" controller="resource" action="unreadResourceList" total="${resources?resources.getTotalCount():0}"/>
+        </div>
+    </g:if>
     <g:if test="${footer}">
         <div class="panel-footer">
             ${footer}

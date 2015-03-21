@@ -1,10 +1,324 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/grails-app/controllers/sharehub/TopicController.groovy" line="95" mnemonic="8" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4160786d-3f67-4d6d-8e09-e75c85ad7b3c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/createTopic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/jquery.validate.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/registration.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/shareDocument.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/shareLink.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Config$_run_closure1_closure4_closure5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Config$_run_closure1_closure4_closure5_closure6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Config$_run_closure2_closure7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ApplicationTagLib$_closure10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ApplicationTagLib$_closure8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ApplicationTagLib$_closure9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_$tt__delete_closure10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_$tt__delete_closure11.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_$tt__save_closure8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_$tt__save_closure9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_$tt__update_closure10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_$tt__update_closure9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_delete_closure6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_delete_closure7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_getResourcesCreated_closure1_closure12.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_notFound_closure7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_notFound_closure7_closure12.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_notFound_closure7_closure13.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_notFound_closure8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_notFound_closure8_closure15.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_notFound_closure8_closure16.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_notFound_closure9_closure17.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_save_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_save_closure5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_shareDocument_closure3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_shareDocument_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_shareLink_closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_shareLink_closure3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_showPost_closure1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_showPost_closure1_closure11.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_showPost_closure2_closure14.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__delete_closure10_closure18.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__delete_closure10_closure19.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__delete_closure11_closure21.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__delete_closure11_closure22.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__delete_closure12_closure23.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__save_closure10_closure19.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__save_closure8_closure14.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__save_closure8_closure15.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__save_closure9_closure17.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__save_closure9_closure18.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__update_closure10_closure19.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__update_closure10_closure20.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__update_closure11_closure21.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__update_closure9_closure16.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__update_closure9_closure17.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_update_closure5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_update_closure6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_$tt__createDefaultRatings_closure11.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_$tt__createDefaultReadingItems_closure10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_$tt__createDefaultResources_closure9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_$tt__getResources_closure13.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_$tt__recentPublicResourceList_closure13.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_$tt__switchReadStatus_closure14.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_$tt__unreadResourceList_closure12.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_getResources_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_recentPublicResourceList_closure7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_shareDocument_closure5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_shareLink_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_switchReadStatus_closure8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__createDefaultResources_closure9_closure15.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__getResources_closure13_closure18.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__getResources_closure13_closure18_closure22.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__getResources_closure13_closure19.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__getResources_closure13_closure19_closure23.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__getResources_closure13_closure19_closure23_closure24.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__getResources_closure13_closure20.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__getResources_closure13_closure20_closure25.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__getResources_closure13_closure20_closure26.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__getResources_closure13_closure20_closure26_closure27.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__getResources_closure13_closure21.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__getResources_closure13_closure21_closure28.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__recentPublicResourceList_closure13_closure21.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__switchReadStatus_closure14_closure22.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__switchReadStatus_closure14_closure23.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__unreadResourceList_closure12_closure16.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__unreadResourceList_closure12_closure16_closure18.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__unreadResourceList_closure12_closure17.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__unreadResourceList_closure12_closure17_closure19.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__unreadResourceList_closure12_closure17_closure19_closure20.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_unreadResourceList_closure6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_$tt__searchResourcesGeneric_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_$tt__searchResources_closure3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_$tt__searchResources_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_$tt__searchResources_closure5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_searchResourcesGeneric_closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_searchResources_closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_searchResources_closure3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResourcesGeneric_closure4_closure6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResourcesGeneric_closure4_closure6_closure9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResourcesGeneric_closure4_closure7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResourcesGeneric_closure4_closure7_closure10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResourcesGeneric_closure4_closure7_closure10_closure11.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResourcesGeneric_closure4_closure8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResourcesGeneric_closure4_closure8_closure12.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResourcesOld_closure5_closure13.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResourcesOld_closure5_closure13_closure16.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResourcesOld_closure5_closure14.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResourcesOld_closure5_closure14_closure17.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResourcesOld_closure5_closure14_closure17_closure18.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResourcesOld_closure5_closure15.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResourcesOld_closure5_closure15_closure19.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure3_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure3_closure4_closure7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure3_closure5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure3_closure5_closure8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure3_closure5_closure8_closure9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure3_closure6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure3_closure6_closure10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure4_closure6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure4_closure6_closure9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure4_closure7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure4_closure7_closure10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure4_closure7_closure10_closure11.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure4_closure8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure4_closure8_closure12.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure5_closure13.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure5_closure13_closure16.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure5_closure14.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure5_closure14_closure17.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure5_closure14_closure17_closure18.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure5_closure15.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService$_tt__searchResources_closure5_closure15_closure19.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure2_closure4_closure5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure3_closure6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_delete_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_delete_closure4_closure11.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_delete_closure4_closure12.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_getTopicsCreated_closure1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_getTopicsCreated_closure1_closure6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_notFound_closure5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_notFound_closure5_closure13.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_notFound_closure5_closure14.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_save_closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_save_closure2_closure7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_save_closure2_closure8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_update_closure3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_update_closure3_closure10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_update_closure3_closure9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_$tt__createDefaultSubscription_closure10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_$tt__createDefaultTopics_closure8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_$tt__getRecentTopics_closure14.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_$tt__getTopics_closure11.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_createDefaultSubscription_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_createDefaultTopics_closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_getRecentTopics_closure7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_getTopics_closure5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_serviceMethod_closure1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_show_closure3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_tt__createDefaultTopics_closure8_closure15.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_tt__getRecentTopics_closure14_closure18.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_tt__getRecentTopics_closure14_closure19.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_tt__getTrendingTopics_closure12_closure16.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_tt__getTrendingTopics_closure12_closure17.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_$tt__delete_closure10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_$tt__save_closure8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_$tt__update_closure9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_activate_closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_deactivate_closure3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_delete_closure6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_notFound_closure7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_notFound_closure7_closure12.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_notFound_closure7_closure13.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_notFound_closure7_closure14.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_profile_closure1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_profile_closure1_closure11.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_profile_closure1_closure11_closure12.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_save_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__delete_closure10_closure18.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__delete_closure10_closure19.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__delete_closure10_closure20.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__save_closure8_closure14.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__save_closure8_closure15.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__save_closure8_closure16.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__update_closure9_closure16.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__update_closure9_closure17.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__update_closure9_closure18.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_update_closure5.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AbstractAssetFile.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AbstractAssetFile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AbstractProcessor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AbstractProcessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ApplicationTagLib$_closure1.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ApplicationTagLib$_closure1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ApplicationTagLib$_closure2.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ApplicationTagLib$_closure2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ApplicationTagLib$_closure3.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ApplicationTagLib$_closure3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ApplicationTagLib$_closure4.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ApplicationTagLib$_closure4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ApplicationTagLib$_closure5.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ApplicationTagLib$_closure5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ApplicationTagLib$_closure6.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ApplicationTagLib$_closure6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ApplicationTagLib$_closure7.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ApplicationTagLib$_closure7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ApplicationTagLib.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ApplicationTagLib.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetCompiler.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetCompiler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetHelper.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetHelper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetMethodTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetMethodTagLib.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/AssetPipelineBootStrap.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/AssetPipelineBootStrap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetPipelineFilter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetPipelineFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/AssetPipelineGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/AssetPipelineGrailsPlugin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetProcessorService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetProcessorService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/AssetResourceLocator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/AssetResourceLocator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/AssetUrlMappings.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/AssetUrlMappings.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetsController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetsTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetsTagLib.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/AuthorListWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/AuthorListWriter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/AuthorWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/AuthorWriter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BootStrap.class" afterPath="$PROJECT_DIR$/target/classes/BootStrap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BuildConfig$_run_closure1_closure5.class" afterPath="$PROJECT_DIR$/target/classes/BuildConfig$_run_closure1_closure5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BuildConfig.class" afterPath="$PROJECT_DIR$/target/classes/BuildConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/CacheGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/CacheGrailsPlugin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/CacheManager.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/CacheManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/CacheTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/CacheTagLib.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/CachingLinkGenerator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/CachingLinkGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/ChangeLogListWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/ChangeLogListWriter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/ChangeLogWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/ChangeLogWriter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ChangePasswordCommand.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ChangePasswordCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/ChangelogXml2Groovy.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/ChangelogXml2Groovy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/ColumnWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/ColumnWriter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Config$_run_closure1.class" afterPath="$PROJECT_DIR$/target/classes/Config$_run_closure1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Config$_run_closure1_closure4.class" afterPath="$PROJECT_DIR$/target/classes/Config$_run_closure1_closure4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Config$_run_closure2.class" afterPath="$PROJECT_DIR$/target/classes/Config$_run_closure2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Config$_run_closure2_closure8.class" afterPath="$PROJECT_DIR$/target/classes/Config$_run_closure2_closure8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Config$_run_closure3.class" afterPath="$PROJECT_DIR$/target/classes/Config$_run_closure3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Config.class" afterPath="$PROJECT_DIR$/target/classes/Config.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/ConfigBuilder.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/ConfigBuilder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/ConfigLoader.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/ConfigLoader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugins/console/ConsoleController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugins/console/ConsoleController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/ConsoleGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/ConsoleGrailsPlugin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugins/console/ConsoleService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugins/console/ConsoleService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugins/console/ConsoleTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugins/console/ConsoleTagLib.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/CssAssetFile.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/CssAssetFile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/processors/CssMinifyPostProcessor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/processors/CssMinifyPostProcessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/processors/CssProcessor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/processors/CssProcessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DataSource.class" afterPath="$PROJECT_DIR$/target/classes/DataSource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/DatabaseMigrationGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/DatabaseMigrationGrailsPlugin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/DbdocController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/DbdocController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/DbdocUrlMappings.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/DbdocUrlMappings.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/DefaultCacheConfig.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/DefaultCacheConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/scaffolding/DefaultGrailsTemplateGenerator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/scaffolding/DefaultGrailsTemplateGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/DefaultWebXmlConfig.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/DefaultWebXmlConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/DirectiveProcessor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/DirectiveProcessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/DslBuilder.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/DslBuilder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/EditUserCommand.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/EditUserCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugins/console/Evaluation.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugins/console/Evaluation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/webxml/FilterManager.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/webxml/FilterManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/ForkedTomcatServer.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/ForkedTomcatServer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormColumn.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormColumn.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDatabase.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDatabase.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDatabaseSnapshotGenerator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDatabaseSnapshotGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDatabaseTypeConverter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDatabaseTypeConverter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDiff.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDiff.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/GrailsCacheAdminService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/GrailsCacheAdminService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsChange$1.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsChange$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsChange.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsChange.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsChangeLogParser.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsChangeLogParser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsClassLoaderResourceAccessor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsClassLoaderResourceAccessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsDiffStatusListener.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsDiffStatusListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsPrecondition$1.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsPrecondition$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsPrecondition.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsPrecondition.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GroovyAwareStringChangeLogSerializer.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GroovyAwareStringChangeLogSerializer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/HTMLListWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/HTMLListWriter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/HTMLWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/HTMLWriter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/Hibernate4GrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/Hibernate4GrailsPlugin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/HibernateAwareTypeConverter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/HibernateAwareTypeConverter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/HomeController.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/HomeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/HtmlAssetFile.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/HtmlAssetFile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/IdeaPrintProjectSettings.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/IdeaPrintProjectSettings.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/InlineExplodedTomcatServer.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/InlineExplodedTomcatServer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sharehub/enums/InviteStatus.class" afterPath="$PROJECT_DIR$/target/classes/com/sharehub/enums/InviteStatus.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Invites.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Invites.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_$tt__delete_closure7.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_$tt__delete_closure7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_$tt__save_closure5.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_$tt__save_closure5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_$tt__update_closure6.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_$tt__update_closure6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_notFound_closure4.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_notFound_closure4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_notFound_closure4_closure8.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_notFound_closure4_closure8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_notFound_closure4_closure9.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_notFound_closure4_closure9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_tt__delete_closure7_closure14.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_tt__delete_closure7_closure14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_tt__delete_closure7_closure15.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_tt__delete_closure7_closure15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_tt__save_closure5_closure10.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_tt__save_closure5_closure10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_tt__save_closure5_closure11.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_tt__save_closure5_closure11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_tt__update_closure6_closure12.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_tt__update_closure6_closure12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_tt__update_closure6_closure13.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/InvitesController$_tt__update_closure6_closure13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/InvitesController.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/InvitesController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/JQueryConfig.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/JQueryConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/plugins/jquery/JQueryConfig.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/plugins/jquery/JQueryConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/JQueryPluginResources.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/JQueryPluginResources.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/plugins/jquery/JQueryProvider.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/plugins/jquery/JQueryProvider.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/JQueryResourceTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/JQueryResourceTagLib.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/JQueryService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/JQueryService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/JQueryTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/JQueryTagLib.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/JqueryGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/JqueryGrailsPlugin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/JsAssetFile.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/JsAssetFile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/LinkGenerator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/LinkGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/LinkedProperties.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/LinkedProperties.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/ListEnumeration.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/ListEnumeration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/LoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/ManifestAssetFile.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/ManifestAssetFile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/MemoryDocVisitor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/MemoryDocVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MigrationRunner.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MigrationRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MigrationUtils.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MigrationUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MySQLCompatibleChangeLogSerializer.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MySQLCompatibleChangeLogSerializer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MysqlAwareCreateTableGenerator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MysqlAwareCreateTableGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/NoopVisitor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/NoopVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/PendingChangesWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/PendingChangesWriter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/PendingSQLWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/PendingSQLWriter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/RecentChangesWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/RecentChangesWriter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/RemotePaginationGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/RemotePaginationGrailsPlugin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugins/remotepagination/RemotePaginationTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugins/remotepagination/RemotePaginationTagLib.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure2.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$_closure1.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$_closure1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$_closure1_closure4.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$_closure1_closure4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__delete_closure12_closure24.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__delete_closure12_closure24.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__save_closure10_closure20.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__save_closure10_closure20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__update_closure11_closure22.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ResourceController$_tt__update_closure11_closure22.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceController.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ResourceController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_$tt__getResourceList_closure13.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_$tt__getResourceList_closure13.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_$tt__recentPublicResourceList_closure15.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_$tt__recentPublicResourceList_closure15.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_$tt__switchReadStatus_closure16.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_$tt__switchReadStatus_closure16.class" />
@@ -29,15 +343,94 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__unreadResourceList_closure14_closure30_closure32.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__unreadResourceList_closure14_closure30_closure32.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__unreadResourceList_closure14_closure30_closure32_closure33.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ResourceService$_tt__unreadResourceList_closure14_closure30_closure32_closure33.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ResourceService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceStatus.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ResourceStatus.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceStatusController.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ResourceStatusController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sharehub/enums/ResourceType.class" afterPath="$PROJECT_DIR$/target/classes/com/sharehub/enums/ResourceType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/ScaffoldingGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/ScaffoldingGrailsPlugin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/ScriptUtils.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/ScriptUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchController.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/SearchController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/SearchService.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/SearchService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sharehub/enums/Seriousness.class" afterPath="$PROJECT_DIR$/target/classes/com/sharehub/enums/Seriousness.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/Slf4jLogger.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/Slf4jLogger.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Subscription.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Subscription.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_$tt__delete_closure8.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_$tt__delete_closure8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_$tt__save_closure6.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_$tt__save_closure6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_$tt__update_closure7.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_$tt__update_closure7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_notFound_closure5.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_notFound_closure5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_notFound_closure5_closure10.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_notFound_closure5_closure10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_notFound_closure5_closure9.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_notFound_closure5_closure9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_tt__delete_closure8_closure15.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_tt__delete_closure8_closure15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_tt__delete_closure8_closure16.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_tt__delete_closure8_closure16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_tt__save_closure6_closure11.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_tt__save_closure6_closure11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_tt__save_closure6_closure12.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_tt__save_closure6_closure12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_tt__update_closure7_closure13.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_tt__update_closure7_closure13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_tt__update_closure7_closure14.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController$_tt__update_closure7_closure14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionService.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/SubscriptionService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/TableListWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/TableListWriter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/TableWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/TableWriter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatDevelopmentRunner.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatDevelopmentRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatExecutionContext.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatExecutionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/TomcatGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/TomcatGrailsPlugin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatLoader.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatLoader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatServer.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatServer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatServerFactory.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatServerFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatWarRunner.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatWarRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Topic$__clinit__closure2.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Topic$__clinit__closure2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Topic$_closure1.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Topic$_closure1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Topic.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Topic.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_delete_closure3.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_delete_closure3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_delete_closure3_closure10.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_delete_closure3_closure10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_delete_closure3_closure9.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_delete_closure3_closure9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_notFound_closure4.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_notFound_closure4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_notFound_closure4_closure11.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_notFound_closure4_closure11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_notFound_closure4_closure12.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_notFound_closure4_closure12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_save_closure1.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_save_closure1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_save_closure1_closure5.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_save_closure1_closure5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_save_closure1_closure6.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_save_closure1_closure6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_update_closure2.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_update_closure2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_update_closure2_closure7.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_update_closure2_closure7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_update_closure2_closure8.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/TopicController$_update_closure2_closure8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicController.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/TopicController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_$tt__createDefaultSubscription_closure9.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_$tt__createDefaultSubscription_closure9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_$tt__getTrendingTopics_closure12.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_$tt__getTrendingTopics_closure12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_$tt__getTrendingTopics_closure13.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/TopicService$_$tt__getTrendingTopics_closure13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/TopicService.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/TopicService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/processors/UglifyJsProcessor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/processors/UglifyJsProcessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/UrlMappings.class" afterPath="$PROJECT_DIR$/target/classes/UrlMappings.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/User$__clinit__closure1.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/User$__clinit__closure1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/User.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserCommand.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__delete_closure9_closure16.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__delete_closure9_closure16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__save_closure7_closure12.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__save_closure7_closure12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__update_closure8_closure14.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController$_tt__update_closure8_closure14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserController.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserService.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserViewCommand$_closure1.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserViewCommand$_closure1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/UserViewCommand.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/UserViewCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sharehub/enums/Visibility.class" afterPath="$PROJECT_DIR$/target/classes/com/sharehub/enums/Visibility.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/WebxmlGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/WebxmlGrailsPlugin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/resources.class" afterPath="$PROJECT_DIR$/target/classes/resources.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/taglib/sharehub/ApplicationTagLib.groovy" afterPath="$PROJECT_DIR$/grails-app/taglib/sharehub/ApplicationTagLib.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/Config.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/sharehub/InvitesController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/sharehub/InvitesController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/sharehub/Resource.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/sharehub/Resource.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/sharehub/ResourceController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/sharehub/ResourceController.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/services/sharehub/ResourceService.groovy" afterPath="$PROJECT_DIR$/grails-app/services/sharehub/ResourceService.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareHub-grailsPlugins.iml" afterPath="$PROJECT_DIR$/ShareHub-grailsPlugins.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareHub.iml" afterPath="$PROJECT_DIR$/ShareHub.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/sharehub/SubscriptionController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/sharehub/SubscriptionController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/sharehub/Topic.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/sharehub/Topic.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/sharehub/TopicController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/sharehub/TopicController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/topic/_createTopic.gsp" afterPath="$PROJECT_DIR$/grails-app/views/topic/_createTopic.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/services/sharehub/TopicService.groovy" afterPath="$PROJECT_DIR$/grails-app/services/sharehub/TopicService.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/sharehub/User.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/sharehub/User.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/resource/_resourceList.gsp" afterPath="$PROJECT_DIR$/grails-app/views/resource/_resourceList.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/invites/_sendInvite.gsp" afterPath="$PROJECT_DIR$/grails-app/views/invites/_sendInvite.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/resource/_shareDocument.gsp" afterPath="$PROJECT_DIR$/grails-app/views/resource/_shareDocument.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/resource/_shareLink.gsp" afterPath="$PROJECT_DIR$/grails-app/views/resource/_shareLink.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/afterLogin.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/afterLogin.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/beforeLogin.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/beforeLogin.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/login.gsp" afterPath="$PROJECT_DIR$/grails-app/views/login.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -72,11 +465,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_shareLink.gsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/resource/_shareLink.gsp">
+      <file leaf-file-name="_resourceList.gsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/resource/_resourceList.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6666667" vertical-offset="810" max-vertical-offset="1350">
-              <caret line="78" column="78" selection-start-line="78" selection-start-column="78" selection-end-line="78" selection-end-column="78" />
+            <state vertical-scroll-proportion="0.5209125" vertical-offset="104" max-vertical-offset="630">
+              <caret line="21" column="24" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationTagLib.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/taglib/sharehub/ApplicationTagLib.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="276" max-vertical-offset="1404">
+              <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -85,60 +488,45 @@
       <file leaf-file-name="afterLogin.gsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/afterLogin.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.458334" vertical-offset="3367" max-vertical-offset="3930">
-              <caret line="254" column="9" selection-start-line="254" selection-start-column="9" selection-end-line="254" selection-end-column="9" />
+            <state vertical-scroll-proportion="-9.925926" vertical-offset="1622" max-vertical-offset="4698">
+              <caret line="105" column="29" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/dashboard.gsp">
+      <file leaf-file-name="SubscriptionController.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/SubscriptionController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.375" vertical-offset="279" max-vertical-offset="855">
-              <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TopicController.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/TopicController.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.826087" vertical-offset="1222" max-vertical-offset="2805">
-              <caret line="103" column="218" selection-start-line="103" selection-start-column="218" selection-end-line="103" selection-end-column="218" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/login.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="1935">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="registration.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/registration.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="690">
-              <caret line="42" column="3" selection-start-line="3" selection-start-column="0" selection-end-line="42" selection-end-column="3" />
+            <state vertical-scroll-proportion="-20.68" vertical-offset="1355" max-vertical-offset="3150">
+              <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
               <folding>
-                <element signature="e#0#46#0" expanded="false" />
+                <element signature="e#473#926#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createTopic.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/createTopic.js">
+      <file leaf-file-name="ResourceService.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/services/sharehub/ResourceService.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-              <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="8" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1458" max-vertical-offset="2970">
+              <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+              <folding>
+                <element signature="n#!!block;n#createDefaultResources#0;n#!!block;n#ResourceService#0" expanded="false" />
+                <element signature="n#!!block;n#createDefaultReadingItems#0;n#!!block;n#ResourceService#0" expanded="false" />
+                <element signature="n#!!block;n#createDefaultRatings#0;n#!!block;n#ResourceService#0" expanded="false" />
+                <element signature="n#!!block;n#shareLink#0;n#!!block;n#ResourceService#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GormValidationApi.groovy" pinned="false" current-in-tab="false">
+        <entry file="jar:///opt/grails/src/grails-datastore-gorm-3.1.3.RELEASE-sources.jar!/org/grails/datastore/gorm/GormValidationApi.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2101" max-vertical-offset="3384">
+              <caret line="143" column="12" selection-start-line="143" selection-start-column="12" selection-end-line="143" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -152,57 +540,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/domain/sharehub/Topic.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/profile.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/domain/sharehub/User.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/InvitesController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/ResourceStatusController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/editProfile.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/LoginController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/adminPanel.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/_topicList.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/_posts.gsp" />
         <option value="$PROJECT_DIR$/src/groovy/com/sharehub/enums/Seriousness.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/sharehub/Subscription.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/topic/showTopic.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/user/editProfile.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/topic/_editTopic.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/user/_userRow.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/resource/_post.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/user/adminPanel.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/services/sharehub/TopicService.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/topic/_topicList.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/user/_userInfo.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/HomeController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/topic/_topicInfo.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/subscription/_subscribeOptions.gsp" />
         <option value="$PROJECT_DIR$/grails-app/services/sharehub/UserService.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/SubscriptionController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/sharehub/ShareHubFilters.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/user/profile.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/UserController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/resource/showPost.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/ResourceController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/dashboard.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/taglib/sharehub/ApplicationTagLib.groovy" />
         <option value="$PROJECT_DIR$/grails-app/services/sharehub/SearchService.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/resource/_posts.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/resource/_resourceList.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/SearchController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/beforeLogin.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/registration.js" />
         <option value="$PROJECT_DIR$/grails-app/views/login.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/services/sharehub/ResourceService.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/topic/_createTopic.gsp" />
         <option value="$PROJECT_DIR$/grails-app/assets/javascripts/createTopic.js" />
-        <option value="$PROJECT_DIR$/grails-app/views/resource/_shareDocument.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/invites/_sendInvite.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/afterLogin.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/registration.js" />
         <option value="$PROJECT_DIR$/grails-app/views/resource/_shareLink.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/shareLink.js" />
+        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/shareDocument.js" />
+        <option value="$PROJECT_DIR$/grails-app/views/resource/_shareDocument.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/services/sharehub/_utilService.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/services/sharehub/utilService.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/services/sharehub/UtilService.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/sharehub/Topic.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/sharehub/User.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/sharehub/Resource.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/services/sharehub/TopicService.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/TopicController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/ResourceController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/invites/_sendInvite.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/InvitesController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/taglib/sharehub/ApplicationTagLib.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/layouts/afterLogin.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/SubscriptionController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/services/sharehub/ResourceService.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/resource/_resourceList.gsp" />
       </list>
     </option>
   </component>
@@ -214,9 +602,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="1301" />
-    <option name="height" value="772" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -243,6 +631,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -351,7 +740,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sharehub" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -372,14 +765,9 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -397,7 +785,7 @@
     <property name="FullScreen" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="LayoutCode.rearrangeEntriesGSP" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="share&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/resource/_shareLink.gsp&#10;create&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/topic/_createTopic.gsp&#10;crea&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/assets/javascripts/createTopic.js&#10;invi&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/invites/_sendInvite.gsp&#10;dash&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/dashboard.gsp&#10;shareD&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/resource/_shareDocument.gsp&#10;creat&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/assets/javascripts/createTopic.js&#10;befor&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/beforeLogin.gsp&#10;resou&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/services/sharehub/ResourceService.groovy&#10;login&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/login.gsp&#10;logi&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/afterLogin.gsp&#10;after&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/afterLogin.gsp&#10;createTop&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/topic/_createTopic.gsp&#10;regi&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/assets/javascripts/registration.js&#10;das&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/dashboard.gsp&#10;befo&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/beforeLogin.gsp&#10;_topi&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/topic/_topicList.gsp&#10;pos&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/resource/_posts.gsp&#10;sear&#9;null&#9;null&#10;shareL&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/resource/_shareLink.gsp&#10;posts&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/resource/_posts.gsp&#10;topi&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/TopicController.groovy&#10;tag&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/taglib/sharehub/ApplicationTagLib.groovy&#10;cre&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/topic/_createTopic.gsp&#10;sho&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/resource/showPost.gsp&#10;_crea&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/topic/_createTopic.gsp&#10;pro&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/user/profile.gsp&#10;showP&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/resource/showPost.gsp&#10;filter&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/sharehub/ShareHubFilters.groovy&#10;top&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/TopicController.groovy&#10;topic&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/TopicController.groovy&#10;topicco&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/TopicController.groovy&#10;pr&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/user/profile.gsp&#10;user&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/UserController.groovy&#10;fil&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/sharehub/ShareHubFilters.groovy&#10;log&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/login.gsp&#10;subs&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/SubscriptionController.groovy&#10;sub&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/SubscriptionController.groovy&#10;ad&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/user/adminPanel.gsp&#10;ta&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/taglib/sharehub/ApplicationTagLib.groovy&#10;afte&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/afterLogin.gsp&#10;hom&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/HomeController.groovy&#10;show&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/resource/showPost.gsp&#10;buildconfig&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BuildConfig.groovy&#10;_po&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/resource/_posts.gsp&#10;su&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/subscription/_subscribeOptions.gsp&#10;ho&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/HomeController.groovy&#10;resour&#9;null&#9;null&#10;to&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/TopicController.groovy&#10;res&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/ResourceController.groovy" />
+    <property name="SearchEverywhereHistoryKey" value="re&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/resource/_resourceList.gsp&#10;resou&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/services/sharehub/ResourceService.groovy&#10;ta&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/taglib/sharehub/ApplicationTagLib.groovy&#10;user&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/UserController.groovy&#10;after&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/afterLogin.gsp&#10;topi&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/topic/_topicInfo.gsp&#10;tag&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/taglib/sharehub/ApplicationTagLib.groovy&#10;config.g&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/Config.groovy&#10;build&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BuildConfig.groovy&#10;invi&#9;null&#9;null&#10;das&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/dashboard.gsp&#10;resour&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/services/sharehub/ResourceService.groovy&#10;bui&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BuildConfig.groovy&#10;ad&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/user/adminPanel.gsp&#10;topic&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/topic/_topicInfo.gsp&#10;hom&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/HomeController.groovy&#10;dash&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/dashboard.gsp&#10;top&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/domain/sharehub/Topic.groovy&#10;confi&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BuildConfig.groovy&#10;share&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/resource/_shareDocument.gsp&#10;create&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/topic/_createTopic.gsp&#10;crea&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/assets/javascripts/createTopic.js&#10;shareD&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/resource/_shareDocument.gsp&#10;creat&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/assets/javascripts/createTopic.js&#10;befor&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/beforeLogin.gsp&#10;login&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/login.gsp&#10;logi&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/afterLogin.gsp&#10;createTop&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/topic/_createTopic.gsp&#10;regi&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/assets/javascripts/registration.js&#10;befo&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/beforeLogin.gsp&#10;_topi&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/topic/_topicList.gsp&#10;pos&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/resource/_posts.gsp&#10;sear&#9;null&#9;null&#10;shareL&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/resource/_shareLink.gsp&#10;posts&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/resource/_posts.gsp&#10;cre&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/topic/_createTopic.gsp&#10;sho&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/resource/showPost.gsp&#10;_crea&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/topic/_createTopic.gsp&#10;pro&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/user/profile.gsp&#10;showP&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/resource/showPost.gsp&#10;filter&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/sharehub/ShareHubFilters.groovy&#10;topicco&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/TopicController.groovy&#10;pr&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/user/profile.gsp&#10;fil&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/sharehub/ShareHubFilters.groovy&#10;log&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/login.gsp&#10;subs&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/SubscriptionController.groovy&#10;sub&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/SubscriptionController.groovy&#10;afte&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/afterLogin.gsp&#10;show&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/resource/showPost.gsp&#10;buildconfig&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BuildConfig.groovy" />
     <property name="options.lastSelected" value="editor.preferences.completion" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -1047,7 +1435,9 @@
       <workItem from="1426521859384" duration="6015000" />
       <workItem from="1426570061552" duration="364000" />
       <workItem from="1426571685933" duration="21237000" />
-      <workItem from="1426661864291" duration="27830000" />
+      <workItem from="1426661864291" duration="30079000" />
+      <workItem from="1426831671103" duration="20114000" />
+      <workItem from="1426855366339" duration="4624000" />
     </task>
     <task id="LOCAL-00001" summary="check">
       <created>1424700707141</created>
@@ -1059,7 +1449,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="552943000" />
+    <option name="totallyTimeSpent" value="579930000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1082,7 +1472,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1095,22 +1485,21 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3476874" sideWeight="0.50039715" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32535884" sideWeight="0.49961567" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32376397" sideWeight="0.49961567" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19618745" sideWeight="0.49741602" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32057416" sideWeight="0.49960285" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19681275" sideWeight="0.49741602" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3188406" sideWeight="0.49960285" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.49960285" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39969373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6825658" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6825658" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.49960285" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30341542" sideWeight="0.502584" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1119,6 +1508,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1142,7 +1532,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1151,95 +1541,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/views/topic/show.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1950">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/user/_userList.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="394">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/user/editProfile.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1725">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/error.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="394">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1995">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/sharehub/enums/InviteStatus.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/sharehub/enums/ResourceType.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/sharehub/enums/Seriousness.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/sharehub/enums/Visibility.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/temp.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/topic/_editTopic.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0851064" vertical-offset="216" max-vertical-offset="690">
           <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7534626" vertical-offset="808" max-vertical-offset="1275">
-          <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/HomeController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.826087" vertical-offset="0" max-vertical-offset="330">
-          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1254,14 +1559,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="126203" max-vertical-offset="154530">
           <caret line="8434" column="0" selection-start-line="8434" selection-start-column="0" selection-end-line="8434" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/user/adminPanel.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1307,26 +1604,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/SubscriptionController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5151515" vertical-offset="1123" max-vertical-offset="2700">
-          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/topic/showTopic.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="525">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/UserController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.173913" vertical-offset="90" max-vertical-offset="4530">
-          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
           <folding />
         </state>
       </provider>
@@ -1355,51 +1636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/ResourceController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3305785" vertical-offset="1380" max-vertical-offset="3300">
-          <caret line="100" column="13" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
-          <folding>
-            <element signature="e#18#54#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/services/sharehub/TopicService.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="1620">
-          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/taglib/sharehub/ApplicationTagLib.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
-          <caret line="48" column="53" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/topic/_topicInfo.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6637168" vertical-offset="450" max-vertical-offset="1035">
-          <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/User.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5769231" vertical-offset="0" max-vertical-offset="615">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/SearchController.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.173913" vertical-offset="0" max-vertical-offset="345">
@@ -1420,7 +1656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.1914895" vertical-offset="0" max-vertical-offset="375">
           <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1436,15 +1671,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="587">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/resource/_resourceList.gsp">
+    <entry file="file://$PROJECT_DIR$/target/work/plugins/asset-pipeline-1.9.9/grails-app/taglib/asset/pipeline/AssetsTagLib.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.6595745" vertical-offset="0" max-vertical-offset="480">
-          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="2520">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/beforeLogin.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28645834" vertical-offset="210" max-vertical-offset="1140">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="27" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -1456,67 +1696,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/work/plugins/asset-pipeline-1.9.9/grails-app/taglib/asset/pipeline/AssetsTagLib.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="2520">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/registration.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="690">
-          <caret line="42" column="3" selection-start-line="3" selection-start-column="0" selection-end-line="42" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/services/sharehub/ResourceService.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="915" max-vertical-offset="2130">
-          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#createDefaultResources#0;n#!!block;n#ResourceService#0" expanded="false" />
-            <element signature="n#!!block;n#createDefaultReadingItems#0;n#!!block;n#ResourceService#0" expanded="false" />
-            <element signature="n#!!block;n#createDefaultRatings#0;n#!!block;n#ResourceService#0" expanded="false" />
-            <element signature="n#!!block;n#shareLink#0;n#!!block;n#ResourceService#0" expanded="false" />
-            <element signature="n#!!block;n#shareDocument#0;n#!!block;n#ResourceService#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/beforeLogin.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28645834" vertical-offset="210" max-vertical-offset="1140">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="27" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/dashboard.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.375" vertical-offset="279" max-vertical-offset="855">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/resource/_shareDocument.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.787234" vertical-offset="540" max-vertical-offset="1170">
-          <caret line="51" column="104" selection-start-line="51" selection-start-column="104" selection-end-line="51" selection-end-column="104" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/invites/_sendInvite.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24050634" vertical-offset="287" max-vertical-offset="840">
-          <caret line="28" column="104" selection-start-line="28" selection-start-column="104" selection-end-line="28" selection-end-column="104" />
-          <folding />
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1524,38 +1707,260 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="780">
           <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/afterLogin.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.458334" vertical-offset="3367" max-vertical-offset="3930">
-          <caret line="254" column="9" selection-start-line="254" selection-start-column="9" selection-end-line="254" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/createTopic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="8" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.2631579" vertical-offset="0" max-vertical-offset="399">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/resource/_shareLink.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="15" max-vertical-offset="1245">
+          <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/shareLink.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/shareDocument.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/resource/_shareDocument.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="225" max-vertical-offset="1200">
+          <caret line="15" column="67" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/sharehub/enums/Visibility.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="399">
+          <caret line="0" column="26" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/HomeController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.826087" vertical-offset="0" max-vertical-offset="330">
+          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/sharehub/UtilService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/User.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="792">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/Topic.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4561404" vertical-offset="43" max-vertical-offset="432">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/Resource.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26865673" vertical-offset="54" max-vertical-offset="738">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/TopicController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.826087" vertical-offset="1222" max-vertical-offset="2805">
-          <caret line="103" column="218" selection-start-line="103" selection-start-column="218" selection-end-line="103" selection-end-column="218" />
+        <state vertical-scroll-proportion="-6.08" vertical-offset="1486" max-vertical-offset="3348">
+          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/resource/_shareLink.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/services/sharehub/TopicService.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6666667" vertical-offset="810" max-vertical-offset="1350">
-          <caret line="78" column="78" selection-start-line="78" selection-start-column="78" selection-end-line="78" selection-end-column="78" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2232">
+          <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+          <folding>
+            <element signature="e#18#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/user/adminPanel.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/dashboard.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="1026">
+          <caret line="37" column="36" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/ResourceController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18083182" vertical-offset="314" max-vertical-offset="3582">
+          <caret line="23" column="149" selection-start-line="23" selection-start-column="149" selection-end-line="23" selection-end-column="149" />
+          <folding>
+            <element signature="e#18#54#0" expanded="false" />
+            <element signature="n#!!block;n#getResourcesCreated#0;n#!!block;n#ResourceController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/resource/_resource.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="307" max-vertical-offset="846">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+          <folding>
+            <marker date="1426489918823" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426489918823" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426489918823" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426489918823" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="964" max-vertical-offset="1566">
+          <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="916" max-vertical-offset="2700">
+          <caret line="64" column="28" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/invites/_sendInvite.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1026">
+          <caret line="18" column="100" selection-start-line="18" selection-start-column="100" selection-end-line="18" selection-end-column="100" />
+          <folding>
+            <marker date="1426854614309" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/InvitesController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.52" vertical-offset="0" max-vertical-offset="2106">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/topic/_topicInfo.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8846154" vertical-offset="608" max-vertical-offset="1242">
+          <caret line="45" column="50" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/UserController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.76" vertical-offset="288" max-vertical-offset="5436">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="31" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/taglib/sharehub/ApplicationTagLib.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="276" max-vertical-offset="1404">
+          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/grails/src/grails-datastore-gorm-3.1.3.RELEASE-sources.jar!/org/grails/datastore/gorm/GormValidationApi.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2101" max-vertical-offset="3384">
+          <caret line="143" column="12" selection-start-line="143" selection-start-column="12" selection-end-line="143" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/afterLogin.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.925926" vertical-offset="1622" max-vertical-offset="4698">
+          <caret line="105" column="29" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/SubscriptionController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.68" vertical-offset="1355" max-vertical-offset="3150">
+          <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+          <folding>
+            <element signature="e#473#926#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/sharehub/ResourceService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1458" max-vertical-offset="2970">
+          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!block;n#createDefaultResources#0;n#!!block;n#ResourceService#0" expanded="false" />
+            <element signature="n#!!block;n#createDefaultReadingItems#0;n#!!block;n#ResourceService#0" expanded="false" />
+            <element signature="n#!!block;n#createDefaultRatings#0;n#!!block;n#ResourceService#0" expanded="false" />
+            <element signature="n#!!block;n#shareLink#0;n#!!block;n#ResourceService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/resource/_resourceList.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5209125" vertical-offset="104" max-vertical-offset="630">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1567,7 +1972,7 @@
         <entry key="ShareHub">
           <value>
             <GrailsSettings>
-              <option name="buildConfigCrc" value="20797230" />
+              <option name="buildConfigCrc" value="-360448814" />
               <option name="pluginDependenciesCrc" value="-480571649" />
               <option name="properties">
                 <map>

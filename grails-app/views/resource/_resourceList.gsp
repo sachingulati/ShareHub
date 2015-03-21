@@ -15,9 +15,12 @@
         </g:if>
         <h3 class="panel-title">${header}</h3>
     </div>  <!-- panel-heading -->
-    <div class="panel-body">
+    <div class="panel-body" name="resourceListPage">
             <g:render template="/resource/resource" collection="${resources}" var="resource"/>
     </div>  <!-- panel-body -->
+
+    <util:remotePaginate update="unreadResources" max="10" controller="resource" action="unreadResourceList" total="${resources?resources.getTotalCount():0}"/>
+
     <g:if test="${footer}">
         <div class="panel-footer">
             ${footer}

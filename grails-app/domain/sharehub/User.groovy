@@ -1,13 +1,16 @@
 package sharehub
 
 class User {
-    String firstName,lastName
+    String firstName
+    String lastName
     String email
-    String username, password//, confirmPassword
+    String username
+    String password//, confirmPassword
     String photoUrl
     boolean admin = false
     boolean active = true
-    Date dateCreated, lastUpdated
+    Date dateCreated
+    Date lastUpdated
     static hasMany = [topics: Topic,resources: Resource,subscriptions: Subscription, resourceStatus: ResourceStatus]
     static transients = ['name']//,'confirmPassword']
 

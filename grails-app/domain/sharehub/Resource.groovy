@@ -3,11 +3,14 @@ package sharehub
 import com.sharehub.enums.ResourceType
 
 class Resource {
-    String description, title
-    Date dateCreated, lastUpdated
+    String description
+    String title
+    Date dateCreated
+    Date lastUpdated
     ResourceType type
     String url
     String filePath
+
     static belongsTo = [createdBy: User, topic: Topic]
     static hasMany = [resourceStatus: ResourceStatus]
     static mapping = {

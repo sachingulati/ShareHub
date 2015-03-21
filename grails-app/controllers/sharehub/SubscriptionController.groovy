@@ -23,8 +23,10 @@ class SubscriptionController {
 
         }
         Subscription subscription = Subscription.findOrCreateByTopicAndUser(topic,user)
+
+        println "-------------------------------------------"
         if (subscription.validate()){
-            subscription.save(flush: true, failOnError: true)
+            subscription.save()
             user.addToSubscriptions(subscription)
             topic.addToSubscriptions(subscription)
             topic.save(flush: true)

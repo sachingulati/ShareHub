@@ -42,14 +42,21 @@ class ResourceService {
 /*          isRead: for either read or unread resources
             username: for user specific search
             isSubscribed: for resources in subscribed topics
-            --> searchByRating: search resources where rating is greater than equal to given rating
+            --> searchByRating: search resources where rating is greater than equal to given rating (not implemented)
             resourceSearchString: for searching in resource title and description
             topicNameSearchString: for topic specific search
             createdByUsername: search by resourceCreator
-            lastUpdated: search resources which are updated after a given date
+            --> lastUpdated: search resources which are updated after a given date (not implemented)
             offset: for pagination
             max: for pagination
+            topicId: search within given topic
  */
+        if (!attr.max){
+            attr.max = 10
+        }
+        if (!attr.offset){
+            attr.offset = 0
+        }
         Boolean isAdmin = false
         if (attr.username){
             User user = User.findByUsername(attr.username)
@@ -70,6 +77,9 @@ class ResourceService {
                 }
             }
             topic {
+                if(attr.topicId){
+                    eq("id",attr.topicId)
+                }
                 if(attr.isSubscribed && attr.username) {
                     subscriptions {
                         user {

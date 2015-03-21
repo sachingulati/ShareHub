@@ -6,7 +6,7 @@
                         aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Send Invitation</h4>
             </div>
-            <g:form>
+            <g:form controller="invites" action="sendInvite">
                 <div class="modal-body">
 
                     <div class="row padding5">
@@ -15,7 +15,8 @@
                         </div>
 
                         <div class="col-lg-7">
-                            <input type="text" id="txtFirstName" class="form-control" placeholder="Email"/>
+                            <g:textField name="email" class="form-control" placeholder="Email"/>
+                            %{--<input type="text" id="Email" class="form-control" placeholder="Email"/>--}%
                         </div>
                     </div>
 
@@ -33,7 +34,7 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Invite</button>
+                    <button type="submit" class="btn btn-primary">Invite</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 </div>
             </g:form>

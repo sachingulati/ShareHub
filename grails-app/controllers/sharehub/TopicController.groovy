@@ -1,14 +1,5 @@
-
 package sharehub
-import com.sharehub.enums.Seriousness
-
 import com.sharehub.enums.Visibility
-import grails.transaction.Transactional
-import org.xhtmlrenderer.css.parser.property.PrimitivePropertyBuilders
-import sharehub.Topic
-import sharehub.User
-
-import static org.springframework.http.HttpStatus.*
 
 
 
@@ -22,7 +13,7 @@ class TopicController {
     }
 
     def getRecentSubscribedTopics(){
-        List<Topic> topicList = topicService.getRecentTopics(session["username"],true)
+        List<Topic> topicList = topicService.getTopicList(bySubscriberUsername: session["username"])
         render(template: "/topic/topicList", model: [header:"Subscriptions", hr:true], bean: topicList, var: "topics")
     }
     def getTrendingTopics(){
@@ -89,19 +80,19 @@ class TopicController {
         else{
             username = session["username"]
         }
-        List<Topic> topics = Topic.createCriteria().list{
-            if (session["username"]!=params.username && !session["admin"]){
-                eq("visibility",Visibility.PUBLIC)
-            }
-            createdBy{
-                eq("username",username)
-            }
+        List<Topic> topicList
+        if (username != session["username"] && !session["admin"]){
+            topicList = topicService.getTopicList(byCreatorUsername: username, visibility: Visibility.PUBLIC)
         }
-        render(template: "/topic/topicList", model: [header: 'Topics Created', hr:true], bean:topics, var:"topics")
+        else {
+            topicList = topicService.getTopicList(byCreatorUsername: username)
+        }
+        render(template: "/topic/topicList", model: [header: 'Topics Created', hr:true], bean:topicList, var:"topics")
     }
 
     def getSubscribedTopics(){
-        render(select([name: "topic", from: topicService.getTopics(session["username"]), optionKey: "id", optionValue: "name", value: "id", noSelection: ['': 'Select Topic'], class: "form-control"], required: "required"))
+        def topicList = topicService.getTopicList(bySubscriberUsername: session["username"])
+        render g.select(name: "topic", from: topicList, optionKey: "id", optionValue: "name", value: "id", noSelection: ['': 'Select Topic'], class: "form-control", required: "required")
     }
     def show(Topic topicInstance) {
         respond topicInstance

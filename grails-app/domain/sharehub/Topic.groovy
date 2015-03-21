@@ -7,7 +7,8 @@ class Topic {
     String name
     static belongsTo = [createdBy:User]
     static hasMany = [resources: Resource,subscriptions: Subscription]
-    Date dateCreated,lastUpdated
+    Date dateCreated
+    Date lastUpdated
     Visibility visibility;
     static constraints = {
         name unique: 'createdBy'

@@ -69,6 +69,8 @@ grails.project.dependency.resolution = {
         //compile ":console:1.5.3"
         compile ":remote-pagination:0.4.8"
         compile ":console:1.5.4"
+        compile ":mail:1.0.7"
+        compile ":quartz:1.0.2"
 //        compile ":jquery-validation:1.9"
         // Uncomment these to enable additional asset-pipeline capabilities
         //compile ":sass-asset-pipeline:1.9.0"

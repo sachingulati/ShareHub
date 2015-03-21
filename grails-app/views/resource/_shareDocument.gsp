@@ -1,3 +1,5 @@
+
+<asset:javascript src="shareDocument.js"/>
 <div class="modal fade" id="shareDocument" tabindex="-1" role="dialog" aria-labelledby="shareDocumentModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -6,7 +8,7 @@
                         aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Share Document</h4>
             </div>
-            <g:form controller="resource" action="shareDocument">
+            <g:form controller="resource" action="shareDocument" name="shareDocumentForm">
                 <div class="modal-body">
 
                     <div class="row padding5">
@@ -26,7 +28,7 @@
 
                         <div class="col-lg-7">
                             <span class="btn btn-default btn-file">
-                                <input type="file" id="file" placeholder="Link" required="required"/>
+                                <input type="file" id="file" required="required"/>
                             </span>
 
                         </div>

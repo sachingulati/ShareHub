@@ -8,6 +8,16 @@ class InvitesController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    def mailService
+    def sendInvite(){
+        println(params)
+        mailService.sendMail {
+            to params.email
+            subject "hello"
+            html "html"
+        }
+        render("hit")
+    }
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Invites.list(params), model: [invitesInstanceCount: Invites.count()]

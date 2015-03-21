@@ -22,8 +22,8 @@ class ResourceController {
     }
     def unreadResourceList() {
 //        render(template: "/resource/posts", model: [resources: resourceService.unreadResourceList(session["username"], params.max, params.offset)])
-        List unreadResources = resourceService.unreadResourceList(session["username"])
-        render(template: "/resource/resourceList", bean: unreadResources, var: "resources", model: [header: 'Inbox', search: true])
+        List<Topic> unreadResourceList = resourceService.getResourceList(isSubscribed: true, isRead: false, username: session["username"], offset: params.offset, max: params.max)
+        render(template: "/resource/resourceList", bean: unreadResourceList, var: "resources", model: [header: 'Inbox', search: true])
     }
 
 

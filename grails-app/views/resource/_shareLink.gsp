@@ -1,3 +1,5 @@
+
+<asset:javascript src="shareLink.js"/>
 <div class="modal fade" id="shareLink" tabindex="-1" role="dialog" aria-labelledby="shareLinkModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -26,7 +28,7 @@
 
                         <div class="col-lg-7">
                             <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1">hhtp://</span>
+                                <span class="input-group-addon" id="basic-addon1">http://</span>
                                 <g:textField name="url" class="form-control" placeholder="Url" aria-describedby="basic-addon1" required="required"/>
                             </div>
                         </div>
@@ -38,7 +40,7 @@
                         </div>
 
                         <div class="col-lg-7">
-                            <g:textArea name="description" class="form-control" placeholder="\n\nDescription" rows="5" required="required"/>
+                            <g:textArea name="description" class="form-control" placeholder="\n\nDescription" rows="5" required="required" maxlength="1000"/>
                         </div>
                     </div>
 
@@ -65,15 +67,6 @@
 </div>
 
 <script>
-
-    $('#shareLinkForm').validate({
-        rules:{
-            title: "required"
-        },
-        messages:{
-            title: "Please enter Topic Name!"
-        }
-    })
     console.log('script');
     $('#shareLink .topicSelector').on('load',function(){
         $(this).load("${createLink(controller: "topic", action: "getSubscribedTopics")}");

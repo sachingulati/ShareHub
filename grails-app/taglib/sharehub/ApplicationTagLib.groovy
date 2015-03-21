@@ -5,19 +5,13 @@ class ApplicationTagLib {
     static defaultEncodeAs = [taglib: 'raw']
     //static encodeAsForTags = [tagName: [taglib:'html'], otherTagName: [taglib:'none']]
     def userService
-    def topicService
     def userName = {
         out << userService.getName(session["username"])
-    }
-    def topicSelector = {
-        def topics = topicService.getTopics(session["username"])
-        out << g.select([name: "topic", from: topics, optionKey: "id", optionValue: "name", value: "id", noSelection: ['': 'Select Topic'], class: "form-control"])
     }
     def image = { attr ->
         String path = createLink(controller: "assets", action: "user-default.png")
         if (attr.src)
             path = createLink(controller: "user", action: "showImage", params: [photoUrl: attr.src])
-//            path = "data:img/png;base64," + new File(attr.src).getBytes().encodeBase64()
         out << "<img src='" + path
         out << "' width='80' height='80' />"
     }
@@ -38,20 +32,16 @@ class ApplicationTagLib {
         Boolean read = resourceStatus.isRead
         out << '<a class="inboxLinkStyle markReadLink" data-resource-id="' + attr.resourceId+ '" href="javascript:void(0)"> Mark ' + (read ? "un" : "") + "read </a>"
     }
-    def resourceOptions = { attr ->
-        if (attr.resource.createdBy.username == session["username"] || User.findByUsername(session["username"]).admin) {
-            out << "<a href='#' class='inboxLinkStyle'>Delete</a>"
-            out << "<a href='#' class='inboxLinkStyle'>Edit</a>"
-        }
-    }
     def subscribe = { attr ->
-        if (!(attr.topic)) return
+        if (!(attr.topic)){
+            render ""
+            return
+        }
         Subscription subscription = Subscription.findByTopicAndUser(attr.topic, User.findByUsername(session["username"]))
         if (subscription) {
             out<< render(template: "/subscription/subscribeOptions", model: [subscriptionType: subscription.seriousness, topicId: attr.topic.id, canUnsubscribe:(attr.topic.createdBy.username!=session["username"])])
         } else {
             out<< "<a class='subscribe' href='javascript:void(0)' data-topic-id='" + attr.topic.id+"'>Subscribe</a>"
-//            out<< g.remoteLink(update: "subscriptionStatus${attr.topic.id}", controller: "subscription", action: "subscribe", params: [topicId: attr.topic.id]){"Subscribe"}
         }
     }
 
@@ -65,8 +55,7 @@ class ApplicationTagLib {
         if (!date) return
         out << date.format("h:mm a, d MMM, yyyy")
     }
-    def rate={attr->
-    }
+
     /*
     def rate = { attr ->
         int rating = attr.rating

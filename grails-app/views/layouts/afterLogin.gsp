@@ -102,7 +102,6 @@
                     url:url,
                     data : {topicId:id},
                      success: function(data){
-//                         parentDiv.html(data);
                          $('.subscriptionStatus'+id).html(data);
                          reLoadContent($('#subscriptionList'));
                          reLoadContent($('#unreadResources'));
@@ -162,7 +161,7 @@
                                 else{
                                     obj.text(response)
                                 }
-                                $('#unreadResources').load()
+                                reLoadContent($('#unreadResources'));
                             }
                     )
                 }

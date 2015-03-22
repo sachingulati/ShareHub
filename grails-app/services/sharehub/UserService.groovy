@@ -43,21 +43,22 @@ class UserService {
         user.save()
         return user
     }
-    def editUser(String username, String fname, String lname, Boolean removePhoto, def photo){
+    def updateUser(String username, String fname, String lname, String email, Boolean removePhoto, def photo){
         User user = User.findByUsername(username)
         if (!user)
             return false
         user.firstName = fname
         user.lastName = lname
+        user.email = email
         if (removePhoto){
             user.photoUrl = null
         }
-        user.validate()
-        if (user.hasErrors()){
-            println user.errors.allErrors
+        if (user.validate()){
+            user.save()
+            return true
         }
-        user.save()
-        return true
+        println user.errors.allErrors
+        return false
     }
     def changePassword(String username, String newPassword, String confirmPassword,String currentPassword){
         User user = User.findByUsernameAndPassword(username,currentPassword)
@@ -67,9 +68,11 @@ class UserService {
         if (confirmPassword!=newPassword)
             return "New Password and Confirm Password do not match!"
         user.password = newPassword
-        user.validate()
+        if (user.validate())
+            user.save(failOnError: true)
+        else
+            return "Password must be at least 8 characters long!"
         println(user.errors.allErrors)
-        user.save(failOnError: true)
         return "Password successfully changed."
     }
     def getName(String username){

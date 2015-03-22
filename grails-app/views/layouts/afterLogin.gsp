@@ -6,7 +6,7 @@
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" %>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <title><g:layoutTitle default="Share Hub"/></title>
 
@@ -55,7 +55,6 @@
             </button>
             <a class="navbar-brand" href="/ShareHub/">Share Hub</a>
         </div>
-
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -107,13 +106,25 @@
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
+
+    <div class="bg-info report" id="info">
+        <h4 class="reportText"></h4>
+    </div>
+    <div class="bg-success report" id="successReport">
+        <h4 class="reportText"></h4>
+    </div>
+    <div class="bg-danger report" id="warningReport">
+        <h4 class="reportText"></h4>
+    </div>
+
 </nav>
 <g:render template="/resource/shareLink"/>
 <g:render template="/resource/shareDocument"/>
 <g:render template="/topic/createTopic"/>
 <g:render template="/topic/editTopic"/>
 <g:render template="/invites/sendInvite"/>
-<div class="contentMargin">
+
+<div class="contentMargin" id="contentBody">
     <g:layoutBody/>
 </div>
 </body>

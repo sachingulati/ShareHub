@@ -27,10 +27,7 @@
                         </div>
 
                         <div class="col-lg-7">
-                            <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1">http://</span>
-                                <g:textField name="url" class="form-control" placeholder="Url" aria-describedby="basic-addon1" required="required"/>
-                            </div>
+                                <g:textField name="url" class="form-control" value="http://" placeholder="Url" aria-describedby="basic-addon1" required="required"/>
                         </div>
                     </div>
 

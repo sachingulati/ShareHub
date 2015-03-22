@@ -48,3 +48,8 @@
 .pagination a, span{
     margin: 0px 10px;
 }
+.report{
+    padding: 5px;
+    display: none;
+    text-align: center;
+}

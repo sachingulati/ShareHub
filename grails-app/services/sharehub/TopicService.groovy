@@ -24,7 +24,7 @@ class TopicService {
         if (!topic) {
             return false
         }
-        if (topic.visibility == Visibility.PRIVATE && !(user.admin)) {
+        if (topic.visibility == Visibility.PRIVATE && !(user?.admin)) {
             if (!Subscription.findByTopicAndUser(topic, user)) {
                 return false
             }

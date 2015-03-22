@@ -8,7 +8,8 @@ $(document).ready(function(){
             lastName: "required",
             username: {
                 required: true,
-                minlength: 3
+                minlength: 3,
+                remote: checkUsernameForNewUser
             },
             password: {
                 required: true,
@@ -19,7 +20,8 @@ $(document).ready(function(){
             },
             email: {
                 required: true,
-                email: true
+                email: true,
+                remote: checkEmailForNewUser
             }
         },
         messages:{

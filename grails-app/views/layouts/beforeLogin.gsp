@@ -32,7 +32,7 @@
 </head>
 
 <body>
-
+<g:render template="/vars"/>
 <nav class="navbar navbar-default topBar">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->

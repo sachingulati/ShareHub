@@ -15,6 +15,7 @@
 <body>
 
 <div>
+
     <div class="row">
         <div class="col-lg-5">
             %{--<!-- User Info -->--}%
@@ -35,9 +36,11 @@
         </div> <!-- col-lg-5 -->
 
         <div class="col-lg-7" id="resourceList">
+        <div class="afterReport">
             <div id="unreadResources" class="applyPaginate" data-ajax-url="${createLink(controller: "resource", action: "unreadResourceList")}" data-ajax-params="${[offset: 0, max: 10] as grails.converters.JSON}">
                 <g:render template="/resource/resourceList" bean="${null}" var="resources" model="[header: 'Inbox', search: true, footer:'Loading..', doPaginate:true]"/>
             </div>
+        </div>
         </div> <!-- col-lg-7 -->
 
     </div><!-- /.row -->

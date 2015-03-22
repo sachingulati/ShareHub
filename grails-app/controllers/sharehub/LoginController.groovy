@@ -37,4 +37,8 @@ class LoginController {
         else
             render "Invalid Data"
     }
+    def checkEmail(){
+        println params
+        return true
+    }
 }

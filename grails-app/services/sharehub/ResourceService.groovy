@@ -7,6 +7,7 @@ import grails.transaction.Transactional
 @Transactional
 class ResourceService {
 
+    def topicService
     def createDefaultResources() {
         String desc = "hi this is description of Resources. This is temporary description and will be replaced by actual description later on. so for the time being please co-operate :)"
         Topic.list().each { topic ->
@@ -36,6 +37,36 @@ class ResourceService {
         }
     }
 
+    def getRating(id){
+        def rating = ResourceStatus.createCriteria().get(){
+            projections{
+                count("score","number")
+                avg("score","rating")
+            }
+            resource{
+                eq("id",id.toLong())
+            }
+            gt("score", 0)
+        }
+        return [totalCount: rating[0], avgRating: rating[1]]
+    }
+    def showPost(Long id,String username){
+        Resource resource = Resource.get(id)
+        if(!resource){
+            return null
+        }
+        User user = User.findByUsername(username)
+        if(!topicService.show(user,resource.topic)){
+            return null
+        }
+        Subscription subscription = Subscription.findByUserAndTopic(user,resource.topic)
+        if(subscription){
+            ResourceStatus resourceStatus = ResourceStatus.findByUserAndResource(user,resource)
+            resourceStatus?.isRead = true
+            resourceStatus.save()
+        }
+        return resource
+    }
 
     def getResourceList(attr){
 //        Attributes summary:
@@ -87,7 +118,7 @@ class ResourceService {
                         }
                     }
                 }
-                else if (!attr.isSubscribed && !isAdmin && !attr.creatorUsername==!attr.username){
+                else if (!attr.isSubscribed && !isAdmin && attr.createdByUsername!=attr.username){
                     eq("visibility",Visibility.PUBLIC)
                 }
             }
@@ -97,11 +128,11 @@ class ResourceService {
             if (attr.createdByUsername){
                 or {
                     createdBy {
-                        eq("username", attr.creatorUsername)
+                        eq("username", attr.createdByUsername)
                     }
                     topic {
                         createdBy {
-                            eq("username", attr.creatorUsername)
+                            eq("username", attr.createdByUsername)
                         }
                     }
                 }
@@ -153,15 +184,6 @@ class ResourceService {
         }
     }
 
-
-    def recentPublicResourceList() {
-        def resources = Resource.createCriteria().list(max: 5, offset: 0) {
-            order("dateCreated", "desc")
-            topic {
-                eq("visibility", Visibility.PUBLIC)
-            }
-        }
-    }
 
     def switchReadStatus(Long resourceId, String username) {
         ResourceStatus rs = ResourceStatus.createCriteria().get {

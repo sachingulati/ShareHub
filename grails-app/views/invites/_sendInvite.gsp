@@ -16,7 +16,6 @@
 
                         <div class="col-lg-7">
                             <g:textField name="email" class="form-control" placeholder="Email"/>
-                            %{--<input type="text" id="Email" class="form-control" placeholder="Email"/>--}%
                         </div>
                     </div>
 

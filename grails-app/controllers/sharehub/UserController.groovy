@@ -18,11 +18,31 @@ class UserController {
             redirect(action: "myProfile")
             return false
         }
-//        List<Resource> resources1 = user.subscribedTopics.size()?Resource.findAll({topic in user.subscribedTopics && createdBy.username==user.username }):[]
+        if (params.id == session["username"])
+            params.myProfile = true
         render (view: "/user/profile", model: [user: user, myProfile: params.myProfile])
         return false
     }
-
+    def myProfile(){
+        forward(action: "profile", params: [id:session["username"], myProfile:true])
+        return false
+    }
+    def editProfile(){
+        User user = User.findByUsername(session["username"])
+        render(view: "/user/editProfile", model: [user: user])
+    }
+    def updateUser(){
+        if (!userService.updateUser(session["username"], params.firstName, params.lastName, params.email, params.removePhoto, params.photo)){
+            render "Bad Request!"
+            return false
+        }
+        render "Profile updated successfully"
+        return false
+    }
+    def changePassword(){
+        render userService.changePassword(session["username"], params.newPassword,  params.confirmPassword, params.currentPassword)
+        return false
+    }
     def showImage(){
         if (!params.photoUrl){
             return false
@@ -38,10 +58,6 @@ class UserController {
             return false
         }
         render view: "/user/adminPanel", model: [users:User.list()]
-    }
-    def myProfile(){
-        forward(action: "profile", params: [id:session["username"], myProfile:true])
-        return false
     }
 
     def activate(){
@@ -83,26 +99,6 @@ class UserController {
             return false
         }
 
-    }
-    def editProfile(){
-        UserViewCommand user = new UserViewCommand(session["username"], Visibility.PRIVATE)
-        if (!user.valid){
-            redirect(controller: "login")
-            return false
-        }
-        render(view: "/user/editProfile", model: [user: user])
-    }
-    def editUser(){
-        if (!userService.editUser(session["username"], params.firstName, params.lastName, params.removePhoto, params.photo)){
-            render "Bad Request!"
-            return false
-        }
-        render "Profile updated successfully"
-        return false
-    }
-    def changePassword(){
-        render userService.changePassword(session["username"], params.newPassword,  params.confirmPassword, params.currentPassword)
-        return false
     }
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)

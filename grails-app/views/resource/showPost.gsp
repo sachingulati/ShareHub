@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta name="layout" content="afterLogin"/>
-    <title>${resource.title}</title>
+    <title>${resource?.title}</title>
     <script>
     </script>
 </head>
@@ -19,7 +19,8 @@
 <div>
     <div class="row">
         <div class="col-lg-7">
-            <div class="panel panel-default" style="margin-bottom:7px">
+            <g:if test="${resource}">
+                <div class="panel panel-default" style="margin-bottom:7px">
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-6">
@@ -91,6 +92,12 @@
                     </div>
                 </div> <!-- panel-body -->
             </div> <!-- panel -->
+            </g:if>
+            <g:else>
+                <div class="bg-info" style="padding: 10px">
+                    <h4>Post Not found!</h4>
+                </div>
+            </g:else>
         </div>
         <div class="col-lg-5">
             %{--Trending Topics--}%

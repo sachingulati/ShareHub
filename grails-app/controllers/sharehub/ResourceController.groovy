@@ -10,13 +10,6 @@ class ResourceController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
     def resourceService
     def topicService
-    def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        respond Resource.list(params), model: [resourceInstanceCount: Resource.count()]
-    }
-    def remoteTest(){
-        render(view: "/temp")
-    }
     def getResources(){
         render(template: "/resource/resourceList", model: [resources: Resource.list(params)])
     }
@@ -24,28 +17,9 @@ class ResourceController {
         List<Topic> unreadResourceList = resourceService.getResourceList(isSubscribed: true, isRead: false, username: session["username"], offset: params.offset, max: params.max)
         render(template: "/resource/resourceList", bean: unreadResourceList, var: "resources", model: [header: 'Inbox', search: true, doPaginate: true])
     }
-
-
     def getResourcesCreated(){
-        String username
-        if (params.username){
-            username = params.username
-        }
-        else{
-            username = session["username"]
-        }
-        List<Resource> resources = Resource.createCriteria().list{
-            if (session["username"]!=params.username && !session["admin"]){
-                topic{
-                    eq("visibility",Visibility.PUBLIC)
-                }
-            }
-            createdBy{
-                eq("username",username)
-            }
-            order("dateCreated", "desc")
-        }
-        render(template: "/resource/resourceList", bean:resources, var: "resources", model: [header: 'Posts', hr:true])
+        def resourceList = resourceService.getResourceList(username: session["username"], createdByUsername: (params.username?:session["username"]), max: params.max, offset: params.offset);
+        render(template: "/resource/resourceList", bean:resourceList, var: "resources", model: [header: 'Posts', hr:true])
     }
 
 
@@ -56,57 +30,17 @@ class ResourceController {
         else{
             render("Mark Read")
         }
-        return
-
+        return false
     }
 
     def showPost(){
-        Resource resource = Resource.findById(params.id)
-        if(!resource){
-            redirect(controller: "home")
-            return false
-        }
-        User user = User.findByUsername(session["username"])
-        if(!topicService.show(user,resource.topic)){
-            redirect(controller: "home")
-            return false
-        }
-        def rating = ResourceStatus.createCriteria().get(){
-            projections{
-                count("score","number")
-                avg("score","rating")
-            }
-            eq("resource",resource)
-            gt("score", 0)
-        }
-        Subscription subscription = Subscription.findByUserAndTopic(user,resource.topic)
-        if(subscription){
-            ResourceStatus resourceStatus = ResourceStatus.findByUserAndResource(user,resource)
-            resourceStatus?.isRead = true
-            resourceStatus.save()
-        }
-        render(view: "/resource/showPost", model: [resource: resource, rating: rating])
+        render(view: "/resource/showPost", model: [resource: resourceService.showPost(params.id.toLong(),session["username"])])
+        return false
     }
 
     def getRating(){
-        def rating = ResourceStatus.createCriteria().get(){
-            projections{
-                count("score","number")
-                avg("score","rating")
-            }
-            'resource'{
-                eq("id",params.id.toLong())
-            }
-            gt("score", 0)
-        }
-        render "Avg. Rating: ${rating[1]} (${rating[0]})"
-    }
-    def show(Resource resourceInstance) {
-        respond resourceInstance
-    }
-
-    def create() {
-        respond new Resource(params)
+        def rating = resourceService.getRating(params.id)
+        render "Avg. Rating: ${rating.totalCount} (${rating.avgRating})"
     }
 
     @Transactional

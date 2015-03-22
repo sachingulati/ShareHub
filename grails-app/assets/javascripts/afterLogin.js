@@ -2,6 +2,7 @@
  * Created by intelligrape on 21/3/15.
  */
 
+var reportDelay = 5000;
 function openShareLink() {
     var options = {
         "backdrop": "true",
@@ -49,14 +50,47 @@ function openSendInvite() {
     $('#sendInvite.topicSelector').load();
 }
 
-function showMessage(){
-    if("${message}".length>0){
-        alert("${message}");
-    }
-}
-
 function reLoadContent($div){
     $div.load($div.data('ajax-url'),$div.data('ajax-params'));
+}
+
+function hide($obj){
+    $obj.hide();
+}
+function successReport(reportText){
+    var $success = $('#successReport');
+    $success.find('.reportText').html(reportText);
+    $success.show();
+    setTimeout(hide, reportDelay, $success);
+}
+function infoReport(reportText){
+    var $info = $('#info');
+    $info.find('.reportText').html(reportText);
+    $info.show();
+    setTimeout(hide, reportDelay, $info);
+}
+function warningReport(reportText){
+    var $warningReport = $('#warningReport');
+    $warningReport.find('.reportText').html(reportText);
+    $warningReport.show();
+    setTimeout(hide, reportDelay, $warningReport);
+}
+
+function updateProfileStatus(data){
+    if(data == "Profile updated successfully"){
+        successReport(data);
+    }
+    else{
+        warningReport("Error in updating profile")
+    }
+}
+function changePasswordStatus(data){
+    if(data == "Password successfully changed."){
+        successReport(data);
+    }
+    else{
+        warningReport(data.length>50?"Error in changing password!":data);
+    }
 }
 
 $(document).on('click','.pagination a',function(){
@@ -80,6 +114,7 @@ $(document).on('click', '.subscribe',
                 $('.subscriptionStatus'+id).html(data);
                 reLoadContent($('#subscriptionList'));
                 reLoadContent($('#unreadResources'));
+                successReport("Subscribed successfully.")
             }
         });
     }
@@ -98,6 +133,7 @@ $(document).on('click', '.unsubscribe',
                 $('.subscriptionStatus'+id).html(data);
                 reLoadContent($('#subscriptionList'));
                 reLoadContent($('#unreadResources'));
+                successReport("Unsubscribed successfully.")
             }
         });
     }
@@ -116,6 +152,7 @@ $(document).on('click', '.markReadLink',
                     $obj.text(response)
                 }
                 reLoadContent($('#unreadResources'));
+                successReport("Successfully Marked.")
             }
         )
     }
@@ -125,4 +162,7 @@ $(document).on('load','.topicSelector',function(){
 });
 $(document).ready(function(){
     $(".topicSelector").load();
+});
+$(document).ready(function(){
+    $('#shareLink #url').valid();
 });

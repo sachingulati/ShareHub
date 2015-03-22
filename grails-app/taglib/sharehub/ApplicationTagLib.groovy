@@ -9,9 +9,9 @@ class ApplicationTagLib {
         out << userService.getName(session["username"])
     }
     def image = { attr ->
-        String path = createLink(controller: "assets", action: "user-default.png")
+        String path = createLink(controller: "assets", action: "user-default.png", absolute: true)
         if (attr.src)
-            path = createLink(controller: "user", action: "showImage", params: [photoUrl: attr.src])
+            path = createLink(controller: "user", action: "showImage", params: [photoUrl: attr.src], absolute: true)
         out << "<img src='" + path
         out << "' width='80' height='80' />"
     }

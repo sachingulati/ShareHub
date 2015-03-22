@@ -92,6 +92,45 @@ function changePasswordStatus(data){
         warningReport(data.length>50?"Error in changing password!":data);
     }
 }
+function showRating($rateBox, num){
+    var myRating = $rateBox.data('my-rating');
+    if(num>-1)
+        myRating = num;
+    var $ratingHearts = $rateBox.find('.ratingHearts');
+    for(var a = 0;a<5;a++){
+        $ratingHearts.eq(a).attr("src", a<myRating?rateOnImagePath:rateOffImagePath);
+    }
+}
+function rateOnHover(){
+    var $rateObj = $(this);
+    var $rateBox = $rateObj.closest(".rate");
+    var id = $rateObj.data('id');
+    showRating($rateBox,id);
+}
+function rateReset(){
+    showRating($(this),-1);
+}
+function changeRating(){
+    var $rateObj = $(this);
+    var id = $rateObj.data('id');
+    var resourceId = $rateObj.data('resource-id');
+    jQuery.ajax({
+        url: changeRatingUrl,
+        data: {resourceId: resourceId, rate: id},
+        method: "post",
+        success: function(data){
+            if(data != "Invalid Request!" && data.length<30){
+                var $rateBox = $rateObj.closest('.rate');
+                $rateBox.data('my-rating',id);
+                showRating($rateBox,-1);
+                var avgRating = data.substring(data.indexOf(":")+1,data.indexOf(','));
+                var totalCount = data.substring(data.lastIndexOf(":")+1);
+                $rateBox.find('.avgRating').text(avgRating);
+                $rateBox.find('.totalCount').text(totalCount);
+            }
+        }
+    });
+}
 
 $(document).on('click','.pagination a',function(){
     var $obj = $(this);
@@ -162,7 +201,13 @@ $(document).on('load','.topicSelector',function(){
 });
 $(document).ready(function(){
     $(".topicSelector").load();
+    $rateBox = $('.rate');
+    $ratingHearts = $('.ratingHearts');
+    showRating($rateBox,-1);
+    $ratingHearts.hover(rateOnHover);
+    $rateBox.mouseout(rateReset);
+    $ratingHearts.click(changeRating);
 });
-$(document).ready(function(){
-    $('#shareLink #url').valid();
+$(document).on('hover', '.rate',function(){
+    console.log("rating");
 });

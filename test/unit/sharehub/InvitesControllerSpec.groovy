@@ -5,7 +5,7 @@ import grails.test.mixin.*
 import spock.lang.*
 
 @TestFor(InvitesController)
-@Mock(Invites)
+@Mock(Invite)
 class InvitesControllerSpec extends Specification {
 
     def populateValidParams(params) {
@@ -37,7 +37,7 @@ class InvitesControllerSpec extends Specification {
         when: "The save action is executed with an invalid instance"
         request.contentType = FORM_CONTENT_TYPE
         request.method = 'POST'
-        def invites = new Invites()
+        def invites = new Invite()
         invites.validate()
         controller.save(invites)
 
@@ -48,14 +48,14 @@ class InvitesControllerSpec extends Specification {
         when: "The save action is executed with a valid instance"
         response.reset()
         populateValidParams(params)
-        invites = new Invites(params)
+        invites = new Invite(params)
 
         controller.save(invites)
 
         then: "A redirect is issued to the show action"
         response.redirectedUrl == '/invites/show/1'
         controller.flash.message != null
-        Invites.count() == 1
+        Invite.count() == 1
     }
 
     void "Test that the show action returns the correct model"() {
@@ -67,7 +67,7 @@ class InvitesControllerSpec extends Specification {
 
         when: "A domain instance is passed to the show action"
         populateValidParams(params)
-        def invites = new Invites(params)
+        def invites = new Invite(params)
         controller.show(invites)
 
         then: "A model is populated containing the domain instance"
@@ -83,7 +83,7 @@ class InvitesControllerSpec extends Specification {
 
         when: "A domain instance is passed to the edit action"
         populateValidParams(params)
-        def invites = new Invites(params)
+        def invites = new Invite(params)
         controller.edit(invites)
 
         then: "A model is populated containing the domain instance"
@@ -103,7 +103,7 @@ class InvitesControllerSpec extends Specification {
 
         when: "An invalid domain instance is passed to the update action"
         response.reset()
-        def invites = new Invites()
+        def invites = new Invite()
         invites.validate()
         controller.update(invites)
 
@@ -114,7 +114,7 @@ class InvitesControllerSpec extends Specification {
         when: "A valid domain instance is passed to the update action"
         response.reset()
         populateValidParams(params)
-        invites = new Invites(params).save(flush: true)
+        invites = new Invite(params).save(flush: true)
         controller.update(invites)
 
         then: "A redirect is issues to the show action"
@@ -135,16 +135,16 @@ class InvitesControllerSpec extends Specification {
         when: "A domain instance is created"
         response.reset()
         populateValidParams(params)
-        def invites = new Invites(params).save(flush: true)
+        def invites = new Invite(params).save(flush: true)
 
         then: "It exists"
-        Invites.count() == 1
+        Invite.count() == 1
 
         when: "The domain instance is passed to the delete action"
         controller.delete(invites)
 
         then: "The instance is deleted"
-        Invites.count() == 0
+        Invite.count() == 0
         response.redirectedUrl == '/invites/index'
         flash.message != null
     }

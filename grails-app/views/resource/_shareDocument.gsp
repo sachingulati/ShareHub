@@ -8,12 +8,12 @@
                         aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Share Document</h4>
             </div>
-            <g:form controller="resource" action="shareDocument" name="shareDocumentForm">
+            <g:form controller="resource" action="shareDocument" name="shareDocumentForm" enctype="multipart/form-data">
                 <div class="modal-body">
 
                     <div class="row padding5">
                         <div class="col-lg-5">
-                            <span class="valignstyle">Title*</span>
+                            Title*
                         </div>
 
                         <div class="col-lg-7">
@@ -23,14 +23,11 @@
 
                     <div class="row padding5">
                         <div class="col-lg-5">
-                            <span class="valignstyle">Upload File*</span>
+                            Upload File*
                         </div>
 
                         <div class="col-lg-7">
-                            <span class="btn btn-default btn-file">
-                                <input type="file" id="file" required="required"/>
-                            </span>
-
+                                <input type="file" name="file" id="file" required="required"/>
                         </div>
                     </div>
 

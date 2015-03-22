@@ -45,8 +45,13 @@ class ApplicationTagLib {
         }
     }
 
-    def isEditable={attr, body->
+    def isEditableTopic ={attr, body->
         if (session["admin"] || attr.topic.createdBy.username == session["username"]){
+            out<< (body())
+        }
+    }
+    def isEditableResource ={attr, body->
+        if (session["admin"] || attr.resource.topic.createdBy.username == session["username"] || attr.resource.createdBy.username == session["username"]){
             out<< (body())
         }
     }

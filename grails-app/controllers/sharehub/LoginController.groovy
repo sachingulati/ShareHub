@@ -38,7 +38,20 @@ class LoginController {
             render "Invalid Data"
     }
     def checkEmail(){
+        if (User.findByEmail(params.email)){
+            render "false"
+            return false
+        }
+        render "true"
+        return false
+    }
+    def checkUsername(){
         println params
-        return true
+        if (User.findByUsername(params.username)){
+            render "false"
+            return false
+        }
+        render "true"
+        return false
     }
 }

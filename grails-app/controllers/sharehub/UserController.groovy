@@ -32,7 +32,7 @@ class UserController {
         render(view: "/user/editProfile", model: [user: user])
     }
     def updateUser(){
-        if (!userService.updateUser(session["username"], params.firstName, params.lastName, params.email, params.removePhoto, params.photo)){
+        if (!userService.updateUser(session["username"], params.firstName, params.lastName, params.email, (params.removePhoto=="on"), params.photo)){
             render "Bad Request!"
             return false
         }

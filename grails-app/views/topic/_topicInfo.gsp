@@ -16,7 +16,7 @@
             </g:else>
             ${topic.name}</a>
             %{--    Editing options     --}%
-            <sh:isEditable topic="${topic}">
+            <sh:isEditableTopic topic="${topic}">
                 <span class="text-right" style="float: right">
                     <div class="dropdown">
                         <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" style="margin-left: 0px; padding-left: 0px">
@@ -32,7 +32,7 @@
                         </ul>
                     </div>
                 </span>
-            </sh:isEditable>
+            </sh:isEditableTopic>
         </div>
         <table>
             <tr>

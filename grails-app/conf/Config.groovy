@@ -106,9 +106,9 @@ grails.plugins.remotepagination.max=20
 environments {
     development {
         grails.logging.jul.usebridge = true
-        uploadFiles = "$userHome/ShareHubResources/uploadFiles/"
+        uploadFiles = "$userHome/Documents/uploadFiles/"
         userImages= "$userHome/Documents/userImages/"
-        uploadImages = "$userHome/Documents/userImages/"
+//        uploadImages = "$userHome/Documents/userImages/"
     }
     QA {
         grails.logging.jul.usebridge = false

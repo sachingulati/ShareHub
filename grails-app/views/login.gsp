@@ -89,7 +89,7 @@
                                 </div>
 
                                 <div class="col-lg-7">
-                                    <input type="file" name="photo" id="photo" class="padding5"/>
+                                    <input type="file" accept="image/*" name="photo" id="photo" class="padding5"/>
                                 </div>
                             </div>
 

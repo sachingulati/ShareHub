@@ -7,6 +7,26 @@
         </a>
     </div>
     <div class="padding5">
+
+        %{--    Editing options     --}%
+        <sh:isEditableResource resource="${resource}">
+            <span class="text-right" style="float: right; padding: 0px; margin: 0px">
+                <div class="dropdown">
+                    <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" style="margin-left: 0px; padding-left: 0px">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+                            <a href="javascript:void(0)" role="menuitem" tabindex="-1" onclick=''>Edit</a>
+                        </li>
+                        <li role="presentation">
+                            <g:link role="menuitem" tabindex="-1" controller="topic" action="delTopic" params="[id: resource.id]">Delete</g:link>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+        </sh:isEditableResource>
+
         <span style="float:right;">
             <g:if test="${resource.topic.visibility==com.sharehub.enums.Visibility.PRIVATE}">
                 <a href="${g.createLink(controller: "topic", action: "showTopic", params: [id: resource.topic.id])}" style="color:red;">
@@ -14,8 +34,8 @@
             <g:else>
                 <a href="${g.createLink(controller: "topic", action: "showTopic", params: [id: resource.topic.id])}">
             </g:else>
-            ${resource.topic.name}</a></span>
-
+            ${resource.topic.name}</a>
+        </span>
         <div>
             <g:link controller="user" action="profile" params='[id:"${resource.createdBy.username}"]'>${resource.createdBy.name}</g:link>
             @${resource.createdBy.username}

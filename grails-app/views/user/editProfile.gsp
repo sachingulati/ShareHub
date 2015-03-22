@@ -38,7 +38,7 @@
                 <h3 class="panel-title">Profile</h3>
             </div> <!-- panel-heading -->
             <div class="panel-body">
-                <g:formRemote name="updateProfile" url="[controller: 'user', action: 'updateUser']" method="post" onSuccess="updateProfileStatus(data)">
+                <g:formRemote name="updateProfile" enctype="multipart/form-data" url="[controller: 'user', action: 'updateUser']" method="post" onSuccess="updateProfileStatus(data)">
                 %{--<g:form controller="user" action="updateUser">--}%
                     <table width="100%" id="editProfile">
                         <tr>
@@ -59,9 +59,10 @@
                         </tr>
                         <tr>
                             <td>Photo</td>
-                            <td><input type="file" name="photo" class="form-control"/>
+                            <td><input type="file" id="photo" name="photo" class="form-control"/>
                                 <div style="margin-top: 10px">
-                                    <g:checkBox name="removePhoto"/> Remove Photo</div>
+                                    <g:checkBox name="removePhoto"/> Remove Photo
+                                </div>
                             </td>
                         </tr>
                         <tr>

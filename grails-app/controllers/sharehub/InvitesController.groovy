@@ -9,30 +9,52 @@ class InvitesController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def mailService
+    @Transactional
     def sendInvite(){
-        println(params)
-        mailService.sendMail {
-            to params.email
-            subject "hello"
-            html "html"
+        User user = User.findByUsername(session["username"]);
+        Topic topic = Topic.get(params.topic)
+        if (!user || !topic){
+            render "Invalid Request!"
+            return false
         }
-        render("hit")
+        if (!session["admin"]){
+            if (!Subscription.findByUserAndTopic(user,topic)){
+                render "Invalid Request!"
+                return false
+            }
+        }
+        Invite invite = new Invite(inviteToEmail: params.email,invitedBy: user, topic: topic, token: "token")
+        if (invite.validate()){
+            def htmlcontent = g.render(template: "emailInvite", model: [user: user, topicId: topic.id, inviteTo: params.inviteTo, token: invite.token])
+            mailService.sendMail {
+                to params.email
+                subject "hello"
+                html "${htmlcontent}"
+            }
+            invite.save()
+            render(htmlcontent)
+            return false
+        }
+        render("Error in sending Main: \n")
+        render(invite.errors.allErrors)
+        println(invite.errors.allErrors)
+        return false
     }
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Invites.list(params), model: [invitesInstanceCount: Invites.count()]
+        respond Invite.list(params), model: [invitesInstanceCount: Invite.count()]
     }
 
-    def show(Invites invitesInstance) {
+    def show(Invite invitesInstance) {
         respond invitesInstance
     }
 
     def create() {
-        respond new Invites(params)
+        respond new Invite(params)
     }
 
     @Transactional
-    def save(Invites invitesInstance) {
+    def save(Invite invitesInstance) {
         if (invitesInstance == null) {
             notFound()
             return
@@ -54,12 +76,12 @@ class InvitesController {
         }
     }
 
-    def edit(Invites invitesInstance) {
+    def edit(Invite invitesInstance) {
         respond invitesInstance
     }
 
     @Transactional
-    def update(Invites invitesInstance) {
+    def update(Invite invitesInstance) {
         if (invitesInstance == null) {
             notFound()
             return
@@ -82,7 +104,7 @@ class InvitesController {
     }
 
     @Transactional
-    def delete(Invites invitesInstance) {
+    def delete(Invite invitesInstance) {
 
         if (invitesInstance == null) {
             notFound()

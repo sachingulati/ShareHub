@@ -6,11 +6,12 @@ import grails.transaction.Transactional
 class UserService {
 
     def grailsApplication
+    def utilService
     def serviceMethod() {
 
     }
     def createDefaultUsers(){
-        User user = new User(firstName: "Sachin", lastName: "Gulati", email: "sachin@email.com", username: "sachin", password: "12345678", confirmPassword: "12345678", admin: false, active: true, photoUrl: (grailsApplication.config.uploadImages+"sachin"))
+        User user = new User(firstName: "Sachin", lastName: "Gulati", email: "sachin@email.com", username: "sachin", password: "12345678", confirmPassword: "12345678", admin: false, active: true, photoUrl: (grailsApplication.config.userImages+"sachin"))
         user.validate()
         if (user.hasErrors()){
             log.error("Validation errors in user!\n" + user.errors.allErrors)
@@ -34,7 +35,6 @@ class UserService {
         user.lastName = user.lastName.capitalize()
         user.username = user.username.toLowerCase()
         user.email = user.email.toLowerCase()
-        println(params.photo.bytes)
         if (params.photo.bytes.size()>0){
             String path = grailsApplication.config.uploadImages.toString() + params.username
             params.photo.transferTo(new File(path));
@@ -50,11 +50,15 @@ class UserService {
         user.firstName = fname
         user.lastName = lname
         user.email = email
+        String photoUrl = user.photoUrl
         if (removePhoto){
             user.photoUrl = null
         }
         if (user.validate()){
             user.save()
+            if (removePhoto){
+                utilService.deleteFile(photoUrl)
+            }
             return true
         }
         println user.errors.allErrors

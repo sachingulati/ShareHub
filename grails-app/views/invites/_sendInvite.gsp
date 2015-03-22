@@ -8,10 +8,18 @@
             </div>
             <g:form controller="invites" action="sendInvite">
                 <div class="modal-body">
-
                     <div class="row padding5">
                         <div class="col-lg-5">
-                            <span class="valignstyle">Email*</span>
+                            To*
+                        </div>
+
+                        <div class="col-lg-7">
+                            <g:textField name="inviteTo" class="form-control" placeholder=""/>
+                        </div>
+                    </div>
+                    <div class="row padding5">
+                        <div class="col-lg-5">
+                            Email*
                         </div>
 
                         <div class="col-lg-7">
@@ -23,7 +31,6 @@
                         <div class="col-lg-5">
                             Topic*
                         </div>
-
                         <div class="col-lg-7">
                             <div class="topicSelector">
                                 <g:select name="topic" from="${["Select Topic"]}" class="form-control"/>

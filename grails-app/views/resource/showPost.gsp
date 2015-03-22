@@ -29,9 +29,7 @@
                                     <sh:image src="${resource.createdBy.photoUrl}"/>
                                 </a>
                             </div>
-
                             <div class="padding5">
-
                                 <div>
                                     <g:link controller="user" action="profile" params='[id:"${resource.createdBy.username}"]'>${resource.createdBy.name}</g:link>
                                 </div>
@@ -41,7 +39,6 @@
                                 <div style="margin-top: 10px">
                                     <g:link controller="resource" action="showPost" params='[id:  "${resource.id}"]'>${resource.title}</g:link>
                                 </div>
-
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -63,13 +60,12 @@
                                 </span>
                             </div>
                             <div class="row">
-                                <span style="float:right; margin-right: 10px">
+                                <span class="rate" style="float:right; margin-right: 10px" data-my-rating="${myRating}">
                                     <g:each in="${1..5}" var="id">
-                                        <asset:image src="RateOn.jpg" class=".ratingHearts" data-id="${id}" width="25" height="25"/>
+                                        <img class="ratingHearts" data-id="${id}" data-resource-id="${resource.id}" width="25" height="25"/>
                                     </g:each>
-                                    <div id="postRating" data-ajax-url="${createLink(controller: "resource", action: "getRating")}" data-ajax-params="${[id: resource.id] as grails.converters.JSON}">
-                                        %{--Avg. Rating: ${rating[1]} (${rating[0]})--}%
-                                        loading...
+                                    <div>
+                                        Avg. Rating: <span class="avgRating" style="margin: 2px">${rating.avgRating?:0}</span> (<span class="totalCount" style="margin: 2px">${rating.totalCount}</span>)
                                     </div>
                                 </span>
                             </div>
@@ -82,7 +78,7 @@
                         </div>
                         <div style="float:right; margin: 10px">
                             <g:if test="${resource.type==com.sharehub.enums.ResourceType.DOCUMENT}">
-                                <a href="javascript:void(0)" class="inboxLinkStyle">Download</a>
+                                <a href="${createLink(controller: "resource", action: "download", params: [resourceId: resource.id])}" class="inboxLinkStyle" data-ajax-url="${createLink(controller: "resource", action: "download", params: [resourceId: resource.id])}">Download</a>
                             </g:if>
                             <g:else>
                                 <a href="${'http://' + resource.url}" class="inboxLinkStyle" target="_blank">View full site</a>
@@ -109,7 +105,6 @@
 </div>
 <script>
     reLoadContent($("#trendingTopics"));
-    reLoadContent($("#postRating"))
 </script>
 </body>
 </html>

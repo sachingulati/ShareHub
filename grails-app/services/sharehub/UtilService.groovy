@@ -8,9 +8,10 @@ class UtilService {
     def serviceMethod() {
 
     }
-    def mostRecent={collection->
-        if (!collection || !(collection.dateCreated))
-            return
-        collection.max{it.dateCreated}
+    def deleteFile(String fileUrl){
+        new File(fileUrl).delete()
+    }
+    def saveFile(String fileUrl,data){
+        data.transferTo(new File(fileUrl));
     }
 }

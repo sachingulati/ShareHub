@@ -29,7 +29,8 @@ $(document).ready(function(){
             lastName: "Please enter your Last Name!",
             username: {
                 required: "Please enter a username!",
-                minlength: "Username should be at least 3 characters long!"
+                minlength: "Username should be at least 3 characters long!",
+                remote: "Username already taken!"
             },
             password: {
                 required: "Password is required!",
@@ -38,7 +39,8 @@ $(document).ready(function(){
             confirmPassword: "Password and confirm password do not match!",
             email: {
                 required: "Email is required!",
-                email: "Please enter a valid email id!"
+                email: "Please enter a valid email id!",
+                remote: "Email Id already registered!"
             }
         }
     })

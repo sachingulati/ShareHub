@@ -13,7 +13,7 @@
 
                     <div class="row padding5">
                         <div class="col-lg-5">
-                            <span class="valignstyle">Title*</span>
+                            Title*
                         </div>
 
                         <div class="col-lg-7">
@@ -23,7 +23,7 @@
 
                     <div class="row padding5">
                         <div class="col-lg-5">
-                            <span class="valignstyle">Link*</span>
+                            Link*
                         </div>
 
                         <div class="col-lg-7">

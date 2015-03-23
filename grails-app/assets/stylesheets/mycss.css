@@ -40,6 +40,11 @@
     width: 100%;
     z-index: 10;
 }
+.resourceDescription{
+    height: 40px;
+    overflow: hidden;
+
+}
 
 #editProfile td{
     width: 50%;

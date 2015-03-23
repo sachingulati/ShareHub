@@ -44,7 +44,7 @@
             <g:link controller="resource" action="showPost" params='[id:  "${resource.id}"]'>${resource.title}</g:link>
         </div>
 
-        <div id="recentShareDesc">
+        <div class="resourceDescription">
             ${resource.description?.substring(0,resource.description?.size()>180?180:resource.description?.size())}
         </div>
         <div style="float:right">

@@ -20,8 +20,8 @@
     </div>  <!-- panel-body -->
 
     <g:if test="${doPaginate}">
-        <div class="pagination center-block">
-            <util:remotePaginate name="paginate" update="unreadResources" max="10" controller="resource" action="unreadResourceList" total="${resources?resources.getTotalCount():0}"/>
+        <div class="pagination center-block" style="text-align: center">
+            <util:remotePaginate name="paginate" update="searchResults" max="10" controller="${ajaxController}" action="${ajaxAction}" params="[searchString: searchString]" total="${resources?resources.getTotalCount():0}"/>
         </div>
     </g:if>
     <g:if test="${footer}">

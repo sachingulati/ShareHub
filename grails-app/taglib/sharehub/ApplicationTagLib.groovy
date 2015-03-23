@@ -22,7 +22,14 @@ class ApplicationTagLib {
             out << "<a href='${createLink(controller: "user", action: "adminPanel")}'>Users</a>"
         }
     }
-
+    def topBarSearch={
+        if (session["admin"]){
+            out<<g.textField(name: "search", class: "form-control", placeholder: "Search")
+        }
+        else{
+            out<<g.textField(name: "search", class: "form-control", placeholder: "Search", required: "required")
+        }
+    }
     def markRead = { attr ->
         if (!session["username"])
             return

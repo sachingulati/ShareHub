@@ -13,11 +13,11 @@ class TopicController {
     }
 
     def getRecentSubscribedTopics(){
-        List<Topic> topicList = topicService.getTopicList(bySubscriberUsername: session["username"])
+        List<Topic> topicList = topicService.getTopicList(bySubscriberUsername: session["username"], offset: params.offset, max: params.max)
         render(template: "/topic/topicList", model: [header:"Subscriptions", hr:true], bean: topicList, var: "topics")
     }
     def getTrendingTopics(){
-        List<Topic> topicList = topicService.getTrendingTopics(session["admin"])
+        List<Topic> topicList = topicService.getTrendingTopics(session["admin"], params.offset, params.max)
         render(template: "/topic/topicList", model: [header:"Trending Topics", hr:true], bean: topicList, var: "topics")
     }
 

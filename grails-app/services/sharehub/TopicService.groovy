@@ -46,6 +46,7 @@ class TopicService {
         }
         return topic
     }
+
     def createDefaultSubscription() {
         User user = User.get(1)
         3.times {
@@ -69,13 +70,6 @@ class TopicService {
         }
     }
 
-    def getTopics(String username) {
-        def topicsList = Subscription.executeQuery("select topic.id, topic.name from Subscription where user.username = ?", [username]) as List
-        def topicsMap = topicsList.collect { [id: it[0], name: it[1]] }
-        //def topics = User.findByUsername(username).subscriptions*.topic
-        return topicsMap
-    }
-
     public String getToken() {
         SecureRandom random = new SecureRandom();
         return new BigInteger(130, random).toString(32);
@@ -95,11 +89,11 @@ class TopicService {
         Invite invite = new Invite(inviteToEmail: email,invitedBy: user, topic: topic, token: "token")
         if (invite.validate()){
             invite.token = getToken()
-            def htmlcontent = g.render(template: "emailInvite", model: [user: user, topicId: topic.id, inviteTo: inviteTo, token: invite.token])
             mailService.sendMail {
+                async true
                 to email
                 subject "Share Hub invitation from ${user.name}"
-                html "${htmlcontent}"
+                html "${g.render(template: "emailInvite", model: [user: user, topicId: topic.id, inviteTo: inviteTo, token: invite.token])}"
             }
             invite.save()
             return true
@@ -114,12 +108,12 @@ class TopicService {
         * visibility: visibility of topic: private or public, instance of Visibility enum
 */
         List<Topic> topicList = Topic.createCriteria().listDistinct() {
-            if (attr.max){
-                maxResults attr.max
+            /*if (attr.max){
+                maxResults (Integer.parseInt(attr.max))
             }
             if (attr.offset){
-                firstResult attr.max
-            }
+                firstResult (Integer.parseInt(attr.offset))
+            }*/
             if (attr.byCreatorUsername) {
                 createdBy {
                     eq("username", attr.byCreatorUsername)
@@ -140,12 +134,17 @@ class TopicService {
                 order("dateCreated", "desc")
             }
         }
+        if (attr.max){
+            Integer offset = Integer.parseInt(attr.offset)
+            offset = offset>topicList.size()?0:offset
+            Integer max = (Integer.parseInt(attr.max)+offset) % topicList.size()
+            topicList = topicList.subList(offset,max)
+        }
         return topicList
     }
 
-    def getTrendingTopics(Boolean isPrivate = false) {
-        def trendingTopicList = Resource.createCriteria().list {
-
+    def getTrendingTopics(Boolean isPrivate = false, offset, Max) {
+        def trendingTopicList = Resource.createCriteria().list(offset: offset, max: Max) {
             projections {
                 groupProperty("topic")
             }

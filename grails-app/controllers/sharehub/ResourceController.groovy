@@ -1,19 +1,26 @@
 package sharehub
 
-import grails.transaction.Transactional
 
 class ResourceController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
     def grailsApplication
     def resourceService
+
     def getResources(){
         render(template: "/resource/resourceList", model: [resources: Resource.list(params)])
     }
+
     def unreadResourceList() {
-        List<Topic> unreadResourceList = resourceService.getResourceList(isSubscribed: true, isRead: false, username: session["username"], offset: params.offset, max: params.max)
-        render(template: "/resource/resourceList", bean: unreadResourceList, var: "resources", model: [header: 'Inbox', search: true, doPaginate: true])
+        List<Resource> unreadResourceList = resourceService.getResourceList(isSubscribed: true, isRead: false, username: session["username"], offset: params.offset, max: params.max)
+        render(template: "/resource/resourceList", bean: unreadResourceList, var: "resources", model: [header: 'Inbox', search: true, doPaginate: true, ajaxController: "resource", ajaxAction: "unreadResourceList"])
     }
+
+    def getTopPost(){
+        List<Resource> topPost = resourceService.getResourceList(username: session["username"], offset: params.offset, max: params.max)
+        render(template: "/resource/resourceList", bean: topPost, var: "resources", model: [header: 'Top Post'])
+    }
+
     def getResourcesCreated(){
         def resourceList = resourceService.getResourceList(username: session["username"], createdByUsername: (params.username?:session["username"]), max: params.max, offset: params.offset);
         render(template: "/resource/resourceList", bean:resourceList, var: "resources", model: [header: 'Posts', hr:true])
@@ -32,10 +39,12 @@ class ResourceController {
         }
         return false
     }
+
     def showPost(){
         render(view: "/resource/showPost", model: resourceService.showPost(params.id.toLong(),session["username"]))
         return false
     }
+
     def changeRating(){
 //        data: {resourceId: resourceId, rate: id}
         if (resourceService.changeRating(params.resourceId, params.rate, session["username"])){
@@ -52,7 +61,6 @@ class ResourceController {
         render "Avg. Rating: ${rating.totalCount} (${rating.avgRating?:0})"
     }
 
-    @Transactional
     def shareLink() {
         int id=resourceService.shareLink(params, User.findByUsername(session["username"]))
         if (id){
@@ -61,7 +69,6 @@ class ResourceController {
         else "Error in sharing resource!"
     }
 
-    @Transactional
     def shareDocument() {
 //        println(params)
         int id=resourceService.shareDocument(params, User.findByUsername(session["username"]))
@@ -70,6 +77,7 @@ class ResourceController {
         }
         else render "Error in sharing resource!"
     }
+
     def download(){
         File file = resourceService.download(params.resourceId, session["username"])
         if (file)

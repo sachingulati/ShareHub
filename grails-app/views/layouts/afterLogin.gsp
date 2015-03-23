@@ -59,12 +59,11 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <form class="navbar-form navbar-left" role="search">
+                    <g:form class="navbar-form navbar-left" method="get" role="search" controller="search">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search">
+                            <sh:topBarSearch/>
                         </div>
-                        <!-- <button type="submit" class="btn btn-default">Search</button> -->
-                    </form>
+                    </g:form>
                 </li>
                 <li>
                     <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:10px" onclick="openCreateTopic()" data-toggle="tooltip" data-placement="bottom" title="Create Topic">

@@ -27,9 +27,9 @@ class Resource {
     def afterInsert = {
         topic.subscriptions.each {
             if (it.user == createdBy) {
-                addToResourceStatus(user: it.user, topic: it.topic, isRead: true)
+                addToResourceStatus(user: it.user, isRead: true)
             } else {
-                addToResourceStatus(user: it.user, topic: it.topic, isRead: false)
+                addToResourceStatus(user: it.user, isRead: false)
             }
         }
     }

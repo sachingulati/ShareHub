@@ -27,7 +27,7 @@ class ApplicationTagLib {
             out<<g.textField(name: "search", class: "form-control", placeholder: "Search")
         }
         else{
-            out<<g.textField(name: "search", class: "form-control", placeholder: "Search", required: "required")
+            out<<g.textField(name: "search", class: "form-control", title: "Please enter some text to search", placeholder: "Search", required: "required")
         }
     }
     def markRead = { attr ->

@@ -126,5 +126,8 @@
 <div class="contentMargin" id="contentBody">
     <g:layoutBody/>
 </div>
+<script>
+
+</script>
 </body>
 </html>

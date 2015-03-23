@@ -9,6 +9,7 @@ import java.security.SecureRandom;
 class TopicService {
 
     def mailService
+    def utilService
     def createDefaultTopics() {
         User.list().each { user ->
             5.times {
@@ -88,7 +89,7 @@ class TopicService {
         }
         Invite invite = new Invite(inviteToEmail: email,invitedBy: user, topic: topic, token: "token")
         if (invite.validate()){
-            invite.token = getToken()
+            invite.token = utilService.randomString
             mailService.sendMail {
                 async true
                 to email

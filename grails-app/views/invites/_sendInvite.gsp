@@ -1,4 +1,4 @@
-<div class="modal fade" id="sendInvite" tabindex="-1" role="dialog" aria-labelledby="sendInviteModal" aria-hidden="true">
+<div class="modal fade m" id="sendInvite" tabindex="-1" role="dialog" aria-labelledby="sendInviteModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -6,7 +6,7 @@
                         aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Send Invitation</h4>
             </div>
-            <g:form controller="invites" action="sendInvite">
+            <g:formRemote name="invite" url="[controller: 'invites', action: 'sendInvite']" onSuccess="invitationSent(data)">
                 <div class="modal-body">
                     <div class="row padding5">
                         <div class="col-lg-5">
@@ -40,10 +40,10 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Invite</button>
+                    <g:submitButton name="submit" value="submit" class="btn btn-primary"/>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 </div>
-            </g:form>
+            </g:formRemote>
         </div>
     </div>
 </div>

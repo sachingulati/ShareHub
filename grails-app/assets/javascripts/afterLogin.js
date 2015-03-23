@@ -28,7 +28,10 @@ function openCreateTopic() {
     };
     $('#createTopic').modal(options);
 }
-
+function invitationSent(data){
+    $('#sendInvite').modal('hide');
+    successReport(data);
+}
 function openEditTopic(topicId, topicName, seriousness) {
     var options = {
         "backdrop": "true",

@@ -108,7 +108,7 @@ class ResourceService {
             }
         }
         List resources = Resource.createCriteria().list(offset:attr.offset, max: attr.max) {
-            if (attr.isRead || attr.searchByRating) {
+            if (attr.isRead!=null || attr.searchByRating) {
                 resourceStatus {
                     if (attr.isRead != null && attr.username && attr.isSubscribed) {
                         eq("isRead", attr.isRead)

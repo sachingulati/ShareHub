@@ -14,7 +14,7 @@
                         </div>
 
                         <div class="col-lg-7">
-                            <g:textField name="inviteTo" class="form-control" placeholder=""/>
+                            <g:textField name="inviteTo" class="form-control" placeholder="Name"/>
                         </div>
                     </div>
                     <div class="row padding5">

@@ -1,11 +1,6 @@
 package sharehub
 
-import com.sharehub.enums.Visibility
-
 class HomeController {
-
-    def topicService
-    def resourceService
     def index() {
             forward(action: "dashboard")
     }

@@ -12,6 +12,7 @@ class User {
     Date dateCreated
     Date lastUpdated
     static hasMany = [topics: Topic,resources: Resource,subscriptions: Subscription, resourceStatus: ResourceStatus, invites: Invite]
+    static hasOne = [passwordToken: PasswordToken]
     static transients = ['name']//,'confirmPassword']
 
     def getSubscriptionCount(){
@@ -33,6 +34,7 @@ class User {
         lastName blank: false, nullable: false
         password(size:8..20,blank: false)
         photoUrl nullable: true
+        passwordToken nullable: true
         /*confirmPassword(validator:{val, user->
             return val.equals(user.password)
         })*/

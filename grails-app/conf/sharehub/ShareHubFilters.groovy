@@ -10,6 +10,10 @@ class ShareHubFilters {
                     return
                 }
                 if(!session['username']){
+                    if (request.xhr){
+                        render "Login failed!"
+                        return false
+                    }
                     flash.message = "Please login to proceed!"
                     redirect(controller: "login", action: "index")
                     return false

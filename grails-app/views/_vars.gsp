@@ -11,4 +11,5 @@
     var rateHalfImagePath = assetsPath + "RateHalf.jpg";
     var rateOffImagePath = assetsPath + "RateOff.jpg";
     var changeRatingUrl = "${createLink(controller: "resource", action: "changeRating")}";
+    var checkLogin = "${createLink(controller: "user", action: "isLoggedIn")}"
 </script>

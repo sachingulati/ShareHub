@@ -43,6 +43,14 @@ class UserController {
         render userService.changePassword(session["username"], params.newPassword,  params.confirmPassword, params.currentPassword)
         return false
     }
+    def isLoggedIn(){
+        if (session["username"]){
+            render("true")
+            return false
+        }
+        render("false")
+        return false
+    }
     def showImage(){
         if (!params.photoUrl){
             return false

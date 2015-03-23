@@ -7,6 +7,7 @@ class UserService {
 
     def grailsApplication
     def utilService
+    def mailService
     def serviceMethod() {
 
     }
@@ -41,6 +42,25 @@ class UserService {
             user.photoUrl = path
         }
         user.save()
+        return user
+    }
+    def forgotPassword(username,g) {
+        User user = User.findByUsernameOrEmail(username, username)
+        if (!user?.active) {
+            return null
+        }
+        PasswordToken passwordToken = PasswordToken.findOrCreateByUser(user)
+        if (!passwordToken) {
+            return null
+        }
+        passwordToken.token = utilService.randomString
+        passwordToken.save(failOnError: true)
+        mailService.sendMail {
+            async true
+            to "${user.email}"
+            subject "Share Hub: Change password request."
+            html "${g.render(template: "/login/forgotPasswordEmail", model: [token: passwordToken])}"
+        }
         return user
     }
     def updateUser(String username, String fname, String lname, String email, Boolean removePhoto, def photo){
@@ -78,6 +98,19 @@ class UserService {
             return "Password must be at least 8 characters long!"
         println(user.errors.allErrors)
         return "Password successfully changed."
+    }
+    def changePasswordWithToken(String token, String password, String confirmPassword){
+        PasswordToken passwordToken = PasswordToken.findByToken(token)
+        if (!passwordToken || password != confirmPassword || password.size()<8){
+            return null
+        }
+        User user = passwordToken.user
+        user.password = password
+        if (user.validate()){
+            user.save()
+            return user
+        }
+        return null
     }
     def getName(String username){
         def name = User.createCriteria().get {

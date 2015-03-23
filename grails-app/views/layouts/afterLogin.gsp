@@ -37,6 +37,7 @@
 
     <g:render template="/vars"/>
     <asset:javascript src="afterLogin.js"/>
+    <asset:javascript src="reports.js"/>
     <g:layoutHead/>
 </head>
 

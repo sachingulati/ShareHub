@@ -6,8 +6,8 @@
     <div>
         hello ${inviteTo},<br>
         <a href="${createLink(controller: "user", action: "profile", params: [username: user.username], absolute: true)}">${user.name}</a> has sent you an invitation on <a href="${createLink(url: "/", absolute: true)}">Share Hub</a> for topic: <a href="${createLink(controller: "topic", action: "showTopic", params: [id: topicId, token: token], absolute: true)}">topicName</a><br>
-        To know more about this topic <br>
-        <a href="${createLink(controller: "topic", action: "showTopic", params: [id: topicId, token: token], absolute: true)}">Click here to visit and subscribe..</a></br>
+        To know more about this topic
+        <a href="${createLink(controller: "topic", action: "showTopic", params: [id: topicId, token: token], absolute: true)}">click here..</a><br>
         Have a good day.. :)
     </div>
 </div>

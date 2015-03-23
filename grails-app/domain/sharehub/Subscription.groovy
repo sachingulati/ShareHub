@@ -17,10 +17,5 @@ class Subscription {
             ResourceStatus resourceStatus = new ResourceStatus(resource: resource, user: user)
             resource.addToResourceStatus(resourceStatus)
         }
-         /*Invites i = Invites.findByInvitedToAndTopicAndStatus(user,topic,InviteStatus.PENDING)
-        if(i){
-            i.status = InviteStatus.SUBSCRIBED;
-            i.save()
-        }*/
     }
 }

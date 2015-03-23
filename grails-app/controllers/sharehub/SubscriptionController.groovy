@@ -1,6 +1,7 @@
 package sharehub
 
 import com.sharehub.enums.Seriousness
+import com.sharehub.enums.Visibility
 import grails.converters.JSON
 
 import static org.springframework.http.HttpStatus.*
@@ -10,171 +11,17 @@ class SubscriptionController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-//    @Transactional
-    def subscribe(){
-        Topic topic = Topic.findById(params.topicId)
-        User user = User.findByUsername(session["username"])
-        if (!topic || !user){
-//            println ("Invalid access request in Controller: subscription, action: subscribe, reason: " + (!user?"No user found! ":"")+(!topic?"No Topic found! ":""))
-            log.info("Invalid access request in Controller: subscription, action: subscribe, reason: " + (!user?"No user found! ":"")+(!topic?"No Topic found! ":""))
-            render(sh.subscribe(topic: topic))
-            return false
-            /*render([] as JSON)*/
-
-        }
-        Subscription subscription = Subscription.findOrCreateByTopicAndUser(topic,user)
-
-        println "-------------------------------------------"
-        if (subscription.validate()){
-            subscription.save()
-            user.addToSubscriptions(subscription)
-            topic.addToSubscriptions(subscription)
-            topic.save(flush: true)
-        }
-        else{
-            println(subscription.errors.allErrors)
-        }
-        render((sh.subscribe(topic: topic)))
+    def subscriptionService
+    def subscribe() {
+        subscriptionService.subscribe(session["username"],params.topicId)
+        render((sh.subscribe(topic: Topic.get(params.topicId))))
     }
-//    @Transactional
     def unsubscribe(){
-        Topic topic = Topic.findById(params.topicId)
-        User user = User.findByUsername(session["username"])
-        if (!topic || !user){
-            log.error("Error in Controller: subscription, action: unsubscribe, reason: " + (!user?"No user found! ":"")+(!topic?"No Topic found! ":""))
-            render(sh.subscribe(topic: topic))
-            return false
-        }
-        if (topic.createdBy==user){
-            log.error("User cannot unsubscribe its own created topic! TopicId: ${topic.id}, UserId: ${user.id}")
-            render(sh.subscribe(topic: topic))
-            return false
-        }
-        Subscription subscription = Subscription.findByUserAndTopic(user, topic)
-        if(!subscription) {
-            log.error("Error in Controller: subscription, action: unsubscribe, reason: no subscription found! ")
-            render (sh.subscribe(topic: topic))
-            return false
-        }
-        user.removeFromSubscriptions(subscription)
-        topic.removeFromSubscriptions(subscription)
-        subscription.delete(flush: true)
-        render(sh.subscribe(topic: topic))
+        subscriptionService.unsubscribe(session["username"],params.topicId)
+        render(sh.subscribe(topic: Topic.get(params.topicId)))
     }
-    @Transactional
     def modifySubscriptionSeriousness(){
-        Topic topic = Topic.findById(params.topicId)
-        User user = User.findByUsername(session["username"])
-        Seriousness seriousness = Seriousness.valueOf(params.seriousness)
-        if (!user || !topic || !seriousness){
-            log.error("Error in Controller: subscription, action: subscribe, reason: " + (!user?"No user found! ":"")+(!topic?"No Topic found! ":"")+(!seriousness?"Invalid Seriousness ":""))
-            render (sh.subscribe(topic: topic))
-            return false
-        }
-        Subscription subscription = Subscription.findByTopicAndUser(topic,user)
-        if (subscription){
-            subscription.seriousness = seriousness
-            subscription.save()
-            render(sh.subscribe(topic: topic))
-        }
-        else {
-            Subscription newSubscription = new Subscription(topic: topic,user: user,seriousness: seriousness)
-            topic.addToSubscriptions(newSubscription)
-            user.addToSubscriptions(newSubscription)
-            subscription.save()
-            render(sh.subscribe(topic: topic))
-        }
-    }
-
-    def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        respond Subscription.list(params), model: [subscriptionInstanceCount: Subscription.count()]
-    }
-
-    def show(Subscription subscriptionInstance) {
-        respond subscriptionInstance
-    }
-
-    def create() {
-        respond new Subscription(params)
-    }
-
-    @Transactional
-    def save(Subscription subscriptionInstance) {
-        if (subscriptionInstance == null) {
-            notFound()
-            return
-        }
-
-        if (subscriptionInstance.hasErrors()) {
-            respond subscriptionInstance.errors, view: 'create'
-            return
-        }
-
-        subscriptionInstance.save flush: true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'subscription.label', default: 'Subscription'), subscriptionInstance.id])
-                redirect subscriptionInstance
-            }
-            '*' { respond subscriptionInstance, [status: CREATED] }
-        }
-    }
-
-    def edit(Subscription subscriptionInstance) {
-        respond subscriptionInstance
-    }
-
-    @Transactional
-    def update(Subscription subscriptionInstance) {
-        if (subscriptionInstance == null) {
-            notFound()
-            return
-        }
-
-        if (subscriptionInstance.hasErrors()) {
-            respond subscriptionInstance.errors, view: 'edit'
-            return
-        }
-
-        subscriptionInstance.save flush: true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'Subscription.label', default: 'Subscription'), subscriptionInstance.id])
-                redirect subscriptionInstance
-            }
-            '*' { respond subscriptionInstance, [status: OK] }
-        }
-    }
-
-    @Transactional
-    def delete(Subscription subscriptionInstance) {
-
-        if (subscriptionInstance == null) {
-            notFound()
-            return
-        }
-
-        subscriptionInstance.delete flush: true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'Subscription.label', default: 'Subscription'), subscriptionInstance.id])
-                redirect action: "index", method: "GET"
-            }
-            '*' { render status: NO_CONTENT }
-        }
-    }
-
-    protected void notFound() {
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'subscription.label', default: 'Subscription'), params.id])
-                redirect action: "index", method: "GET"
-            }
-            '*' { render status: NOT_FOUND }
-        }
+        subscriptionService.subscribe(session["username"],params.topicId,Seriousness.valueOf(params.seriousness))
+        render(sh.subscribe(topic: Topic.get(params.topicId)))
     }
 }

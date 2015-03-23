@@ -3,13 +3,12 @@ package sharehub
 import com.sharehub.enums.Seriousness
 import com.sharehub.enums.Visibility
 import grails.transaction.Transactional
+import java.security.SecureRandom;
 
 @Transactional
 class TopicService {
 
-    def userService
-    def utilService
-
+    def mailService
     def createDefaultTopics() {
         User.list().each { user ->
             5.times {
@@ -32,6 +31,21 @@ class TopicService {
         return true
     }
 
+    def showTopic(username, topicId){
+        Topic topic = Topic.findById(topicId)
+        User user = User.findByUsername(username)
+        if (!topic){
+            return null
+        }
+        if (topic.visibility == Visibility.PRIVATE && !(user?.admin)){
+            if (!Subscription.findByTopicAndUser(topic,user)){
+                if (!Invite.findByTopicAndInviteToEmail(topic,user.email)){
+                    return null
+                }
+            }
+        }
+        return topic
+    }
     def createDefaultSubscription() {
         User user = User.get(1)
         3.times {
@@ -60,6 +74,37 @@ class TopicService {
         def topicsMap = topicsList.collect { [id: it[0], name: it[1]] }
         //def topics = User.findByUsername(username).subscriptions*.topic
         return topicsMap
+    }
+
+    public String getToken() {
+        SecureRandom random = new SecureRandom();
+        return new BigInteger(130, random).toString(32);
+    }
+
+    def invite(username, topicId, email, inviteTo, g){
+        User user = User.findByUsername(username);
+        Topic topic = Topic.get(topicId)
+        if (!user || !topic){
+            return false
+        }
+        if (!user.admin){
+            if (!Subscription.findByUserAndTopic(user,topic)){
+                return false
+            }
+        }
+        Invite invite = new Invite(inviteToEmail: email,invitedBy: user, topic: topic, token: "token")
+        if (invite.validate()){
+            invite.token = getToken()
+            def htmlcontent = g.render(template: "emailInvite", model: [user: user, topicId: topic.id, inviteTo: inviteTo, token: invite.token])
+            mailService.sendMail {
+                to email
+                subject "Share Hub invitation from ${user.name}"
+                html "${htmlcontent}"
+            }
+            invite.save()
+            return true
+        }
+        return false
     }
 
     def getTopicList(attr) {

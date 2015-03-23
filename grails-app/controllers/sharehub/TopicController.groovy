@@ -63,12 +63,7 @@ class TopicController {
     }
 
     def showTopic(){
-        Topic topic = Topic.findById(params.id)
-        User user = User.findByUsername(session["username"])
-        if(!topicService.show(user,topic)){
-            redirect(controller: "home")
-            return false
-        }
+        Topic topic = topicService.showTopic(session["username"], params.id)
         render (view: "/topic/showTopic", model: [topic:topic])
     }
 
@@ -93,88 +88,5 @@ class TopicController {
     def getSubscribedTopics(){
         def topicList = topicService.getTopicList(bySubscriberUsername: session["username"])
         render g.select(name: "topic", from: topicList, optionKey: "id", optionValue: "name", value: "id", noSelection: ['': 'Select Topic'], class: "form-control", required: "required")
-    }
-    def show(Topic topicInstance) {
-        respond topicInstance
-    }
-
-    def create() {
-        respond new Topic(params)
-    }
-
-    def save(Topic topicInstance) {
-        if (topicInstance == null) {
-            notFound()
-            return
-        }
-
-        if (topicInstance.hasErrors()) {
-            respond topicInstance.errors, view: 'create'
-            return
-        }
-
-        topicInstance.save flush: true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'topic.label', default: 'Topic'), topicInstance.id])
-                redirect topicInstance
-            }
-            '*' { respond topicInstance, [status: CREATED] }
-        }
-    }
-
-    def edit(Topic topicInstance) {
-        respond topicInstance
-    }
-
-    def update(Topic topicInstance) {
-        if (topicInstance == null) {
-            notFound()
-            return
-        }
-
-        if (topicInstance.hasErrors()) {
-            respond topicInstance.errors, view: 'edit'
-            return
-        }
-
-        topicInstance.save flush: true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'Topic.label', default: 'Topic'), topicInstance.id])
-                redirect topicInstance
-            }
-            '*' { respond topicInstance, [status: OK] }
-        }
-    }
-
-    def delete(Topic topicInstance) {
-
-        if (topicInstance == null) {
-            notFound()
-            return
-        }
-
-        topicInstance.delete flush: true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'Topic.label', default: 'Topic'), topicInstance.id])
-                redirect action: "index", method: "GET"
-            }
-            '*' { render status: NO_CONTENT }
-        }
-    }
-
-    protected void notFound() {
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'topic.label', default: 'Topic'), params.id])
-                redirect action: "index", method: "GET"
-            }
-            '*' { render status: NOT_FOUND }
-        }
     }
 }

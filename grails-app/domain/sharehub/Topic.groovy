@@ -6,7 +6,7 @@ import com.sharehub.enums.Visibility
 class Topic {
     String name
     static belongsTo = [createdBy:User]
-    static hasMany = [resources: Resource,subscriptions: Subscription]
+    static hasMany = [resources: Resource,subscriptions: Subscription, invites: Invite]
     Date dateCreated
     Date lastUpdated
     Visibility visibility;

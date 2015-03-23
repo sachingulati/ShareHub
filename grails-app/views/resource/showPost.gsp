@@ -90,7 +90,7 @@
             </div> <!-- panel -->
             </g:if>
             <g:else>
-                <div class="bg-info" style="padding: 10px">
+                <div class="bg-danger" style="padding: 10px">
                     <h4>Post Not found!</h4>
                 </div>
             </g:else>

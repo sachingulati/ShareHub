@@ -11,7 +11,7 @@ class User {
     boolean active = true
     Date dateCreated
     Date lastUpdated
-    static hasMany = [topics: Topic,resources: Resource,subscriptions: Subscription, resourceStatus: ResourceStatus]
+    static hasMany = [topics: Topic,resources: Resource,subscriptions: Subscription, resourceStatus: ResourceStatus, invites: Invite]
     static transients = ['name']//,'confirmPassword']
 
     def getSubscriptionCount(){

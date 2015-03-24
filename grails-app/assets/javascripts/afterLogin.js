@@ -138,7 +138,7 @@ $(document).on('click', '.subscribe',
             success: function(data){
                 $('.subscriptionStatus'+id).html(data);
                 reLoadContent($('#subscriptionList'));
-                reLoadContent($('#resourceList'));
+                reLoadContent($("[name=unreadResources]"));
                 successReport("Subscribed successfully.")
             }
         });
@@ -157,8 +157,8 @@ $(document).on('click', '.unsubscribe',
 //                         parentDiv.html(data);
                 $('.subscriptionStatus'+id).html(data);
                 reLoadContent($('#subscriptionList'));
-                reLoadContent($('#resourceList'));
-                successReport("Unsubscribed successfully.")
+                reLoadContent($("[name=unreadResources]"));
+                successReport("Unsubscribed successfully.");
             }
         });
     }
@@ -176,7 +176,7 @@ $(document).on('click', '.markReadLink',
                 else{
                     $obj.text(response)
                 }
-                reLoadContent($('#resourceList'));
+                reLoadContent($("[name=unreadResources]"));
                 successReport("Successfully Marked.")
             }
         )

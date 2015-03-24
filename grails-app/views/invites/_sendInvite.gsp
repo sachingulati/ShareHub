@@ -32,7 +32,7 @@
                             Topic*
                         </div>
                         <div class="col-lg-7">
-                            <div class="topicSelector">
+                            <div class="topicSelector" data-ajax-url="${createLink(controller: "topic", action: "getSubscribedTopics")}">
                                 <g:select name="topic" from="${["Select Topic"]}" class="form-control"/>
                             </div>
                         </div>
@@ -47,9 +47,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    $('#sendInvite .topicSelector').on('load',function(){
-        $(this).load(topicSelectorUrl);
-    });
-</script>

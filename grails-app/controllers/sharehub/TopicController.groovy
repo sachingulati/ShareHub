@@ -13,11 +13,11 @@ class TopicController {
     }
 
     def getRecentSubscribedTopics(){
-        List<Topic> topicList = topicService.getTopicList(bySubscriberUsername: session["username"], offset: params.offset, max: params.max)
-        render(template: "/topic/topicList", model: [header:"Subscriptions", hr:true], bean: topicList, var: "topics")
+        def topicList = topicService.getSubscribedTopics(params.offset, params.max, session["username"])
+        render(template: "/topic/topicList", model: [header:"Subscriptions", hr:true, viewAll: true], bean: topicList, var: "topics")
     }
     def getTrendingTopics(){
-        List<Topic> topicList = topicService.getTrendingTopics(session["admin"], params.offset, params.max)
+        List<Topic> topicList = topicService.getTrendingTopics(params.offset, params.max)
         render(template: "/topic/topicList", model: [header:"Trending Topics", hr:true], bean: topicList, var: "topics")
     }
 
@@ -62,6 +62,9 @@ class TopicController {
         render "done"
     }
 
+    def viewAllSubscribedTopics(){
+        render(view: "/topic/topicList", model: [ajaxUrl: createLink(controller: "topic", action: "getRecentSubscribedTopics"), ajaxParams:[offset: 0, max: 10] as grails.converters.JSON, header: "Subscribed Topics", search: true, doPaginate: true])
+    }
     def showTopic(){
         Topic topic = topicService.showTopic(session["username"], params.id)
         render (view: "/topic/showTopic", model: [topic:topic])

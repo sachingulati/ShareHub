@@ -1,5 +1,5 @@
-
-<div id="topicInfo${topic.id}${isHead}">
+<div class="topic">
+<div id="topicInfo${topic.id}${isHead}" class="topicBox" data-topic-id="${topic.id}" data-topic-name="${topic.name}">
     <div style="float:left; margin-right:10px">
         <a href="${g.createLink(controller: "user", action: "profile", params: [id:topic.createdBy.username])}">
             <sh:image src="${topic.createdBy.photoUrl}" />
@@ -61,4 +61,5 @@
     <g:if test="${hr}">
         <hr>
     </g:if>
+</div>
 </div>

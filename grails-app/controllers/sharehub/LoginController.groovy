@@ -4,7 +4,6 @@ class LoginController {
 
     def resourceService
     def userService
-    def utilService
     def index() {
         def resourceList = resourceService.getResourceList(offset: 0, max: 5)
         render view: "/login/login", model: [recentResources: resourceList]

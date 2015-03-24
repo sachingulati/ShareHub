@@ -107,6 +107,7 @@ class ResourceService {
                 isAdmin = user.isAdmin()
             }
         }
+        def temp
         List resources = Resource.createCriteria().list(offset:attr.offset, max: attr.max) {
             if (attr.isRead!=null || attr.searchByRating) {
                 resourceStatus {
@@ -123,7 +124,7 @@ class ResourceService {
             }
             topic {
                 if(attr.topicId){
-                    eq("id",attr.topicId)
+                    eq("id",Long.parseLong(attr.topicId))
                 }
                 if(attr.isSubscribed && attr.username) {
                     subscriptions {
@@ -135,6 +136,14 @@ class ResourceService {
                 else if (!attr.username || (!attr.isSubscribed && !isAdmin && attr.createdByUsername!=attr.username)){
                     eq("visibility",Visibility.PUBLIC)
                 }
+                /*
+                else if (!isAdmin){
+                    subscriptions{
+                        user{
+                            eq("username", attr.username)
+                        }
+                    }
+                }*/
                 /*
                 * not logged in: attr.username = null
                 * or

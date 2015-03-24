@@ -8,12 +8,16 @@ class ResourceController {
     def resourceService
 
     def getResources(){
-        render(template: "/resource/resourceList", model: [resources: Resource.list(params)])
+        params.username = session["username"]
+        println "----------------------------------------------"
+        println params
+        println "----------------------------------------------"
+        render(template: "/resource/resourceList", model: [resources: resourceService.getResourceList(params), header: params.header, search: true])
     }
-
     def unreadResourceList() {
         List<Resource> unreadResourceList = resourceService.getResourceList(isSubscribed: true, isRead: false, username: session["username"], offset: params.offset, max: params.max)
-        render(template: "/resource/resourceList", bean: unreadResourceList, var: "resources", model: [header: 'Inbox', search: true, doPaginate: true, ajaxController: "resource", ajaxAction: "unreadResourceList"])
+        render(template: "/resource/resourceList", bean: unreadResourceList, var: "resources", model: [header: 'Inbox', search: true,
+                       doPaginate: true, ajaxController: "resource", ajaxAction: "unreadResourceList", ajaxParams: []])
     }
 
     def getTopPost(){

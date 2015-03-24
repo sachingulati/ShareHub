@@ -1,9 +1,7 @@
-<%@ page import="sharehub.Topic" %>
-
 <div class="panel panel-default">
     <div class="panel-heading">
         <g:if test="${viewAll==true}">
-            <span style="float:right;"><a href="javascript:void(0)">View All</a></span>
+            <span style="float:right;"><g:link controller="topic" action="viewAllSubscribedTopics">View All</g:link> </span>
         </g:if>
         <h3 class="panel-title">${header}</h3>
     </div> <!-- panel-heading -->

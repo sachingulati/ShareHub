@@ -14,7 +14,6 @@ function openShareLink() {
         "keyboard": "true"
     };
     $('#shareLink').modal(options);
-    $('#shareLink.topicSelector').load();
 }
 
 function openShareDocument() {
@@ -23,7 +22,6 @@ function openShareDocument() {
         "keyboard": "true"
     };
     $('#shareDocument').modal(options);
-    $('#shareDocument.topicSelector').load();
 }
 
 function openCreateTopic() {
@@ -55,7 +53,6 @@ function openSendInvite() {
         "keyboard": "true"
     }
     $('#sendInvite').modal(options);
-    $('#sendInvite.topicSelector').load();
 }
 
 function reLoadContent($div){
@@ -185,17 +182,18 @@ $(document).on('click', '.markReadLink',
         )
     }
 );
-$(document).on('load','.topicSelector',function(){
-    $(this).load(topicSelectorUrl);
-});
 $(document).ready(function(){
-    $(".topicSelector").load();
     $rateBox = $('.rate');
     $ratingHearts = $('.ratingHearts');
     showRating($rateBox,-1);
     $ratingHearts.hover(rateOnHover);
     $rateBox.mouseout(rateReset);
     $ratingHearts.click(changeRating);
+});
+$(document).ready(function(){
+    $("[data-ajax-url]").each(function(){
+        reLoadContent($(this));
+    });
 });
 $(document).on('hover', '.rate',function(){
     console.log("rating");

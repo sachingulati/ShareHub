@@ -26,7 +26,7 @@
 
         <!-- topics created -->
             <div id="topicsCreated" data-ajax-url="${createLink(controller: "topic", action: "getTopicsCreated")}" data-ajax-params="${[username:user.username] as grails.converters.JSON}">
-                <g:render template="/topic/topicList" model="[header: 'Topics Created', hr:true, footer:'Loading..']" bean="${null}" var="topics"/>
+                <g:render template="/topic/topicList" model="[header: 'Topics Created', hr:true, footer:'Loading...']" bean="${null}" var="topics"/>
             </div>
         </div> <!-- col-lgrailg-5 -->
 
@@ -112,8 +112,5 @@
 
     </div><!-- /.row -->
 </div>
-<script>
-    reLoadContent($('#topicsCreated'))
-</script>
 </body>
 </html>

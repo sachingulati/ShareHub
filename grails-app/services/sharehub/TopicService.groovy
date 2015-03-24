@@ -138,26 +138,44 @@ class TopicService {
         if (attr.max){
             Integer offset = Integer.parseInt(attr.offset)
             offset = offset>topicList.size()?0:offset
-            Integer max = (Integer.parseInt(attr.max)+offset) % topicList.size()
+            Integer max = (Integer.parseInt(attr.max)+offset)
+            max = max>topicList.size()?topicList()-offset:max
             topicList = topicList.subList(offset,max)
         }
         return topicList
     }
 
-    def getTrendingTopics(Boolean isPrivate = false, offset, Max) {
-        def trendingTopicList = Resource.createCriteria().list(offset: offset, max: Max) {
-            projections {
-                groupProperty("topic")
-            }
-            topic {
-                if (!isPrivate) {
-                    eq("visibility", Visibility.PUBLIC)
-                }
-            }
-            rowCount("rows")
-            order("rows", "desc")
-        }.collect { it[0] }
+    def getTrendingTopics(offset, max) {
+        def trendingTopicList = Resource.createCriteria().list(offset:offset, max: max) {
+                    projections {
+                        groupProperty("topic")
+                    }
+                    topic {
+                        eq("visibility", Visibility.PUBLIC)
+                    }
+                    rowCount("rows")
+                    order("rows", "desc")
+                }.collect { it[0] }
         return trendingTopicList
     }
+
+    def getSubscribedTopics(offset, max, username){
+
+        Resource.createCriteria().list(offset:offset, max: max){
+            projections{
+                groupProperty("topic")
+            }
+            order("dateCreated","desc")
+            topic{
+                subscriptions{
+                    user{
+                        eq("username", username)
+                    }
+                }
+            }
+        }
+    }
+
+
 
 }

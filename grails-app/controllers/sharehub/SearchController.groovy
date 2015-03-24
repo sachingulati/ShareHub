@@ -12,7 +12,7 @@ class SearchController {
     def searchResources(){
         List<Resource> searchResult = resourceService.getResourceList(username: session["username"], resourceSearchString: params.search,
                 topicNameSearchString: params.search, offset: params.offset, max: params.max)
-        render(template: "/resource/resourceList", model: [resources: searchResult, search: params.search, searchResultResourceList: searchResult,
-                                        ajaxController: "search", ajaxAction: "searchResources", header: "Search: "+params.search,search: false, doPaginate: true])
+        render(template: "/resource/resourceList", model: [resources: searchResult, ajaxController: "search",
+                           ajaxAction: "searchResources", header: "Search: "+params.search,search: false, doPaginate: true, ajaxParams: [search: params.search]])
     }
 }

@@ -1,11 +1,6 @@
 package sharehub
 
 import com.sharehub.enums.Seriousness
-import com.sharehub.enums.Visibility
-import grails.converters.JSON
-
-import static org.springframework.http.HttpStatus.*
-import grails.transaction.Transactional
 
 class SubscriptionController {
 

@@ -4,19 +4,25 @@
     <list default="true" id="4160786d-3f67-4d6d-8e09-e75c85ad7b3c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/LoginController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure10.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure11.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure12.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure13.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure14.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure15.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure16.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure17.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure18.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure8.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure9.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure3_closure9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure4.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure5.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$__clinit__closure5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$_closure1.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$_closure1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$_closure1_closure6.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$_closure1_closure6.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource$_closure2.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource$_closure2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/Resource.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/Resource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ResourceService.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ResourceService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure2_closure4.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure2_closure4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure3.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure3_closure5.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters$_closure1_closure3_closure5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters.class" afterPath="$PROJECT_DIR$/target/classes/sharehub/ShareHubFilters.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/sharehub/LoginController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/sharehub/LoginController.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/sharehub/Resource.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/sharehub/Resource.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/services/sharehub/ResourceService.groovy" afterPath="$PROJECT_DIR$/grails-app/services/sharehub/ResourceService.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/sharehub/ShareHubFilters.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/sharehub/ShareHubFilters.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -51,11 +57,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Resource.groovy" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Resource.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/Resource.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.1929824" vertical-offset="1114" max-vertical-offset="2160">
-              <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.8262295" vertical-offset="360" max-vertical-offset="2448">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
                 <element signature="e#18#56#0" expanded="true" />
               </folding>
@@ -86,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginController.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginController.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/LoginController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37091988" vertical-offset="1" max-vertical-offset="1998">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            <state vertical-scroll-proportion="-5.76" vertical-offset="0" max-vertical-offset="1980">
+              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -176,8 +182,8 @@
         <option value="$PROJECT_DIR$/grails-app/views/user/editProfile.gsp" />
         <option value="$PROJECT_DIR$/grails-app/conf/sharehub/ShareHubFilters.groovy" />
         <option value="$PROJECT_DIR$/grails-app/services/sharehub/ResourceService.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/sharehub/Resource.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/LoginController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/sharehub/Resource.groovy" />
       </list>
     </option>
   </component>
@@ -992,7 +998,7 @@
       <workItem from="1427137927988" duration="19348000" />
       <workItem from="1427177607058" duration="3329000" />
       <workItem from="1427182635207" duration="10537000" />
-      <workItem from="1427197066627" duration="50077000" />
+      <workItem from="1427197066627" duration="51676000" />
     </task>
     <task id="LOCAL-00001" summary="check">
       <created>1424700707141</created>
@@ -1004,7 +1010,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="772397000" />
+    <option name="totallyTimeSpent" value="773996000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1544,17 +1550,12 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/Resource.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/LoginController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1929824" vertical-offset="1114" max-vertical-offset="2160">
-          <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
-          <folding>
-            <element signature="e#18#56#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-5.76" vertical-offset="0" max-vertical-offset="1980">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/services/sharehub/ResourceService.groovy">
@@ -1575,12 +1576,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/LoginController.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/sharehub/Resource.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37091988" vertical-offset="1" max-vertical-offset="1998">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
+        <state vertical-scroll-proportion="0.8262295" vertical-offset="360" max-vertical-offset="2448">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="e#18#56#0" expanded="true" />
+          </folding>
         </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
       </provider>
     </entry>
   </component>

@@ -5,8 +5,7 @@ class LoginController {
     def resourceService
     def userService
     def index() {
-        def resourceList = resourceService.getResourceList(offset: 0, max: 5)
-        render view: "/login/login", model: [recentResources: resourceList]
+        render view: "/login/login", model: [recentResources: Resource.byPublicTopic().sortByDate().list()]
     }
     def loginHandler(String username, String password){
         User user = User.findByUsernameAndPasswordAndActive(username,password,true)

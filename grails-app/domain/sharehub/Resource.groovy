@@ -20,6 +20,19 @@ class Resource {
             order("lastUpdated","desc")
         }
 
+        today{
+            gt("dateCreated", new Date().clearTime())
+        }
+        inLastOneWeek{
+            gt("dateCreated", new Date().clearTime()-7)
+        }
+        inLastOneMonth{
+            gt("dateCreated", new Date().clearTime()-30)
+        }
+        inLastOneYear{
+            gt("dateCreated", new Date().clearTime()-365)
+        }
+
         getAverageRating{id->
             eq("id",id)
             groupProperty("id")
@@ -56,9 +69,12 @@ class Resource {
             eq("rsUser.username",username)
         }
         subscribedOrPublic{username->
+            createAlias("topic","topic")
+            createAlias("topic.subscriptions","subs")
+            createAlias("subs.user","subUser")
             or {
-                byPublicTopic()
-                subscribed(username)
+                eq("subUser.username",username)
+                eq("topic.visibility",Visibility.PUBLIC)
             }
         }
         searchInResource{searchString->

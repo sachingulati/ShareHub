@@ -90,6 +90,6 @@ class TopicController {
 
     def getSubscribedTopics(){
         def topicList = topicService.getTopicList(bySubscriberUsername: session["username"])
-        render g.select(name: "topic", from: topicList, optionKey: "id", optionValue: "name", value: "id", noSelection: ['': 'Select Topic'], class: "form-control", required: "required")
+        render g.select(name: "topic", from: topicList, optionKey: "id", optionValue: "name", value: "id", noSelection: ['': 'Select Topic'], class: "form-control")
     }
 }

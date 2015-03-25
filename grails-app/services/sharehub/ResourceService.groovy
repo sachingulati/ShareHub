@@ -13,7 +13,7 @@ class ResourceService {
         String desc = "hi this is description of Resources. This is temporary description and will be replaced by actual description later on. so for the time being please co-operate :)"
         Topic.list().each { topic ->
             10.times {
-                Resource r = new Resource(title: "Resource$it", description: "$desc", type: (it < 5 ? ResourceType.DOCUMENT : ResourceType.LINK), url: "google.com", createdBy: topic.createdBy, topic: topic)
+                Resource r = new Resource(title: "Resource$it", description: "$desc", type: (it < 5 ? ResourceType.DOCUMENT : ResourceType.LINK), url: "http://google.com", createdBy: topic.createdBy, topic: topic)
                 topic.addToResources(r)
                 topic.createdBy.addToResources(r)
                 topic.save(flush: true)
@@ -66,6 +66,7 @@ class ResourceService {
         resourceStatus.save()
         return true
     }
+
     def showPost(Long id,String username){
         Resource resource = Resource.get(id)
         if(!resource){
@@ -182,6 +183,32 @@ class ResourceService {
         }
         return resources
         // || resource.title.contains(searchString) || resource.topic.name.contains(searchString)
+    }
+
+    def editResource(attr){
+        println attr
+        Resource resource = Resource.get(Long.parseLong(attr.resourceId))
+        if (!resource){
+            return null
+        }
+        resource.title = attr.title
+        resource.description = attr.description
+        if (resource.validate()){
+            resource.save()
+            return resource
+        }
+        return null
+    }
+
+    def deleteResource(id, username){
+        Resource resource = Resource.get(id)
+        User user = User.findByUsername(username)
+        if (!resource || !user || (!user.isAdmin() && resource.createdBy != user)){
+            return "Invalid request!"
+        }
+        String resourceTitle = resource.title
+        resource.delete()
+        return resourceTitle + " has been successfully deleted."
     }
 
     def shareLink(def params, User user) {

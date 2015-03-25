@@ -9,15 +9,17 @@ $(document).ready(function(){
             description: {
                 required: true,
                 maxlength: 1000
-            }
+            },
+            topic: "required"
         },
         messages:{
             title: "Please provide a title for your Link",
-            file: "Please select a file",
+            file: "",
             description: {
                 required: "Please provide a description for your link",
                 maxlength: "Description can not be more than 1000 characters!"
-            }
+            },
+            topic: "Please select a topic!"
         }
     })
 });

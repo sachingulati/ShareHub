@@ -7,9 +7,6 @@ import java.security.SecureRandom
 @Transactional
 class UtilService {
 
-    def serviceMethod() {
-
-    }
     def deleteFile(String fileUrl){
         new File(fileUrl).delete()
     }

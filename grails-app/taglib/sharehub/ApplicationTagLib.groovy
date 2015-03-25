@@ -12,8 +12,7 @@ class ApplicationTagLib {
         String path = createLink(controller: "assets", action: "user-default.png", absolute: true)
         if (attr.src)
             path = createLink(controller: "user", action: "showImage", params: [photoUrl: attr.src], absolute: true)
-        out << "<img src='" + path
-        out << "' width='80' height='80' />"
+        out << "<img src='" + path + "' class='img-media'/>"
     }
 
     def admin = {
@@ -46,7 +45,7 @@ class ApplicationTagLib {
         }
         Subscription subscription = Subscription.findByTopicAndUser(attr.topic, User.findByUsername(session["username"]))
         if (subscription) {
-            out<< render(template: "/subscription/subscribeOptions", model: [subscriptionType: subscription.seriousness, topicId: attr.topic.id, canUnsubscribe:(attr.topic.createdBy.username!=session["username"])])
+            out<< render(template: "/subscription/subscribeOptions", model: [subscriptionType: subscription.seriousness, topicId: attr.topic.id, topicName: attr.topic.name, canUnsubscribe:(attr.topic.createdBy.username!=session["username"])])
         } else {
             out<< "<a class='subscribe' href='javascript:void(0)' data-topic-id='" + attr.topic.id+"'>Subscribe</a>"
         }

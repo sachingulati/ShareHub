@@ -78,10 +78,10 @@
                         </div>
                         <div style="float:right; margin: 10px">
                             <g:if test="${resource.type==com.sharehub.enums.ResourceType.DOCUMENT}">
-                                <a href="${createLink(controller: "resource", action: "download", params: [resourceId: resource.id])}" class="inboxLinkStyle" data-ajax-url="${createLink(controller: "resource", action: "download", params: [resourceId: resource.id])}">Download</a>
+                                <a href="${createLink(controller: "resource", action: "download", params: [resourceId: resource.id], absolute: true)}" class="inboxLinkStyle">Download</a>
                             </g:if>
                             <g:else>
-                                <a href="${'http://' + resource.url}" class="inboxLinkStyle" target="_blank">View full site</a>
+                                <a href="${resource.url}" class="inboxLinkStyle" target="_blank">View full site</a>
                             </g:else>
                             <sh:markRead resourceId="${resource.id}"/>
                         </div>

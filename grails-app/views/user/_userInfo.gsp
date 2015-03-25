@@ -5,7 +5,7 @@
             </a>
         </div>
 
-        <div>
+        <div style="margin-top: 6px">
             <div>
                 <g:link controller="user" action="profile" params='[id: "${user.username}"]'>${user.name}</g:link>
             </div>
@@ -15,12 +15,16 @@
             </div>
             <table>
                 <tr>
-                    <td class="userTableData">Subscriptions</td>
-                    <td class="userTableData">Topics</td>
-                </tr>
-                <tr>
-                    <td class="userTableData"><a href="javascript:void(0)">${user.subscriptions.size()}</a></td>
-                    <td class="userTableData"><a href="javascript:void(0)">${user.topics.size()}</a></td>
+                    <td class="userTableData">
+                        <g:if test="${profileHeader}">My subscription</g:if>
+                        <g:else>Subscriptions</g:else>
+                        : <a href="javascript:void(0)">${user.subscriptions.size()}</a>
+                    </td>
+                    <td class="userTableData">
+                        <g:if test="${profileHeader}">My topics</g:if>
+                        <g:else>Topics</g:else>
+                        : <a href="javascript:void(0)">${user.topics.size()}</a>
+                    </td>
                 </tr>
             </table>
         </div>

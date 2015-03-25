@@ -10,6 +10,7 @@
 <head>
     <meta name="layout" content="afterLogin"/>
     <title>${user.name}</title>
+    <asset:javascript src="editProfile.js"/>
 </head>
 
 <body>
@@ -38,7 +39,7 @@
                 <h3 class="panel-title">Profile</h3>
             </div> <!-- panel-heading -->
             <div class="panel-body">
-                <g:formRemote name="updateProfile" enctype="multipart/form-data" url="[controller: 'user', action: 'updateUser']" method="post" onSuccess="updateProfileStatus(data)">
+                <g:formRemote class="validation" name="updateProfile" beforeSend="false" enctype="multipart/form-data" url="[controller: 'user', action: 'updateUser']" method="post" onSuccess="updateProfileStatus(data)">
                 %{--<g:form controller="user" action="updateUser">--}%
                     <table width="100%" id="editProfile">
                         <tr>
@@ -57,7 +58,7 @@
                             <td>Email*</td>
                             <td><g:textField name="email" class="form-control" value="${user.email}"/> </td>
                         </tr>
-                        <tr>
+                        <tr style="display: none">
                             <td>Photo</td>
                             <td><input type="file" id="photo" name="photo" class="form-control"/>
                                 <div style="margin-top: 10px">
@@ -72,7 +73,6 @@
                     </table>
                 </g:formRemote>
                 %{--</g:form>--}%
-                %{--<div id="updateProfileStatus" align="center" style="margin-top: 10px; margin-bottom: 10px;"></div>--}%
             </div>    <!-- panel-body -->
         </div>  <!-- panel -->
 
@@ -81,7 +81,7 @@
                 <h3 class="panel-title">Change password</h3>
             </div> <!-- panel-heading -->
             <div class="panel-body">
-                <g:formRemote name="updateProfile" url="[controller: 'user', action: 'changePassword']" method="post" onSuccess="changePasswordStatus(data)">
+                <g:formRemote name="changePassword" class="validation" url="[controller: 'user', action: 'changePassword']" method="post" onSuccess="changePasswordStatus(data)">
                 %{--<g:form controller="user" action="changePassword">--}%
                     <table width="100%" id="editProfile">
                         <tr>

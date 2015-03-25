@@ -14,6 +14,7 @@ $(document).on('keydown','#shareLinkForm #url', function(){
         }
     },1);
 });
+
 $(document).ready(function(){
     $('#shareLinkForm').validate({
         rules:{
@@ -25,13 +26,14 @@ $(document).ready(function(){
             description: {
                 required: true,
                 maxlength: 1000
-            }
+            },
+            topic: "required"
         },
         messages:{
             title: "Please provide a title for your Link",
             url: {
-                required: "please enter a url!",
-                url: "please enter a valid url!"
+                required: "please enter a url",
+                url: "please enter a valid url"
             },
             description: {
                 required: "Please provide a description for your link",

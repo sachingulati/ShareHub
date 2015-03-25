@@ -8,32 +8,15 @@ jQuery.ajaxSetup({
         }
     }
 });
+function openModal($modal){
+    var options = {
+        "backdrop": "true",
+        "keyboard": "true"
+    };
+    $modal.modal(options);
+}
 function openShareLink() {
-    var options = {
-        "backdrop": "true",
-        "keyboard": "true"
-    };
-    $('#shareLink').modal(options);
-}
-
-function openShareDocument() {
-    var options = {
-        "backdrop": "true",
-        "keyboard": "true"
-    };
-    $('#shareDocument').modal(options);
-}
-
-function openCreateTopic() {
-    var options = {
-        "backdrop": "true",
-        "keyboard": "true"
-    };
-    $('#createTopic').modal(options);
-}
-function invitationSent(data){
-    $('#sendInvite').modal('hide');
-    successReport(data);
+    openModal($('#shareLink'));
 }
 function openEditTopic(topicId, topicName, seriousness) {
     var options = {
@@ -47,12 +30,52 @@ function openEditTopic(topicId, topicName, seriousness) {
     topic.modal(options);
 }
 
+function openCreateTopic() {
+    openModal($('#createTopic'));
+}
+function invitationSent(data){
+    $('#sendInvite').modal('hide');
+    successReport(data);
+}
 function openSendInvite() {
-    var options = {
-        "backdrop": "true",
-        "keyboard": "true"
-    }
-    $('#sendInvite').modal(options);
+    var $invite = $("#sendInvite");
+    $invite.find('#topicName').css("display","none");
+    $invite.find('.topicSelector select').css("display","block").attr("readOnly",false).val('');
+    $invite.find('.topicSelector').css("display","block");
+    $invite.find('#sendInviteLabel').text("Send Invitation");
+    openModal($invite);
+}
+
+function openTopicInvite(topicId, topicName) {
+    var $invite = $("#sendInvite");
+    $invite.find('#topicName').css("display","block").text(topicName);
+    $invite.find('.topicSelector select').val(topicId).css("display","none").attr("readOnly",true);
+    $invite.find('#sendInviteLabel').text("Send Invitation: " + topicName);
+    openModal($invite);
+}
+
+function openEditResource(id, link){
+    var $resource = $(link).closest('.resource');
+    var $modal = ($resource.data("resource-type")=="link")?$('#shareLink'):$('#shareDocument');
+    $modal.find("#title").val($resource.find(".resourceTitle").text());
+    $modal.find("#description").val($resource.find(".resourceDescription").text());
+    $modal.find(".topicSelector select").val($resource.find(".resourceTopicLink").data("topic-id"));
+    $modal.find(":submit").attr("name","_action_editResource");
+    $modal.find(".typeInfo").css("display","none");
+    $modal.find("#resourceId").val($resource.data("resource-id"));
+    $modal.find('.topicSelector select').attr("disabled", true);
+    openModal($modal);
+}
+
+function openShareDocument(){
+    var $modal = $('#shareDocument');
+    $modal.find("#title").val('');
+    $modal.find("#description").val('');
+    $modal.find(".topicSelector select").val('');
+    $modal.find(":submit").attr("name","_action_shareDocument");
+    $modal.find(".typeInfo").css("display","block");
+    $modal.find('.topicSelector select').attr("disabled", false);
+    openModal($modal);
 }
 
 function reLoadContent($div){
@@ -154,7 +177,6 @@ $(document).on('click', '.unsubscribe',
             url:url,
             data : {topicId:id},
             success: function(data){
-//                         parentDiv.html(data);
                 $('.subscriptionStatus'+id).html(data);
                 reLoadContent($('#subscriptionList'));
                 reLoadContent($("[name=unreadResources]"));
@@ -163,6 +185,15 @@ $(document).on('click', '.unsubscribe',
         });
     }
 );
+function afterResourceDelete(status){
+    if(status == "Invalid request!"){
+        warningReport(status)
+    }
+    else if(status != "Login failed!"){
+        successReport(status);
+        reLoadContent($('#resourceList'));
+    }
+}
 
 $(document).on('click', '.markReadLink',
     function(){
@@ -173,15 +204,18 @@ $(document).on('click', '.markReadLink',
                 if(response == "Bad Request!"){
                     alert(response)
                 }
-                else{
+                else if(response != "Login failed!"){
                     $obj.text(response)
+                    reLoadContent($("[name=unreadResources]"));
+                    successReport("Successfully Marked.");
                 }
-                reLoadContent($("[name=unreadResources]"));
-                successReport("Successfully Marked.")
             }
         )
     }
 );
+$(document).on('click', '.deleteResource', function(){
+
+});
 $(document).ready(function(){
     $rateBox = $('.rate');
     $ratingHearts = $('.ratingHearts');

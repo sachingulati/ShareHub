@@ -8,9 +8,9 @@
                         aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Share Document</h4>
             </div>
-            <g:form controller="resource" action="shareDocument" name="shareDocumentForm" enctype="multipart/form-data">
+            <g:form controller="resource" action="shareDocument" class="validation" name="shareDocumentForm" enctype="multipart/form-data">
+                <g:hiddenField name="resourceId" value=""/>
                 <div class="modal-body">
-
                     <div class="row padding5">
                         <div class="col-lg-5">
                             Title*
@@ -21,7 +21,7 @@
                         </div>
                     </div>
 
-                    <div class="row padding5">
+                    <div class="row padding5 typeInfo">
                         <div class="col-lg-5">
                             Upload File*
                         </div>
@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="modal-footer">
-                    <g:submitButton name="submit" value="Share" class="btn btn-primary"/>
+                    <g:actionSubmit name="submit" value="Share" class="btn btn-primary"/>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 </div>
             </g:form>

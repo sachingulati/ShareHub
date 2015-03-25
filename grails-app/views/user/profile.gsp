@@ -20,7 +20,7 @@
             <!-- User Info -->
             <div class="panel panel-default" style="margin-bottom:7px">
                 <div class="panel-body">
-                    <g:render template="/user/userInfo" bean="${user}"/>
+                    <g:render template="/user/userInfo" bean="${user}" model="[profileHeader: true]"/>
                 </div> <!-- panel-body -->
             </div> <!-- panel -->
 

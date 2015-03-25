@@ -17,7 +17,7 @@
 
         <li role="presentation" class="divider" style="margin: 2px 0px"></li>
         <li role="presentation">
-            <a href="javascript:void(0)">Invite</a>
+            <a href="javascript:void(0)" onclick='openTopicInvite("${topicId}","${topicName}")'>Invite</a>
         </li>
         <g:if test="${canUnsubscribe}">
             <li role="presentation">

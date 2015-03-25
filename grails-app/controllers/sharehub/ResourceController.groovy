@@ -9,11 +9,9 @@ class ResourceController {
 
     def getResources(){
         params.username = session["username"]
-        println "----------------------------------------------"
-        println params
-        println "----------------------------------------------"
         render(template: "/resource/resourceList", model: [resources: resourceService.getResourceList(params), header: params.header, search: true])
     }
+
     def unreadResourceList() {
         List<Resource> unreadResourceList = resourceService.getResourceList(isSubscribed: true, isRead: false, username: session["username"], offset: params.offset, max: params.max)
         render(template: "/resource/resourceList", bean: unreadResourceList, var: "resources", model: [header: 'Inbox', search: true,
@@ -74,13 +72,20 @@ class ResourceController {
     }
 
     def shareDocument() {
-//        println(params)
         int id=resourceService.shareDocument(params, User.findByUsername(session["username"]))
         if (id){
             redirect(action: "showPost", params: [id: id])
         }
         else render "Error in sharing resource!"
     }
+
+    def editResource(){
+        Resource resource = resourceService.editResource(params)
+        redirect(action: "showPost", params: [id: resource?.id])
+        return false;
+    }
+
+    def editLink(){}
 
     def download(){
         File file = resourceService.download(params.resourceId, session["username"])
@@ -95,5 +100,10 @@ class ResourceController {
         }
         else
             render "Bad request!"
+    }
+
+    def deleteResource(){
+        render resourceService.deleteResource(Long.parseLong(params.id), session["username"])
+        return false;
     }
 }

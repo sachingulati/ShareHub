@@ -1,12 +1,14 @@
+<asset:javascript src="sendInvite.js"/>
 <div class="modal fade m" id="sendInvite" tabindex="-1" role="dialog" aria-labelledby="sendInviteModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Send Invitation</h4>
+                <h4 class="modal-title" id="sendInviteLabel">Send Invitation</h4>
             </div>
-            <g:formRemote name="invite" url="[controller: 'invites', action: 'sendInvite']" onSuccess="invitationSent(data)">
+
+            <g:formRemote name="invite" class="validation" url="[controller: 'invites', action: 'sendInvite']" onSuccess="invitationSent(data)">
                 <div class="modal-body">
                     <div class="row padding5">
                         <div class="col-lg-5">
@@ -32,6 +34,7 @@
                             Topic*
                         </div>
                         <div class="col-lg-7">
+                            <label id="topicName" style="display: none">Topic Name</label>
                             <div class="topicSelector" data-ajax-url="${createLink(controller: "topic", action: "getSubscribedTopics")}">
                                 <g:select name="topic" from="${["Select Topic"]}" class="form-control"/>
                             </div>

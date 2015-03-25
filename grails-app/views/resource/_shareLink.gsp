@@ -8,9 +8,9 @@
                         aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Share Link</h4>
             </div>
-            <g:form controller="resource" action="shareLink" name="shareLinkForm">
+            <g:form controller="resource" class="validation" action="shareLink" name="shareLinkForm">
                 <div class="modal-body">
-
+                    <g:hiddenField name="resourceId" value=""/>
                     <div class="row padding5">
                         <div class="col-lg-5">
                             Title*
@@ -21,7 +21,7 @@
                         </div>
                     </div>
 
-                    <div class="row padding5">
+                    <div class="row padding5 typeInfo">
                         <div class="col-lg-5">
                             Link*
                         </div>

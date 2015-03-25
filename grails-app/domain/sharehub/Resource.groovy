@@ -33,4 +33,9 @@ class Resource {
             }
         }
     }
+    def beforeDelete = {
+        if (type == ResourceType.DOCUMENT && filePath){
+            new File(filePath).delete()
+        }
+    }
 }

@@ -8,7 +8,7 @@
                         aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Create Topic</h4>
             </div>
-            <g:form name="createTopicForm" controller="topic" action="createTopic">
+            <g:form name="createTopicForm" class="validation" controller="topic" action="createTopic">
                 <div class="modal-body">
 
                     <div class="row padding5">

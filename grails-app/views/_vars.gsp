@@ -13,4 +13,7 @@
     var changeRatingUrl = "${createLink(controller: "resource", action: "changeRating")}";
     var checkLogin = "${createLink(controller: "user", action: "isLoggedIn")}";
     var topicResourcesUrl = "${createLink(controller: "resource", action: "getResources")}";
+    var shareDocumentUrl = "${createLink(controller: "resource", action: "shareDocument")}";
+    var shareLinkUrl = "${createLink(controller: "resource", action: "shareLink")}";
+    var editResourceUrl = "${createLink(controller: "resource", action: "editResource")}";
 </script>

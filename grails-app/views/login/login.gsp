@@ -22,12 +22,14 @@
                     </div>
 
                     <div class="panel-body contentBox">
-                        <g:form name="registration" controller="login" action="register" enctype="multipart/form-data">
+
+                        <g:form name="registration" class="validation" controller="login" action="register" enctype="multipart/form-data">
                             <div class="row padding5">
                                 <div class="col-lg-5">
-                                    First Name*
+                                    <label for="firstName" class="control-label label-form">
+                                        First Name*
+                                    </label>
                                 </div>
-
                                 <div class="col-lg-7">
                                     <g:textField name="firstName" class="form-control"/>
                                 </div>
@@ -112,6 +114,7 @@
                                 </div>
                             </div>
                         </g:form>
+
                     </div>
                 </div>
             </div>

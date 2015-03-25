@@ -7,7 +7,8 @@ class SearchController {
         render(view: "/search", model: [search: params.search, ajaxController: "search", ajaxAction: "searchResources"])
     }
     def inboxSearch(){
-        render(template: "/resource/resourceList", model: [resources: resourceService.getResourceList([isRead: false, isSubscribed: true, username: session["username"], resourceSearchString: params.searchString,topicNameSearchString: params.searchString]), header: "Inbox search: '${params.searchString}'", search: true])
+        def resources = Resource.searchInInbox(session["username"],params.search).sortByDate().list(max: 10, offset: 0)
+        render(template: "/resource/resourceList", model: [resources: resources, header: "Inbox search: '${params.search}'", search: true])
     }
     def searchResources(){
         List<Resource> searchResult = resourceService.getResourceList(username: session["username"], resourceSearchString: params.search,

@@ -37,8 +37,8 @@
 
         <div class="col-lg-7">
         <div class="afterReport">
-            <div id="resourceList" name="unreadResources" class="applyPaginate" data-ajax-url="${createLink(controller: "resource", action: "unreadResourceList")}" data-ajax-params="${[offset: 0, max: 10] as grails.converters.JSON}">
-                <g:render template="/resource/resourceList" bean="${null}" var="resources" model="[header: 'Inbox', search: true, footer:'Loading...', doPaginate:true, ajaxController: 'resources', ajaxAction: 'unreadResourceList']"/>
+            <div id="resourceList" name="unreadResources" class="applyPaginate" data-ajax-url="${createLink(controller: "resource", action: "renderUnreadResources")}" data-ajax-params="${[offset: 0, max: 10] as grails.converters.JSON}">
+                <g:render template="/resource/resourceList" bean="${null}" var="resources" model="[header: 'Inbox', search: true, footer:'Loading...', doPaginate:true, ajaxController: 'resources', ajaxAction: 'renderUnreadResources']"/>
             </div>
         </div>
         </div> <!-- col-lg-7 -->

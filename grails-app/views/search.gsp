@@ -24,7 +24,7 @@
                 <g:render template="/topic/topicList" model="[header: 'Trending Topics', hr:true, footer:'Loading...']" bean="${null}" var="topics"/>
             </div>
             %{--Top Post--}%
-            <div id="topPost" data-ajax-url="${createLink(controller: "resource", action: "getTopPost", params: [offset: 0, max: 5])}">
+            <div id="topPost" data-ajax-url="${createLink(controller: "resource", action: "renderTopPost", params: [offset: 0, max: 5])}">
                 <g:render template="/resource/resourceList" bean="${null}" var="resources" model="[header:'Top Posts', search:false]"/>
             </div>
         </div> <!-- col-lg-5 -->

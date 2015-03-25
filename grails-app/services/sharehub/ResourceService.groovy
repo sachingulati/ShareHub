@@ -186,7 +186,6 @@ class ResourceService {
     }
 
     def editResource(attr){
-        println
         Resource resource = Resource.get(Long.parseLong(attr.resourceId))
         if (!resource){
             return null

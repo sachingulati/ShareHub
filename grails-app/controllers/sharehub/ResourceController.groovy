@@ -7,25 +7,25 @@ class ResourceController {
     def grailsApplication
     def resourceService
 
-    def getResources(){
+    def renderResources(){
         params.username = session["username"]
         render(template: "/resource/resourceList", model: [resources: resourceService.getResourceList(params), header: params.header, search: true])
     }
 
-    def unreadResourceList() {
-        List<Resource> unreadResourceList = resourceService.getResourceList(isSubscribed: true, isRead: false, username: session["username"], offset: params.offset, max: params.max)
-        render(template: "/resource/resourceList", bean: unreadResourceList, var: "resources", model: [header: 'Inbox', search: true,
-                       doPaginate: true, ajaxController: "resource", ajaxAction: "unreadResourceList", ajaxParams: []])
+    def renderUnreadResources() {
+        List<Resource> unreadResourceList = Resource.byIsRead(session["username"],false).sortByDate().list(offset: params.offset, max: params.max)
+        render(template: "/resource/resourceList", model: [resources: unreadResourceList, header: 'Inbox', search: true,
+                       doPaginate: true, ajaxController: "resource", ajaxAction: "renderUnreadResources", ajaxParams: []])
     }
 
-    def getTopPost(){
-        List<Resource> topPost = resourceService.getResourceList(username: session["username"], offset: params.offset, max: params.max)
-        render(template: "/resource/resourceList", bean: topPost, var: "resources", model: [header: 'Top Post'])
+    def renderTopPost(){
+        List<Resource> topPost = Resource.subscribedOrPublic(session["username"]).sortByDate().list(offset: params.offset, max: params.max)
+        render(template: "/resource/resourceList", model: [resources: topPost, header: 'Top Post'])
     }
 
-    def getResourcesCreated(){
-        def resourceList = resourceService.getResourceList(username: session["username"], createdByUsername: (params.username?:session["username"]), max: params.max, offset: params.offset);
-        render(template: "/resource/resourceList", bean:resourceList, var: "resources", model: [header: 'Posts', hr:true])
+    def renderResourcesCreated(){
+        def resourceList = Resource.byCreatedBy(params.username?:session["username"]).sortByDate().list(max: params.max, offset: params.offset)
+        render(template: "/resource/resourceList", model: [resources: resourceList, header: 'Posts', hr:true])
     }
 
     def switchReadStatus() {
@@ -58,9 +58,9 @@ class ResourceController {
         return false
     }
 
-    def getRating(){
-        def rating = resourceService.getRating(params.id)
-        render "Avg. Rating: ${rating.totalCount} (${rating.avgRating?:0})"
+    def renderRating(){
+        def rating = Resource.getAverageRating(Long.parseLong(params.id)).get()
+        render "Avg. Rating: ${rating[0]} (${rating[1]?:0})"
     }
 
     def shareLink() {

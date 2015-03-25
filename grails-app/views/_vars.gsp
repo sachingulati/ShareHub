@@ -12,7 +12,7 @@
     var rateOffImagePath = assetsPath + "RateOff.jpg";
     var changeRatingUrl = "${createLink(controller: "resource", action: "changeRating")}";
     var checkLogin = "${createLink(controller: "user", action: "isLoggedIn")}";
-    var topicResourcesUrl = "${createLink(controller: "resource", action: "getResources")}";
+    var topicResourcesUrl = "${createLink(controller: "resource", action: "renderResources")}";
     var shareDocumentUrl = "${createLink(controller: "resource", action: "shareDocument")}";
     var shareLinkUrl = "${createLink(controller: "resource", action: "shareLink")}";
     var editResourceUrl = "${createLink(controller: "resource", action: "editResource")}";

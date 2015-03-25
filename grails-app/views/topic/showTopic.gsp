@@ -24,7 +24,7 @@
         <g:render template="/user/userList" model='[topicName: "${topic.name}"]' bean="${topic.subscriptions.user}" var="users"/>
     </div>
     <div class="col-lg-7">
-        <div id="resourceList" class="applyPaginate" data-ajax-url="${createLink(controller: "resource", action: "getResources")}" data-ajax-params="${[offset: 0, max: 10, topicId: topic.id, header: "Posts: " + topic.name] as grails.converters.JSON}">
+        <div id="resourceList" class="applyPaginate" data-ajax-url="${createLink(controller: "resource", action: "renderResources")}" data-ajax-params="${[offset: 0, max: 10, topicId: topic.id, header: "Posts: " + topic.name] as grails.converters.JSON}">
             <g:render template="/resource/resourceList" model='[header:"Posts: ${topic.name}"]' bean="${topic.resources}" var="resources"/>
         </div>
     </div>

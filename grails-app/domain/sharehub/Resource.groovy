@@ -89,6 +89,27 @@ class Resource {
                 searchInTopic(searchString)
             }
         }
+        /*searchInInboxWithTopicOrResource{username,searchString->
+            byIsRead(username,false)
+            or {
+                searchInResource(searchString)
+                ilike("topic.name","%${searchString}%")
+            }
+        }*/
+        searchInInbox{username,searchString->
+            createAlias("topic","topic")
+            createAlias("topic.subscriptions","subs")
+            createAlias("subs.user","subUser")
+            eq("subUser.username",username)
+            createAlias("resourceStatus","rs")
+            createAlias("rs.user","rsUser")
+            eq("rs.isRead",false)
+            eq("rsUser.username",username)
+            or {
+                searchInResource(searchString)
+                ilike("topic.name","%${searchString}%")
+            }
+        }
         searchInTopic{searchString->
             createAlias("topic","t")
             ilike("t.name","%${searchString}%")

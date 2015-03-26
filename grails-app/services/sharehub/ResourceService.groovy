@@ -223,7 +223,7 @@ class ResourceService {
         resource.createdBy = user
         resource.validate()
         if (resource.hasErrors()) {
-            println(resource.errors.allErrors)
+            //println(resource.errors.allErrors)
             return 0
         } else {
             resource.save(failOnError: true)
@@ -243,7 +243,7 @@ class ResourceService {
         resource.type = ResourceType.DOCUMENT
         resource.createdBy = user
         if (!resource.validate()) {
-            println(resource.errors.allErrors)
+            //println(resource.errors.allErrors)
             return 0
         } else {
             resource.save()

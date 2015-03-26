@@ -1,11 +1,12 @@
 $(document).on('click','.topicBox',function(){
-    console.log($(this).data("topic-id"));
+    var topicId = $(this).data("topic-id");
     $.ajax({
             url: topicResourcesUrl,
             data: {topicId: $(this).data("topic-id"),
             header: $(this).data("topic-name")},
         success: function(data){
-            $("#resourceList").html(data)
+            $("#resourceList").html(data);
+            $("#resourceList :hidden").val(topicId);
         }
     });
 });

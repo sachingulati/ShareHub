@@ -30,6 +30,9 @@
         </div>
 
         <div class="resourceDescription">${resource.description}</div>
+        <div style="float: left">
+            <div class="fb-share-button" data-href="${createLink(controller: "resource", action: "showPost", params: [id: resource.id], absolute: true)}" data-layout="button"></div></div>
+            <div class="g-plus" data-action="share" data-href="${createLink(controller: "resource", action: "showPost", params: [id: resource.id], absolute: true)}" ></div>
         <div style="float:right">
             <g:if test="${resource.type==com.sharehub.enums.ResourceType.DOCUMENT}">
                 <a href="${createLink(controller: "resource", action: "download", params: [resourceId: resource.id], absolute: true)}" class="inboxLinkStyle resourceLink">Download</a>

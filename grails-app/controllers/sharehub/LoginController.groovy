@@ -93,7 +93,6 @@ class LoginController {
         return false
     }
     def checkUsername(){
-        println params
         if (User.findByUsername(params.username)){
             render "false"
             return false

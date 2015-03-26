@@ -17,6 +17,7 @@ doPaginate: boolean, for enabling or disabling pagination
             <span style="float:right;">
                 <g:formRemote name="search" url="[controller:'search', action: 'inboxSearch']" method="get" update="resourceList"  style="margin: -5px">
                     <div class="input-group">
+                        <g:hiddenField name="topicId" value="${topicId}"/>
                         <g:textField name="search" placeholder="Search" aria-describedby="basic-addon2"/>
                     </div>
                 </g:formRemote>

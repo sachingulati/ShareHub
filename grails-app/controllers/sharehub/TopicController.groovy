@@ -15,7 +15,7 @@ class TopicController {
     def getRecentSubscribedTopics(){
 //        def topicList = topicService.getSubscribedTopics(params.offset, params.max, session["username"])
         def topicList = Topic.subscribedTopics(session["username"]).list(offset:params.offset, max: params.max)
-        println topicList.totalCount
+        //println topicList.totalCount
         //topicList = Topic.subscribedTopics(session["username"]).sortByRecentResource()
         render(template: "/topic/topicList", model: [topics: topicList, header:"Subscriptions", search: true, searchSubscription: true,
                      hr:true, viewAll: true, doPaginate: true, ajaxController: "topic", ajaxAction: "getRecentSubscribedTopics", totalCount: topicList.totalCount])

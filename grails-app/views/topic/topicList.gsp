@@ -3,6 +3,7 @@
 <head>
     <meta name="layout" content="afterLogin"/>
     <title>Topics</title>
+    ${doPaginate=false}
 </head>
 <body>
 <div>
@@ -18,8 +19,8 @@
         <div class="col-lg-7">
             <div class="afterReport">
                 <div id="resourceList" class="applyPaginate" data-ajax-params="${[offset: 0, max: 10] as grails.converters.JSON}">
-                    <g:render template="/resource/resourceList" bean="${null}" var="resources"
-                              model="[header: 'Posts', doPaginate:false, footer: 'Click on a topic to show its posts...']"/>
+                    <g:render template="/resource/resourceList" model="[resources: null, header: 'Posts',
+                                doPaginate:false, footer: 'Click on a topic to show its posts...']"/>
                 </div>
             </div>
         </div> <!-- col-lg-7 -->

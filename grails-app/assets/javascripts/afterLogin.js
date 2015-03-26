@@ -232,3 +232,4 @@ $(document).ready(function(){
 $(document).on('hover', '.rate',function(){
     console.log("rating");
 });
+

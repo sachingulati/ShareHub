@@ -38,10 +38,20 @@
     <g:render template="/vars"/>
     <asset:javascript src="afterLogin.js"/>
     <asset:javascript src="reports.js"/>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <g:layoutHead/>
 </head>
 
 <body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <nav class="navbar navbar-default topBar">
     <div class="container-fluid">
@@ -96,8 +106,8 @@
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="${g.createLink(controller: "user", action: "myProfile")}">Profile</a></li>
                             <li role="presentation"><sh:admin/></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Topics</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Posts</a></li>
+                            <li role="presentation"><g:link controller="topic" role="menuitem" tabindex="-1" action="viewAllSubscribedTopics">Topics</g:link></li>
+                            %{--<li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)">Posts</a></li>--}%
                             <li role="presentation">
                                 <g:link controller="user" action="logout" tabindex="-1">Logout</g:link></li>
                         </ul>
@@ -127,8 +137,7 @@
 <div class="contentMargin" id="contentBody">
     <g:layoutBody/>
 </div>
-<script>
 
-</script>
+
 </body>
 </html>

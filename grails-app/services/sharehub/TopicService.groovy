@@ -2,6 +2,7 @@ package sharehub
 
 import com.sharehub.enums.Seriousness
 import com.sharehub.enums.Visibility
+import grails.gsp.PageRenderer
 import grails.transaction.Transactional
 import java.security.SecureRandom;
 
@@ -10,6 +11,8 @@ class TopicService {
 
     def mailService
     def utilService
+
+    PageRenderer groovyPageRenderer
     def createDefaultTopics() {
         User.list().each { user ->
             5.times {

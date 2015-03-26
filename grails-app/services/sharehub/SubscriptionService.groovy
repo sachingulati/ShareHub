@@ -32,7 +32,7 @@ class SubscriptionService {
             topic.save(flush: true)
         }
         else{
-            println(subscription.errors.allErrors)
+            //println(subscription.errors.allErrors)
             return null
         }
         return subscription

@@ -81,7 +81,7 @@ class UserService {
             }
             return true
         }
-        println user.errors.allErrors
+        //println user.errors.allErrors
         return false
     }
     def changePassword(String username, String newPassword, String confirmPassword,String currentPassword){
@@ -96,7 +96,7 @@ class UserService {
             user.save(failOnError: true)
         else
             return "Password must be at least 8 characters long!"
-        println(user.errors.allErrors)
+        //println(user.errors.allErrors)
         return "Password successfully changed."
     }
     def changePasswordWithToken(String token, String password, String confirmPassword){

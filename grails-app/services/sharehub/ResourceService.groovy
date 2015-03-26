@@ -13,7 +13,7 @@ class ResourceService {
         String desc = "hi this is description of Resources. This is temporary description and will be replaced by actual description later on. so for the time being please co-operate :)"
         Topic.list().each { topic ->
             10.times {
-                Resource r = new Resource(title: "Resource$it", description: "$desc", type: (it < 5 ? ResourceType.DOCUMENT : ResourceType.LINK), url: "http://google.com", createdBy: topic.createdBy, topic: topic)
+                Resource r = new Resource(title: "Resource$it", description: "$desc", type: (it < 5 ? ResourceType.DOCUMENT : ResourceType.LINK), url: "http://google.com", filePath: grailsApplication.config.uploadFiles+"defaultFile", createdBy: topic.createdBy, topic: topic)
                 topic.addToResources(r)
                 topic.createdBy.addToResources(r)
                 topic.save(flush: true)

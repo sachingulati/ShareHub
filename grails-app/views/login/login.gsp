@@ -26,9 +26,9 @@
                         <g:form name="registration" class="validation" controller="login" action="register" enctype="multipart/form-data">
                             <div class="row padding5">
                                 <div class="col-lg-5">
-                                    <label for="firstName" class="control-label label-form">
+                                    %{--<label for="firstName" class="control-label label-form">--}%
                                         First Name*
-                                    </label>
+                                    %{--</label>--}%
                                 </div>
                                 <div class="col-lg-7">
                                     <g:textField name="firstName" class="form-control"/>

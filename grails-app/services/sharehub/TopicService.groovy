@@ -71,11 +71,6 @@ class TopicService {
         }
     }
 
-    public String getToken() {
-        SecureRandom random = new SecureRandom();
-        return new BigInteger(130, random).toString(32);
-    }
-
     def invite(username, topicId, email, inviteTo, g){
         User user = User.findByUsername(username);
         Topic topic = Topic.get(topicId)
@@ -145,6 +140,22 @@ class TopicService {
         return topicList
     }
 
+    def subList(def topicList, def paramsMax, def paramsOffset){
+        int size = topicList.size()
+        Integer offset=0, max=5
+        try{
+            offset = Integer.parseInt(paramsOffset?:0)
+            max = Integer.parseInt(paramsMax?:5)
+        }
+        catch (Exception e){}
+        if (size<offset){
+            return null
+        }
+        if (size<max+offset){
+            max = size-offset
+        }
+        topicList[offset..<max]
+    }
     def getTrendingTopics(offset, max) {
         def trendingTopicList = Resource.createCriteria().list(offset:offset, max: max) {
                     projections {
@@ -160,7 +171,10 @@ class TopicService {
     }
 
     def getSubscribedTopics(offset, max, username){
-
+/*
+        Topic.createCriteria().list(offset: offset, max: max){
+            order
+        }*/
         Resource.createCriteria().list(offset:offset, max: max){
             projections{
                 groupProperty("topic")

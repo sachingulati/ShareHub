@@ -16,4 +16,36 @@ class Topic {
     def afterInsert = {
         addToSubscriptions(topic: this, user: createdBy, seriousness: Seriousness.VERY_SERIOUS)
     }
+    static namedQueries = {
+        byCreatedBy{username->
+            createAlias("createdBy","user")
+            eq("user.username",username)
+        }
+        subscribedTopics{username->
+            createAlias("subscriptions","s")
+            createAlias("s.user","u")
+            eq("u.username",username)
+        }
+        publicOrSubscribed{username->
+            or{
+                subscribedTopics(username)
+                publicTopics()
+            }
+        }
+        publicTopics{
+            eq("visibility",Visibility.PUBLIC)
+        }
+        privateTopics{
+            eq("visibility",Visibility.PRIVATE)
+        }
+        sortByRecentResource{
+            createAlias("resources","r")
+            projections{}
+            groupProperty("id")
+            order("r.dateCreated","desc")
+        }
+        search{searchString->
+            ilike("name", "%${searchString}%")
+        }
+    }
 }

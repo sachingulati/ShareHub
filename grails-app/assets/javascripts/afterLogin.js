@@ -160,7 +160,7 @@ $(document).on('click', '.subscribe',
             data : {topicId:id},
             success: function(data){
                 $('.subscriptionStatus'+id).html(data);
-                reLoadContent($('#subscriptionList'));
+                reLoadContent($('#topicPagination'));
                 reLoadContent($("[name=unreadResources]"));
                 successReport("Subscribed successfully.")
             }
@@ -178,7 +178,7 @@ $(document).on('click', '.unsubscribe',
             data : {topicId:id},
             success: function(data){
                 $('.subscriptionStatus'+id).html(data);
-                reLoadContent($('#subscriptionList'));
+                reLoadContent($('#topicPagination'));
                 reLoadContent($("[name=unreadResources]"));
                 successReport("Unsubscribed successfully.");
             }

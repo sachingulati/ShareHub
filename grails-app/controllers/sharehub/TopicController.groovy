@@ -13,8 +13,12 @@ class TopicController {
     }
 
     def getRecentSubscribedTopics(){
-        def topicList = topicService.getSubscribedTopics(params.offset, params.max, session["username"])
-        render(template: "/topic/topicList", model: [header:"Subscriptions", hr:true, viewAll: true], bean: topicList, var: "topics")
+//        def topicList = topicService.getSubscribedTopics(params.offset, params.max, session["username"])
+        def topicList = Topic.subscribedTopics(session["username"]).list(offset:params.offset, max: params.max)
+        println topicList.totalCount
+        //topicList = Topic.subscribedTopics(session["username"]).sortByRecentResource()
+        render(template: "/topic/topicList", model: [topics: topicList, header:"Subscriptions", search: true, searchSubscription: true,
+                     hr:true, viewAll: true, doPaginate: true, ajaxController: "topic", ajaxAction: "getRecentSubscribedTopics", totalCount: topicList.totalCount])
     }
     def getTrendingTopics(){
         List<Topic> topicList = topicService.getTrendingTopics(params.offset, params.max)
@@ -71,25 +75,27 @@ class TopicController {
     }
 
     def getTopicsCreated(){
-        String username
-        if (params.username){
-            username = params.username
+        String username = params.username?:session["username"]
+        def topicList/*
+        if (session["admin"]){
+            topicList = Topic.byCreatedBy(username).sortByRecentResource().list(max: params.max, offset: params.offset)
         }
-        else{
-            username = session["username"]
-        }
-        List<Topic> topicList
+        else {
+            topicList = Topic.byCreatedBy(username).publicOrSubscribed(session["username"]).sortByRecentResource().list(max: params.max, offline: params.offset)
+        }*/
+//        println topicList
         if (username != session["username"] && !session["admin"]){
             topicList = topicService.getTopicList(byCreatorUsername: username, visibility: Visibility.PUBLIC)
         }
         else {
             topicList = topicService.getTopicList(byCreatorUsername: username)
         }
-        render(template: "/topic/topicList", model: [header: 'Topics Created', hr:true], bean:topicList, var:"topics")
+//        println topicList
+        render(template: "/topic/topicList", model: [topics: topicList, header: 'Topics Created', hr:true])
     }
 
     def getSubscribedTopics(){
-        def topicList = topicService.getTopicList(bySubscriberUsername: session["username"])
+        def topicList = Topic.subscribedTopics(session["username"]).list()
         render g.select(name: "topic", from: topicList, optionKey: "id", optionValue: "name", value: "id", noSelection: ['': 'Select Topic'], class: "form-control")
     }
 }

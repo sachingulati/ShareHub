@@ -8,6 +8,6 @@ class DailyJob {
     }
 
     def execute() {
-        // execute job
+        
     }
 }

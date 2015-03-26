@@ -26,8 +26,8 @@
             </div> <!-- panel -->
 
             <!-- subscription -->
-            <div id="subscriptionList" data-ajax-url="${createLink(controller: "topic", action: "getRecentSubscribedTopics")}" data-ajax-params="${[offset: 0, max: 5] as grails.converters.JSON}">
-                <g:render template="/topic/topicList" model="[header: 'Subscriptions', hr:true, footer:'Loading...', viewAll: true]" bean="${null}" var="topics"/>
+            <div id="topicPagination" data-ajax-url="${createLink(controller: "topic", action: "getRecentSubscribedTopics")}" data-ajax-params="${[offset: 0, max: 5] as grails.converters.JSON}">
+                <g:render template="/topic/topicList" model="[topics: null, header: 'Subscriptions', hr:true, footer:'Loading...', viewAll: true, searchSubscription: true]"/>
             </div>
             %{--Trending Topics--}%
             <div id="trendingTopics" data-ajax-url="${createLink(controller: "topic", action: "getTrendingTopics")}" data-ajax-params="${[offset: 0, max: 5] as grails.converters.JSON}">

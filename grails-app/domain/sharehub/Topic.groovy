@@ -18,15 +18,19 @@ class Topic {
     }
     static namedQueries = {
         byCreatedBy{username->
-            createAlias("createdBy","user")
-            eq("user.username",username)
+            createdBy{
+                eq("username",username)
+            }
         }
         subscribedTopics{username->
-            createAlias("subscriptions","s")
-            createAlias("s.user","u")
-            eq("u.username",username)
+            subscriptions{
+                user{
+                    eq("username",username)
+                }
+            }
         }
         publicOrSubscribed{username->
+            distinct()
             or{
                 subscribedTopics(username)
                 publicTopics()
@@ -39,10 +43,15 @@ class Topic {
             eq("visibility",Visibility.PRIVATE)
         }
         sortByRecentResource{
-            createAlias("resources","r")
-            projections{}
+            projections {
+//                distinct()
+                uniqueResult: true
+            }
+            distinct()
             groupProperty("id")
-            order("r.dateCreated","desc")
+            resources{
+                order("dateCreated","desc")
+            }
         }
         search{searchString->
             ilike("name", "%${searchString}%")

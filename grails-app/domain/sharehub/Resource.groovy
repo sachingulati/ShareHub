@@ -19,7 +19,6 @@ class Resource {
         sortByDate{
             order("lastUpdated","desc")
         }
-
         today{
             gt("dateCreated", new Date().clearTime())
         }
@@ -45,36 +44,48 @@ class Resource {
         }
 
         byTopicId{id->
-            createAlias("topic","topic")
-            eq("topic.id",id)
+            topic{
+                eq("id",Long.parseLong(id))
+            }
         }
 
         byCreatedBy{username->
-            createAlias("createdBy","user")
-            eq("user.username",username)
+            createdBy{
+                eq("username",username)
+            }
         }
 
         subscribed{username->
-            createAlias("topic","topic")
-            createAlias("topic.subscriptions","subs")
-            createAlias("subs.user","subUser")
-            eq("subUser.username",username)
+            topic{
+                subscriptions{
+                    user{
+                        eq("username",username)
+                    }
+                }
+            }
         }
 
         byIsRead{username,isRead->
             subscribed(username)
-            createAlias("resourceStatus","rs")
-            createAlias("rs.user","rsUser")
-            eq("rs.isRead",isRead)
-            eq("rsUser.username",username)
+            resourceStatus{
+                eq("isRead",isRead)
+                user{
+                    eq("username",username)
+                }
+            }
         }
         subscribedOrPublic{username->
-            createAlias("topic","topic")
-            createAlias("topic.subscriptions","subs")
-            createAlias("subs.user","subUser")
             or {
-                eq("subUser.username",username)
-                eq("topic.visibility",Visibility.PUBLIC)
+                topic{
+                    or{
+                        eq("visibility",Visibility.PUBLIC)
+                        subscriptions{
+                            user{
+                                eq("username",username)
+                            }
+                        }
+                    }
+                }
             }
         }
         searchInResource{searchString->
@@ -111,12 +122,14 @@ class Resource {
             }
         }
         searchInTopic{searchString->
-            createAlias("topic","t")
-            ilike("t.name","%${searchString}%")
+            topic{
+                ilike("name","%${searchString}%")
+            }
         }
         byPublicTopic{
-            createAlias("topic","t")
-            eq("t.visibility",Visibility.PUBLIC)
+            topic{
+                eq("visibility",Visibility.PUBLIC)
+            }
         }
         sortByRating{
 //            order(avgRating(property("id")), "desc")

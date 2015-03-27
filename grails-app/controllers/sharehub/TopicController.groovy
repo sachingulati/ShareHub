@@ -75,27 +75,17 @@ class TopicController {
     }
 
     def getTopicsCreated(){
-        String username = params.username?:session["username"]
-        def topicList/*
-        if (session["admin"]){
-            topicList = Topic.byCreatedBy(username).sortByRecentResource().list(max: params.max, offset: params.offset)
+
+        def topicList = Topic.byCreatedBy(params.username)
+        if (!session["admin"]){
+            topicList = topicList.publicOrSubscribed(session["username"])
         }
-        else {
-            topicList = Topic.byCreatedBy(username).publicOrSubscribed(session["username"]).sortByRecentResource().list(max: params.max, offline: params.offset)
-        }*/
-//        println topicList
-        if (username != session["username"] && !session["admin"]){
-            topicList = topicService.getTopicList(byCreatorUsername: username, visibility: Visibility.PUBLIC)
-        }
-        else {
-            topicList = topicService.getTopicList(byCreatorUsername: username)
-        }
-//        println topicList
-        render(template: "/topic/topicList", model: [topics: topicList, header: 'Topics Created', hr:true])
+        topicList = topicList.listDistinct()
+        render(template: "/topic/topicList", model: [ajaxController: "topic", ajaxAction: "getTopicsCreated", ajaxUrl: createLink(controller: "topic", action: "getRecentSubscribedTopics"), ajaxParams:[offset: 0, max:5] as grails.converters.JSON,topics: topicList, header: 'Topics Created', hr:true])
     }
 
     def getSubscribedTopics(){
-        def topicList = Topic.subscribedTopics(session["username"]).list()
+        def topicList = Topic.subscribedTopics(session["username"]).sortByRecentResource().list()
         render g.select(name: "topic", from: topicList, optionKey: "id", optionValue: "name", value: "id", noSelection: ['': 'Select Topic'], class: "form-control")
     }
 }

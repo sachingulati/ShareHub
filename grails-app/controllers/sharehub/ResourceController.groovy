@@ -8,10 +8,12 @@ class ResourceController {
     def resourceService
 
     def renderResources(){
-//        params.username = session["username"]
-        /*println params
-        println Re*/
-        render(template: "/resource/resourceList", model: [resources: Resource.byTopicId(params.topicId).subscribedOrPublic(session["username"]), header: params.header, search: true])
+        def resources = Resource.byTopicId(params.topicId)
+        if (!session["admin"]){
+            resources = resources.subscribedOrPublic(session["username"])
+        }
+        println(resources.list())
+        render(template: "/resource/resourceList", model: [resources: resources.list(), header: params.header, search: true])
     }
 
     def renderUnreadResources() {

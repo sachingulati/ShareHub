@@ -2,7 +2,6 @@ package sharehub
 
 class LoginController {
 
-    def resourceService
     def userService
     def index() {
         render view: "/login/login", model: [recentResources: Resource.byPublicTopic().sortByDate().list(max:10, offset: 0)]

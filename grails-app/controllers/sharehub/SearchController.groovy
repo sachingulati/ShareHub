@@ -27,7 +27,7 @@ class SearchController {
     def searchResources(){
         List<Resource> searchResult = resourceService.getResourceList(username: session["username"], resourceSearchString: params.search,
                 offset: params.offset, max: params.max)
-        def header = "Search resources: '${params.search}'"
+        def header = "Resources: '${params.search}'"
         header = header.length()>50?header.substring(0,50) + "...'":header
         render(template: "/resource/resourceList", model: [resources: searchResult, ajaxController: "search",
                                                            ajaxAction: "searchResources", header: header,search: false, doPaginate: true, ajaxParams: [search: params.search]])
@@ -53,7 +53,7 @@ class SearchController {
         def searchResult = Topic.search(params.search).sortByRecentResource().listDistinct()
         def totalCount = searchResult.size()
         searchResult = topicService.subList(searchResult, params.max, params.offset)
-        String header = "Search: '" + params.search + "'"
+        String header = "Topics: '" + params.search + "'"
         header = header.length()>25?header.substring(0,25) + "...'":header
         render(template: "/topic/topicList", model: [topics: searchResult, header:"${header}", search: true, searchSubscription: params.searchSubscription,
              hr:true, viewAll: true, doPaginate: true, ajaxController: "search", ajaxAction: "searchTopic", ajaxParams: [search: params.search], totalCount: totalCount])

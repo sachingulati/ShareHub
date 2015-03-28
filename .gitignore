@@ -1,0 +1,8 @@
+.classpath
+.idea
+.project
+grailsw*
+*.iml
+test
+wrapper
+target

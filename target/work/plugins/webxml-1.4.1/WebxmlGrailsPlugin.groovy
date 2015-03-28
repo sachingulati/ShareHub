@@ -1,7 +1,5 @@
 import grails.util.Environment
 import groovy.xml.StreamingMarkupBuilder
-import groovy.xml.XmlUtil
-
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 

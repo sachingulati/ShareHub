@@ -16,24 +16,24 @@ class Resource {
     static hasMany = [resourceStatus: ResourceStatus]
 
     static namedQueries = {
-        sortByDate{
-            order("lastUpdated","desc")
+        sortByDate {
+            order("lastUpdated", "desc")
         }
-        today{
+        today {
             gt("dateCreated", new Date().clearTime())
         }
-        inLastOneWeek{
-            gt("dateCreated", new Date().clearTime()-7)
+        inLastOneWeek {
+            gt("dateCreated", new Date().clearTime() - 7)
         }
-        inLastOneMonth{
-            gt("dateCreated", new Date().clearTime()-30)
+        inLastOneMonth {
+            gt("dateCreated", new Date().clearTime() - 30)
         }
-        inLastOneYear{
-            gt("dateCreated", new Date().clearTime()-365)
+        inLastOneYear {
+            gt("dateCreated", new Date().clearTime() - 365)
         }
 
-        getAverageRating{id->
-            eq("id",id)
+        getAverageRating { id ->
+            eq("id", id)
             groupProperty("id")
             projections {
                 resourceStatus {
@@ -43,58 +43,58 @@ class Resource {
             }
         }
 
-        byTopicId{id->
-            topic{
-                eq("id",Long.parseLong(id))
+        byTopicId { id ->
+            topic {
+                eq("id", Long.parseLong(id))
             }
         }
 
-        byCreatedBy{username->
-            createdBy{
-                eq("username",username)
+        byCreatedBy { username ->
+            createdBy {
+                eq("username", username)
             }
         }
 
-        subscribed{username->
-            topic{
-                subscriptions{
-                    user{
-                        eq("username",username)
+        subscribed { username ->
+            topic {
+                subscriptions {
+                    user {
+                        eq("username", username)
                     }
                 }
             }
         }
 
-        byIsRead{username,isRead->
+        byIsRead { username, isRead ->
             subscribed(username)
-            resourceStatus{
-                eq("isRead",isRead)
-                user{
-                    eq("username",username)
+            resourceStatus {
+                eq("isRead", isRead)
+                user {
+                    eq("username", username)
                 }
             }
         }
-        subscribedOrPublic{username->
+        subscribedOrPublic { username ->
             or {
-                topic{
-                    or{
-                        eq("visibility",Visibility.PUBLIC)
-                        subscriptions{
-                            user{
-                                eq("username",username)
+                topic {
+                    or {
+                        eq("visibility", Visibility.PUBLIC)
+                        subscriptions {
+                            user {
+                                eq("username", username)
                             }
                         }
                     }
                 }
             }
         }
-        searchInResource{searchString->
+        searchInResource { searchString ->
             or {
                 ilike("description", "%${searchString}%")
                 ilike("title", "%${searchString}%")
             }
         }
-        searchInTopicOrResource{searchString->
+        searchInTopicOrResource { searchString ->
             or {
                 searchInResource(searchString)
                 searchInTopic(searchString)
@@ -107,38 +107,38 @@ class Resource {
                 ilike("topic.name","%${searchString}%")
             }
         }*/
-        searchInInbox{username,searchString->
-            createAlias("topic","topic")
-            createAlias("topic.subscriptions","subs")
-            createAlias("subs.user","subUser")
-            eq("subUser.username",username)
-            createAlias("resourceStatus","rs")
-            createAlias("rs.user","rsUser")
-            eq("rs.isRead",false)
-            eq("rsUser.username",username)
+        searchInInbox { username, searchString ->
+            createAlias("topic", "topic")
+            createAlias("topic.subscriptions", "subs")
+            createAlias("subs.user", "subUser")
+            eq("subUser.username", username)
+            createAlias("resourceStatus", "rs")
+            createAlias("rs.user", "rsUser")
+            eq("rs.isRead", false)
+            eq("rsUser.username", username)
             or {
                 searchInResource(searchString)
-                ilike("topic.name","%${searchString}%")
+                ilike("topic.name", "%${searchString}%")
             }
         }
-        searchInTopic{searchString->
-            topic{
-                ilike("name","%${searchString}%")
+        searchInTopic { searchString ->
+            topic {
+                ilike("name", "%${searchString}%")
             }
         }
-        byPublicTopic{
-            topic{
-                eq("visibility",Visibility.PUBLIC)
+        byPublicTopic {
+            topic {
+                eq("visibility", Visibility.PUBLIC)
             }
         }
-        sortByRating{
+        sortByRating {
 //            order(avgRating(property("id")), "desc")
         }
     }
 
     static mapping = {
         description type: 'text'
-        sort(dateCreated:'desc')
+        sort(dateCreated: 'desc')
     }
     static constraints = {
         description nullable: true;
@@ -158,7 +158,7 @@ class Resource {
         }
     }
     def beforeDelete = {
-        if (type == ResourceType.DOCUMENT && filePath){
+        if (type == ResourceType.DOCUMENT && filePath) {
             new File(filePath).delete()
         }
     }

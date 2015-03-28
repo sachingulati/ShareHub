@@ -142,3 +142,11 @@ log4j.main = {
     //info 'grails.app.services'
 
 }
+simian {
+    reportsDir = "target/simian-reports"
+    fileDir = "/home/intelligrape/Documents/project/ShareHub"
+    cludesFiles = [includes  : "**/*.groovy **/*.java"
+                   , excludes: "**/*Spec.groovy **/Config.groovy **/ApplicationResources.groovy **/target/ **/work/**"]
+    methodParams = [threshold: 4]
+}
+

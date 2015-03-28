@@ -13,17 +13,8 @@
  * limitations under the License.
  */
 
-import grails.plugin.databasemigration.GormDatabaseSnapshotGenerator
-import grails.plugin.databasemigration.GormDatabaseTypeConverter
-import grails.plugin.databasemigration.GrailsChange
-import grails.plugin.databasemigration.GrailsChangeLogParser
-import grails.plugin.databasemigration.GrailsClassLoaderResourceAccessor
-import grails.plugin.databasemigration.GrailsDiffStatusListener
-import grails.plugin.databasemigration.GrailsPrecondition
-import grails.plugin.databasemigration.MigrationRunner
-import grails.plugin.databasemigration.MigrationUtils
-import grails.plugin.databasemigration.MysqlAwareCreateTableGenerator
-import grails.plugin.databasemigration.Slf4jLogger
+
+import grails.plugin.databasemigration.*
 import liquibase.change.ChangeFactory
 import liquibase.database.typeconversion.TypeConverterFactory
 import liquibase.logging.LogFactory

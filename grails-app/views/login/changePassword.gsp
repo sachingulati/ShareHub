@@ -2,8 +2,9 @@
 <html>
 <head>
     <title>Login</title>
-    <meta name="layout" content="beforeLogin">
+    <meta name="layout" content="applicationLayout"/>
     <asset:javascript src="registration.js"/>
+    <title>Change Password</title>
 </head>
 
 <body>

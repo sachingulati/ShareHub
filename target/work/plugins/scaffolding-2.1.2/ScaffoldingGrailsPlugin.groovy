@@ -13,17 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import java.lang.reflect.Method
-import java.lang.reflect.Modifier
-import java.util.concurrent.ConcurrentHashMap
 
 import org.codehaus.groovy.control.CompilerConfiguration
 import org.codehaus.groovy.control.customizers.ASTTransformationCustomizer
-import org.codehaus.groovy.grails.commons.ControllerArtefactHandler
-import org.codehaus.groovy.grails.commons.GrailsApplication
-import org.codehaus.groovy.grails.commons.GrailsClassUtils
-import org.codehaus.groovy.grails.commons.GrailsControllerClass
-import org.codehaus.groovy.grails.commons.GrailsDomainClass
+import org.codehaus.groovy.grails.commons.*
 import org.codehaus.groovy.grails.compiler.injection.NamedArtefactTypeAstTransformation
 import org.codehaus.groovy.grails.scaffolding.DefaultGrailsTemplateGenerator
 import org.codehaus.groovy.grails.scaffolding.GrailsTemplateGenerator
@@ -34,6 +27,10 @@ import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory
 import org.springframework.context.ApplicationContext
+
+import java.lang.reflect.Method
+import java.lang.reflect.Modifier
+import java.util.concurrent.ConcurrentHashMap
 
 class ScaffoldingGrailsPlugin {
 

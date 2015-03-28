@@ -8,7 +8,8 @@ class SearchService {
     def serviceMethod() {
 
     }
-    def getResources(attr){
+
+    def getResources(attr) {
 //        Attributes summary:
         /*
             isRead: for either read or unread resources
@@ -23,19 +24,19 @@ class SearchService {
             max: for pagination
          */
 
-        List resources = Resource.createCriteria().list(offset:attr.offset, max: attr.max) {
-            resourceStatus{
-                if(attr.isRead!=null && attr.username && attr.isSubscribed) {
+        List resources = Resource.createCriteria().list(offset: attr.offset, max: attr.max) {
+            resourceStatus {
+                if (attr.isRead != null && attr.username && attr.isSubscribed) {
                     eq("isRead", attr.isRead)
-                    user{
+                    user {
                         eq("username", attr.username)
                     }
                 }
-                if (attr.searchByRating!=null){
-                    gte("score",attr.searchByRating)
+                if (attr.searchByRating != null) {
+                    gte("score", attr.searchByRating)
                 }
             }
-            if(attr.isSubscribed && attr.username) {
+            if (attr.isSubscribed && attr.username) {
                 topic {
                     subscriptions {
                         user {
@@ -44,10 +45,10 @@ class SearchService {
                     }
                 }
             }
-            if (attr.lastUpdated){
-                gte("lastUpdated",attr.lastUpdated)
+            if (attr.lastUpdated) {
+                gte("lastUpdated", attr.lastUpdated)
             }
-            if (attr.createdByUsername){
+            if (attr.createdByUsername) {
                 or {
                     createdBy {
                         eq("username", attr.creatorUsername)
@@ -60,34 +61,35 @@ class SearchService {
                 }
             }
             or {
-                if (attr.resourceSearchString){
-                    ilike("description","%${attr.resourceSearchString}%")
-                    ilike("title","%${attr.resourceSearchString}%")
+                if (attr.resourceSearchString) {
+                    ilike("description", "%${attr.resourceSearchString}%")
+                    ilike("title", "%${attr.resourceSearchString}%")
                 }
-                if (attr.topicNameSearchString){
-                    topic{
-                        ilike("name","%${attr.topicNameSearchString}%")
+                if (attr.topicNameSearchString) {
+                    topic {
+                        ilike("name", "%${attr.topicNameSearchString}%")
                     }
                 }
             }
-            order("lastUpdated","desc")
+            order("lastUpdated", "desc")
 
         }
         return resources
         // || resource.title.contains(searchString) || resource.topic.name.contains(searchString)
     }
-    def searchResourcesOld(String username, String searchString,attr){
+
+    def searchResourcesOld(String username, String searchString, attr) {
         List resources = Resource.createCriteria().list {
-            resourceStatus{
-                if(attr.inbox) {
+            resourceStatus {
+                if (attr.inbox) {
                     eq("isRead", false)
                 }
-                user{
+                user {
                     eq("username", username)
                 }
 
             }
-            if(attr.inbox) {
+            if (attr.inbox) {
                 topic {
                     subscriptions {
                         user {
@@ -97,11 +99,11 @@ class SearchService {
                 }
             }
             or {
-                ilike("description","%$searchString%")
-                topic{
-                    ilike("name","%$searchString%")
+                ilike("description", "%$searchString%")
+                topic {
+                    ilike("name", "%$searchString%")
                 }
-                ilike("title","%$searchString%")
+                ilike("title", "%$searchString%")
             }
         }
         return resources

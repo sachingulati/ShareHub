@@ -7,9 +7,8 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-
-    <meta name="layout" content="afterLogin"/>
-    <title>Search</title>
+    <meta name="layout" content="applicationLayout"/>
+    <title>Search: ${search}</title>
 </head>
 
 <body>

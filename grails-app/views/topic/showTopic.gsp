@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <meta content="afterLogin" name="layout">
+    <meta name="layout" content="applicationLayout"/>
     <title>Topic: ${topic?.name}</title>
 </head>
 

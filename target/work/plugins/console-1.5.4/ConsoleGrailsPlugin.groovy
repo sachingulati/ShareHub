@@ -1,4 +1,5 @@
 import grails.converters.JSON
+
 import java.lang.reflect.Method
 
 class ConsoleGrailsPlugin {

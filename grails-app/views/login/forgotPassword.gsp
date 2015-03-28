@@ -2,11 +2,13 @@
 <html>
 <head>
     <title>Login</title>
-    <meta name="layout" content="beforeLogin">
+    <meta name="layout" content="applicationLayout"/>
     <asset:javascript src="registration.js"/>
+    <title>Forgot Password</title>
 </head>
 
 <body>
+<g:message code="default.link.skip.label" default="Skip to content&hellip;"/>
 
 <div class="contentMargin">
 
@@ -15,7 +17,7 @@
             <h3 class="panel-title">Forgot Password</h3>
         </div>  <!-- panel-heading -->
         <div class="panel-body">
-            <g:form controller="login" action="requestPassword">
+            <g:form controller="login" action="forgotPasswordHandler">
                 <label style="margin-left: 2px">Enter your username or email id:</label> <br>
                 <g:textField name="username" class="form-control" placeholder="Username/Email-Id" required="required" title="Please enter your email id or password!"/>
                 <div class="text-danger" style="margin-top: 20px; display: inline-block">${flash.userNotFound}</div>

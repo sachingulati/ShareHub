@@ -71,11 +71,28 @@ grails.project.dependency.resolution = {
         compile ":console:1.5.4"
         compile ":mail:1.0.7"
         compile ":quartz:1.0.2"
+
+        compile ":simian:0.1-SNAPSHOT"
+        compile ":codenarc:0.22"
+        compile ":gmetrics:0.3.1"
+
 //        compile ":jquery-validation:1.9"
         // Uncomment these to enable additional asset-pipeline capabilities
         //compile ":sass-asset-pipeline:1.9.0"
         //compile ":less-asset-pipeline:1.10.0"
         //compile ":coffee-asset-pipeline:1.8.0"
         //compile ":handlebars-asset-pipeline:1.3.0.3"
+    }
+
+}
+
+
+codenarc {
+    ruleSetFiles = "file:grails-app/conf/CodeNarcRules.groovy"
+    reports = {
+        HtmlReport('html') {                  // Report type is 'html'
+            outputFile = 'target/CodeNarcReport.html'
+            title = 'My Test Code Narc Report'
+        }
     }
 }

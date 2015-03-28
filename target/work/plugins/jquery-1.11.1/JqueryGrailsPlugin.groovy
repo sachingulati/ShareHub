@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-import grails.util.Environment
 
+import grails.util.Environment
 import org.codehaus.groovy.grails.plugins.jquery.JQueryConfig
 import org.codehaus.groovy.grails.plugins.jquery.JQueryProvider
 import org.codehaus.groovy.grails.plugins.web.taglib.JavascriptTagLib

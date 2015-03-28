@@ -12,23 +12,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import grails.plugin.cache.CacheBeanPostProcessor
-import grails.plugin.cache.CacheConfigArtefactHandler
-import grails.plugin.cache.ConfigLoader
-import grails.plugin.cache.CustomCacheKeyGenerator
-import grails.plugin.cache.GrailsConcurrentMapCacheManager
+
+import grails.plugin.cache.*
 import grails.plugin.cache.web.filter.DefaultWebKeyGenerator
 import grails.plugin.cache.web.filter.ExpressionEvaluator
 import grails.plugin.cache.web.filter.NoOpFilter
 import grails.plugin.cache.web.filter.simple.MemoryPageFragmentCachingFilter
-
+import javassist.util.proxy.ProxyFactory
 import org.codehaus.groovy.grails.commons.GrailsApplication
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.cache.Cache
 import org.springframework.core.Ordered
 import org.springframework.web.filter.DelegatingFilterProxy
-import javassist.util.proxy.*;
 
 class CacheGrailsPlugin {
 

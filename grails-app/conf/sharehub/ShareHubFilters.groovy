@@ -9,7 +9,7 @@ class ShareHubFilters {
                 if (params.controller == "user" && params.action == "showImage"){
                     return
                 }
-//                return
+                return
                 if(!session['username']){
                     if (request.xhr){
                         render "Login failed!"

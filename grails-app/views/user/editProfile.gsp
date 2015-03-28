@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <meta name="layout" content="afterLogin"/>
+    <sh:layout/>
     <title>${user.name}</title>
     <asset:javascript src="editProfile.js"/>
 </head>

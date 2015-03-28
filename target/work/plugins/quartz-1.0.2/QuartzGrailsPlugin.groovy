@@ -14,27 +14,15 @@
  * limitations under the License.
  */
 
-import grails.plugins.quartz.CustomTriggerFactoryBean
-import grails.plugins.quartz.GrailsJobClass
-import grails.plugins.quartz.GrailsJobFactory
-import grails.plugins.quartz.JobArtefactHandler
-import grails.plugins.quartz.JobDetailFactoryBean
-import grails.plugins.quartz.TriggerUtils
+
+import grails.plugins.quartz.*
+import grails.plugins.quartz.GrailsJobClassConstants as Constants
 import grails.plugins.quartz.listeners.ExceptionPrinterJobListener
 import grails.plugins.quartz.listeners.SessionBinderJobListener
-import grails.plugins.quartz.GrailsJobClassConstants as Constants
 import grails.spring.BeanBuilder
 import grails.util.Environment
-
 import org.codehaus.groovy.grails.commons.spring.GrailsApplicationContext
-import org.quartz.JobDataMap
-import org.quartz.JobDetail
-import org.quartz.JobKey
-import org.quartz.ListenerManager
-import org.quartz.Scheduler
-import org.quartz.SimpleTrigger
-import org.quartz.Trigger
-import org.quartz.TriggerKey
+import org.quartz.*
 import org.quartz.impl.matchers.KeyMatcher
 import org.quartz.spi.MutableTrigger
 import org.slf4j.Logger

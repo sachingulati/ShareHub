@@ -16,4 +16,5 @@
     var shareDocumentUrl = "${createLink(controller: "resource", action: "shareDocument")}";
     var shareLinkUrl = "${createLink(controller: "resource", action: "shareLink")}";
     var editResourceUrl = "${createLink(controller: "resource", action: "editResource")}";
+    var loggedIn = "${loggedIn}"
 </script>

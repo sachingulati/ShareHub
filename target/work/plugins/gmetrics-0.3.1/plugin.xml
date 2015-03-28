@@ -1,0 +1,14 @@
+<plugin name='gmetrics' version='0.3.1' grailsVersion='1.2.2 &gt; *'>
+  <author>Scott Ryan</author>
+  <authorEmail>scott@theryansplace.com</authorEmail>
+  <title>An implementation of the GMetrics library (http://gmetrics.sourceforge.net/index.html) to allow analysis of Grails code.</title>
+  <description>\ This plugin allows for analysis of grails code with the gmetrics library which calculates lines of code and complexity.</description>
+  <documentation>http://grails.org/plugin/grails-gmetrics-plugin</documentation>
+  <resources>
+    <resource>BuildConfig</resource>
+    <resource>DataSource</resource>
+    <resource>UrlMappings</resource>
+  </resources>
+  <dependencies />
+  <behavior />
+</plugin>

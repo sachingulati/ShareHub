@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import grails.util.Environment
-import grails.plugin.webxml.FilterManager
-import asset.pipeline.grails.LinkGenerator
-import asset.pipeline.grails.CachingLinkGenerator
-import asset.pipeline.grails.AssetResourceLocator
 
+import asset.pipeline.grails.AssetResourceLocator
+import asset.pipeline.grails.CachingLinkGenerator
+import asset.pipeline.grails.LinkGenerator
+import grails.plugin.webxml.FilterManager
+import grails.util.Environment
 
 class AssetPipelineGrailsPlugin {
     def version         = "1.9.9"

@@ -8,48 +8,48 @@ import grails.transaction.Transactional
 @Transactional
 class SubscriptionService {
 
-    def subscribe(username, topicId, seriousness=Seriousness.VERY_SERIOUS){
+    def subscribe(username, topicId, seriousness = Seriousness.VERY_SERIOUS) {
         Topic topic = Topic.findById(topicId)
         User user = User.findByUsername(username)
-        if (!topic || !user || !seriousness){
-            log.info("Invalid access request in Controller: subscription, action: subscribe, reason: " + (!user?"No user found! ":"")+(!topic?"No Topic found! ":""))
+        if (!topic || !user || !seriousness) {
+            log.info("Invalid access request in Controller: subscription, action: subscribe, reason: " + (!user ? "No user found! " : "") + (!topic ? "No Topic found! " : ""))
             return null
         }
-        List invite = Invite.findAllByTopicAndInviteToEmail(topic,user.email)
+        List invite = Invite.findAllByTopicAndInviteToEmail(topic, user.email)
 
-        if (topic.visibility == Visibility.PRIVATE && !user.isAdmin()){
+        if (topic.visibility == Visibility.PRIVATE && !user.isAdmin()) {
             if (!invite || invite.isEmpty()) {
                 return null
             }
         }
-        Subscription subscription = Subscription.findOrCreateByTopicAndUser(topic,user)
+        Subscription subscription = Subscription.findOrCreateByTopicAndUser(topic, user)
         subscription.seriousness = seriousness
-        if (subscription.validate()){
+        if (subscription.validate()) {
             subscription.save()
-            invite.each {it.delete()}
+            invite.each { it.delete() }
             user.addToSubscriptions(subscription)
             topic.addToSubscriptions(subscription)
             topic.save(flush: true)
-        }
-        else{
+        } else {
             //println(subscription.errors.allErrors)
             return null
         }
         return subscription
     }
-    def unsubscribe(username,topicId){
+
+    def unsubscribe(username, topicId) {
         Topic topic = Topic.findById(topicId)
         User user = User.findByUsername(username)
-        if (!topic || !user){
-            log.error("Error in Controller: subscription, action: unsubscribe, reason: " + (!user?"No user found! ":"")+(!topic?"No Topic found! ":""))
+        if (!topic || !user) {
+            log.error("Error in Controller: subscription, action: unsubscribe, reason: " + (!user ? "No user found! " : "") + (!topic ? "No Topic found! " : ""))
             return null
         }
-        if (topic.createdBy==user){
+        if (topic.createdBy == user) {
             log.error("User cannot unsubscribe its own created topic! TopicId: ${topic.id}, UserId: ${user.id}")
             return null
         }
         Subscription subscription = Subscription.findByUserAndTopic(user, topic)
-        if(!subscription) {
+        if (!subscription) {
             log.error("Error in Controller: subscription, action: unsubscribe, reason: no subscription found! ")
             return null
         }

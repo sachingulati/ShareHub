@@ -8,14 +8,13 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <meta name="layout" content="afterLogin"/>
+    <meta name="layout" content="applicationLayout"/>
     <title>Dashboard</title>
 </head>
 
 <body>
 
 <div>
-
     <div class="row">
         <div class="col-lg-5">
             %{--<!-- User Info -->--}%

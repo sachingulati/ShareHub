@@ -1,11 +1,15 @@
 package sharehub
 
 class HomeController {
-    def index() {
-            forward(action: "dashboard")
+    static beforeInterceptor = {
+        if (!session["username"]) {
+            redirect(controller: "login")
+            return false
+        }
     }
-    def dashboard(){
-        User user = User.findByUsername(session["username"])
-        render(view: "/dashboard",model: [user:user])
+    static defaultAction = "dashboard"
+
+    def dashboard() {
+        render(view: "/dashboard", model: [user: User.findByUsername(session["username"])])
     }
 }

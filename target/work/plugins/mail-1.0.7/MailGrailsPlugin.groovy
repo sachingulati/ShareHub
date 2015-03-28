@@ -14,10 +14,12 @@
  * limitations under the License.
  */
 
+
+import grails.plugin.mail.MailMessageBuilderFactory
+import grails.plugin.mail.MailMessageContentRenderer
+import grails.plugin.mail.MailService
 import org.springframework.jndi.JndiObjectFactoryBean
 import org.springframework.mail.javamail.JavaMailSenderImpl
-
-import grails.plugin.mail.*
 
 class MailGrailsPlugin {
     def version = "1.0.7"

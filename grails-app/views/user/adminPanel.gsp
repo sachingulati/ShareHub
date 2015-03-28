@@ -8,7 +8,7 @@
 <%@ page import="sharehub.User" contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <meta name="layout" content="afterLogin"/>
+    <sh:layout/>
     <title>Admin Panel</title>
 </head>
 

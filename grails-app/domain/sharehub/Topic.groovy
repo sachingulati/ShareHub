@@ -5,8 +5,8 @@ import com.sharehub.enums.Visibility
 
 class Topic {
     String name
-    static belongsTo = [createdBy:User]
-    static hasMany = [resources: Resource,subscriptions: Subscription, invites: Invite]
+    static belongsTo = [createdBy: User]
+    static hasMany = [resources: Resource, subscriptions: Subscription, invites: Invite]
     Date dateCreated
     Date lastUpdated
     Visibility visibility;
@@ -17,43 +17,43 @@ class Topic {
         addToSubscriptions(topic: this, user: createdBy, seriousness: Seriousness.VERY_SERIOUS)
     }
     static namedQueries = {
-        byCreatedBy{username->
-            createdBy{
-                eq("username",username)
+        byCreatedBy { username ->
+            createdBy {
+                eq("username", username)
             }
         }
-        subscribedTopics{username->
-            subscriptions{
-                user{
-                    eq("username",username)
+        subscribedTopics { username ->
+            subscriptions {
+                user {
+                    eq("username", username)
                 }
             }
         }
-        publicOrSubscribed{username->
+        publicOrSubscribed { username ->
             distinct()
-            or{
+            or {
                 subscribedTopics(username)
                 publicTopics()
             }
         }
-        publicTopics{
-            eq("visibility",Visibility.PUBLIC)
+        publicTopics {
+            eq("visibility", Visibility.PUBLIC)
         }
-        privateTopics{
-            eq("visibility",Visibility.PRIVATE)
+        privateTopics {
+            eq("visibility", Visibility.PRIVATE)
         }
-        sortByRecentResource{
+        sortByRecentResource {
             projections {
 //                distinct()
                 uniqueResult: true
             }
             distinct()
             groupProperty("id")
-            resources{
-                order("dateCreated","desc")
+            resources {
+                order("dateCreated", "desc")
             }
         }
-        search{searchString->
+        search { searchString ->
             ilike("name", "%${searchString}%")
         }
     }

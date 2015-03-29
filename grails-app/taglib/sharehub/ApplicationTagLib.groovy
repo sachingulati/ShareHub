@@ -14,7 +14,7 @@ class ApplicationTagLib {
     def image = { attr ->
         String path = createLink(controller: "assets", action: "user-default.png", absolute: true)
         if (attr.src){
-            path = createLink(controller: "user", action: "showImage", params: [photoUrl: attr.src], absolute: true)
+            path = createLink(controller: "user", action: "showUserImage", params: [photoUrl: attr.src], absolute: true)
         }
         out << "<img src='" + path + "' class='img-media'/>"
     }

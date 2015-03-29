@@ -3,7 +3,7 @@ package sharehub
 class HomeController {
     static beforeInterceptor = {
         if (!session["username"]) {
-            redirect(controller: "login")
+            forward(controller: "login")
             return false
         }
     }

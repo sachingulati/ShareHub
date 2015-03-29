@@ -8,12 +8,11 @@ class LoginController {
         render view: "/login/login", model: [recentResources: Resource.byPublicTopic().sortByDate().list(max: 10, offset: 0)]
     }
 
-
-    private setUserSession(User user){
+    private setUserSession(User user,boolean keepMeLogin=false){
         session["username"] = user.username
         session["admin"] = user.admin
         session["name"] = user.name
-        if (params.keepMeLogin == "on") {
+        if (keepMeLogin) {
             session.setMaxInactiveInterval(-1)
         }
     }
@@ -22,12 +21,11 @@ class LoginController {
         User user = User.findByUsernameAndPasswordAndActive(username, password, true)?:
                 User.findByEmailAndPasswordAndActive(username, password, true)
         if (user) {
-            setUserSession(user)
-            redirect(controller: "Home", action: "dashboard")
+            setUserSession(user, params.keepMeLogin=="on")
         } else {
             flash.message = "Invalid username or password!"
-            forward(controller: "login")
         }
+        redirect(url: "/")
     }
 
     def forgotPassword() {
@@ -36,7 +34,7 @@ class LoginController {
 
     def forgotPasswordHandler() {
         User user = userService.forgotPassword(params.username, g)
-        if (user == null) {
+        if (!user) {
             flash.userNotFound = "User not found!"
             redirect(action: "forgotPassword")
             return false
@@ -58,10 +56,8 @@ class LoginController {
         User user = userService.changePasswordWithToken(params.token, params.password, params.confirmPassword)
         if (user) {
             setUserSession(user)
-            redirect(controller: "home")
-            return false
         }
-        redirect(controller: "login")
+        redirect(url: "/")
     }
 
     def invalidChangePasswordRequest() {
@@ -70,14 +66,14 @@ class LoginController {
             passwordToken.delete(flush: true)
             flash.message = "Token deleted."
         }
-        redirect(controller: "login")
+        redirect(url: "/")
     }
 
     def register() {
         User user = userService.register(params)
         if (user) {
             setUserSession(user)
-            redirect(controller: "home", action: "dashboard")
+            redirect(url: "/")
         } else{
             render "Invalid Data"
         }

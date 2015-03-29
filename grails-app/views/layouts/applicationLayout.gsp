@@ -29,7 +29,7 @@
     <asset:javascript src="modal.js"/>
 
     <!-- my css -->
-    <asset:stylesheet src="mycss.css"/>
+    <asset:stylesheet src="application.css"/>
 
 
 
@@ -37,7 +37,7 @@
     <asset:javascript src="jquery.validate.min.js"/>
     <asset:javascript src="tooltip"/>
     <g:render template="/vars" model="[loggedIn: true]"/>
-    <asset:javascript src="utils.js"/>
+    <asset:javascript src="application.js"/>
     <asset:javascript src="reports.js"/>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <g:layoutHead/>
@@ -45,14 +45,6 @@
 
 <body>
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
 <nav class="navbar navbar-default topBar">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -95,7 +87,5 @@
 <div class="${session["username"]?"afterLogin":"beforeLogin"}" id="contentBody">
     <g:layoutBody/>
 </div>
-
-
 </body>
 </html>

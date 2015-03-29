@@ -13,9 +13,9 @@ class InvitesController {
     def sendInvite() {
         if (topicService.invite(session["username"], params.topic, params.email, params.inviteTo, g)) {
             render "Invitation sent successfully to " + params.inviteTo
-            return false
         }
-        render("Error in sending Invitation!")
-        return false
+        else {
+            render("Error in sending Invitation!")
+        }
     }
 }

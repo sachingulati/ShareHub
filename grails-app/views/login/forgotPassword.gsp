@@ -8,8 +8,6 @@
 </head>
 
 <body>
-<g:message code="default.link.skip.label" default="Skip to content&hellip;"/>
-
 <div class="contentMargin">
 
     <div class="panel panel-default center-block" style="max-width: 500px; margin-top: 120px">
@@ -29,5 +27,6 @@
             </g:form>
         </div>  <!-- panel-body -->
     </div>
+</div>
 </body>
 </html>

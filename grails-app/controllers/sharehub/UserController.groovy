@@ -50,11 +50,11 @@ class UserController {
         return false
     }
 
-    def showImage() {
-        if (!params.photoUrl) {
-            return false
+    def showUserImage(String photoUrl) {
+        if (!photoUrl) {
+            render ""
         }
-        File file = new File(params.photoUrl)
+        File file = new File(photoUrl)
         response.contentLength = file.bytes.length
         response.outputStream << file.bytes
     }
@@ -107,6 +107,6 @@ class UserController {
 
     def logout() {
         session.invalidate()
-        redirect controller: "Login"
+        redirect url: "/"
     }
 }

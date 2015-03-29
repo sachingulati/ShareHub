@@ -1,5 +1,6 @@
 package sharehub
 
+import com.sharehub.CO.MailCO
 import com.sharehub.enums.Seriousness
 import com.sharehub.enums.Visibility
 import grails.transaction.Transactional
@@ -71,28 +72,20 @@ class TopicService {
         }
     }
 
-    def invite(username, topicId, email, inviteTo, g) {
+    def invite(username, topicId, email, inviteTo,g) {
         User user = User.findByUsername(username);
         Topic topic = Topic.get(topicId)
-        if (!user || !topic) {
+        if (!user || !topic || !Subscription.findByUserAndTopic(user, topic)) {
             return false
-        }
-        if (!user.admin) {
-            if (!Subscription.findByUserAndTopic(user, topic)) {
-                return false
-            }
         }
         Invite invite = new Invite(inviteToEmail: email, invitedBy: user, topic: topic, token: "token")
         if (invite.validate()) {
             invite.token = utilService.randomString
-            mailService.sendMail {
-                async true
-                to email
-                subject "Share Hub invitation from ${user.name}"
-                html "${g.render(template: "emailInvite", model: [user: user, topicId: topic.id, inviteTo: inviteTo, token: invite.token])}"
+            String body = g.render(template: "/invites/emailInvite",model: [user: user, topicId: topic.id, inviteTo: inviteTo, token: invite.token])
+            if (utilService.sendMail(new MailCO(to:email,body:body, subject: "Share Hub invitation from ${user.name}"))){
+                invite.save()
+                return true
             }
-            invite.save()
-            return true
         }
         return false
     }

@@ -15,6 +15,11 @@ class Resource {
     static belongsTo = [createdBy: User, topic: Topic]
     static hasMany = [resourceStatus: ResourceStatus]
 
+    static mapping = {
+        description type: 'text'
+        sort(dateCreated: 'desc')
+    }
+
     static namedQueries = {
         sortByDate {
             order("lastUpdated", "desc")
@@ -134,11 +139,6 @@ class Resource {
         sortByRating {
 //            order(avgRating(property("id")), "desc")
         }
-    }
-
-    static mapping = {
-        description type: 'text'
-        sort(dateCreated: 'desc')
     }
     static constraints = {
         description nullable: true;

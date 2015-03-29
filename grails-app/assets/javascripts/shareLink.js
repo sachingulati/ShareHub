@@ -1,6 +1,7 @@
 /**
  * Created by intelligrape on 19/3/15.
  */
+
 $(document).on('keydown','#shareLinkForm #url', function(){
     var $url=$(this);
     var oldvalue = $url.val();

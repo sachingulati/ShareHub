@@ -4,7 +4,7 @@ import com.sharehub.enums.Seriousness
 
 class Subscription {
     Date dateCreated
-    Seriousness seriousness = Seriousness.VERY_SERIOUS;
+    Seriousness seriousness = Seriousness.VERY_SERIOUS
     static belongsTo = [topic: Topic, user: User]
     static constraints = {
         topic unique: 'user'

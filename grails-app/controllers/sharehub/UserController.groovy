@@ -6,57 +6,47 @@ class UserController {
     def userService
 
     def profile() {
-        User user = User.findByUsername(params.id)
-        if (!user) {
-            redirect(action: "myProfile")
-            return false
+        User user = User.findByUsername(params.id) ?: User.findByUsername(session["username"])
+        if (user) {
+            render(view: "/user/profile", model: [user: user, myProfile: user.username == session["username"]])
         }
-        if (params.id == session["username"])
-            params.myProfile = true
-        render(view: "/user/profile", model: [user: user, myProfile: params.myProfile])
-        return false
+        else {
+            redirect(action: "myProfile")
+        }
     }
 
     def myProfile() {
         forward(action: "profile", params: [id: session["username"], myProfile: true])
-        return false
     }
 
     def editProfile() {
-        User user = User.findByUsername(session["username"])
-        render(view: "/user/editProfile", model: [user: user])
+        render(view: "/user/editProfile", model: [user: User.findByUsername(session["username"])])
     }
 
     def updateUser() {
-        if (!userService.updateUser(session["username"], params.firstName, params.lastName, params.email, (params.removePhoto == "on"), params.photo)) {
+        if (userService.updateUser(session["username"], params.firstName, params.lastName, params.email, (params.removePhoto == "on"), params.photo)) {
+            render "Profile updated successfully"
+        } else {
             render "Bad Request!"
-            return false
         }
-        render "Profile updated successfully"
-        return false
     }
 
     def changePassword() {
         render userService.changePassword(session["username"], params.newPassword, params.confirmPassword, params.currentPassword)
-        return false
     }
 
     def isLoggedIn() {
-        if (session["username"]) {
-            render("true")
-            return false
-        }
-        render("false")
-        return false
+        render(session["username"] ? "true" : "false")
     }
 
     def showUserImage(String photoUrl) {
-        if (!photoUrl) {
+        if (photoUrl) {
+            File file = new File(photoUrl)
+            response.contentLength = file.bytes.length
+            response.outputStream << file.bytes
+        } else {
             render ""
         }
-        File file = new File(photoUrl)
-        response.contentLength = file.bytes.length
-        response.outputStream << file.bytes
     }
 
     def adminPanel() {
@@ -67,41 +57,20 @@ class UserController {
         render view: "/user/adminPanel", model: [users: User.list()]
     }
 
-    def activate() {
+    def switchActivate() {
         if (!session["admin"]) {
-            redirect(controller: "home")
+            redirect(url: "/")
             return false
         }
         User user = User.findByUsername(params.username)
-        if (!user) {
-            render("User Not Found!")
-            return false
-        } else {
-            user.active = true
+        if (user) {
+            user.active = !user.active
             user.save flush: true
-            render remoteLink(update: "manager_${user.username}", controller: "user", action: "deactivate") {
-                "Deactivate"
+            render remoteLink(update: "manager_${user.username}", controller: "user", action: "switchActivate") {
+                (user.active ? "Deactivate" : "Activate")
             }
-//            <g:remoteLink update="manager_${user.username}" controller="user" action="${user.active?"Deactivate":"Activate"}" params="[username: user.username]">${user.active?"Deactivate":"Activate"}</g:remoteLink>
-            return false
-        }
-    }
-
-    def deactivate() {
-        if (!session["admin"]) {
-            redirect(controller: "home")
-            return false
-        }
-        User user = User.findByUsername(params.username)
-        if (!user) {
-            render("User Not Found!")
-            return false
         } else {
-            user.active = false
-            user.save flush: true
-            render remoteLink(update: "manager_${user.username}", controller: "user", action: "activate") { "Activate" }
-//            <g:remoteLink update="manager_${user.username}" controller="user" action="${user.active?"Deactivate":"Activate"}" params="[username: user.username]">${user.active?"Deactivate":"Activate"}</g:remoteLink>
-            return false
+            render("User Not Found!")
         }
     }
 

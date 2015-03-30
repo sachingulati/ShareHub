@@ -16,19 +16,11 @@ class UtilService {
             content = groovyPageRenderer.render(template: template, model: model)
         }
         catch (Exception e){
-            println "-----------------------------------------------------------------"
             println e
         }
         return content
     }
     def sendMail(MailCO mailCO){
-        println "-----------------------------------------------------------------"
-        println mailCO.subject
-        println "-----------------------------------------------------------------"
-        println mailCO.to
-        println "-----------------------------------------------------------------"
-        println mailCO.body
-        println "-----------------------------------------------------------------"
         try{
             mailService.sendMail {
                 async true
@@ -38,8 +30,7 @@ class UtilService {
             }
         }
         catch (Exception e){
-            println "-----------------------------------------------------------------"
-            println e
+            log.error(e)
             return false
         }
         return true

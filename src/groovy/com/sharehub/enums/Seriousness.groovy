@@ -7,7 +7,7 @@ enum Seriousness {
     SERIOUS("Serious"),
     VERY_SERIOUS("Very serious"),
     CASUAL("Casual")
-    final String displayName;
+    final String displayName
     Seriousness(String name){
         displayName = name;
     }

@@ -8,6 +8,6 @@
 
         <a href="${createLink(controller: "login", action: "changePassword", absolute: true, params: [token: token.token])}">click here to change your password.</a><br><br>
         <label>Didn't Request this change?</label><br>
-        If you didn't request a new password, <a href="${createLink(controller: "login", action: "invalidChangePasswordRequest", params: [token: token.token], absolute: true)}">let us know immediately.</a><br>
+        If you didn't request a new password, <a href="${createLink(controller: "login", action: "deleteToken", params: [token: token.token], absolute: true)}">let us know immediately.</a><br>
     </div>
 </div>

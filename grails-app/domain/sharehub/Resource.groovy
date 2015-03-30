@@ -20,6 +20,12 @@ class Resource {
         sort(dateCreated: 'desc')
     }
 
+    static constraints = {
+        description nullable: true, maxSize: 1024
+        title unique: 'topic'
+        filePath nullable: true
+        url nullable: true
+    }
     static namedQueries = {
         sortByDate {
             order("lastUpdated", "desc")
@@ -140,13 +146,6 @@ class Resource {
 //            order(avgRating(property("id")), "desc")
         }
     }
-    static constraints = {
-        description nullable: true;
-        title unique: 'topic'
-        description maxSize: 1024
-        filePath nullable: true
-        url nullable: true
-    }
 
     def afterInsert = {
         topic.subscriptions.each {
@@ -156,10 +155,13 @@ class Resource {
                 addToResourceStatus(user: it.user, isRead: false)
             }
         }
-    }
+    }/*
     def beforeDelete = {
         if (type == ResourceType.DOCUMENT && filePath) {
-            new File(filePath).delete()
+            File file = new File(filePath)
+            if (file){
+                file.delete()
+            }
         }
-    }
+    }*/
 }

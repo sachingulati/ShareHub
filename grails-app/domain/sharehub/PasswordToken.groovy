@@ -5,7 +5,6 @@ class PasswordToken {
     static belongsTo = [user: User]
     static constraints = {
         user unique: true
-        token blank: false
-        token unique: true
+        token blank: false, unique: true
     }
 }

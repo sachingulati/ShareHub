@@ -1,3 +1,6 @@
+/**
+ * Created by intelligrape on 21/3/15.
+ */
 
 (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -88,9 +91,6 @@ function reLoadContent($div){
     $div.load($div.data('ajax-url'),$div.data('ajax-params'));
 }
 
-function hide($obj){
-    $obj.hide();
-}
 function updateProfileStatus(data){
     if(data == "Profile updated successfully"){
         successReport(data);
@@ -232,7 +232,15 @@ $(document).ready(function(){
         $ratingHearts.click(changeRating);
     }else{
         $rateBox.attr("title","Please login to rate this post.");
-
+    }
+    if(errorMessage.length>0){
+        warningReport(errorMessage);
+    }
+    if(infoMessage.length>0){
+        infoReport(infoMessage);
+    }
+    if(successMessage.length>0){
+        successReport(successMessage);
     }
 });
 $(document).ready(function(){

@@ -16,5 +16,8 @@
     var shareDocumentUrl = "${createLink(controller: "resource", action: "shareDocument")}";
     var shareLinkUrl = "${createLink(controller: "resource", action: "shareLink")}";
     var editResourceUrl = "${createLink(controller: "resource", action: "editResource")}";
-    var loggedIn = "${loggedIn}"
+    var loggedIn = "${loggedIn}";
+    var errorMessage = "${flash.error}";
+    var successMessage = "${flash.success}";
+    var infoMessage = "${flash.info}";
 </script>

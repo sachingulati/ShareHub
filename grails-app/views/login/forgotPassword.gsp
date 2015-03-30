@@ -18,7 +18,7 @@
             <g:form controller="login" action="forgotPasswordHandler">
                 <label style="margin-left: 2px">Enter your username or email id:</label> <br>
                 <g:textField name="username" class="form-control" placeholder="Username/Email-Id" required="required" title="Please enter your email id or password!"/>
-                <div class="text-danger" style="margin-top: 20px; display: inline-block">${flash.userNotFound}</div>
+                %{--<div class="text-danger" style="margin-top: 20px; display: inline-block">${flash.userNotFound}</div>--}%
 
                 <span style="float: right; margin: 0px; padding-top: 10px">
                     <g:submitButton name="submit" value="Request new password" class="btn btn-primary"/>

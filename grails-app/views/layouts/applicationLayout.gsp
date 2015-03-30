@@ -37,7 +37,7 @@
     <asset:javascript src="jquery.validate.min.js"/>
     <asset:javascript src="tooltip"/>
     <g:render template="/vars" model="[loggedIn: true]"/>
-    <asset:javascript src="application.js"/>
+    <asset:javascript src="utils.js"/>
     <asset:javascript src="reports.js"/>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <g:layoutHead/>

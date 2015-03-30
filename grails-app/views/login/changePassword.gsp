@@ -22,7 +22,7 @@
                 <g:passwordField name="password" class="form-control" placeholder="New password" required="required" title="Password cannot be empty!"/>
                 <label style="margin-left: 2px">Confirm password:</label> <br>
                 <g:passwordField name="confirmPassword" class="form-control" placeholder="Confirm password" required="required" title="Confirm password cannot be empty!"/>
-                <div class="text-danger" style="margin-top: 20px; display: inline-block">${flash.userNotFound}</div>
+                %{--<div class="text-danger" style="margin-top: 20px; display: inline-block">${flash.userNotFound}</div>--}%
                 <span style="float: right; margin: 0px; padding-top: 10px">
                     <g:submitButton name="submit" value="Change password" class="btn btn-primary"/>
                     <g:link controller="login" class="btn-default btn">Cancel</g:link>

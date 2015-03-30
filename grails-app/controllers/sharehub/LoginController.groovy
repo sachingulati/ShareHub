@@ -8,7 +8,7 @@ class LoginController {
         render view: "/login/login", model: [recentResources: Resource.byPublicTopic().sortByDate().list(max: 10, offset: 0)]
     }
 
-    private setUserSession(User user,boolean keepMeLogin=false){
+    private setUserSession (User user, boolean keepMeLogin = false) {
         session["username"] = user.username
         session["admin"] = user.admin
         session["name"] = user.name
@@ -17,13 +17,13 @@ class LoginController {
         }
     }
 
-    def loginHandler(String username, String password) {
-        User user = User.findByUsernameAndPasswordAndActive(username, password, true)?:
+    def loginHandler (String username, String password) {
+        User user = User.findByUsernameAndPasswordAndActive(username, password, true) ?:
                 User.findByEmailAndPasswordAndActive(username, password, true)
         if (user) {
-            setUserSession(user, params.keepMeLogin=="on")
+            setUserSession(user, params.keepMeLogin == "on")
         } else {
-            flash.message = "Invalid username or password!"
+            flash.error = "Invalid username or password!"
         }
         redirect(url: "/")
     }
@@ -34,37 +34,42 @@ class LoginController {
 
     def forgotPasswordHandler() {
         User user = userService.forgotPassword(params.username, g)
-        if (!user) {
-            flash.userNotFound = "User not found!"
-            redirect(action: "forgotPassword")
-            return false
+        if (user) {
+            flash.success = "Mail sent. Please check your mail box."
+        }else {
+            flash.error = "User not found!"
         }
-        flash.message = "Mail sent. Please check your mail box."
-        redirect(action: "index")
+        redirect(action: "forgotPassword")
     }
 
     def changePassword() {
         PasswordToken passwordToken = PasswordToken.findByToken(params.token)
         if (!passwordToken || !passwordToken.user.isActive()) {
+            flash.error = "Invalid password token!"
             redirect(action: "index")
-            return false
         }
-        render(view: "/login/changePassword", model: [token: passwordToken.token])
+        else {
+            render(view: "/login/changePassword", model: [token: passwordToken.token])
+        }
     }
 
     def updatePassword() {
         User user = userService.changePasswordWithToken(params.token, params.password, params.confirmPassword)
         if (user) {
             setUserSession(user)
+            flash.success = "Password updated successfully."
+        }
+        else {
+            flash.error = "Error in updating password! Please try again.."
         }
         redirect(url: "/")
     }
 
-    def invalidChangePasswordRequest() {
+    def deleteToken() {
         PasswordToken passwordToken = PasswordToken.findByToken(params.token)
         if (passwordToken) {
             passwordToken.delete(flush: true)
-            flash.message = "Token deleted."
+            flash.success = "Token deleted."
         }
         redirect(url: "/")
     }
@@ -73,17 +78,18 @@ class LoginController {
         User user = userService.register(params)
         if (user) {
             setUserSession(user)
-            redirect(url: "/")
-        } else{
-            render "Invalid Data"
+            flash.success = "You are successfully registered. Enjoy sharing :)"
+        } else {
+            flash.error = "Invalid data!"
         }
+        redirect(url: "/")
     }
 
     def checkEmail(String email) {
-        render(User.findByEmail(email).toString())
+        render((User.countByEmail(email) == 0).toString())
     }
 
     def checkUsername(String username) {
-        render(User.findByUsername(username).toString())
+        render((User.countByUsername(username) == 0).toString())
     }
 }

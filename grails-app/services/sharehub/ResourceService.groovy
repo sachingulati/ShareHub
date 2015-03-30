@@ -15,18 +15,16 @@ class ResourceService {
         Topic.list().each { topic ->
             10.times {
                 Resource r = new Resource(title: "Resource$it", description: "$desc", type: (it < 5 ? ResourceType.DOCUMENT : ResourceType.LINK), url: "http://google.com", filePath: grailsApplication.config.uploadFiles + "defaultFile", createdBy: topic.createdBy, topic: topic)
-                topic.addToResources(r)
-                topic.createdBy.addToResources(r)
-                topic.save(flush: true)
+                topic.addToResources(r).createdBy.addToResources(r).save()
             }
         }
     }
 
     def createDefaultReadingItems() {
-        int count = 0;
+        int count = 0
         ResourceStatus.findByIsRead(false).each { rs ->
             if (count++ < 3) {
-                rs.isRead = true;
+                rs.isRead = true
                 rs.save()
             }
         }
@@ -34,13 +32,13 @@ class ResourceService {
 
     def createDefaultRatings() {
         ResourceStatus.list().eachWithIndex { rs, index ->
-            rs.score = index % 5 + 1;
+            rs.score = index % 5 + 1
             rs.save()
         }
     }
 
     def getRating(id) {
-        def rating = ResourceStatus.createCriteria().get() {
+        def rating = ResourceStatus.createCriteria().get {
             projections {
                 count("score", "number")
                 avg("score", "rating")
@@ -56,14 +54,11 @@ class ResourceService {
     def changeRating(resourceId, score, username) {
         User user = User.findByUsername(username)
         Resource resource = Resource.get(resourceId)
-        if (!resource || !user) {
-            return false
-        }
         Subscription subscription = Subscription.findByUserAndTopic(user, resource.topic)
-        if (!subscription && resource.topic.visibility == Visibility.PRIVATE && !user.admin) {
+        if (!resource || !user || (!subscription && resource.topic.visibility == Visibility.PRIVATE && !user.admin)) {
             return false
         }
-        ResourceStatus resourceStatus = ResourceStatus.findOrCreateByUserAndResource(user, resource);
+        ResourceStatus resourceStatus = ResourceStatus.findOrCreateByUserAndResource(user, resource)
         resourceStatus.score = Integer.parseInt(score) % 6
         resourceStatus.save()
         return true
@@ -71,11 +66,8 @@ class ResourceService {
 
     def showPost(Long id, String username) {
         Resource resource = Resource.get(id)
-        if (!resource) {
-            return null
-        }
         User user = User.findByUsername(username)
-        if (!topicService.show(user, resource.topic)) {
+        if (!resource || !topicService.show(user, resource.topic)) {
             return null
         }
         ResourceStatus resourceStatus = ResourceStatus.findByUserAndResource(user, resource)
@@ -92,8 +84,7 @@ class ResourceService {
         resource.title = attr.title
         resource.description = attr.description
         if (resource.validate()) {
-            resource.save()
-            return resource
+            return resource.save()
         }
         return null
     }
@@ -109,54 +100,36 @@ class ResourceService {
         return resourceTitle + " has been successfully deleted."
     }
 
-    def shareLink(def params, User user) {
-        if (!params) {
-            return 0
-        }
-        if (!Subscription.findByUserAndTopic(user, Topic.get(params.topic.toLong()))) {
-            return 0
+    Resource shareResource(def params, User user, ResourceType resourceType) {
+        if (!params || !Subscription.findByUserAndTopic(user, Topic.get(params.topic.toLong()))) {
+            return null
         }
         Resource resource = new Resource()
         resource.properties = params
         resource.type = ResourceType.LINK
         resource.createdBy = user
-        resource.validate()
-        if (resource.hasErrors()) {
-            //println(resource.errors.allErrors)
-            return 0
-        } else {
-            resource.save(failOnError: true)
-            return resource.id
+        if (resource.validate()) {
+            return resource.save()
         }
+        return null
+    }
+    Resource shareLink(def params, User user) {
+        return shareResource(params, user, ResourceType.LINK)
     }
 
-    def shareDocument(def params, User user) {
-        if (!params) {
-            return 0
-        }
-        if (!Subscription.findByUserAndTopic(user, Topic.get(params.topic.toLong()))) {
-            return 0
-        }
-        Resource resource = new Resource()
-        resource.properties = params
-        resource.type = ResourceType.DOCUMENT
-        resource.createdBy = user
-        if (!resource.validate()) {
-            //println(resource.errors.allErrors)
-            return 0
-        } else {
-            resource.save()
+    Resource shareDocument(def params, User user) {
+        Resource resource = shareResource(params, user, ResourceType.DOCUMENT)
+        if (resource) {
             File dir = new File(grailsApplication.config.uploadFiles + resource.id)
             dir.mkdir()
             File doc = new File(dir, params.file.getOriginalFilename())
             params.file.transferTo(doc)
             resource.filePath = doc.absolutePath
-            resource.save()
-            return resource.id
+            return resource.save()
         }
     }
 
-    def switchReadStatus(Long resourceId, String username, status = null) {
+    def changeOrSwitchReadStatus(Long resourceId, String username, status = null) {
         ResourceStatus rs = ResourceStatus.createCriteria().get {
             resource {
                 eq("id", resourceId)
@@ -169,16 +142,13 @@ class ResourceService {
             return null
         }
         rs.isRead = status ?: !(rs.isRead)
-        rs.save(failOnError: true)
+        rs.save()
         return rs.isRead
     }
 
     def download(resourceId, username) {
         Resource resource = Resource.findById(resourceId)
-        if (!resource) {
-            return null
-        }
-        if (resource.topic.visibility == Visibility.PRIVATE && !Subscription.findByUserAndTopic(User.findByUsername(username), resource.topic)) {
+        if (!resource || (resource.topic.visibility == Visibility.PRIVATE && !Subscription.findByUserAndTopic(User.findByUsername(username), resource.topic))) {
             return null
         }
         return new File(resource.filePath)

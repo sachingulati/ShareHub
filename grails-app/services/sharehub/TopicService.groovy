@@ -21,54 +21,30 @@ class TopicService {
         }
     }
 
-    def show(User user, Topic topic) {
-        if (!topic) {
-            return false
-        }
-        if (topic.visibility == Visibility.PRIVATE && !(user?.admin)) {
-            if (!Subscription.findByTopicAndUser(topic, user)) {
-                return false
-            }
-        }
-        return true
+    Boolean show(User user, Topic topic) {
+        return !(!topic || (topic.visibility == Visibility.PRIVATE && !(user?.admin) &&
+                !Subscription.countByTopicAndUser(topic, user) && !Invite.findByTopicAndInviteToEmail(topic,user.email)))
     }
 
     def showTopic(username, topicId) {
         Topic topic = Topic.findById(topicId)
         User user = User.findByUsername(username)
-        if (!topic) {
+        if (!topic || !show(user,topic)) {
             return null
-        }
-        if (topic.visibility == Visibility.PRIVATE && !(user?.admin)) {
-            if (!Subscription.findByTopicAndUser(topic, user)) {
-                if (!Invite.findByTopicAndInviteToEmail(topic, user.email)) {
-                    return null
-                }
-            }
         }
         return topic
     }
 
     def createDefaultSubscription() {
-        User user = User.get(1)
-        3.times {
-            Topic topic = Topic.load(7 + it)
-            Subscription subscription = new Subscription(seriousness: Seriousness.SERIOUS)
-            log.info("Adding subscriptions to user")
-            user.addToSubscriptions(subscription)
-            log.info("Adding subscriptions to topic")
-            topic.addToSubscriptions(subscription)
-            topic.save(flush: true, failOnError: true)
-        }
-        user = User.get(2)
-        3.times {
-            Topic topic = Topic.load(2 + it)
-            Subscription subscription = new Subscription(seriousness: Seriousness.SERIOUS)
-            log.info("Adding subscriptions to user")
-            user.addToSubscriptions(subscription)
-            log.info("Adding subscriptions to topic")
-            topic.addToSubscriptions(subscription)
-            topic.save(flush: true, failOnError: true)
+        User.list().each {User user->
+            3.times {
+                int id = 7-5*(user.id-1) + it
+                Topic topic = Topic.load(id)
+                Subscription subscription = new Subscription(seriousness: Seriousness.SERIOUS)
+                user.addToSubscriptions(subscription)
+                topic.addToSubscriptions(subscription)
+                topic.save(flush: true)
+            }
         }
     }
 
@@ -98,6 +74,8 @@ class TopicService {
             max = Integer.parseInt(paramsMax ?: 5)
         }
         catch (Exception e) {
+            offset = 0
+            max = 5
         }
         if (size < offset) {
             return null
@@ -121,26 +99,4 @@ class TopicService {
         }.collect { it[0] }
         return trendingTopicList
     }
-
-    def getSubscribedTopics(offset, max, username) {
-/*
-        Topic.createCriteria().list(offset: offset, max: max){
-            order
-        }*/
-        Resource.createCriteria().list(offset: offset, max: max) {
-            projections {
-                groupProperty("topic")
-            }
-            order("dateCreated", "desc")
-            topic {
-                subscriptions {
-                    user {
-                        eq("username", username)
-                    }
-                }
-            }
-        }
-    }
-
-
 }

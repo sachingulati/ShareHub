@@ -2,7 +2,7 @@
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-right">
         <li style="padding-top: 20px; color: #ff0000">
-            ${flash.message}
+            %{--${flash.message}--}%
         </li>
         <li>
             <g:form controller="login" action="loginHandler" class="navbar-form navbar-left" role="search">

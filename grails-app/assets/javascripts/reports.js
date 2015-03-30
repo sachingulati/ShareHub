@@ -2,31 +2,30 @@
  * Created by intelligrape on 23/3/15.
  */
 
-var reportDelay = 2000;
+var reportDelay = 4000;
+var $reportTimeOutVar = null;
 function successReport(reportText){
-    var $success = $('#successReport');
-    $success.find('.reportText').html(reportText);
-    $success.slideDown("fast", function(){
-        setTimeout(hide, reportDelay, $success);
-    });
+    $('#report').addClass('alert-success');
+    report(reportText);
 }
 function infoReport(reportText){
-    var $info = $('#info');
-    $info.find('.reportText').html(reportText);
-    $info.slideDown("fast", function(){
-        setTimeout(hide, reportDelay, $info);
-    });
-    setTimeout(hide, reportDelay, $info);
+    $report.addClass('alert-info');
+    report(reportText);
 }
 function warningReport(reportText){
-    var $warningReport = $('#warningReport');
-    $warningReport.find('.reportText').html(reportText);
-    $warningReport.slideDown("fast", function(){
-        setTimeout(hide, reportDelay, $warningReport);
-    });
-    setTimeout(hide, reportDelay, $warningReport);
+    $report.addClass('alert-danger');
+    report(reportText);
 }
-
+function report(reportText){
+    var $report = $('#report');
+    $report.find('.reportText').html(reportText);
+    $report.slideDown("fast", function(){
+        $reportTimeOutVar = setTimeout(hide, reportDelay, $report);
+    });
+}
 function hide($obj){
     $obj.slideUp("fast");
+    if($reportTimeOutVar != null){
+        clearTimeout($reportTimeOutVar)
+    }
 }

@@ -11,11 +11,14 @@ class UserService {
     def mailService
 
     def createDefaultUsers() {
-        User user = new User(firstName: "Sachin", lastName: "Gulati", email: "sachin@email.com", username: "sachin", password: "12345678", confirmPassword: "12345678", admin: false, active: true, photoUrl: (grailsApplication.config.userImages + "sachin"))
+        User user = new User(firstName: "Sachin", lastName: "Gulati", email: "sachin@email.com", username: "sachin",
+                password: "12345678", confirmPassword: "12345678", admin: false, active: true,
+                photoUrl: (grailsApplication.config.userImages + "sachin"))
         if (user.validate()) {
             user.save()
         }
-        user = new User(firstName: "Admin", lastName: "ShareHub", email: "admin@email.com", username: "admin", password: "12345678", confirmPassword: "12345678", admin: true, active: true)
+        user = new User(firstName: "Admin", lastName: "ShareHub", email: "admin@email.com", username: "admin",
+                password: "12345678", confirmPassword: "12345678", admin: true, active: true)
         if (user.validate()) {
             user.save()
         }
@@ -34,7 +37,7 @@ class UserService {
         user.admin = false
         if (params.photo.bytes.size() > 0) {
             String path = grailsApplication.config.uploadImages.toString() + params.username
-            params.photo.transferTo(new File(path));
+            params.photo.transferTo(new File(path))
             user.photoUrl = path
         }
         user.save()
@@ -58,8 +61,9 @@ class UserService {
 
     def updateUser(String username, String fname, String lname, String email, Boolean removePhoto, def photo) {
         User user = User.findByUsername(username)
-        if (!user)
+        if (!user) {
             return false
+        }
         user.firstName = fname
         user.lastName = lname
         user.email = email
@@ -82,16 +86,15 @@ class UserService {
         if (!user) {
             return "Invalid Password!"
         }
-        if (confirmPassword != newPassword)
+        if (confirmPassword != newPassword) {
             return "New Password and Confirm Password do not match!"
+        }
         user.password = newPassword
-        if (user.validate()){
+        if (user.validate()) {
             user.save(failOnError: true)
             return "Password successfully changed."
         }
-        else{
-            return "Password must be at least 8 characters long!"
-        }
+        return "Password must be at least 8 characters long!"
     }
 
     def changePasswordWithToken(String token, String password, String confirmPassword) {

@@ -67,16 +67,10 @@
         </g:else>
     </div><!-- /.container-fluid -->
 
-    <div class="bg-info report" id="info">
-        <h4 class="reportText"></h4>
+    <div class="alert alert-info report" role="alert" id="report">
+        <button type="button" class="close" onclick="hide($(this).parent())" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="reportText">Message</h4>
     </div>
-    <div class="bg-success report" id="successReport">
-        <h4 class="reportText"></h4>
-    </div>
-    <div class="bg-danger report" id="warningReport">
-        <h4 class="reportText"></h4>
-    </div>
-
 </nav>
 <g:render template="/resource/shareLink"/>
 <g:render template="/resource/shareDocument"/>

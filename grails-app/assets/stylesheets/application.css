@@ -66,9 +66,10 @@
 }
 
 .report{
-    padding: 5px;
     display: none;
     text-align: center;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 hr{

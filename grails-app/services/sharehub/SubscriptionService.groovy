@@ -24,9 +24,8 @@ class SubscriptionService {
             topic.addToSubscriptions(subscription)
             topic.save(flush: true)
             return subscription
-        } else {
-            return null
         }
+        return null
     }
 
     def unsubscribe(username, topicId) {

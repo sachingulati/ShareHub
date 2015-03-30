@@ -6,7 +6,6 @@ class ResourceController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
     def grailsApplication
     def resourceService
-
     def renderResources() {
         def resources = Resource.byTopicId(params.topicId)
         if (!session["admin"]) {
@@ -86,7 +85,7 @@ class ResourceController {
 
     def download() {
         File file = resourceService.download(params.resourceId, session["username"])
-        if (file) {
+        if (file?.isFile()) {
             response.setContentType("APPLICATION/OCTET-STREAM")
             response.setHeader("Content-Disposition", "Attachment;Filename=" + file.name)
             def outputStream = response.getOutputStream()
@@ -94,7 +93,8 @@ class ResourceController {
             outputStream.flush()
             outputStream.close()
         } else {
-            render "Bad request!"
+            flash.error = "File not found!"
+            redirect(url:  "/")
         }
     }
 

@@ -9,7 +9,7 @@ enum Seriousness {
     CASUAL("Casual")
     final String displayName
     Seriousness(String name){
-        displayName = name;
+        displayName = name
     }
 
 }

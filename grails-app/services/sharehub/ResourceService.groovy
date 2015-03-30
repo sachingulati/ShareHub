@@ -14,7 +14,9 @@ class ResourceService {
         String desc = "hi this is description of Resources. This is temporary description and will be replaced by actual description later on. so for the time being please co-operate :)"
         Topic.list().each { topic ->
             10.times {
-                Resource r = new Resource(title: "Resource$it", description: "$desc", type: (it < 5 ? ResourceType.DOCUMENT : ResourceType.LINK), url: "http://google.com", filePath: grailsApplication.config.uploadFiles + "defaultFile", createdBy: topic.createdBy, topic: topic)
+                Resource r = new Resource(title: "Resource$it", description: "$desc",
+                        type: (it < 5 ? ResourceType.DOCUMENT : ResourceType.LINK), url: "http://google.com",
+                        filePath: grailsApplication.config.uploadFiles + "defaultFile", createdBy: topic.createdBy, topic: topic)
                 topic.addToResources(r).createdBy.addToResources(r).save()
             }
         }
@@ -106,7 +108,7 @@ class ResourceService {
         }
         Resource resource = new Resource()
         resource.properties = params
-        resource.type = ResourceType.LINK
+        resource.type = resourceType
         resource.createdBy = user
         if (resource.validate()) {
             return resource.save()
@@ -151,7 +153,14 @@ class ResourceService {
         if (!resource || (resource.topic.visibility == Visibility.PRIVATE && !Subscription.findByUserAndTopic(User.findByUsername(username), resource.topic))) {
             return null
         }
-        return new File(resource.filePath)
+        File file
+        try {
+            file = new File(resource.filePath)
+        }
+        catch (Exception e){
+            file = null
+        }
+        return file
     }
 }
 

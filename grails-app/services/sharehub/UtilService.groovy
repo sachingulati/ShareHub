@@ -10,18 +10,18 @@ import java.security.SecureRandom
 class UtilService {
     def mailService
     PageRenderer groovyPageRenderer
-    String pageRenderer(String template, model){
+    String pageRenderer(String template, model) {
         String content
-        try{
+        try {
             content = groovyPageRenderer.render(template: template, model: model)
         }
-        catch (Exception e){
+        catch (Exception e) {
             println e
         }
         return content
     }
-    def sendMail(MailCO mailCO){
-        try{
+    def sendMail(MailCO mailCO) {
+        try {
             mailService.sendMail {
                 async true
                 to mailCO.to
@@ -29,7 +29,7 @@ class UtilService {
                 html mailCO.body
             }
         }
-        catch (Exception e){
+        catch (Exception e) {
             log.error(e)
             return false
         }
@@ -40,11 +40,11 @@ class UtilService {
     }
 
     def saveFile(String fileUrl, data) {
-        data.transferTo(new File(fileUrl));
+        data.transferTo(new File(fileUrl))
     }
 
     public String getRandomString() {
-        SecureRandom random = new SecureRandom();
-        return new BigInteger(130, random).toString(32);
+        SecureRandom random = new SecureRandom()
+        return new BigInteger(130, random).toString(32)
     }
 }

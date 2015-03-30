@@ -2,14 +2,12 @@ package sharehub
 
 class SearchController {
 
-    def resourceService
     def topicService
-
+    def utilService
     def index() {
         render(view: "/search", model: [search: params.search, ajaxController: "search", ajaxAction: "searchResources"])
     }
-
-    def inboxSearch() {
+    def resourceSearchInBox() {
         def resources
         String header
         if (params.topicId?.size() > 0) {
@@ -23,7 +21,7 @@ class SearchController {
         header = header.length() > 45 ? header[0..45] + "...'" : header
         render(template: "/resource/resourceList",
                 model: [resources : resources, header: header, search: true, doPaginate: true, ajaxController: "search",
-                        ajaxAction: "inboxSearch", ajaxParams: [search: params.search, topicId: params.topicId]])
+                        ajaxAction: "resourceSearchInBox", ajaxParams: [search: params.search, topicId: params.topicId]])
     }
 
     def searchResources() {

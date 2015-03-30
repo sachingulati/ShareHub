@@ -1,7 +1,8 @@
 
         <div style="float:left; margin-right:10px">
             <a href="${g.createLink(controller: "user", action: "profile", params: [id:user.username])}">
-                <sh:image src="${user.photoUrl}"/>
+                %{--<sh:image src="${user.photoUrl}"/>--}%
+                ${sh.image(src: user.photoUrl)}
             </a>
         </div>
 

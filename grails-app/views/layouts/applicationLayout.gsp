@@ -36,9 +36,9 @@
     %{--jquery validation--}%
     <asset:javascript src="jquery.validate.min.js"/>
     <asset:javascript src="tooltip"/>
-    <g:render template="/vars" model="[loggedIn: true]"/>
-    <asset:javascript src="utils.js"/>
+    <g:render template="/vars"/>
     <asset:javascript src="reports.js"/>
+    <asset:javascript src="utils.js"/>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <g:layoutHead/>
 </head>
@@ -67,17 +67,19 @@
         </g:else>
     </div><!-- /.container-fluid -->
 
-    <div class="alert alert-info report" role="alert" id="report">
+    <div class="alert report" role="alert" id="report">
         <button type="button" class="close" onclick="hide($(this).parent())" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="reportText">Message</h4>
     </div>
 </nav>
-<g:render template="/resource/shareLink"/>
-<g:render template="/resource/shareDocument"/>
-<g:render template="/topic/createTopic"/>
-<g:render template="/topic/editTopic"/>
-<g:render template="/invites/sendInvite"/>
 
+<g:if test="${session["username"]}">
+    <g:render template="/resource/shareLink"/>
+    <g:render template="/resource/shareDocument"/>
+    <g:render template="/topic/createTopic"/>
+    <g:render template="/topic/editTopic"/>
+    <g:render template="/invites/sendInvite"/>
+</g:if>
 <div class="${session["username"]?"afterLogin":"beforeLogin"}" id="contentBody">
     <g:layoutBody/>
 </div>

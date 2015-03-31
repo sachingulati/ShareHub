@@ -231,7 +231,7 @@ $(document).ready(function(){
         $rateBox.mouseout(rateReset);
         $ratingHearts.click(changeRating);
     }else{
-        $rateBox.attr("title","Please login to rate this post.");
+        $rateBox.click(function(){warningReport("Please login to rate this post.");});
     }
     if(errorMessage.length>0){
         warningReport(errorMessage);

@@ -23,7 +23,7 @@ class TopicService {
 
     Boolean show(User user, Topic topic) {
         return !(!topic || (topic.visibility == Visibility.PRIVATE && !(user?.admin) &&
-                !Subscription.countByTopicAndUser(topic, user) && !Invite.findByTopicAndInviteToEmail(topic, user.email)))
+                !Subscription.countByTopicAndUser(topic, user) && !Invite.findByTopicAndInviteToEmail(topic, user?.email)))
     }
 
     def showTopic(username, topicId) {

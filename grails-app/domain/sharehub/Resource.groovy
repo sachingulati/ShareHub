@@ -33,8 +33,10 @@ class Resource {
 
         sortByRating {
             resourceStatus{
-                groupProperty("resource")
-                avg("score", "rating")
+                projections{
+                    groupProperty("resource")
+                    avg("score", "rating")
+                }
                 gt("score",0)
             }
             order("rating", "desc")

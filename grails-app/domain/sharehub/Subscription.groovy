@@ -12,8 +12,7 @@ class Subscription {
 
     static afterInsert = {
         topic.resources.each { resource ->
-            ResourceStatus resourceStatus = new ResourceStatus(resource: resource, user: user)
-            resource.addToResourceStatus(resourceStatus)
+            resource.addToResourceStatus(resource: resource, user: user)
         }
     }
 }

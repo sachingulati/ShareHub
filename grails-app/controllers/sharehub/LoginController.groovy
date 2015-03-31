@@ -5,7 +5,8 @@ class LoginController {
     def userService
 
     def index() {
-        render view: "/login/login", model: [recentResources: Resource.byPublicTopic().sortByDate().list(max: 5, offset: 0)]
+        render view: "/login/login", model: [recentResources: Resource.byPublicTopic().sortByDate().list(max: 5, offset: 0),
+                                             topPost: Resource.byPublicTopic().sortByRating().list(max: 5, offset: 0).collect{it[0]}]
     }
 
     private setUserSession (User user, boolean keepMeLogin = false) {

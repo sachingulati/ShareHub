@@ -91,7 +91,11 @@ class TopicController {
     }
 
     def getSubscribedTopics() {
-        def topicList = Topic.subscribedTopics(session["username"]).sortByRecentResource().list()
+        //def topicList = Topic.subscribedTopics(session["username"]).sortByRecentResource().list().unique()
+        def topicList = User.findByUsername(session["username"])?.subscriptions.topic
+        topicList = topicList.sort({topic->
+            topic.resources.max({resource-> resource.dateCreated})
+        })
         render g.select(name: "topic", from: topicList, optionKey: "id", optionValue: "name", value: "id", noSelection: ['': 'Select Topic'], class: "form-control")
     }
 }

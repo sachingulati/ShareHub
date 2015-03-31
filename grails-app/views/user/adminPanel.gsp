@@ -8,10 +8,9 @@
 <%@ page import="sharehub.User" contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <sh:layout/>
+    <meta name="layout" content="applicationLayout">
     <title>Admin Panel</title>
 </head>
-
 <body>
 
 

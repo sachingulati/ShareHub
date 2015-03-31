@@ -9,11 +9,11 @@ function successReport(reportText){
     report(reportText);
 }
 function infoReport(reportText){
-    $report.addClass('alert-info');
+    $('#report').addClass('alert-info');
     report(reportText);
 }
 function warningReport(reportText){
-    $report.addClass('alert-danger');
+    $('#report').addClass('alert-danger');
     report(reportText);
 }
 function report(reportText){

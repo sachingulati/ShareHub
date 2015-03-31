@@ -1,19 +1,43 @@
 package sharehub
 
 class User {
+
+	transient springSecurityService
+
+	String username
+	String password
     String firstName
     String lastName
     String email
-    String username
-    String password//, confirmPassword
     String photoUrl
-    boolean admin = false
-    boolean active = true
     Date dateCreated
     Date lastUpdated
     static hasMany = [topics: Topic, resources: Resource, subscriptions: Subscription, resourceStatus: ResourceStatus, invites: Invite]
     static hasOne = [passwordToken: PasswordToken]
-    static transients = ['name']//,'confirmPassword']
+    boolean enabled = true
+	boolean accountExpired
+	boolean accountLocked
+	boolean passwordExpired
+
+	static transients = ['springSecurityService', 'name']
+
+    static constraints = {
+        username unique: true, blank: false
+        email(unique: true, email: true, blank: false)
+        firstName blank: false, nullable: false
+        lastName blank: false, nullable: false
+        password(size: 8..20, blank: false)
+        photoUrl nullable: true
+        passwordToken nullable: true
+    }
+
+	static mapping = {
+		password column: '`password`'
+	}
+
+	Set<Role> getAuthorities() {
+		UserRole.findAllByUser(this).collect { it.role }
+	}
 
     def getSubscriptionCount() {
         return subscriptions.size()
@@ -26,13 +50,18 @@ class User {
     String getName() {
         return firstName + " " + lastName
     }
-    static constraints = {
-        username unique: true
-        email(unique: true, email: true, blank: false)
-        firstName blank: false, nullable: false
-        lastName blank: false, nullable: false
-        password(size: 8..20, blank: false)
-        photoUrl nullable: true
-        passwordToken nullable: true
-    }
+
+	def beforeInsert() {
+		encodePassword()
+	}
+
+	def beforeUpdate() {
+		if (isDirty('password')) {
+			encodePassword()
+		}
+	}
+
+	protected void encodePassword() {
+		password = springSecurityService?.passwordEncoder ? springSecurityService.encodePassword(password) : password
+	}
 }

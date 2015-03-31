@@ -7,6 +7,13 @@ class InvitesController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    static beforeInterceptor = {
+        if (!session["username"]) {
+            redirect(url: "/")
+            return false
+        }
+    }
+
     def mailService
     def topicService
     @Transactional

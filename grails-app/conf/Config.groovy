@@ -150,3 +150,19 @@ simian {
     methodParams = [threshold: 4]
 }
 
+
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'sharehub.User'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'sharehub.UserRole'
+grails.plugin.springsecurity.authority.className = 'sharehub.Role'
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+	'/':                              ['permitAll'],
+	'/index':                         ['permitAll'],
+	'/index.gsp':                     ['permitAll'],
+	'/**/js/**':                      ['permitAll'],
+	'/**/css/**':                     ['permitAll'],
+	'/**/images/**':                  ['permitAll'],
+	'/**/favicon.ico':                ['permitAll']
+]
+

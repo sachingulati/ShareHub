@@ -40,6 +40,8 @@ grails.project.dependency.resolution = {
         mavenLocal()
         grailsCentral()
         mavenCentral()
+
+        mavenRepo 'http://repo.spring.io/milestone'
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
@@ -52,6 +54,7 @@ grails.project.dependency.resolution = {
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0.2-grails-2.4"
         //build "jquery-form-validator" : ">=2.1.47"
+
     }
 
     plugins {
@@ -75,6 +78,7 @@ grails.project.dependency.resolution = {
         compile ":simian:0.1-SNAPSHOT"
         compile ":codenarc:0.22"
         compile ":gmetrics:0.3.1"
+        compile ':spring-security-core:2.0-RC3'
 
 //        compile ":jquery-validation:1.9"
         // Uncomment these to enable additional asset-pipeline capabilities

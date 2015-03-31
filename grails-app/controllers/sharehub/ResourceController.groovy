@@ -4,6 +4,7 @@ package sharehub
 class ResourceController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+
     def grailsApplication
     def resourceService
     def renderResources() {

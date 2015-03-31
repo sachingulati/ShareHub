@@ -30,15 +30,28 @@ class Resource {
         sortByDate {
             order("lastUpdated", "desc")
         }
+
+        sortByRating {
+            resourceStatus{
+                groupProperty("resource")
+                avg("score", "rating")
+                gt("score",0)
+            }
+            order("rating", "desc")
+        }
+
         today {
             gt("dateCreated", new Date().clearTime())
         }
+
         inLastOneWeek {
             gt("dateCreated", new Date().clearTime() - 7)
         }
+
         inLastOneMonth {
             gt("dateCreated", new Date().clearTime() - 30)
         }
+
         inLastOneYear {
             gt("dateCreated", new Date().clearTime() - 365)
         }
@@ -141,9 +154,6 @@ class Resource {
             topic {
                 eq("visibility", Visibility.PUBLIC)
             }
-        }
-        sortByRating {
-//            order(avgRating(property("id")), "desc")
         }
     }
 

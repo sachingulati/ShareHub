@@ -22,6 +22,7 @@ class Topic {
                 eq("username", username)
             }
         }
+
         subscribedTopics { username ->
             subscriptions {
                 user {
@@ -29,6 +30,7 @@ class Topic {
                 }
             }
         }
+
         publicOrSubscribed { username ->
             distinct()
             or {
@@ -36,12 +38,15 @@ class Topic {
                 publicTopics()
             }
         }
+
         publicTopics {
             eq("visibility", Visibility.PUBLIC)
         }
+
         privateTopics {
             eq("visibility", Visibility.PRIVATE)
         }
+
         sortByRecentResource {
             projections {
 //                distinct()
@@ -53,6 +58,15 @@ class Topic {
                 order("dateCreated", "desc")
             }
         }
+
+        sortByNumberOfPost{
+            resources{
+                groupProperty("topic")
+                count("id", "resource")
+            }
+            order("resource","desc")
+        }
+
         search { searchString ->
             ilike("name", "%${searchString}%")
         }

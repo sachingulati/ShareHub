@@ -25,10 +25,7 @@ class User {
 
     String getName() {
         return firstName + " " + lastName
-    }/*
-    String setConfirmPassword(String paswd){
-        confirmPassword = paswd
-    }*/
+    }
     static constraints = {
         username unique: true
         email(unique: true, email: true, blank: false)
@@ -37,8 +34,5 @@ class User {
         password(size: 8..20, blank: false)
         photoUrl nullable: true
         passwordToken nullable: true
-        /*confirmPassword(validator:{val, user->
-            return val.equals(user.password)
-        })*/
     }
 }

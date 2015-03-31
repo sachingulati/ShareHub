@@ -8,7 +8,7 @@ class ApplicationTagLib {
         if (attr.src) {
             path = createLink(controller: "user", action: "showUserImage", params: [photoUrl: attr.src], absolute: true)
         }
-        out << "<img src='" + path + "' class='img-media'/>"
+        out << "<img src='" + path + "' style='height:80px; width:80px;'/>"
     }
 
     def topBarSearch = {

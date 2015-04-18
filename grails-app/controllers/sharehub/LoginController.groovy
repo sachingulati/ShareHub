@@ -1,5 +1,9 @@
 package sharehub
 
+import org.springframework.security.access.annotation.Secured
+
+
+//@Secured('permitAll')
 class LoginController {
 
     def userService
@@ -10,17 +14,21 @@ class LoginController {
     }
 
     private setUserSession (User user, boolean keepMeLogin = false) {
-        session["username"] = user.username
-        session["admin"] = user.admin
-        session["name"] = user.name
-        if (keepMeLogin) {
-            session.setMaxInactiveInterval(-1)
-        }
+//        session["username"] = user.username
+////        session["admin"] = user.admin
+//        session["name"] = user.name
+//        if (keepMeLogin) {
+//            session.setMaxInactiveInterval(-1)
+//        }
     }
 
     def loginHandler (String username, String password) {
-        User user = User.findByUsernameAndPasswordAndActive(username, password, true) ?:
-                User.findByEmailAndPasswordAndActive(username, password, true)
+        println "-----------------------------------------------------------------"
+        println params
+        User user = User.findByUsernameAndPasswordAndEnabled(username, password, true) ?:
+                User.findByEmailAndPasswordAndEnabled(username, password, true)
+        println "-----------------------------------------------------------------"
+        println user
         if (user) {
             setUserSession(user, params.keepMeLogin == "on")
         } else {

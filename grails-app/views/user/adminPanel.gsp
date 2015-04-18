@@ -48,7 +48,7 @@
                 <td>${user.firstName}</td>
                 <td>${user.lastName}</td>
                 <td id="manager_${user.username}">
-                    <g:remoteLink update="manager_${user.username}" controller="user" action="switchActivate" params="[username: user.username]">${user.active?"Deactivate":"Activate"}</g:remoteLink>
+                    <g:remoteLink update="manager_${user.username}" controller="user" action="switchActivate" params="[username: user.username]">${user.enabled?"Deactivate":"Activate"}</g:remoteLink>
                 </td>
             </tr>
         </div>

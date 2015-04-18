@@ -8,11 +8,12 @@ import grails.transaction.Transactional
 @Transactional
 class SubscriptionService {
 
-    def subscribe(username, topicId, seriousness = Seriousness.VERY_SERIOUS) {
+    def springSecurityService
+    def subscribe(Long topicId, seriousness = Seriousness.VERY_SERIOUS) {
         Topic topic = Topic.findById(topicId)
-        User user = User.findByUsername(username)
+        User user = springSecurityService.currentUser
         List invite = Invite.findAllByTopicAndInviteToEmail(topic, user.email)
-        if (!topic || !user || !seriousness || (topic.visibility == Visibility.PRIVATE && !user.isAdmin() && (!invite || invite.isEmpty()))) {
+        if (!topic || !user || !seriousness || (topic.visibility == Visibility.PRIVATE && !user.isAdmin() && invite?.isEmpty())) {
             return null
         }
         Subscription subscription = Subscription.findOrCreateByTopicAndUser(topic, user)
@@ -28,9 +29,9 @@ class SubscriptionService {
         return null
     }
 
-    def unsubscribe(username, topicId) {
+    def unsubscribe(topicId) {
         Topic topic = Topic.findById(topicId)
-        User user = User.findByUsername(username)
+        User user = springSecurityService.currentUser
         Subscription subscription = Subscription.findByUserAndTopic(user, topic)
         if (!topic || !user || !subscription || topic.createdBy == user) {
             return false

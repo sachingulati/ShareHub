@@ -59,12 +59,12 @@
             <g:link class="navbar-brand" controller="login">Share Hub</g:link>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <g:if test="${session["username"]}">
+        <sec:ifLoggedIn>
             <g:render template="/loggedInBar"/>
-        </g:if>
-        <g:else>
+        </sec:ifLoggedIn>
+        <sec:ifNotLoggedIn>
             <g:render template="/notLoggedInBar"/>
-        </g:else>
+        </sec:ifNotLoggedIn>
     </div><!-- /.container-fluid -->
 
     <div class="alert report" role="alert" id="report">
@@ -72,15 +72,21 @@
         <h4 class="reportText">Message</h4>
     </div>
 </nav>
-
-<g:if test="${session["username"]}">
+<sec:ifLoggedIn>
     <g:render template="/resource/shareLink"/>
     <g:render template="/resource/shareDocument"/>
     <g:render template="/topic/createTopic"/>
     <g:render template="/topic/editTopic"/>
     <g:render template="/invites/sendInvite"/>
-</g:if>
-<div class="${session["username"]?"afterLogin":"beforeLogin"}" id="contentBody">
+</sec:ifLoggedIn>
+<sec:ifLoggedIn>
+    <div class="afterLogin" id="contentBody">
+</sec:ifLoggedIn>
+<sec:ifNotLoggedIn>
+    <div class="beforeLogin" id="contentBody">
+</sec:ifNotLoggedIn>
+%{--update required--}%
+    <g:remoteLink controller="logout" method="POST">Logout</g:remoteLink>
     <g:layoutBody/>
 </div>
 </body>

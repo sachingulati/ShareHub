@@ -7,32 +7,34 @@ class ResourceController {
 
     def grailsApplication
     def resourceService
+    def springSecurityService
     def renderResources() {
         def resources = Resource.byTopicId(params.topicId)
+        // update required
         if (!session["admin"]) {
-            resources = resources.subscribedOrPublic(session["username"])
+            resources = resources.subscribedOrPublic(springSecurityService.currentUser.username)
         }
         render(template: "/resource/resourceList", model: [resources: resources.list(), header: params.header, search: true])
     }
 
     def renderUnreadResources() {
-        List<Resource> unreadResourceList = Resource.byIsRead(session["username"], false).sortByDate().list(offset: params.offset, max: params.max)
+        List<Resource> unreadResourceList = Resource.byIsRead(springSecurityService.currentUser.username, false).sortByDate().list(offset: params.offset, max: params.max)
         render(template: "/resource/resourceList", model: [resources : unreadResourceList, header: 'Inbox', search: true,
                        doPaginate: true, ajaxController: "resource", ajaxAction: "renderUnreadResources", ajaxParams: []])
     }
 
     def renderTopPost() {
-        List<Resource> topPost = Resource.subscribedOrPublic(session["username"]).sortByDate().list(offset: params.offset, max: params.max)
+        List<Resource> topPost = Resource.subscribedOrPublic(springSecurityService.currentUser.username).sortByDate().list(offset: params.offset, max: params.max)
         render(template: "/resource/resourceList", model: [resources: topPost, header: 'Top Post'])
     }
 
     def renderResourcesCreated() {
-        def resourceList = Resource.byCreatedBy(params.username ?: session["username"]).sortByDate().list(max: params.max, offset: params.offset)
+        def resourceList = Resource.byCreatedBy(params.username).sortByDate().list(max: params.max, offset: params.offset)
         render(template: "/resource/resourceList", model: [resources: resourceList, header: 'Posts', hr: true])
     }
 
     def switchReadStatus() {
-        Boolean result = resourceService.changeOrSwitchReadStatus(params.resource.toLong(), session["username"])
+        Boolean result = resourceService.changeOrSwitchReadStatus(params.resource.toLong(), springSecurityService.currentUser.username)
         if (result) {
             render "Mark Unread"
         } else if (result == false) {
@@ -43,11 +45,11 @@ class ResourceController {
     }
 
     def showPost() {
-        render(view: "/resource/showPost", model: resourceService.showPost(params.id.toLong(), session["username"]))
+        render(view: "/resource/showPost", model: resourceService.showPost(params.id.toLong(), springSecurityService.currentUser.username))
     }
 
     def changeRating() {
-        if (resourceService.changeRating(params.resourceId, params.rate, session["username"])) {
+        if (resourceService.changeRating(params.resourceId, params.rate, springSecurityService.currentUser.username)) {
             def rating = resourceService.getRating(params.resourceId)
             render("avgRating:" + rating.avgRating + ", totalCount:" + rating.totalCount)
         }
@@ -62,16 +64,16 @@ class ResourceController {
     }
 
     def shareLink() {
-        Resource resource= resourceService.shareLink(params, User.findByUsername(session["username"]))
+        Resource resource= resourceService.shareLink(params, springSecurityService.currentUser)
         if (resource) {
-        redirect(action: "showPost", params: [id: resource.id])
+            redirect(action: "showPost", params: [id: resource.id])
         } else {
-           render "Error in sharing link!"
+            render "Error in sharing link!"
         }
     }
 
     def shareDocument() {
-        Resource resource = resourceService.shareDocument(params, User.findByUsername(session["username"]))
+        Resource resource = resourceService.shareDocument(params, springSecurityService.currentUser)
         if (resource) {
             redirect(action: "showPost", params: [id: resource.id])
         } else {
@@ -85,7 +87,7 @@ class ResourceController {
     }
 
     def download() {
-        File file = resourceService.download(params.resourceId, session["username"])
+        File file = resourceService.download(params.resourceId, springSecurityService.currentUser.username)
         if (file?.isFile()) {
             response.setContentType("APPLICATION/OCTET-STREAM")
             response.setHeader("Content-Disposition", "Attachment;Filename=" + file.name)
@@ -100,6 +102,6 @@ class ResourceController {
     }
 
     def deleteResource() {
-        render resourceService.deleteResource(Long.parseLong(params.id), session["username"])
+        render resourceService.deleteResource(Long.parseLong(params.id), springSecurityService.currentUser.username)
     }
 }

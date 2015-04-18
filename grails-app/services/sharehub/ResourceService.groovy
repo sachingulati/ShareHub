@@ -9,6 +9,7 @@ class ResourceService {
 
     def topicService
     def grailsApplication
+    def springSecurityService
 
     def createDefaultResources() {
         String desc = "hi this is description of Resources. This is temporary description and will be replaced by actual description later on. so for the time being please co-operate :)"
@@ -53,11 +54,12 @@ class ResourceService {
         return [totalCount: rating[0], avgRating: rating[1]]
     }
 
-    def changeRating(resourceId, score, username) {
-        User user = User.findByUsername(username)
+    def changeRating(resourceId, score) {
+        User user = springSecurityService.currentUser
         Resource resource = Resource.get(resourceId)
         Subscription subscription = Subscription.findByUserAndTopic(user, resource.topic)
-        if (!resource || !user || (!subscription && resource.topic.visibility == Visibility.PRIVATE && !user.admin)) {
+        // update required
+        if (!resource || !user /*|| (!subscription && resource.topic.visibility == Visibility.PRIVATE && !user.admin)*/) {
             return false
         }
         ResourceStatus resourceStatus = ResourceStatus.findOrCreateByUserAndResource(user, resource)
@@ -68,7 +70,7 @@ class ResourceService {
 
     def showPost(Long id, String username) {
         Resource resource = Resource.get(id)
-        User user = User.findByUsername(username)
+        User user = springSecurityService.currentUser
         if (!resource || !topicService.show(user, resource.topic)) {
             return null
         }
@@ -93,8 +95,9 @@ class ResourceService {
 
     def deleteResource(id, username) {
         Resource resource = Resource.get(id)
-        User user = User.findByUsername(username)
-        if (!resource || !user || (!user.isAdmin() && resource.createdBy != user)) {
+        User user = springSecurityService.currentUser
+        // update required
+        if (!resource || !user /*|| (!user.isAdmin() && resource.createdBy != user)*/) {
             return "Invalid request!"
         }
         String resourceTitle = resource.title
@@ -102,7 +105,8 @@ class ResourceService {
         return resourceTitle + " has been successfully deleted."
     }
 
-    Resource shareResource(def params, User user, ResourceType resourceType) {
+    Resource shareResource(def params, ResourceType resourceType) {
+        User user = springSecurityService.currentUser
         if (!params || !Subscription.findByUserAndTopic(user, Topic.get(params.topic.toLong()))) {
             return null
         }
@@ -115,12 +119,12 @@ class ResourceService {
         }
         return null
     }
-    Resource shareLink(def params, User user) {
-        return shareResource(params, user, ResourceType.LINK)
+    Resource shareLink(def params) {
+        return shareResource(params, ResourceType.LINK)
     }
 
-    Resource shareDocument(def params, User user) {
-        Resource resource = shareResource(params, user, ResourceType.DOCUMENT)
+    Resource shareDocument(def params) {
+        Resource resource = shareResource(params, ResourceType.DOCUMENT)
         if (resource) {
             File dir = new File(grailsApplication.config.uploadFiles + resource.id)
             dir.mkdir()
@@ -131,14 +135,12 @@ class ResourceService {
         }
     }
 
-    def changeOrSwitchReadStatus(Long resourceId, String username, status = null) {
+    def changeOrSwitchReadStatus(Long resourceId, status = null) {
         ResourceStatus rs = ResourceStatus.createCriteria().get {
             resource {
                 eq("id", resourceId)
             }
-            user {
-                eq("username", username)
-            }
+            eq("user", springSecurityService.currentUser)
         }
         if (!rs) {
             return null
@@ -148,9 +150,10 @@ class ResourceService {
         return rs.isRead
     }
 
-    def download(resourceId, username) {
+    def download(resourceId) {
         Resource resource = Resource.findById(resourceId)
-        if (!resource || (resource.topic.visibility == Visibility.PRIVATE && !Subscription.findByUserAndTopic(User.findByUsername(username), resource.topic))) {
+        // update required
+        if (!resource || (resource.topic.visibility == Visibility.PRIVATE && !Subscription.findByUserAndTopic(springSecurityService.currentUser, resource.topic))) {
             return null
         }
         File file

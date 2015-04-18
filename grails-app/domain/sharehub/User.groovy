@@ -23,11 +23,11 @@ class User {
 
     static constraints = {
         username unique: true, blank: false
-        email(unique: true, email: true, blank: false)
+        photoUrl nullable: true
+        email unique: true, email: true, blank: false
         firstName blank: false, nullable: false
         lastName blank: false, nullable: false
-        password(size: 8..20, blank: false)
-        photoUrl nullable: true
+        password blank: false, minSize: 8
         passwordToken nullable: true
     }
 

@@ -31,18 +31,20 @@
             <div class="dropdown">
                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
                         data-toggle="dropdown" style="margin:7px" aria-expanded="true">
-                    ${session["name"]}
+                    <sec:loggedInUserInfo field="name"/>
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                     <li role="presentation"><a role="menuitem" tabindex="-1" href="${g.createLink(controller: "user", action: "myProfile")}">Profile</a></li>
-                    <g:if test="${session["admin"]}">
+                    <sec:ifAllGranted roles="ROLE_ADMIN">
                         <li role="presentation">
                             <a href='${createLink(controller: "user", action: "adminPanel")}'>Users</a>
                         </li>
-                    </g:if>
+                    </sec:ifAllGranted>
                     <li role="presentation"><g:link controller="topic" role="menuitem" tabindex="-1" action="viewAllSubscribedTopics">Topics</g:link></li>
                     <li role="presentation">
+                        %{--<g:remoteLink controller="logout" method="POST">Logout</g:remoteLink>--}%
+
                         <g:link controller="user" action="logout" tabindex="-1">Logout</g:link></li>
                 </ul>
             </div>

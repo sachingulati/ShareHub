@@ -1,15 +1,12 @@
 package sharehub
 
-class HomeController {
-    static beforeInterceptor = {
-        if (!session["username"]) {
-            forward(controller: "login")
-            return false
-        }
-    }
-    static defaultAction = "dashboard"
+import grails.plugin.springsecurity.annotation.Secured
 
+@Secured(['ROLE_ADMIN', 'ROLE_USER'])
+class HomeController {
+    def springSecurityService
+    static defaultAction = "dashboard"
     def dashboard() {
-        render(view: "/dashboard", model: [user: User.findByUsername(session["username"])])
+        render(view: "/dashboard", model: [user: springSecurityService.currentUser])
     }
 }

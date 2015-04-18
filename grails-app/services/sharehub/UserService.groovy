@@ -8,8 +8,10 @@ class UserService {
 
     def grailsApplication
     def utilService
-    def mailService
+    def mailService // update required
+    def springSecurityService
 
+//    update required
     def createDefaultUsers() {
         User user = new User(firstName: "Sachin", lastName: "Gulati", email: "sachin@email.com", username: "sachin",
                 password: "12345678", confirmPassword: "12345678", admin: false, active: true,
@@ -24,6 +26,7 @@ class UserService {
         }
     }
 
+    // update required
     def register(params) {
         User user = new User()
         user.properties = params
@@ -46,7 +49,7 @@ class UserService {
 
     def forgotPassword(username, g) {
         User user = User.findByUsernameOrEmail(username, username)
-        if (!user?.active) {
+        if (!user?.enabled) {
             return null
         }
         PasswordToken passwordToken = PasswordToken.findOrCreateByUser(user)
@@ -59,8 +62,8 @@ class UserService {
         return user
     }
 
-    def updateUser(String username, String fname, String lname, String email, Boolean removePhoto, def photo) {
-        User user = User.findByUsername(username)
+    def updateUser(String fname, String lname, String email, Boolean removePhoto, def photo) {
+        User user = springSecurityService.currentUser
         if (!user) {
             return false
         }
@@ -82,6 +85,7 @@ class UserService {
     }
 
     def changePassword(String username, String newPassword, String confirmPassword, String currentPassword) {
+        // update required
         User user = User.findByUsernameAndPassword(username, currentPassword)
         if (!user) {
             return "Invalid Password!"

@@ -4,9 +4,11 @@ class SearchController {
 
     def topicService
     def utilService
+    def springSecurityService
     def index() {
         render(view: "/search", model: [search: params.search, ajaxController: "search", ajaxAction: "searchResources"])
     }
+    // update required
     def resourceSearchInBox() {
         def resources
         String header
@@ -14,7 +16,7 @@ class SearchController {
             resources = Resource.byTopicId(Long.parseLong(params.topicId.toString())).searchInResource(params.search).sortByDate().list(max: params.max ?: 10, offset: params.offset ?: 0)
             header = "Search: '"
         } else {
-            resources = Resource.searchInInbox(session["username"], params.search).sortByDate().list(max: params.max ?: 10, offset: params.offset ?: 0)
+            resources = Resource.searchInInbox(springSecurityService.currentUser.username, params.search).sortByDate().list(max: params.max ?: 10, offset: params.offset ?: 0)
             header = "Inbox search: '"
         }
         header = header + params.search + "'"
@@ -27,7 +29,7 @@ class SearchController {
     def searchResources() {
         def searchResult = Resource.searchInResource(params.search)
         if (!session["admin"]) {
-            searchResult = searchResult.subscribedOrPublic(session["username"])
+            searchResult = searchResult.subscribedOrPublic(springSecurityService.currentUser.username)
         }
         searchResult = searchResult.list(offset: params.offset, max: params.max)
         String header = "Resources: '${params.search}'"

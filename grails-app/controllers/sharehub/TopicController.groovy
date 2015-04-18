@@ -8,6 +8,8 @@ class TopicController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
     def topicService
 
+    def springSecurityService
+    // update required
     def getRecentSubscribedTopics() {
         def topicList = Topic.subscribedTopics(session["username"]).list(offset: params.offset, max: params.max)
         render(template: "/topic/topicList",

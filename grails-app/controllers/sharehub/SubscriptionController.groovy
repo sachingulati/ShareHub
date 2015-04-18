@@ -11,15 +11,16 @@ class SubscriptionController {
     }
     def subscriptionService
 
+    // update required
     def subscribe() {
-        subscriptionService.subscribe(session["username"], params.topicId)
+        subscriptionService.subscribe(springSecurityService.currentUser.username, params.topicId)
     }
 
     def unsubscribe() {
-        subscriptionService.unsubscribe(session["username"], params.topicId)
+        subscriptionService.unsubscribe(springSecurityService.currentUser.username, params.topicId)
     }
 
     def modifySubscriptionSeriousness() {
-        subscriptionService.subscribe(session["username"], params.topicId, Seriousness.valueOf(params.seriousness))
+        subscriptionService.subscribe(springSecurityService.currentUser.username, params.topicId, Seriousness.valueOf(params.seriousness))
     }
 }

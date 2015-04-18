@@ -1,5 +1,6 @@
 package sharehub
 
+
 class UserController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -64,10 +65,10 @@ class UserController {
         }
         User user = User.findByUsername(params.username)
         if (user) {
-            user.active = !user.active
+            user.enabled = !user.enabled
             user.save flush: true
             render remoteLink(update: "manager_${user.username}", controller: "user", action: "switchActivate") {
-                (user.active ? "Deactivate" : "Activate")
+                (user.enabled ? "Deactivate" : "Activate")
             }
         } else {
             render("User Not Found!")

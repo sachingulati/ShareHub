@@ -1,7 +1,6 @@
 package sharehub
 
 class Role {
-
 	String authority
 
 	static mapping = {

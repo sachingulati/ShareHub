@@ -10,6 +10,7 @@ class TopicService {
 
     def mailService
     def utilService
+    def springSecurityService
 
     def createDefaultTopics() {
         User.list().each { user ->
@@ -22,13 +23,14 @@ class TopicService {
     }
 
     Boolean show(User user, Topic topic) {
-        return !(!topic || (topic.visibility == Visibility.PRIVATE && !(user?.admin) &&
+        // update required
+        return !(!topic || (topic.visibility == Visibility.PRIVATE /*&& !(user?.admin)*/ &&
                 !Subscription.countByTopicAndUser(topic, user) && !Invite.findByTopicAndInviteToEmail(topic, user?.email)))
     }
 
-    def showTopic(username, topicId) {
+    def showTopic(topicId) {
         Topic topic = Topic.findById(topicId)
-        User user = User.findByUsername(username)
+        User user = springSecurityService.currentUser
         if (!topic || !show(user, topic)) {
             return null
         }
@@ -48,8 +50,9 @@ class TopicService {
         }
     }
 
-    def invite(username, topicId, email, inviteTo, g) {
-        User user = User.findByUsername(username)
+    // update required
+    def invite(topicId, email, inviteTo, g) {
+        User user = springSecurityService.currentUser
         Topic topic = Topic.get(topicId)
         if (!user || !topic || !Subscription.findByUserAndTopic(user, topic)) {
             return false
@@ -67,6 +70,7 @@ class TopicService {
         return false
     }
 
+    // update required
     def subList(def topicList, def paramsMax, def paramsOffset) {
         int size = topicList.size()
         Integer offset = 0, max = 5

@@ -3,6 +3,7 @@ package sharehub
 class ApplicationTagLib {
     static namespace = "sh"
     static defaultEncodeAs = [taglib: 'raw']
+    def springSecurityService
     def image = { attr ->
         String path = createLink(controller: "assets", action: "user-default.png", absolute: true)
         if (attr.src) {
@@ -12,6 +13,7 @@ class ApplicationTagLib {
     }
 
     def topBarSearch = {
+        // update required
         if (session["admin"]) {
             out << g.textField(name: "search", class: "form-control", placeholder: "Search")
         }
@@ -21,32 +23,38 @@ class ApplicationTagLib {
     }
 
     def markRead = { attr ->
-        ResourceStatus resourceStatus = ResourceStatus.findByResourceAndUser(Resource.load(attr.resourceId), User.findByUsername(session["username"]))
-        if (session["username"] && resourceStatus) {
-            out << '<a class="inboxLinkStyle markReadLink" data-resource-id="' + attr.resourceId +
-                    '" href="javascript:void(0)"> Mark ' + (resourceStatus.isRead ? "un" : "") + "read </a>"
+        if (springSecurityService.isLoggedIn()) {
+            ResourceStatus resourceStatus = ResourceStatus.findByResourceAndUser(Resource.load(attr.resourceId), springSecurityService.currentUser)
+            if (resourceStatus) {
+                out << '<a class="inboxLinkStyle markReadLink" data-resource-id="' + attr.resourceId +
+                        '" href="javascript:void(0)"> Mark ' + (resourceStatus.isRead ? "un" : "") + "read </a>"
+            }
         }
     }
-
     def subscribe = { attr ->
-        Subscription subscription = Subscription.findByTopicAndUser(attr.topic, User.findByUsername(session["username"]))
-        if (subscription) {
-            out << render(template: "/subscription/subscribeOptions",
-                    model: [subscriptionType: subscription.seriousness, topicId: attr.topic.id, topicName: attr.topic.name,
-                            canUnsubscribe:(attr.topic.createdBy.username != session["username"])])
-        } else {
-            out << "<a class='subscribe' href='javascript:void(0)' data-topic-id='" + attr.topic.id + "'>Subscribe</a>"
+        if (springSecurityService.isLoggedIn()) {
+            User currentUser = springSecurityService.currentUser
+            Subscription subscription = Subscription.findByTopicAndUser(attr.topic, currentUser)
+            if (subscription) {
+                out << render(template: "/subscription/subscribeOptions",
+                        model: [subscriptionType: subscription.seriousness, topicId: attr.topic.id, topicName: attr.topic.name,
+                                canUnsubscribe: (attr.topic.createdBy != currentUser)])
+            } else {
+                out << "<a class='subscribe' href='javascript:void(0)' data-topic-id='" + attr.topic.id + "'>Subscribe</a>"
+            }
         }
     }
 
     def isEditableTopic = { attr, body ->
-        if (session["admin"] || attr.topic.createdBy.username == session["username"]) {
+//        update required
+        if (/*session["admin"] ||*/ attr.topic.createdBy == springSecurityService.currentUser) {
             out << (body())
         }
     }
 
     def isEditableResource = { attr, body ->
-        if (session["admin"] || attr.resource.topic.createdBy.username == session["username"] || attr.resource.createdBy.username == session["username"]) {
+//        update required
+        if (/*session["admin"] || */attr.resource.topic.createdBy.username == session["username"] || attr.resource.createdBy.username == session["username"]) {
             out << (body())
         }
     }

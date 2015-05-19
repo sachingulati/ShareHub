@@ -75,9 +75,9 @@ grails.project.dependency.resolution = {
         compile ":mail:1.0.7"
         compile ":quartz:1.0.2"
 
-        compile ":simian:0.1-SNAPSHOT"
-        compile ":codenarc:0.22"
-        compile ":gmetrics:0.3.1"
+//        compile ":simian:0.1-SNAPSHOT"
+//        compile ":codenarc:0.22"
+//        compile ":gmetrics:0.3.1"
         compile ':spring-security-core:2.0-RC3'
 
 //        compile ":jquery-validation:1.9"

@@ -13,17 +13,23 @@ class UserService {
 
 //    update required
     def createDefaultUsers() {
-        User user = new User(firstName: "Sachin", lastName: "Gulati", email: "sachin@email.com", username: "sachin",
-                password: "12345678", confirmPassword: "12345678", admin: false, active: true,
-                photoUrl: (grailsApplication.config.userImages + "sachin"))
+        def adminRole = new Role(authority: 'ROLE_ADMIN').save(flush: true)
+        def userRole = new Role(authority: 'ROLE_USER').save(flush: true)
+
+
+        User user = new User(firstName: "Sachin", lastName: "Gulati", email: "sachingulati21@gmail.com", username: "sachin",
+                password: "12345678", photoUrl: (grailsApplication.config.userImages + "sachin"))
         if (user.validate()) {
-            user.save()
+            user.save(flush:true)
+            UserRole.create user, userRole, true
         }
-        user = new User(firstName: "Admin", lastName: "ShareHub", email: "admin@email.com", username: "admin",
-                password: "12345678", confirmPassword: "12345678", admin: true, active: true)
+        user = new User(firstName: "Admin", lastName: "ShareHub", email: "sachin.gulati@tothenew.com", username: "admin",
+                password: "12345678")
         if (user.validate()) {
-            user.save()
+            user.save(flush: true)
+            UserRole.create user, adminRole, true
         }
+
     }
 
     // update required

@@ -9,17 +9,7 @@ class BootStrap {
     def resourceService
     def init = { servletContext ->
 
-        def adminRole = new Role(authority: 'ROLE_ADMIN').save(flush: true)
-        def userRole = new Role(authority: 'ROLE_USER').save(flush: true)
-
-        User testUser = new User(firstName: "Sachin", lastName: "Gulati", email: "sachin@email.com", username: "sachin",
-                password: "12345678")
-        testUser.save(flush: true)
-
-        UserRole.create testUser, adminRole, true
-
-/*
-        if (false && User.list().isEmpty()){
+        if (User?.list().isEmpty()){
             log.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
             userService.createDefaultUsers()
             log.info("Default Users added.")
@@ -34,7 +24,7 @@ class BootStrap {
             resourceService.createDefaultReadingItems()
             log.info("Default readingItems added.")
             log.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-        }*/
+        }
     }
     def destroy = {
     }

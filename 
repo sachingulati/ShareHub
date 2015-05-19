@@ -1,0 +1,1000 @@
+  606  git add -A .
+  607  git commit -m "added properties in qa in datasource.groovy"
+  608  git push
+  609  git add -A .
+  610  git commit -m "added logs in bootstrap"
+  611  git push
+  612  git add -A .
+  613  git commit -m "bootstrap.groovy updated for update mode"
+  614  git push
+  615  qa
+  616  cd
+  617  vim .bashrc
+  618  qa
+  619  shareHub
+  620  git reset
+  621  git status
+  622  git add -A .
+  623  git commit -m "rating count updated"
+  624  git push
+  625  qa
+  626  qa 
+  627  qa
+  628  gcrap
+  629  git add -A .
+  630  git commit -m "image path updated in config"
+  631  git status
+  632  git push
+  633  cd .. 
+  634  ls
+  635  cd .. 
+  636  ls 
+  637  cd userImages/
+  638  ls
+  639  scp sachin sachin-gulati@qa6.intelligrape.com:/ShareHubResources/userImages/sachin
+  640  qa
+  641  scp sachin sachin-gulati@qa6.intelligrape.com:/ShareHubResources/userImages/sachin
+  642  scp sachin sachin-gulati@qa6.intelligrape.net:/ShareHubResources/userImages/sachin
+  643  scp sachin sachin-gulati@qa6.intelligrape.net:/ShareHubResources/userImages/
+  644  scp sachin sachin-gulati@qa6.intelligrape.net
+  645  scp sachin sachin-gulati@qa6.intelligrape.net:/
+  646  cd 
+  647  shareHub
+  648  git add -A .
+  649  git commit -m "user default images working"
+  650  git push
+  651  touch catalina.out
+  652  less catalina.out
+  653  qa
+  654  qa
+  655  git add -A .
+  656  git commit -m "registration debugging!"
+  657  ls
+  658  rm catalina.out
+  659  ls
+  660  git add -A .
+  661  git commit -m "registration debugging!"
+  662  git push
+  663  qa
+  664  git add -A .
+  665  git commit -m "Registratin debugging "
+  666  git push
+  667  qa
+  668  git add -A .
+  669  git commit -m "registration debugging"
+  670  git push
+  671  qa
+  672  brightness 0.5
+  673  git add -A .
+  674  git commit -m "edit profile page added"
+  675  git push
+  676  grails
+  677  qa
+  678  sql
+  679  git add -A .
+  680  git commit -m "edit user"
+  681  git push
+  682  brightness 0.6
+  683  clear
+  684  groovysh
+  685  groovyConsole
+  686  qa
+  687  cd
+  688  groovyConsole
+  689  groovysh
+  690  cd /media/intelligrape/d22cb4fd-b53b-4532-8fde-0267189ba9c6/d/sw/flash/hAuNtEd RM-625 v51.1.002 CORE/RM625_0597963_51.1.002_001/Refurbish/x
+  691  cd "/media/intelligrape/d22cb4fd-b53b-4532-8fde-0267189ba9c6/d/sw/flash/hAuNtEd RM-625 v51.1.002 CORE/RM625_0597963_51.1.002_001/Refurbish/x"
+  692  ls
+  693  ll
+  694  open
+  695  clear
+  696  s
+  697  clear
+  698  git add -A .
+  699  git log
+  700  git commit -m "improvements"
+  701  git push 
+  702  qa
+  703  sql
+  704  qa
+  705  git add -A .
+  706  s
+  707  git add -A .
+  708  git commit -m "dashboard ajaxified: inbox, subscriptions, trending topics"
+  709  s
+  710  git add -A .
+  711  git log
+  712  git commit -m "topic list ajaxified"
+  713  git push 
+  714  qa
+  715  sql
+  716  sql
+  717  s
+  718  grails 
+  719  grails -reloading run-app;
+  720  sql
+  721  git add -A .
+  722  git commit -m "subscribe unsubscribe ajaxified"
+  723  git push
+  724  git add -A .
+  725  git commit -m "all pages ajaxified"
+  726  git push
+  727  qa
+  728  javac
+  729  vi HelloWorld.java
+  730  javac HelloWorld.java
+  731  vi HelloWorld.java
+  732  s
+  733  cd .. 
+  734  vi todo
+  735  git add -A .
+  736  s
+  737  git add -A .
+  738  git commit -m "generalised resource searching added"
+  739  cd /media/intelligrape/2898-9865
+  740  ls
+  741  cp /home/intelligrape/.bashrc bashrc
+  742  ls
+  743  cat bashrc
+  744  cd
+  745  ls -a
+  746  pwd
+  747  s
+  748  git add -A .
+  749  git commit -m "validation"
+  750  git push
+  751  s
+  752  git reset
+  753  git reset --hard
+  754  git add -A .
+  755  git commit -m "javascript seperated from afterLogin.gsp, _vars.gsp added and some minor improvements"
+  756  git add -A .
+  757  git commit -m "javascript jquery improvements"
+  758  git status
+  759  git push
+  760  git status
+  761  git add -A .
+  762  git commit -m "Invites, rating and other improvements"
+  763  git push
+  764  git status
+  765  git add -A .
+  766  git commit -m "email image fix"
+  767  git push
+  768  sql
+  769  gcrap
+  770  git reset --hard
+  771  gcrap
+  772  sql
+  773  qa
+  774  sql
+  775  qa
+  776  git add -A .
+  777  s
+  778  git add -A .
+  779  git commit -m "search done"
+  780  git push
+  781  qa
+  782  git add -A .
+  783  s
+  784  git add -A .
+  785  git commit -m "invite and subscription improved"
+  786  git push
+  787  git add -A .
+  788  git commit -m "unread resource list fixed"
+  789  git push 
+  790  sql
+  791  s
+  792  git add -A . 
+  793  git push
+  794  git commit -m "invitation ajaxified"
+  795  git push
+  796  qa
+  797  git add -A .
+  798  s
+  799  git add -A .
+  800  git commit -m "Seriousness fixed" 
+  801  git push
+  802  .bashrc
+  803  cd 
+  804  . .bashrc
+  805  cat .bashrc
+  806  clear
+  807  sql
+  808  s
+  809  grails clean;
+  810  gcrap
+  811  sql
+  812  s
+  813  git add -A .
+  814  git commit -m "forget password and ajax request validation added"
+  815  git push
+  816  qa
+  817  git add -A .
+  818  git commit -m "topic list"
+  819  git push
+  820  qa 
+  821  sql
+  822  git reset --hard
+  823  git add -A .
+  824  git commit -m "unreadresource reload fixed"
+  825  git push
+  826  git add -A .
+  827  git commit -m "unread resource list fixed"
+  828  git push 
+  829  qa
+  830  grails create-job mailer;
+  831  gcrap
+  832  git log
+  833  vim .bashrc
+  834  s
+  835  gcrap
+  836  grails 
+  837  s
+  838  git add -A .
+  839  git commit -m "edit resource"
+  840  git push
+  841  qa
+  842  grails 
+  843  grails run-app
+  844  s
+  845  git log
+  846  git push
+  847  git add -A .
+  848  git commit -m "searching in view all topics added"
+  849  git push
+  850  qa
+  851  s
+  852  git add -A .
+  853  git commit -m "facebook and google+ share added, private topic resources shown"
+  854  git push
+  855  qa
+  856  cd .
+  857  cd
+  858  mkdir -p "tmpdir/tmpchild/tmpchild2"
+  859  ls
+  860  cd tmpdir
+  861  ls
+  862  touch a
+  863  cd .. 
+  864  rm -rf tmpdir
+  865  cd
+  866  ls
+  867  cat temp.c
+  868  cat temp.c|head 2
+  869  cat temp.c head
+  870  head|cat temp.c
+  871  head 2|cat temp.c
+  872  head -2 temp.c
+  873  head -5 tail -1 temp.c
+  874  head -5| tail -1 temp.c
+  875  cat >> temp.c
+  876  cat temp.c
+  877  cat > temp.c
+  878  cat temp.c
+  879  head -10| tail -5 temp.c
+  880  head -5|tail -10 temp.c
+  881  tail -5 | head -10 temp.c
+  882  ls
+  883  find mykey
+  884  cd Music
+  885  touch a
+  886  cd
+  887  find a
+  888  find a -r
+  889  s
+  890  grails
+  891  grails run-app
+  892  git reset --hard
+  893  git add -A .
+  894  git commit -m "recent resource on login page edited: showing only 10 resources now"
+  895  git push
+  896  sudo apt-get install tor
+  897  qa
+  898  sudo apt-get install tor
+  899  qa
+  900  git add -A .
+  901  s
+  902  git add -A 
+  903  git commit -m "stable" 
+  904  simian-reports
+  905  simian-report
+  906  s
+  907  grails stats
+  908  clear
+  909  grails stats
+  910  grails
+  911  gmetrics
+  912  s
+  913  git add -A .
+  914  git commit -m "many improvements"
+  915  git push 
+  916  qa
+  917  s
+  918  git add -A .
+  919  git commit -m "commit"
+  920  git push
+  921  qa
+  922  git add -a . 
+  923  git add -A . 
+  924  git commit -m "reports bug removed "
+  925  git push
+  926  qa
+  927  git add -A .
+  928  git commit -m "report messages fixes, error message added to rating before login, subscribed topic list fix"
+  929  git push
+  930  cd /media/intelligrape/d22cb4fd-b53b-4532-8fde-0267189ba9c6/d/sw/flash/hAuNtEd RM-625 v51.1.002 CORE/RM625_0597963_51.1.002_001/Refurbish
+  931  cd "/media/intelligrape/d22cb4fd-b53b-4532-8fde-0267189ba9c6/d/sw/flash/hAuNtEd RM-625 v51.1.002 CORE/RM625_0597963_51.1.002_001/Refurbish"
+  932  ls
+  933  ls -a
+  934  open
+  935  cd
+  936  gedit .bashrc
+  937  cd "/media/intelligrape/d22cb4fd-b53b-4532-8fde-0267189ba9c6/d/sw/flash/hAuNtEd RM-625 v51.1.002 CORE/RM625_0597963_51.1.002_001/Refurbish"
+  938  open
+  939  history
+  940  open
+  941  ls
+  942  cd "/media/intelligrape/d22cb4fd-b53b-4532-8fde-0267189ba9c6/d/sw/flash/hAuNtEd RM-625 v51.1.002 CORE/RM625_0597963_51.1.002_001/Refurbish"
+  943  ll
+  944  open
+  945  cd .. 
+  946  cd ttn-hubspot/
+  947  git add -A .
+  948  git commit -m "analytics case studies added"
+  949  git push origin case-studies 
+  950  git branch
+  951  git log
+  952  git add -A .
+  953  git commit -m "AEM case studies added" 
+  954  git branch
+  955  git push origin case-studies 
+  956  git add -A .
+  957  git commit -m "big data case studies added"
+  958  git push origin case-studies 
+  959  git add -A .
+  960  git commit -m "mobility case studies added "
+  961  git push origin case-studies 
+  962  git add -A .
+  963  git commit -m "added remaining analytics case studies"
+  964  git push origin case-studies 
+  965  git add -A .
+  966  git commit -m "mobile case studies removed"
+  967  cd .. 
+  968  cd ttn-hubspot/
+  969  git pull origin case-studies 
+  970  git checkout case-studies 
+  971  git branch
+  972  git fetch -a
+  973  git checkout case-studies
+  974  git branch
+  975  git checkout case-studies
+  976  git branch
+  977  git checkout static-content 
+  978  git branch
+  979  git checkout case-studies
+  980  git checkout casestudy
+  981  git branch
+  982  git branch -r
+  983  git checkout case-studies
+  984  git branch 
+  985  git checkout -b case-studies
+  986  git branch
+  987  git pull origin case-studies 
+  988  git add . 
+  989  git commit -m "grails case studies added"
+  990  git push case-studies
+  991  git push
+  992  git checkout static-content 
+  993  git add .
+  994  git commit -m "coe tech hover menu resolved"
+  995  git push
+  996  git status
+  997  git branch
+  998  git status
+  999  git push origin static-content 
+ 1000  git pull origin static-content 
+ 1001  git push origin static-content 
+ 1002  git status
+ 1003  git checkout case-studies 
+ 1004  git add . 
+ 1005  git commit -m "content case studies added"
+ 1006  git push origin case-studies 
+ 1007  git checkout services 
+ 1008  git add . 
+ 1009  git commit -m "grails upgrade services.html added"
+ 1010  git push
+ 1011  git pull
+ 1012  git pull origin services 
+ 1013  git push origin services
+ 1014  git checkout case-studies 
+ 1015  git add .
+ 1016  git commit "all content case studies added"
+ 1017  git commit -m "all content case studies added"
+ 1018  git add -A .
+ 1019  git commit -m "all content case studies added"
+ 1020  git push origin case-studies 
+ 1021  groovyConsole
+ 1022  cd ..
+ 1023  ls
+ 1024  cd groovyScript
+ 1025  ls
+ 1026  groovyConsole "placeholder file.groovy"
+ 1027  mkdir temp project
+ 1028  mkdir "temp project"
+ 1029  cd "temp project"
+ 1030  git reset --hard
+ 1031  cd projects
+ 1032  cd ttn-hubspot/
+ 1033  git reset --hard
+ 1034  git pull origin static-content 
+ 1035  git reset --hard
+ 1036  git pull origin static-content 
+ 1037  git add -A
+ 1038  git status
+ 1039  git commit -m "related case study groovy script added"
+ 1040  git push origin static-content 
+ 1041  git add misc/updateRelatedCaseStudies
+ 1042  git status
+ 1043  git reset
+ 1044  git reset --hard
+ 1045  git pull origin static-content 
+ 1046  git log
+ 1047  git status
+ 1048  git add -A
+ 1049  git commit -banner and related case study images script added"
+ 1050  "
+ 1051  git commit "banner and related case study images script added"
+ 1052  git commit -m "banner and related case study images script added"
+ 1053  git add -A
+ 1054  git commit -m "case study index page updation"
+ 1055  git pull origin static-content 
+ 1056  git log
+ 1057  git push origin static-content 
+ 1058  sudo apt-get install nautilus-open-terminal
+ 1059  git add -A 
+ 1060  git commit -m "banner and related case studies updated in all case studies"
+ 1061  git push origin static-content 
+ 1062  git pull origin static-content 
+ 1063  git push origin static-content 
+ 1064  git reset --hard
+ 1065  git add -A .
+ 1066  git commit -m "banner and related case studies updated in all case studies"
+ 1067  git push origin static-content 
+ 1068  git add -A .
+ 1069  git commit -m "case study index page and caseStudyJson.js updated"
+ 1070  git pull origin static-content 
+ 1071  git push origin static-content 
+ 1072  git reset --hard
+ 1073  git add -A 
+ 1074  git commit -m "Result count added in case study index page"
+ 1075  git pull origin static-content 
+ 1076  git push origin static-content 
+ 1077  git reset --hard
+ 1078  git log
+ 1079  git checkout e3349576ff4b36ed792eda675fb284d3dcd3aba9
+ 1080  git log
+ 1081  git checkout b3efe276c0e2371b968e073d0a94361d16881b48
+ 1082  git log
+ 1083  git checkout 07e22430f4d699997635bcb8dd3da78bfa2528f7
+ 1084  git log
+ 1085  git checkout a4b48ec69cedb7219f676cc6895add58be1b310c
+ 1086  git log
+ 1087  git checkout 4c26563e7f7ff50b8fd03548d363889089428eb9
+ 1088  git log
+ 1089  git checkout 10ce211e16d1d9789808ad34dcbcd037634fbf92
+ 1090  git log
+ 1091  git checkout 8b30fdb0fe9bf7afc4ed9f4404ff34cdaec68159
+ 1092  git branch
+ 1093  git checkout static-content 
+ 1094  git reset --hard
+ 1095  git pull origin static-content 
+ 1096  git reset --hard
+ 1097  git pull origin static-content 
+ 1098  git log
+ 1099  clear
+ 1100  git log
+ 1101  git revert --no-commit 10ce211e16d1d9789808ad34dcbcd037634fbf92 693dd18a86d7e6dafc9a4015db1e958cda29e05e
+ 1102  git status
+ 1103  git reset --hard
+ 1104  git status
+ 1105  clear
+ 1106  git revert --no-commit 693dd18a86d7e6dafc9a4015db1e958cda29e05e 10ce211e16d1d9789808ad34dcbcd037634fbf92
+ 1107  git status
+ 1108  clear
+ 1109  git log
+ 1110  git status
+ 1111  git add -A
+ 1112  git commit -m "job index json added"
+ 1113  git pull origin static-content 
+ 1114  git push origin static-content 
+ 1115  git add "js/job-index.js"
+ 1116  git add "jobs-index.js"
+ 1117  git add "jobs-index.html"
+ 1118  git status
+ 1119  git commit -m "minor changes injobs index and json"
+ 1120  git status
+ 1121  git reset --hard
+ 1122  git add -A 
+ 1123  git commit -m "job index done"
+ 1124  git push origin static-content 
+ 1125  git pul
+ 1126  git pull origin static-content 
+ 1127  git push origin static-content 
+ 1128  git add "filter updated in job index and case study index fixed(not completely)"
+ 1129  git add -A
+ 1130  git commit -m "filter updated in job index and case study index fixed(not completely)"
+ 1131  git pull origin static-content 
+ 1132  git push origin static-content 
+ 1133  git add -A 
+ 1134  git commit -m "case study index page filtering done"
+ 1135  git pull origin static-content 
+ 1136  git push origin static-content 
+ 1137  git reset --hard
+ 1138  git add -A 
+ 1139  git log
+ 1140  groovyConsole
+ 1141  ls
+ 1142  ls -a
+ 1143  open
+ 1144  exit
+ 1145  git add -A 
+ 1146  git add -A
+ 1147  git commit -m "jquery validation removed from job index"
+ 1148  git pull origin static-content 
+ 1149  git push origin static-content 
+ 1150  git add -A
+ 1151  git commit -m "case study sorting fixed"
+ 1152  git pull origin static-content 
+ 1153  git push origin static-content 
+ 1154  git add -A .
+ 1155  git commit -m "case study index hash and filter alert fixed"
+ 1156  git reset 
+ 1157  git add -A 
+ 1158  git commit -m "case study index js slash added"
+ 1159  git pull origin static-content 
+ 1160  git push origin static-content 
+ 1161  groovyConsole
+ 1162  git reset --hard
+ 1163  git add -A .
+ 1164  git commit -m "json fixed without priority"
+ 1165  git pull origin static-content 
+ 1166  git add -A
+ 1167  git commit -m "conflict resolve"
+ 1168  git push origin static-content 
+ 1169  git pull origin static-content 
+ 1170  git add -A 
+ 1171  git commit -m "case study duplicacy removed and added load more for every 15 (not working properly)"
+ 1172  git pull origin static-content 
+ 1173  git push origin static-content 
+ 1174  git add -A 
+ 1175  git commit -m "case study load more fixed"
+ 1176  git pull origin static-content 
+ 1177  git log
+ 1178  git push origin static-content 
+ 1179  git add -A
+ 1180  git commit -m "job index color fixed"
+ 1181  git push origin static-content 
+ 1182  git add -A
+ 1183  git commit -m "added loading gif"
+ 1184  git push origin static-content 
+ 1185  git pull origin static-content 
+ 1186  git push origin static-content 
+ 1187  git add -A
+ 1188  git commit -m "coe-tech, coe-content, coe-dm, coe-analytics merged to one file coe-top"
+ 1189  git pull origin static-content 
+ 1190  git push origin static-content 
+ 1191  git add -A 
+ 1192  git commit -m "job index color fixed, case study index loading image fixed"
+ 1193  git pull origin static-content 
+ 1194  git push origin static-content 
+ 1195  git add -A 
+ 1196  git commit jobs pages moved to root
+ 1197  git commit -m jobs pages moved to root
+ 1198  git commit -m "jobs pages moved to root"
+ 1199  git pull origin static-content 
+ 1200  git push origin static-content 
+ 1201  git add -A 
+ 1202  git commit -m "case study loading spinner fixed"
+ 1203  git pull origin static-content 
+ 1204  git push origin static-content 
+ 1205  git add -A 
+ 1206  git add -A
+ 1207  git commit -m "slash added in js script tag"
+ 1208  git push origin static-content 
+ 1209  git add -A
+ 1210  git commit -m "select all children hash and alert fixed"
+ 1211  git pull origin sta
+ 1212  git pull origin static-content 
+ 1213  git push origin static-content 
+ 1214  git pull origin static-content 
+ 1215  git add -A 
+ 1216  git commit -m "case study index logos images fixed, unique case studies fixed"
+ 1217  git pull origin static-content 
+ 1218  git push origin static-content 
+ 1219  git add -A 
+ 1220  git commit -m "media buying and planning american swan: service added in case study page and json"
+ 1221  git push origin static-content 
+ 1222  git log 
+ 1223  git pull origin static-content 
+ 1224  clear
+ 1225  git add -A 
+ 1226  git pull origin static-content 
+ 1227  git push origin static-content 
+ 1228  git add -A 
+ 1229  git commit -m "view all links and breadcrumbs fixed"
+ 1230  git push origin static-content 
+ 1231  git add -A 
+ 1232  git add -A
+ 1233  git commit -m "Case study fixed"
+ 1234  git pull origin static-content 
+ 1235  git push origin static-content 
+ 1236  git log
+ 1237  clear
+ 1238  git status
+ 1239  clear
+ 1240  git reset --hard
+ 1241  git add -A
+ 1242  git commit -m "images fixed in case study json "
+ 1243  git pull origin static-content 
+ 1244  git push origin static-content 
+ 1245  git add -A 
+ 1246  git commit -m "more logo images added in json"
+ 1247  git pull origin static-content 
+ 1248  git push origin static-content 
+ 1249  git reset --hard
+ 1250  git pull origin static-content 
+ 1251  git add -A
+ 1252  git commit -m "services removed from breadcrumbs"
+ 1253  git pull origin static-content 
+ 1254  git push origin static-content 
+ 1255  git add -A
+ 1256  git commit -m "_ replaced by - in all case studies pages"
+ 1257  git pull origin static-content 
+ 1258  git push origin static-content 
+ 1259  git add -A 
+ 1260  git commit -m "replaced last link with text in breadcrumbs"
+ 1261  git pull origin static-content 
+ 1262  git push origin static-content 
+ 1263  git add -A 
+ 1264  git commit -m "service name change in json"
+ 1265  git pull origin static-content 
+ 1266  git push origin static-content 
+ 1267  git log
+ 1268  git pull origin static-content 
+ 1269  git add -A 
+ 1270  git commit -m "priority changed in case studies"
+ 1271  git pull origin static-content 
+ 1272  git push origin static-content 
+ 1273  git log
+ 1274  clear
+ 1275  groovyConsole
+ 1276  groovyConsole
+ 1277  groovyConsole 
+ 1278  cd projects/ttn-hubspot/
+ 1279  git reset --hard
+ 1280  git pull origin static-content 
+ 1281  git add -A
+ 1282  git commit -m "filter functionality changed for case study index"
+ 1283  git push origin static-content 
+ 1284  git pull origin static-content 
+ 1285  git log
+ 1286  sudo apt get install groovyConsole
+ 1287  sudo apt-get install groovyConsole
+ 1288  sudo apt-get install groovy
+ 1289  groovyConsole
+ 1290  cd projects/ttn-hubspot/
+ 1291  git pull origin static-content 
+ 1292  git reset --hard
+ 1293  git pull origin static-content 
+ 1294  git add -A
+ 1295  git commit -m "footer fixed"
+ 1296  git pull origin static-content 
+ 1297  git push origin static-content 
+ 1298  git log
+ 1299  sudo apt-get install wine
+ 1300  wine
+ 1301  sudo apt-get install wine
+ 1302  git add -A
+ 1303  cd projects/ttn-hubspot/
+ 1304  git add -A
+ 1305  git commit -m "header nav menu fixed"
+ 1306  git pull origin static-content q
+ 1307  git pull origin static-content
+ 1308  git log
+ 1309  git push origin static-content 
+ 1310  sudo apt-get install wine
+ 1311  cd projects/ttn-hubspot/
+ 1312  git log
+ 1313  git pull origin static-content 
+ 1314  git log
+ 1315  groovyConsole 
+ 1316  xrandr --output LVDS --mode 1024x768
+ 1317  cd projects/ttn-hubspot/
+ 1318  git add -A
+ 1319  git commit -m "header event delay changed to 300ms"
+ 1320  git pull origin static-content 
+ 1321  git push origin static-content 
+ 1322  git add -A
+ 1323  git commit -m "content changes in big data services"
+ 1324  git pull origin static-content 
+ 1325  git push origin static-content 
+ 1326  git pull origin static-content 
+ 1327  git push origin static-content 
+ 1328  git add -A
+ 1329  git commit -m "changed unicode a with usual ascii a in all pages"
+ 1330  git pull origin static-content 
+ 1331  git push origin static-content 
+ 1332  git add -A
+ 1333  git commit -m "double question mark and triple question fixed in all pages"
+ 1334  git pull origin static-content 
+ 1335  git push origin static-content 
+ 1336  git status
+ 1337  git pull origin static-content 
+ 1338  git add -A
+ 1339  git commit -m "amc breadcrumb text changed"
+ 1340  git pull origin static-content 
+ 1341  git push origin static-content 
+ 1342  git status
+ 1343  git add -A
+ 1344  git commit -m "breadcrumbs fixed"
+ 1345  git pull origin static-content 
+ 1346  git push origin static-content 
+ 1347  git pull origin static-content 
+ 1348  git push origin static-content 
+ 1349  git status
+ 1350  groovyConsole 
+ 1351  ls
+ 1352  cd downloads
+ 1353  cd Downloads
+ 1354  ls
+ 1355  exit
+ 1356  ifconfig
+ 1357  gedit
+ 1358  git add -A
+ 1359  git commit -m "logo images removed from case study pages"
+ 1360  git pull origin static-content 
+ 1361  git push origin static-content 
+ 1362  git add -A 
+ 1363  git commit -m "100k+ image replaced"
+ 1364  git push origin static-content 
+ 1365  git status
+ 1366  git checkout meta-tags 
+ 1367  git checkout static-content 
+ 1368  git add -A
+ 1369  git commit -m "testimonials fixed"
+ 1370  git push origin static-content 
+ 1371  git pull origin static-content 
+ 1372  git push origin static-content 
+ 1373  git checkout meta-tags 
+ 1374  git add -A 
+ 1375  git commit -m "changed log manually"
+ 1376  git push origin static-content 
+ 1377  git push origin meta-tags 
+ 1378  git checkout static-content 
+ 1379  git status
+ 1380  git branch
+ 1381  groovyConsole
+ 1382  git add -A
+ 1383  git commit -m "testimonials fixed"
+ 1384  git pull origin static-content 
+ 1385  git push origin static-content 
+ 1386  git status
+ 1387  git add -A
+ 1388  git status
+ 1389  git commit -m "case study index filter made dynamic"
+ 1390  git push origin static-content 
+ 1391  git pull origin static-content 
+ 1392  git push origin static-content 
+ 1393  git add -A
+ 1394  git commit -m "social-media-campaign-analysis changed to social-media-campaign-analytics"
+ 1395  git pull origin static-content 
+ 1396  git push origin static-content 
+ 1397  git add -A
+ 1398  git commit -m "coe piano speed reduced"
+ 1399  git pull origin static-content 
+ 1400  git push origin static-content 
+ 1401  git add -A
+ 1402  git commit -m "case study json updated"
+ 1403  git pull origin static-content 
+ 1404  git push origin static-content 
+ 1405  git add -a
+ 1406  git add -A
+ 1407  git commit -m "breadcrumbs added in news pages"
+ 1408  git pull origin static-content 
+ 1409  git push origin static-content 
+ 1410  git status
+ 1411  git reset --hard
+ 1412  git pull origin static-content 
+ 1413  git reset --hard
+ 1414  git add -A 
+ 1415  git reset --hard
+ 1416  git add -A
+ 1417  git commit -m "breadcrumbs added"
+ 1418  git pull origin static-content 
+ 1419  git push origin static-content 
+ 1420  git add -A
+ 1421  git commit -m "industry file name changed to lower case"
+ 1422  git pull origin static-content 
+ 1423  git push origin static-content 
+ 1424  git reset --hard
+ 1425  git add -A
+ 1426  git commit -m "changes by ankit chhabra"
+ 1427  git pull origin static-content 
+ 1428  git push origin static-content 
+ 1429  git pull origin static-content 
+ 1430  git push origin static-content 
+ 1431  git pull origin static-content 
+ 1432  git push origin static-content 
+ 1433  git add -A
+ 1434  git commit -m "case study industry reverted to static"
+ 1435  git pull origin static-content 
+ 1436  git push origin static-content 
+ 1437  git add -A
+ 1438  git commit -m "footer bottom fixed"
+ 1439  git pull origin static-content 
+ 1440  git push origin static-content 
+ 1441  git add .
+ 1442  git commit -am "gayatri changes "
+ 1443  git pull origin static-content 
+ 1444  git push origin static-content 
+ 1445  ifconfig
+ 1446  git status
+ 1447  cd projects/ttn-hubspot/
+ 1448  git status
+ 1449  git branch
+ 1450  git checkout meta-tags 
+ 1451  git add -A
+ 1452  git commit -m "added meta script and log"
+ 1453  git push origin static-content 
+ 1454  git checkout static-content 
+ 1455  git add -A
+ 1456  git commit -m "special characters replaced and images added"
+ 1457  git pull origin static-content 
+ 1458  git push origin static-content 
+ 1459  git add -A
+ 1460  git commit -m "header top nav fixed"
+ 1461  git pull origin static-content 
+ 1462  git push origin static-content 
+ 1463  git add -A 
+ 1464  git commit -m "technology breadcrumbs fixed"
+ 1465  git pull origin static-content 
+ 1466  git push origin static-content 
+ 1467  git status
+ 1468  git reset --hard
+ 1469  git add -A
+ 1470  git commit -m "images added "
+ 1471  git push origin static-content 
+ 1472  git pull origin static-content 
+ 1473  git push origin static-content 
+ 1474  git log
+ 1475  git add -A
+ 1476  git commit -m "sony liv sports images added and replaced site wise"
+ 1477  git pull origin static-content 
+ 1478  git push origin static-content 
+ 1479  git log
+ 1480  git show --name-only bedd0f91f06ad8034a6df802589df16eca63e787
+ 1481  groovyConsole
+ 1482  cd projects/ttn-hubspot/
+ 1483  git reset --hard
+ 1484  git stash
+ 1485  git pull origin static-content 
+ 1486  git log
+ 1487  git stash apply stash{0}
+ 1488  git stash apply @stash{0}
+ 1489  git stash apply stash@{0}
+ 1490  git reset --hard
+ 1491  git log
+ 1492  git stash apply stash@{0}
+ 1493  git add -A
+ 1494  git push origin static-content 
+ 1495  git commit -m "changes by gayatri"
+ 1496  git pull origin static-content 
+ 1497  git push origin static-content 
+ 1498  git add -A 
+ 1499  git commit -m "changes by gayatri"
+ 1500  git push origin static-content 
+ 1501  git pull origin static-content 
+ 1502  git push origin static-content 
+ 1503  groovyConsole
+ 1504  git add -A
+ 1505  git commit -m "changes by gayatri"
+ 1506  git push origin static-content 
+ 1507  git pull origin static-content 
+ 1508  git push origin static-content 
+ 1509  git reset --hard
+ 1510  git add -A 
+ 1511  git commit -m "case study json updated"
+ 1512  git pull origin static-content 
+ 1513  git push origin static-content 
+ 1514  git status
+ 1515  git add -A
+ 1516  git commit -m 
+ 1517  git commit -m "case study index filter spliter changed"
+ 1518  git pull origin static-content 
+ 1519  git push origin static-content 
+ 1520  git pull origin static-content 
+ 1521  git add -A
+ 1522  git commit -m "job index checkbox fixed"
+ 1523  git pull origin static-content 
+ 1524  git push origin static-content 
+ 1525  git add -A
+ 1526  git commit -m "case study index jumping fixed"
+ 1527  git push origin static-content 
+ 1528  git add -A
+ 1529  git commit -m "case study index blinking fix"
+ 1530  git push origin static-content 
+ 1531  git add -A
+ 1532  git commit -m "unique name functionality added to case study index"
+ 1533  git pull origin static-content 
+ 1534  git push origin static-content 
+ 1535  git status
+ 1536  sudo apt-get install wine cabextract
+ 1537  wget http://www.tatanka.com.br/ies4linux/downloads/ies4linux-latest.tar.gz
+ 1538  cd ..
+ 1539  open 
+ 1540  cd ttn-hubspot
+ 1541  git add -A
+ 1542  git commit -m "case study filter unique name functionality limited to industries"
+ 1543  git push origin static-content 
+ 1544  git pull origin static-content q
+ 1545  git pull origin static-content
+ 1546  git push origin static-content 
+ 1547  git add -A
+ 1548  git commit -m "job index added or filtering"
+ 1549  git pull origin static-content 
+ 1550  git push origin static-content 
+ 1551  git add -A
+ 1552  git commit -m "5 industry pages added"
+ 1553  git pull origin static-content 
+ 1554  git push origin static-content 
+ 1555  git pull origin static-content 
+ 1556  git push origin static-content 
+ 1557  git add -A
+ 1558  git commit -m "header updated"
+ 1559  git pull origin static-content 
+ 1560  git push origin static-content 
+ 1561  git status
+ 1562  git add -A
+ 1563  git commit -m "home header updated"
+ 1564  git pull origin static-content 
+ 1565  git push origin static-content 
+ 1566  git add -A
+ 1567  git commit -m "changes by gayatri"
+ 1568  git pull origin static-content 
+ 1569  git push origin static-content 
+ 1570  git add -A
+ 1571  git commit -m "client referenced text changed"
+ 1572  git pull origin static-content 
+ 1573  git push origin static-content 
+ 1574  git add -A
+ 1575  git commit -m "
+ 1576  client refrences text edited"
+ 1577  git add -A
+ 1578  git commit -m "changes by gayatri"
+ 1579  git pull origin static-content 
+ 1580  git push origin static-content 
+ 1581  tar zxvf ies4linux-latest.tar.gz
+ 1582  cd ies4linux-*
+ 1583  ./ies4linux
+ 1584  wine version
+ 1585  git add -A 
+ 1586  history
+ 1587  set_color
+ 1588  gutsy
+ 1589  sudo apt-get install gutsy
+ 1590  sudo apt-get install set_color.1.gz
+ 1591  exit
+ 1592  ping 43.230.174.150
+ 1593  deb http://download.virtualbox.org/virtualbox/debian vivid contrib
+ 1594  curl
+ 1595  sudo apt-get install curl
+ 1596  curl www.google.com
+ 1597  curl www.google.co.in
+ 1598  curl www.google.co.in > google
+ 1599  open
+ 1600  cd..
+ 1601  cd ..
+ 1602  s
+ 1603  git branch
+ 1604  git status
+ 1605  history | less

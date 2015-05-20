@@ -5,10 +5,10 @@
             %{--${flash.message}--}%
         </li>
         <li>
-            <g:form controller="login" action="loginHandler" class="navbar-form navbar-left" role="search">
+            <g:form class="navbar-form navbar-left" role="search" uri="/j_spring_security_check">
                 <div class="form-group">
-                    <g:textField name="username" class="form-control" placeholder="Username"/>
-                    <g:passwordField name="password" class="form-control" placeholder="Password"/>
+                    <g:textField name="j_username" class="form-control" placeholder="Username"/>
+                    <g:passwordField name="j_password" class="form-control" placeholder="Password"/>
                 </div>
                 <g:submitButton name="Login" class="btn btn-default">Login</g:submitButton>
                 <div class="row">

@@ -160,6 +160,8 @@ grails.plugin.springsecurity.authority.className = 'sharehub.Role'
 grails.plugin.springsecurity.rejectIfNoRule = false
 grails.plugin.springsecurity.fii.rejectPublicInvocations = false
 grails.plugin.springsecurity.auth.loginFormUrl = "/login"
+grails.plugin.springsecurity.failureHandler.defaultFailureUrl = "/login?auth=fail"
+grails.plugin.springsecurity.successHandler.defaultTargetUrl = "/home"
 //
 //grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 //	'/':                              ['permitAll'],

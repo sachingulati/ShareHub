@@ -6,12 +6,13 @@ class ShareHubFilters {
     // update required
     def filters = {
         login(controller: "login", action: "*"){
+/*
             before={
                 if(springSecurityService.isLoggedIn()){
                     redirect(controller: "home", action: "dashboard")
                     return false
                 }
-            }
+            }*/
         }
     }
 }

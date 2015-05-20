@@ -78,7 +78,7 @@ grails.project.dependency.resolution = {
 //        compile ":simian:0.1-SNAPSHOT"
 //        compile ":codenarc:0.22"
 //        compile ":gmetrics:0.3.1"
-        compile ':spring-security-core:2.0-RC3'
+        compile ':spring-security-core:2.0-RC4'
 
 //        compile ":jquery-validation:1.9"
         // Uncomment these to enable additional asset-pipeline capabilities

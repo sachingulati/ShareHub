@@ -47,7 +47,7 @@ class ResourceController {
     }
 
     def showPost() {
-        render(view: "/resource/showPost", model: resourceService.showPost(params.id.toLong(), springSecurityService.currentUser.username))
+        render(view: "/resource/showPost", model: resourceService.showPost(params.id.toLong()))
     }
 
     def changeRating() {

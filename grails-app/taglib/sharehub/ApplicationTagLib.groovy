@@ -54,7 +54,9 @@ class ApplicationTagLib {
     }
 
     def isEditableResource = { attr, body ->
-        if (utilService.isUser(Roles.ADMIN) || attr.resource.topic.createdBy.username == session["username"] || attr.resource.createdBy.username == session["username"]) {
+//        println(utilService.isUser(Roles.ADMIN))
+        if (utilService.isUser(Roles.ADMIN) || attr.resource.topic.createdBy == springSecurityService.currentUser
+                || attr.resource.createdBy == springSecurityService.currentUser) {
             out << (body())
         }
     }

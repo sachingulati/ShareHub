@@ -14,6 +14,7 @@ class SubscriptionService {
     def springSecurityService
     def utilService
     def subscribe(Long topicId, seriousness = Seriousness.VERY_SERIOUS) {
+        println topicId
         Topic topic = Topic.findById(topicId)
         User user = springSecurityService.currentUser
         List invite = Invite.findAllByTopicAndInviteToEmail(topic, user.email)

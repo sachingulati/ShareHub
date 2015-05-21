@@ -13,7 +13,7 @@ class UtilService {
     PageRenderer groovyPageRenderer
     def springSecurityService
     def isUser(Roles role){
-        springSecurityService.getAuthentication()?.authorities?.find{role.toString()}?true:false
+        springSecurityService.getAuthentication()?.authorities?.find{it.authority == role.toString()}
     }
     String pageRenderer(String template, model) {
         String content

@@ -69,7 +69,7 @@ class ResourceService {
         return true
     }
 
-    def showPost(Long id, String username) {
+    def showPost(Long id) {
         Resource resource = Resource.get(id)
         User user = springSecurityService.currentUser
         if (!resource || !topicService.show(resource.topic)) {

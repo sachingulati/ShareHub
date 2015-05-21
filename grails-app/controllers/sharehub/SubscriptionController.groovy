@@ -12,7 +12,7 @@ class SubscriptionController {
     def subscriptionService
 
     def subscribe() {
-        subscriptionService.subscribe(params.topicId)
+        subscriptionService.subscribe(params.topicId.toLong())
     }
 
     def unsubscribe() {

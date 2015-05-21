@@ -86,7 +86,7 @@
     <div class="beforeLogin" id="contentBody">
 </sec:ifNotLoggedIn>
 %{--update required--}%
-    <g:remoteLink controller="logout" method="POST">Logout</g:remoteLink>
+    %{--<g:remoteLink controller="logout" method="POST">Logout</g:remoteLink>--}%
     <g:layoutBody/>
 </div>
 </body>

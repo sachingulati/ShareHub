@@ -13,7 +13,7 @@
                 <g:submitButton name="Login" class="btn btn-default">Login</g:submitButton>
                 <div class="row">
                     <div class="col-lg-5">
-                        <g:checkBox name="keepMeLogin"/> Keep me logged in
+                        <g:checkBox name="_spring_security_remember_me"/> Keep me logged in
                     </div>
                     <div class="col-lg-7">
                         <g:link controller="login" action="forgotPassword">Forgot Password?</g:link>

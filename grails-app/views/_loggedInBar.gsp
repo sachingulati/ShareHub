@@ -45,8 +45,7 @@
                     <li role="presentation"><g:link controller="topic" role="menuitem" tabindex="-1" action="viewAllSubscribedTopics">Topics</g:link></li>
                     <li role="presentation">
                         %{--<g:remoteLink controller="logout" method="POST">Logout</g:remoteLink>--}%
-
-                        <g:link controller="user" action="logout" tabindex="-1">Logout</g:link></li>
+                        <g:link controller="logout" method="POST" tabindex="-1">Logout</g:link></li>
                 </ul>
             </div>
         </li>

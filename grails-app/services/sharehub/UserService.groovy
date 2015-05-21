@@ -51,6 +51,7 @@ class UserService {
             user.photoUrl = path
         }
         user.save()
+        UserRole.create user, Role.findByAuthority(Roles.USER.toString()), true
         return user
     }
 

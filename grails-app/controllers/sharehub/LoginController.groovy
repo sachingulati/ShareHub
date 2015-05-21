@@ -32,20 +32,6 @@ class LoginController {
 //        }
     }
 
-    def loginHandler (String username, String password) {
-        println "-----------------------------------------------------------------"
-        println params
-        User user = User.findByUsernameAndPasswordAndEnabled(username, password, true) ?:
-                User.findByEmailAndPasswordAndEnabled(username, password, true)
-        println "-----------------------------------------------------------------"
-        println user
-        if (user) {
-            setUserSession(user, params.keepMeLogin == "on")
-        } else {
-            flash.error = "Invalid username or password!"
-        }
-        redirect(url: "/")
-    }
 
     def forgotPassword() {
         render(view: "/login/forgotPassword")
@@ -63,7 +49,7 @@ class LoginController {
 
     def changePassword() {
         PasswordToken passwordToken = PasswordToken.findByToken(params.token)
-        if (!passwordToken || !passwordToken.user.isActive()) {
+        if (!passwordToken || !passwordToken.user.isEnabled()) {
             flash.error = "Invalid password token!"
             redirect(action: "index")
         }
@@ -95,8 +81,9 @@ class LoginController {
 
     def register() {
         User user = userService.register(params)
+        println user
         if (user) {
-            setUserSession(user)
+//            setUserSession(user)
             flash.success = "You are successfully registered. Enjoy sharing :)"
         } else {
             flash.error = "Invalid data!"

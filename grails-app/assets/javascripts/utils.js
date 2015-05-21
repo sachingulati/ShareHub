@@ -226,12 +226,12 @@ $(document).ready(function(){
     $rateBox = $('.rate');
     $ratingHearts = $('.ratingHearts');
     showRating($rateBox,-1);
-    if(loggedIn == "true"){
+    if(loggedIn == true){
         $ratingHearts.hover(rateOnHover);
         $rateBox.mouseout(rateReset);
         $ratingHearts.click(changeRating);
     }else{
-        $rateBox.click(function(){warningReport("Please login to rate this post.");});
+        $rateBox.click(function(){warningReport("Please login to rate this post.....");});
     }
     if(errorMessage.length>0){
         warningReport(errorMessage);

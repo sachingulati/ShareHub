@@ -10,8 +10,6 @@
 <head>
     <meta name="layout" content="applicationLayout"/>
     <title>${resource?.title}</title>
-    <script>
-    </script>
 </head>
 
 <body>

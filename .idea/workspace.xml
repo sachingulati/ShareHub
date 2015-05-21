@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4160786d-3f67-4d6d-8e09-e75c85ad7b3c" name="Default" comment="check">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/Config.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/sharehub/LoginController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/sharehub/LoginController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/services/sharehub/UserService.groovy" afterPath="$PROJECT_DIR$/grails-app/services/sharehub/UserService.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_loggedInBar.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_loggedInBar.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_notLoggedInBar.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_notLoggedInBar.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/applicationLayout.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/applicationLayout.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/todo" afterPath="$PROJECT_DIR$/grails-app/todo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/resource/showPost.gsp" afterPath="$PROJECT_DIR$/grails-app/views/resource/showPost.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/assets/javascripts/utils.js" afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/utils.js" />
     </list>
     <ignored path="ShareHub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,14 +46,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginController.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginController.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/LoginController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.17021276" vertical-offset="1041" max-vertical-offset="1605">
+            <state vertical-scroll-proportion="4.173913" vertical-offset="1041" max-vertical-offset="1605">
               <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
               <folding>
                 <element signature="e#18#49#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResourceController.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/ResourceController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-24.782608" vertical-offset="0" max-vertical-offset="1725">
+              <caret line="38" column="56" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showPost.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/resource/showPost.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="6.7021275" vertical-offset="480" max-vertical-offset="1650">
+              <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/utils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33216783" vertical-offset="3230" max-vertical-offset="3840">
+              <caret line="228" column="25" selection-start-line="228" selection-start-column="25" selection-end-line="228" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -71,7 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/services/sharehub/SearchService.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/sharehub/PasswordToken.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/sharehub/enums/Seriousness.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/resource/_resourceList.gsp" />
@@ -84,7 +108,6 @@
         <option value="$PROJECT_DIR$/grails-app/views/user/editProfile.gsp" />
         <option value="$PROJECT_DIR$/grails-app/assets/javascripts/reports.js" />
         <option value="$PROJECT_DIR$/grails-app/domain/sharehub/Subscription.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/utils.js" />
         <option value="$PROJECT_DIR$/grails-app/views/subscription/_subscribeOptions.gsp" />
         <option value="$PROJECT_DIR$/grails-app/domain/sharehub/UserRole.groovy" />
         <option value="$PROJECT_DIR$/target/work/plugins/spring-security-core-2.0-RC2/src/groovy/grails/plugin/springsecurity/ReflectionUtils.groovy" />
@@ -122,6 +145,8 @@
         <option value="$PROJECT_DIR$/grails-app/todo" />
         <option value="$PROJECT_DIR$/grails-app/views/_notLoggedInBar.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/sharehub/LoginController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/resource/showPost.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/utils.js" />
       </list>
     </option>
   </component>
@@ -577,6 +602,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="resource" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShareHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShareHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -639,11 +686,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sharehub" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -661,11 +704,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sharehub" />
+              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -711,7 +754,7 @@
     <property name="FullScreen" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="LayoutCode.rearrangeEntriesGSP" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="login&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/LoginController.groovy&#10;not&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_notLoggedInBar.gsp&#10;app&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/applicationLayout.gsp&#10;appl&#9;ACTION&#9;ChangesView.ApplyPatch&#10;user&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/domain/sharehub/User.groovy&#10;logincon&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/LoginController.groovy&#10;applic&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/applicationLayout.gsp&#10;confi&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/Config.groovy&#10;logg&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_loggedInBar.gsp&#10;remem&#9;PSI&#9;JAVA://grails.plugin.springsecurity.web.filter.GrailsRememberMeAuthenticationFilter&#10;logout&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/target/work/plugins/spring-security-core-2.0-RC4/grails-app/controllers/grails/plugin/springsecurity/LogoutController.groovy&#10;vars&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_vars.gsp&#10;userco&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/UserController.groovy&#10;applica&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/applicationLayout.gsp&#10;resour&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/ResourceController.groovy&#10;var&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_vars.gsp&#10;resourc&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/ResourceController.groovy&#10;util&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/services/sharehub/UtilService.groovy&#10;subs&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/SubscriptionController.groovy&#10;todo&#9;ACTION&#9;ActivateTODOToolWindow&#10;topicli&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/topic/topicList.gsp&#10;tagli&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/taglib/sharehub/ApplicationTagLib.groovy&#10;reso&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/ResourceController.groovy&#10;appli&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/taglib/sharehub/ApplicationTagLib.groovy&#10;hom&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/HomeController.groovy&#10;User&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/domain/sharehub/User.groovy&#10;boo&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BootStrap.groovy&#10;userser&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/services/sharehub/UserService.groovy&#10;gsp&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/applicationLayout.gsp&#10;topic&#9;null&#9;null&#10;home&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/HomeController.groovy&#10;notl&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_notLoggedInBar.gsp&#10;boot&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BootStrap.groovy&#10;share&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/sharehub/ShareHubFilters.groovy&#10;conf&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/Config.groovy&#10;loginc&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/LoginController.groovy&#10;auth.gsp&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/target/work/plugins/spring-security-core-2.0-RC4/grails-app/views/login/auth.gsp&#10;auth&#9;PSI&#9;JAVA://grails.plugin.springsecurity.access.vote.AuthenticatedVetoableDecisionManager&#10;build&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BuildConfig.groovy&#10;config&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/Config.groovy&#10;aut&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/target/work/plugins/spring-security-core-2.0-RC3/grails-app/views/login/auth.gsp&#10;buil&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BuildConfig.groovy&#10;topi&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/TopicController.groovy&#10;Use&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/UserController.groovy&#10;lo&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_loggedInBar.gsp&#10;la&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/applicationLayout.gsp&#10;bo&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BootStrap.groovy&#10;ho&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/HomeController.groovy&#10;co&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BuildConfig.groovy&#10;uti&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/assets/javascripts/utils.js" />
+    <property name="SearchEverywhereHistoryKey" value="showpo&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/resource/showPost.gsp&#10;resour&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/ResourceController.groovy&#10;login&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/LoginController.groovy&#10;not&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_notLoggedInBar.gsp&#10;app&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/applicationLayout.gsp&#10;appl&#9;ACTION&#9;ChangesView.ApplyPatch&#10;user&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/domain/sharehub/User.groovy&#10;logincon&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/LoginController.groovy&#10;applic&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/applicationLayout.gsp&#10;confi&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/Config.groovy&#10;logg&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_loggedInBar.gsp&#10;remem&#9;PSI&#9;JAVA://grails.plugin.springsecurity.web.filter.GrailsRememberMeAuthenticationFilter&#10;logout&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/target/work/plugins/spring-security-core-2.0-RC4/grails-app/controllers/grails/plugin/springsecurity/LogoutController.groovy&#10;vars&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_vars.gsp&#10;userco&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/UserController.groovy&#10;applica&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/applicationLayout.gsp&#10;var&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_vars.gsp&#10;resourc&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/ResourceController.groovy&#10;util&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/services/sharehub/UtilService.groovy&#10;subs&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/SubscriptionController.groovy&#10;todo&#9;ACTION&#9;ActivateTODOToolWindow&#10;topicli&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/topic/topicList.gsp&#10;tagli&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/taglib/sharehub/ApplicationTagLib.groovy&#10;reso&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/ResourceController.groovy&#10;appli&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/taglib/sharehub/ApplicationTagLib.groovy&#10;hom&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/HomeController.groovy&#10;User&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/domain/sharehub/User.groovy&#10;boo&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BootStrap.groovy&#10;userser&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/services/sharehub/UserService.groovy&#10;gsp&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/applicationLayout.gsp&#10;topic&#9;null&#9;null&#10;home&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/HomeController.groovy&#10;notl&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_notLoggedInBar.gsp&#10;boot&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BootStrap.groovy&#10;share&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/sharehub/ShareHubFilters.groovy&#10;conf&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/Config.groovy&#10;loginc&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/LoginController.groovy&#10;auth.gsp&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/target/work/plugins/spring-security-core-2.0-RC4/grails-app/views/login/auth.gsp&#10;auth&#9;PSI&#9;JAVA://grails.plugin.springsecurity.access.vote.AuthenticatedVetoableDecisionManager&#10;build&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BuildConfig.groovy&#10;config&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/Config.groovy&#10;aut&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/target/work/plugins/spring-security-core-2.0-RC3/grails-app/views/login/auth.gsp&#10;buil&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BuildConfig.groovy&#10;topi&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/TopicController.groovy&#10;Use&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/UserController.groovy&#10;lo&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/_loggedInBar.gsp&#10;la&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/views/layouts/applicationLayout.gsp&#10;bo&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BootStrap.groovy&#10;ho&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/controllers/sharehub/HomeController.groovy&#10;co&#9;FILE&#9;file:///home/intelligrape/Documents/project/ShareHub/grails-app/conf/BuildConfig.groovy" />
     <property name="options.lastSelected" value="preferences.keymap" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -1402,7 +1445,7 @@
       <workItem from="1432188117896" duration="2248000" />
       <workItem from="1432194314571" duration="702000" />
       <workItem from="1432196948292" duration="1223000" />
-      <workItem from="1432201577950" duration="6137000" />
+      <workItem from="1432201577950" duration="6506000" />
     </task>
     <task id="LOCAL-00001" summary="check">
       <created>1424700707141</created>
@@ -1414,7 +1457,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="995958000" />
+    <option name="totallyTimeSpent" value="996327000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1438,7 +1481,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="43" y="-4" width="1323" height="772" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1455,7 +1498,7 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23028883" sideWeight="0.49615976" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23028883" sideWeight="0.49615976" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37001595" sideWeight="0.49960285" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1509,27 +1552,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/views/error.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="375">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/user/adminPanel.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.531915" vertical-offset="631" max-vertical-offset="1005">
-          <caret line="50" column="159" selection-start-line="50" selection-start-column="159" selection-end-line="50" selection-end-column="159" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/TestController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.521739" vertical-offset="0" max-vertical-offset="315">
-          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/InvitesController.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.695652" vertical-offset="9" max-vertical-offset="420">
@@ -1792,14 +1814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/ResourceController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.130435" vertical-offset="360" max-vertical-offset="1725">
-          <caret line="38" column="56" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/_vars.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.1666667" vertical-offset="121" max-vertical-offset="510">
@@ -1909,11 +1923,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/LoginController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.17021276" vertical-offset="1041" max-vertical-offset="1605">
+        <state vertical-scroll-proportion="4.173913" vertical-offset="1041" max-vertical-offset="1605">
           <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
           <folding>
             <element signature="e#18#49#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/sharehub/ResourceController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.782608" vertical-offset="0" max-vertical-offset="1725">
+          <caret line="38" column="56" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/reports.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/resource/showPost.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.7021275" vertical-offset="480" max-vertical-offset="1650">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33216783" vertical-offset="3230" max-vertical-offset="3840">
+          <caret line="228" column="25" selection-start-line="228" selection-start-column="25" selection-end-line="228" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>

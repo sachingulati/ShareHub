@@ -25,7 +25,7 @@ class UserController {
     }
 
     def updateUser() {
-        if (userService.updateUser(springSecurityService.currentUser.username, params.firstName, params.lastName, params.email, (params.removePhoto == "on"), params.photo)) {
+        if (userService.updateUser(params.firstName, params.lastName, params.email, (params.removePhoto == "on"), params.photo)) {
             render "Profile updated successfully"
         } else {
             render "Bad Request!"

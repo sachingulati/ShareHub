@@ -56,7 +56,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <g:link class="navbar-brand" controller="login">Share Hub</g:link>
+            <g:link class="navbar-brand" controller="home">Share Hub</g:link>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <sec:ifLoggedIn>

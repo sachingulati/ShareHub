@@ -36,7 +36,7 @@ class ResourceController {
     }
 
     def switchReadStatus() {
-        Boolean result = resourceService.changeOrSwitchReadStatus(params.resource.toLong(), springSecurityService.currentUser.username)
+        Boolean result = resourceService.changeOrSwitchReadStatus(params.resource.toLong())
         if (result) {
             render "Mark Unread"
         } else if (result == false) {

@@ -1,5 +1,6 @@
 package sharehub
 
+import com.sharehub.enums.Roles
 import org.springframework.security.access.annotation.Secured
 
 
@@ -7,7 +8,13 @@ import org.springframework.security.access.annotation.Secured
 class LoginController {
 
     def userService
-
+    def utilService
+    def beforeInterceptor = {
+        if (utilService.isUser(Roles.ADMIN) || utilService.isUser(Roles.USER)){
+            redirect(controller: "home")
+            return false
+        }
+    }
     def index() {
         if (params.auth=="fail"){
             flash.error = "Invalid username or password!"

@@ -1,6 +1,7 @@
 package sharehub
 
 import com.sharehub.CO.MailCO
+import com.sharehub.enums.Roles
 import com.sharehub.enums.Seriousness
 import com.sharehub.enums.Visibility
 import grails.transaction.Transactional
@@ -22,16 +23,16 @@ class TopicService {
         }
     }
 
-    Boolean show(User user, Topic topic) {
+    Boolean show(Topic topic) {
         // update required
-        return !(!topic || (topic.visibility == Visibility.PRIVATE /*&& !(user?.admin)*/ &&
+        User user = springSecurityService.currentUser
+        return !(!topic || (topic.visibility == Visibility.PRIVATE && !utilService.isUser(Roles.ADMIN) &&
                 !Subscription.countByTopicAndUser(topic, user) && !Invite.findByTopicAndInviteToEmail(topic, user?.email)))
     }
 
     def showTopic(topicId) {
         Topic topic = Topic.findById(topicId)
-        User user = springSecurityService.currentUser
-        if (!topic || !show(user, topic)) {
+        if (!topic || !show(topic)) {
             return null
         }
         return topic

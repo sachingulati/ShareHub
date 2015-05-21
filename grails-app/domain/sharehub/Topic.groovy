@@ -23,18 +23,16 @@ class Topic {
             }
         }
 
-        subscribedTopics { username ->
+        subscribedTopics { user ->
             subscriptions {
-                user {
-                    eq("username", username)
-                }
+                eq("user",user)
             }
         }
 
-        publicOrSubscribed { username ->
+        publicOrSubscribed { user ->
             distinct()
             or {
-                subscribedTopics(username)
+                subscribedTopics(user)
                 publicTopics()
             }
         }

@@ -31,7 +31,8 @@
             <div class="dropdown">
                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
                         data-toggle="dropdown" style="margin:7px" aria-expanded="true">
-                    <sec:loggedInUserInfo field="name"/>
+                    %{--<sec:loggedInUserInfo field="firstName"/>--}%
+                    <sh:name/>
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">

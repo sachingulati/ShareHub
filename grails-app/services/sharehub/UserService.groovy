@@ -1,6 +1,7 @@
 package sharehub
 
 import com.sharehub.CO.MailCO
+import com.sharehub.enums.Roles
 import grails.transaction.Transactional
 
 @Transactional
@@ -13,21 +14,22 @@ class UserService {
 
 //    update required
     def createDefaultUsers() {
-        def adminRole = new Role(authority: 'ROLE_ADMIN').save(flush: true)
-        def userRole = new Role(authority: 'ROLE_USER').save(flush: true)
-
+        Roles.each{
+            new Role(authority: it.toString()).save(flush: true)
+        }
 
         User user = new User(firstName: "Sachin", lastName: "Gulati", email: "sachingulati21@gmail.com", username: "sachin",
                 password: "12345678", photoUrl: (grailsApplication.config.userImages + "sachin"))
         if (user.validate()) {
             user.save(flush:true)
-            UserRole.create user, userRole, true
+            UserRole.create user, Role.findByAuthority(Roles.USER.toString()), true
         }
         user = new User(firstName: "Admin", lastName: "ShareHub", email: "sachin.gulati@tothenew.com", username: "admin",
                 password: "12345678")
         if (user.validate()) {
             user.save(flush: true)
-            UserRole.create user, adminRole, true
+            UserRole.create user,  Role.findByAuthority(Roles.USER.toString()), true
+            UserRole.create user,  Role.findByAuthority(Roles.ADMIN.toString()), true
         }
 
     }
@@ -43,7 +45,6 @@ class UserService {
         user.lastName = user.lastName.capitalize()
         user.username = user.username.toLowerCase()
         user.email = user.email.toLowerCase()
-        user.admin = false
         if (params.photo.bytes.size() > 0) {
             String path = grailsApplication.config.uploadImages.toString() + params.username
             params.photo.transferTo(new File(path))

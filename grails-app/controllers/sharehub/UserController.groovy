@@ -5,11 +5,11 @@ class UserController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
     def userService
-
+    def springSecurityService
     def profile() {
         User user = User.findByUsername(params.id) ?: User.findByUsername(session["username"])
         if (user) {
-            render(view: "/user/profile", model: [user: user, myProfile: user.username == session["username"]])
+            render(view: "/user/profile", model: [user: user, myProfile: user == springSecurityService.currentUser])
         }
         else {
             redirect(action: "myProfile")
@@ -17,15 +17,15 @@ class UserController {
     }
 
     def myProfile() {
-        forward(action: "profile", params: [id: session["username"], myProfile: true])
+        forward(action: "profile", params: [id: springSecurityService.currentUser.username , myProfile: true])
     }
 
     def editProfile() {
-        render(view: "/user/editProfile", model: [user: User.findByUsername(session["username"])])
+        render(view: "/user/editProfile", model: [user: springSecurityService.currentUser])
     }
 
     def updateUser() {
-        if (userService.updateUser(session["username"], params.firstName, params.lastName, params.email, (params.removePhoto == "on"), params.photo)) {
+        if (userService.updateUser(springSecurityService.currentUser.username, params.firstName, params.lastName, params.email, (params.removePhoto == "on"), params.photo)) {
             render "Profile updated successfully"
         } else {
             render "Bad Request!"
@@ -33,11 +33,11 @@ class UserController {
     }
 
     def changePassword() {
-        render userService.changePassword(session["username"], params.newPassword, params.confirmPassword, params.currentPassword)
+        render userService.changePassword(springSecurityService.currentUser.username, params.newPassword, params.confirmPassword, params.currentPassword)
     }
 
     def isLoggedIn() {
-        render(session["username"] ? "true" : "false")
+        render(springSecurityService.currentUser ? "true" : "false")
     }
 
     def showUserImage(String photoUrl) {

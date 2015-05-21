@@ -9,6 +9,9 @@ class LoginController {
     def userService
 
     def index() {
+        if (params.auth=="fail"){
+            flash.error = "Invalid username or password!"
+        }
         render view: "/login/login", model: [recentResources: Resource.byPublicTopic().sortByDate().list(max: 5, offset: 0),
                                              topPost: Resource.byPublicTopic().sortByRating().list(max: 5, offset: 0).collect{it[0]}]
     }

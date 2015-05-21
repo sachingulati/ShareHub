@@ -1,6 +1,7 @@
 package sharehub
 
 import com.sharehub.enums.ResourceType
+import com.sharehub.enums.Roles
 import com.sharehub.enums.Visibility
 import grails.transaction.Transactional
 
@@ -10,6 +11,7 @@ class ResourceService {
     def topicService
     def grailsApplication
     def springSecurityService
+    def utilService
 
     def createDefaultResources() {
         String desc = "hi this is description of Resources. This is temporary description and will be replaced by actual description later on. so for the time being please co-operate :)"
@@ -58,8 +60,7 @@ class ResourceService {
         User user = springSecurityService.currentUser
         Resource resource = Resource.get(resourceId)
         Subscription subscription = Subscription.findByUserAndTopic(user, resource.topic)
-        // update required
-        if (!resource || !user /*|| (!subscription && resource.topic.visibility == Visibility.PRIVATE && !user.admin)*/) {
+        if (!resource || !user || (!subscription && resource.topic.visibility == Visibility.PRIVATE && !utilService.isUser(Roles.ADMIN))) {
             return false
         }
         ResourceStatus resourceStatus = ResourceStatus.findOrCreateByUserAndResource(user, resource)
@@ -71,7 +72,7 @@ class ResourceService {
     def showPost(Long id, String username) {
         Resource resource = Resource.get(id)
         User user = springSecurityService.currentUser
-        if (!resource || !topicService.show(user, resource.topic)) {
+        if (!resource || !topicService.show(resource.topic)) {
             return null
         }
         ResourceStatus resourceStatus = ResourceStatus.findByUserAndResource(user, resource)
@@ -96,8 +97,7 @@ class ResourceService {
     def deleteResource(id, username) {
         Resource resource = Resource.get(id)
         User user = springSecurityService.currentUser
-        // update required
-        if (!resource || !user /*|| (!user.isAdmin() && resource.createdBy != user)*/) {
+        if (!resource || !user || (!utilService.isUser(Roles.ADMIN) && resource.createdBy != user)) {
             return "Invalid request!"
         }
         String resourceTitle = resource.title
@@ -152,7 +152,6 @@ class ResourceService {
 
     def download(resourceId) {
         Resource resource = Resource.findById(resourceId)
-        // update required
         if (!resource || (resource.topic.visibility == Visibility.PRIVATE && !Subscription.findByUserAndTopic(springSecurityService.currentUser, resource.topic))) {
             return null
         }

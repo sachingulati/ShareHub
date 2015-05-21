@@ -1,6 +1,7 @@
 package sharehub
 
 import com.sharehub.CO.MailCO
+import com.sharehub.enums.Roles
 import grails.gsp.PageRenderer
 import grails.transaction.Transactional
 
@@ -10,6 +11,10 @@ import java.security.SecureRandom
 class UtilService {
     def mailService
     PageRenderer groovyPageRenderer
+    def springSecurityService
+    def isUser(Roles role){
+        springSecurityService.getAuthentication()?.authorities?.find{role.toString()}?true:false
+    }
     String pageRenderer(String template, model) {
         String content
         try {

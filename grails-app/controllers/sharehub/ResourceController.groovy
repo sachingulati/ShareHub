@@ -1,5 +1,7 @@
 package sharehub
 
+import com.sharehub.enums.Roles
+
 
 class ResourceController {
 
@@ -8,10 +10,10 @@ class ResourceController {
     def grailsApplication
     def resourceService
     def springSecurityService
+    def utilService
     def renderResources() {
         def resources = Resource.byTopicId(params.topicId)
-        // update required
-        if (!session["admin"]) {
+        if (!utilService.isUser(Roles.ADMIN)) {
             resources = resources.subscribedOrPublic(springSecurityService.currentUser.username)
         }
         render(template: "/resource/resourceList", model: [resources: resources.list(), header: params.header, search: true])

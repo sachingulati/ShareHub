@@ -1,9 +1,12 @@
 package sharehub
 
+import com.sharehub.enums.Roles
+
 class ApplicationTagLib {
     static namespace = "sh"
     static defaultEncodeAs = [taglib: 'raw']
     def springSecurityService
+    def utilService
     def image = { attr ->
         String path = createLink(controller: "assets", action: "user-default.png", absolute: true)
         if (attr.src) {
@@ -13,8 +16,7 @@ class ApplicationTagLib {
     }
 
     def topBarSearch = {
-        // update required
-        if (session["admin"]) {
+        if (utilService.isUser(Roles.ADMIN)) {
             out << g.textField(name: "search", class: "form-control", placeholder: "Search")
         }
         else {
@@ -46,15 +48,13 @@ class ApplicationTagLib {
     }
 
     def isEditableTopic = { attr, body ->
-//        update required
-        if (/*session["admin"] ||*/ attr.topic.createdBy == springSecurityService.currentUser) {
+        if (utilService.isUser(Roles.ADMIN) || attr.topic.createdBy == springSecurityService.currentUser) {
             out << (body())
         }
     }
 
     def isEditableResource = { attr, body ->
-//        update required
-        if (/*session["admin"] || */attr.resource.topic.createdBy.username == session["username"] || attr.resource.createdBy.username == session["username"]) {
+        if (utilService.isUser(Roles.ADMIN) || attr.resource.topic.createdBy.username == session["username"] || attr.resource.createdBy.username == session["username"]) {
             out << (body())
         }
     }
@@ -64,5 +64,8 @@ class ApplicationTagLib {
         if (date) {
             out << date.format("h:mm a, d MMM, yyyy")
         }
+    }
+    def name = {
+        out << springSecurityService.currentUser.name
     }
 }

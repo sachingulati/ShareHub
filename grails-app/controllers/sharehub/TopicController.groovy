@@ -1,5 +1,6 @@
 package sharehub
 
+import com.sharehub.enums.Roles
 import com.sharehub.enums.Visibility
 
 
@@ -7,11 +8,11 @@ class TopicController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
     def topicService
-
+    def utilService
     def springSecurityService
     // update required
     def getRecentSubscribedTopics() {
-        def topicList = Topic.subscribedTopics(session["username"]).list(offset: params.offset, max: params.max)
+        def topicList = Topic.subscribedTopics(springSecurityService.currentUser).list(offset: params.offset, max: params.max)
         render(template: "/topic/topicList",
                 model: [topics: topicList, header: "Subscriptions", search: true, searchSubscription: true, hr: true,
                         viewAll: true, doPaginate: true, ajaxController: "topic", ajaxAction: "getRecentSubscribedTopics",
@@ -24,7 +25,7 @@ class TopicController {
     }
 
     def createTopic() {
-        Topic topic = new Topic(name: params.name, createdBy: User.findByUsername(session["username"]),
+        Topic topic = new Topic(name: params.name, createdBy: springSecurityService.currentUser,
                 visibility: Visibility.valueOf(params.visibility))
         topic.validate()
         if (topic.validate()) {
@@ -39,7 +40,7 @@ class TopicController {
 
     def editTopic() {
         Topic topic = Topic.findById(params.id)
-        if (!topic || !(topic.createdBy.username == session["username"] || session["admin"])) {
+        if (!topic || !(topic.createdBy == springSecurityService.currentUser || utilService.isUser(Roles.ADMIN))) {
             flash.error = "Invalid request!"
             redirect(url: "/")
             return false
@@ -58,11 +59,11 @@ class TopicController {
     }
 
     def delTopic() {
-        User user = User.findByUsername(session["username"])
+        User user = springSecurityService.currentUser
         Topic topic = Topic.findById(params.id)
-        if (topic && user && (topic.createdBy == user || user.admin)) {
-            flash.success = topic.name + " is successfully deleted."
+        if (topic && user && (topic.createdBy == user || utilService.isUser(Roles.ADMIN))) {
             topic.delete(flush: true)
+            flash.success = topic.name + " is successfully deleted."
         }else {
             flash.error = "Error in deleting " + topic.name
         }
@@ -76,14 +77,14 @@ class TopicController {
     }
 
     def showTopic() {
-        Topic topic = topicService.showTopic(session["username"], params.id)
+        Topic topic = topicService.showTopic(params.id)
         render(view: "/topic/showTopic", model: [topic: topic])
     }
 
     def getTopicsCreated() {
         def topicList = Topic.byCreatedBy(params.username)
-        if (!session["admin"]) {
-            topicList = topicList.publicOrSubscribed(session["username"])
+        if (!utilService.isUser(Roles.ADMIN)) {
+            topicList = topicList.publicOrSubscribed(springSecurityService.currentUser)
         }
         topicList = topicList.listDistinct()
         render(template: "/topic/topicList",
@@ -94,7 +95,7 @@ class TopicController {
 
     def getSubscribedTopics() {
         //def topicList = Topic.subscribedTopics(session["username"]).sortByRecentResource().list().unique()
-        def topicList = User.findByUsername(session["username"])?.subscriptions.topic
+        def topicList = springSecurityService.currentUser?.subscriptions.topic
         topicList = topicList.sort({topic->
             topic.resources.max({resource-> resource.dateCreated})
         })

@@ -7,6 +7,7 @@ class HomeController {
     def springSecurityService
     static defaultAction = "dashboard"
     def dashboard() {
+//        render springSecurityService.currentUser.name
         render(view: "/dashboard", model: [user: springSecurityService.currentUser])
     }
 }

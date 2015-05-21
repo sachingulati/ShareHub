@@ -51,7 +51,7 @@ class ResourceController {
     }
 
     def changeRating() {
-        if (resourceService.changeRating(params.resourceId, params.rate, springSecurityService.currentUser.username)) {
+        if (resourceService.changeRating(params.resourceId, params.rate)) {
             def rating = resourceService.getRating(params.resourceId)
             render("avgRating:" + rating.avgRating + ", totalCount:" + rating.totalCount)
         }
@@ -66,7 +66,7 @@ class ResourceController {
     }
 
     def shareLink() {
-        Resource resource= resourceService.shareLink(params, springSecurityService.currentUser)
+        Resource resource= resourceService.shareLink(params)
         if (resource) {
             redirect(action: "showPost", params: [id: resource.id])
         } else {
@@ -75,7 +75,7 @@ class ResourceController {
     }
 
     def shareDocument() {
-        Resource resource = resourceService.shareDocument(params, springSecurityService.currentUser)
+        Resource resource = resourceService.shareDocument(params)
         if (resource) {
             redirect(action: "showPost", params: [id: resource.id])
         } else {
@@ -89,7 +89,7 @@ class ResourceController {
     }
 
     def download() {
-        File file = resourceService.download(params.resourceId, springSecurityService.currentUser.username)
+        File file = resourceService.download(params.resourceId)
         if (file?.isFile()) {
             response.setContentType("APPLICATION/OCTET-STREAM")
             response.setHeader("Content-Disposition", "Attachment;Filename=" + file.name)

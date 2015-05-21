@@ -106,6 +106,7 @@ class ResourceService {
     }
 
     Resource shareResource(def params, ResourceType resourceType) {
+        println params
         User user = springSecurityService.currentUser
         if (!params || !Subscription.findByUserAndTopic(user, Topic.get(params.topic.toLong()))) {
             return null

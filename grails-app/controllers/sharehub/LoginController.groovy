@@ -87,6 +87,9 @@ class LoginController {
             passwordToken.delete(flush: true)
             flash.success = "Token deleted."
         }
+        else {
+            flash.error = "Invalid password token!"
+        }
         redirect(url: "/")
     }
 

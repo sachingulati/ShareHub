@@ -4,6 +4,7 @@ import com.sharehub.CO.MailCO
 import com.sharehub.enums.Roles
 import grails.plugin.springsecurity.annotation.Secured
 import grails.transaction.Transactional
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import org.springframework.security.provisioning.JdbcUserDetailsManager
 
 @Transactional
@@ -51,7 +52,7 @@ class UserService {
             params.photo.transferTo(new File(path))
             user.photoUrl = path
         }
-        user.save()
+        user.save(flush: true)
         UserRole.create user, Role.findByAuthority(Roles.USER.toString()), true
         return user
     }

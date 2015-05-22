@@ -1,7 +1,14 @@
 package sharehub
 
 import com.sharehub.enums.Roles
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.security.access.annotation.Secured
+import org.springframework.security.authentication.AuthenticationManager
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
+import org.springframework.security.core.Authentication
+import org.springframework.security.core.context.SecurityContextHolder
+import org.springframework.security.web.authentication.WebAuthenticationDetails
 
 
 //@Secured('permitAll')
@@ -9,6 +16,11 @@ class LoginController {
 
     def userService
     def utilService
+
+    AuthenticationManager authenticationManager
+
+//    @Autowired @Qualifier("authenticationManager") private AuthenticationManager authenticationManager;
+
     def beforeInterceptor = {
         if (utilService.isUser(Roles.ADMIN) || utilService.isUser(Roles.USER)){
             redirect(controller: "home")
@@ -61,7 +73,6 @@ class LoginController {
     def updatePassword() {
         User user = userService.changePasswordWithToken(params.token, params.password, params.confirmPassword)
         if (user) {
-            setUserSession(user)
             flash.success = "Password updated successfully."
         }
         else {
@@ -83,8 +94,13 @@ class LoginController {
         User user = userService.register(params)
         println user
         if (user) {
-//            setUserSession(user)
             flash.success = "You are successfully registered. Enjoy sharing :)"
+            UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(user.username, params.password)
+            request.getSession()
+            token.setDetails(new WebAuthenticationDetails(request))
+            Authentication authenticatedUser = authenticationManager.authenticate(token)
+            SecurityContextHolder.getContext().setAuthentication(authenticatedUser)
+
         } else {
             flash.error = "Invalid data!"
         }

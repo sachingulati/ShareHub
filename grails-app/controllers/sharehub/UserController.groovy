@@ -1,13 +1,14 @@
 package sharehub
 
-
+import com.sharehub.enums.Roles
 class UserController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
     def userService
     def springSecurityService
+    def utilService
     def profile() {
-        User user = User.findByUsername(params.id) ?: User.findByUsername(session["username"])
+        User user = User.findByUsername(params.id)
         if (user) {
             render(view: "/user/profile", model: [user: user, myProfile: user == springSecurityService.currentUser])
         }
@@ -16,14 +17,17 @@ class UserController {
         }
     }
 
+    @Secured(["ROLE_USER"])
     def myProfile() {
-        forward(action: "profile", params: [id: springSecurityService.currentUser.username , myProfile: true])
+        forward(action: "profile", params: [id: springSecurityService.currentUser.username])
     }
 
+    @Secured(["ROLE_USER"])
     def editProfile() {
         render(view: "/user/editProfile", model: [user: springSecurityService.currentUser])
     }
 
+    @Secured(["ROLE_USER"])
     def updateUser() {
         if (userService.updateUser(params.firstName, params.lastName, params.email, (params.removePhoto == "on"), params.photo)) {
             render "Profile updated successfully"
@@ -32,8 +36,9 @@ class UserController {
         }
     }
 
+    @Secured(["ROLE_USER"])
     def changePassword() {
-        render userService.changePassword(springSecurityService.currentUser.username, params.newPassword, params.confirmPassword, params.currentPassword)
+        render userService.changePassword(params.newPassword, params.confirmPassword, params.currentPassword)
     }
 
     def isLoggedIn() {
@@ -50,19 +55,13 @@ class UserController {
         }
     }
 
+    @Secured(["ROLE_ADMIN"])
     def adminPanel() {
-        if (session["admin"] == false) {
-            redirect(action: "myProfile")
-            return false
-        }
         render view: "/user/adminPanel", model: [users: User.list()]
     }
 
+    @Secured(["ROLE_ADMIN"])
     def switchActivate() {
-        if (!session["admin"]) {
-            redirect(url: "/")
-            return false
-        }
         User user = User.findByUsername(params.username)
         if (user) {
             user.enabled = !user.enabled
@@ -74,9 +73,7 @@ class UserController {
             render("User Not Found!")
         }
     }
-
-    def logout() {
-        session.invalidate()
-        redirect url: "/"
-    }
 }
+
+
+import grails.plugin.springsecurity.annotation.Secured

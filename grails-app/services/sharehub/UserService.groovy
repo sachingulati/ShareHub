@@ -2,7 +2,9 @@ package sharehub
 
 import com.sharehub.CO.MailCO
 import com.sharehub.enums.Roles
+import grails.plugin.springsecurity.annotation.Secured
 import grails.transaction.Transactional
+import org.springframework.security.provisioning.JdbcUserDetailsManager
 
 @Transactional
 class UserService {
@@ -11,7 +13,6 @@ class UserService {
     def utilService
     def mailService // update required
     def springSecurityService
-
 //    update required
     def createDefaultUsers() {
         Roles.each{
@@ -70,6 +71,7 @@ class UserService {
         return user
     }
 
+    @Secured(["ROLE_USER"])
     def updateUser(String fname, String lname, String email, Boolean removePhoto, def photo) {
         User user = springSecurityService.currentUser
         if (!user) {
@@ -92,10 +94,11 @@ class UserService {
         return false
     }
 
-    def changePassword(String username, String newPassword, String confirmPassword, String currentPassword) {
+    @Secured(["ROLE_USER"])
+    def changePassword(String newPassword, String confirmPassword, String currentPassword) {
         // update required
-        User user = User.findByUsernameAndPassword(username, currentPassword)
-        if (!user) {
+        User user = springSecurityService.currentUser
+        if (!springSecurityService.passwordEncoder.isPasswordValid(user.password,currentPassword,null)) {
             return "Invalid Password!"
         }
         if (confirmPassword != newPassword) {

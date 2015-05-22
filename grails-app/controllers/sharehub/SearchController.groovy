@@ -1,5 +1,7 @@
 package sharehub
 
+import com.sharehub.enums.Roles
+
 class SearchController {
 
     def topicService
@@ -28,7 +30,7 @@ class SearchController {
 
     def searchResources() {
         def searchResult = Resource.searchInResource(params.search)
-        if (!session["admin"]) {
+        if (!utilService.isUser(Roles.ADMIN)) {
             searchResult = searchResult.subscribedOrPublic(springSecurityService.currentUser.username)
         }
         searchResult = searchResult.list(offset: params.offset, max: params.max)

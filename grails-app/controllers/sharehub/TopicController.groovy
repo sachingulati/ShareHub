@@ -94,7 +94,6 @@ class TopicController {
     }
 
     def getSubscribedTopics() {
-        //def topicList = Topic.subscribedTopics(session["username"]).sortByRecentResource().list().unique()
         def topicList = springSecurityService.currentUser?.subscriptions.topic
         topicList = topicList.sort({topic->
             topic.resources.max({resource-> resource.dateCreated})

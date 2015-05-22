@@ -19,12 +19,12 @@
                     <td class="userTableData">
                         <g:if test="${profileHeader}">My subscription</g:if>
                         <g:else>Subscriptions</g:else>
-                        : <a href="javascript:void(0)">${user.subscriptions.size()}</a>
+                        : %{--<g:link controller="topic" action="viewAllSubscribedTopics">--}%${user.subscriptions.size()}%{--</g:link>--}%
                     </td>
                     <td class="userTableData">
                         <g:if test="${profileHeader}">My topics</g:if>
                         <g:else>Topics</g:else>
-                        : <a href="javascript:void(0)">${user.topics.size()}</a>
+                        : <g:link controller="user" action="profile" params='[id: "${user.username}"]'>${user.topics.size()}</g:link>
                     </td>
                 </tr>
             </table>

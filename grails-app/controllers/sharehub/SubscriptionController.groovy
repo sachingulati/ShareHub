@@ -20,6 +20,6 @@ class SubscriptionController {
     }
 
     def modifySubscriptionSeriousness() {
-        subscriptionService.subscribe(params.topicId, Seriousness.valueOf(params.seriousness))
+        subscriptionService.subscribe(params.topicId.toLong(), Seriousness.valueOf(params.seriousness))
     }
 }

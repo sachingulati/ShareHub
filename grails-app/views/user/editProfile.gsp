@@ -86,15 +86,15 @@
                     <table width="100%" id="editProfile">
                         <tr>
                             <td>Current Pasword*</td>
-                            <td><g:textField name="currentPassword" class="form-control"/> </td>
+                            <td><g:passwordField name="currentPassword" class="form-control"/> </td>
                         </tr>
                         <tr>
                             <td>New Password*</td>
-                            <td><g:textField name="newPassword" class="form-control"/> </td>
+                            <td><g:passwordField name="newPassword" class="form-control"/> </td>
                         </tr>
                         <tr>
                             <td>Confirm password*</td>
-                            <td><g:textField name="confirmPassword" class="form-control"/> </td>
+                            <td><g:passwordField name="confirmPassword" class="form-control"/> </td>
                         </tr>
                         <tr>
                             <td colspan="2"><g:submitButton name="submit" value="Update" class="btn btn-default" style="width: 100%"/>

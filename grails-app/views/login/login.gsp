@@ -94,17 +94,17 @@
                             </div>
 
                             <div class="row padding5">
-                                <div class="col-lg-5">
+                                <div class="col-lg-5">%{--
                                     <div>Captcha</div>
-                                    <asset:image src="captcha.jpg" id="captcha"/>
+                                    <asset:image src="captcha.jpg" id="captcha"/>--}%
                                 </div>
 
-                                <div class="col-lg-7">
+                                <div class="col-lg-7">%{--
                                     <div>Enter text shown in image:</div>
 
                                     <div>
                                         <g:textField name="captcha" class="form-control"/></div>
-
+--}%
                                     <div style="margin-top:20px;" width="100%" align="center">
                                         <g:submitButton name="submit" value="Click here to register"
                                                         class="btn btn-default" style="width: 100%"/>
